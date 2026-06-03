@@ -20,99 +20,52 @@ An $n$-point amplitude is a summation over worldsheet path-integrals of genus $g
 
 The tree-level 4-point function in the type IIA and type IIB string theories is the Virasoro-Shapiro amplitude \cite{Green:2012oqa}, for the symmetric traceless massless modes in the NSNS sector of the string, they take the following form \cite{Green:1999pv} up to an irrelevant overall factor
 \begin{equation}
+\begin{aligned}
 \mathcal A_4
-=\frac{1}{3\cdot 2^3}t_8^{m_1...m_8}t_8^{n_1...n_8}               
-\prod_{r=1}^4\zeta^{(r)}_{m_{2r}n_{2r}}k^{(r)}_{m_{2r-1}}k^{(r)}_{n_{2r-1}}
-\times \frac{\alpha^{\prime 4}}{g_s^2}
+&=\frac{\alpha^{\prime 4}}{3\cdot 2^3 g_s^2}
+K
 \times\frac{64}{\alpha^{\prime 3}stu}
-\frac{\Gamma[1-\tfrac{\alpha'}{4}s]\Gamma[1-\tfrac{\alpha'}{4}t]\Gamma[1-\tfrac{\alpha'}{4}u]}{\Gamma[1+\tfrac{\alpha'}{4}s]\Gamma[1+\tfrac{\alpha'}{4}t]\Gamma[1+\tfrac{\alpha'}{4}u]}
-\end{equation}
-where $s,t,u$ are Mandelstam variables, $\zeta^{(i)}_{mn}$ is the dimensionless polarization of the symmetric traceless modes on a closed string, they may also be interpreted as polarizations of the spacetime graviton $\kappa h^{(i)}_{mn}$ in $g_{mn}=\eta_{mn} + \kappa h_{mn}$. 
-The explicit form of $t_8 t_8$ can be found in \cite{Schwarz:1982jn,Policastro:2008hg,Liu:2025uqu}.
-We can expand the $t_8t_8$ contraction explicitly and put back the momenta as derivatives
-\begin{equation}
-\begin{aligned}
-t_8^{m_1...m_8}t_8^{n_1...n_8}
+\frac{\Gamma[1-\tfrac{\alpha'}{4}s]\Gamma[1-\tfrac{\alpha'}{4}t]\Gamma[1-\tfrac{\alpha'}{4}u]}{\Gamma[1+\tfrac{\alpha'}{4}s]\Gamma[1+\tfrac{\alpha'}{4}t]\Gamma[1+\tfrac{\alpha'}{4}u]}\\
+K &\equiv t_8^{m_1...m_8}t_8^{n_1...n_8}               
 \prod_{r=1}^4\zeta^{(r)}_{m_{2r}n_{2r}}k^{(r)}_{m_{2r-1}}k^{(r)}_{n_{2r-1}}
-&=t_8^{m_1...m_8}t_8^{n_1...n_8}
-\prod_{r=1}^4 \kappa h^{(r)}_{m_{2r}n_{2r},m_{2r-1} n_{2r-1}}.\\
-&= \frac{t_8t_8 R^4}{16} + O(h^4).
 \end{aligned}
 \end{equation}
-\footnote{
-It is conventional to define the following contraction
+where $s,t,u$ are Mandelstam variables, $\zeta^{(i)}_{mn}$ is the dimensionless polarization of the symmetric traceless modes on a closed string, they may also be interpreted as polarizations of the spacetime graviton $\kappa h^{(i)}_{mn}$ in $G_{mn}=\eta_{mn} + \kappa h_{mn}$. 
+The explicit form of $t_8 t_8$ can be found in \cite{Schwarz:1982jn,Policastro:2008hg,Liu:2025uqu}.
+Using the relation
 \begin{equation}
-t_8t_8 R^4\equiv
-t_8^{\mu_1...\mu_8}t_8^{\nu_1...\nu_8}
-R_{\mu_2\nu_2\mu_1\nu_1}
-R_{\mu_4\nu_4\mu_3\nu_3}
-R_{\mu_6\nu_6\mu_5\nu_5}
-R_{\mu_8\nu_8\mu_7\nu_7}.
+\ln\Gamma(1-x)-\ln\Gamma(1+x) = 2\gamma x + 2\sum_{m\ge0}\frac{\zeta(2m+3)}{2m+3}x^{2m+3},
 \end{equation}
-}
-Now we can write the string amplitude with spacetime fields, which amounts to the following effective Lagrangian
+we find the expansion
 \begin{equation}
-\mathcal L_4 =
-\frac{1}{2\kappa^2}\frac{(\alpha')^3}{3\cdot 2^7}t_8t_8 R^4\frac{4^3}{\alpha^{\prime 3}stu}
-\frac{\Gamma[1-\tfrac{\alpha'}{4}s]\Gamma[1-\tfrac{\alpha'}{4}t]\Gamma[1-\tfrac{\alpha\prime}{4}u]}{\Gamma[1+\tfrac{\alpha'}{4}s]\Gamma[1+\tfrac{\alpha'}{4}t]\Gamma[1+\tfrac{\alpha'}{4}u]}
-+O(h^5).
+\mathcal{A}_4 = \frac{\alpha^{\prime 4}}{3\cdot 2^3 g_s^2}
+K
+\left[ \frac{64}{\alpha^{\prime 3}stu} + 2 \zeta(3)\right]
+ + O(\alpha^{\prime 5})
 \end{equation}
-The $t_8t_8R^4$ has no dependence on $\alpha'$, so by expanding the fraction of Gamma functions in $\alpha'$ we obtain the low energy effective action of the type II string theory.
-Going into the Einstein frame\footnote{
-One goes into the Einstein frame by replacing $g^{(S)}_{\mu\nu}=g_s^{1/2}g^{(E)}_{\mu\nu}$ with other terms kept intact. 
-One then also needs to account for the $\sqrt{-g^{(S)}}$ multiplying the Lagrangian, as well as the inverse metric for contractions on the mandelstam variables.
-}
-we find\footnote{
-We had also used
+evaluated in the string frame metric with $G_{mn} |_{\infty} = \eta_{mn}$.
+From the relation $G_{mn} = e^{\Phi/2}g_{mn}$, we see that the Einstein frame metric is not asymptotically flat: $g_{mn} |_{\infty} = g_s^{1/2}\eta_{mn}$.
+To translate $\mathcal{A}_4$ into the Einstein frame, we need to translate implicit contractions with the string frame metric with those with the Einstein frame metric, which introduces factors of $g_s$.
+The net effect is the following Einstein frame expansion
 \begin{equation}
-\ln\Gamma(1-x)-\ln\Gamma(1+x) = 2\sum_{m\ge0}\frac{\zeta(2m+3)}{2m+3}x^{2m+3},
+\mathcal{A}_4 \bigg|_{g_{mn}} = 
+\frac{\alpha^{\prime 4}}{3\cdot 2^3 }
+K
+\times
+\left[ \frac{64}{\alpha^{\prime 3}stu} + 2 \zeta(3)g_s^{-3/2}\right]
+ + O(\alpha^{\prime 5}),
 \end{equation}
-\begin{equation}
-\frac{s^3+t^3+u^3}{stu}=3,\quad
-\frac{s^5+t^5+u^5}{stu}=\frac{5}{2}(s^2+t^2+u^2),\quad
-\frac{s^7+t^7+u^7}{stu}=\frac{7}{4}(s^2+t^2+u^2)^2.
-\end{equation}
-} \cite{Green:1999pv}
-\begin{equation}
-\begin{aligned}
-\mathcal{A}^{(E)}_4
-=-4\pi^7(t_8t_8R^4)(\alpha')^4
-\Bigg[&\frac{4^3}{\alpha^{\prime 3}stu}+2\zeta(3)\tau_2^{3/2}+
-\zeta(5)\tau_2^{5/2}\frac{\alpha^{\prime 2}(s^2+t^2+u^2)}{4^2}\\
-&+\frac{2}{3}\zeta(3)^2\tau_2^3\frac{\alpha^{\prime 3}(s^3+t^3+u^3)}{4^3}
-\Bigg] +O(\alpha^8).
-\end{aligned}
-\end{equation}
-This is the genus-zero 4-graviton effective action, common between type IIA and type IIB, expanded in $\alpha'$.
-The $\alpha'$ parameter appears with zeta functions, while the kinematics has, at leading order, a nonlocal pole
-\begin{equation}
-\frac{t_8t_8 R^4}{stu}
-\end{equation}
-trailed by local operators
-\begin{equation}
-t_8t_8 R^4,\quad
-t_8t_8 R^4(s^2+t^2+u^2),\quad
-t_8t_8 R^4(s^3+t^3+u^3),\quad
-t_8t_8 R^4(s^2+t^2+u^2)^2.
-\end{equation}
-The poles of the Virasoro-Shapiro amplitude occur at $s,t,u=0$. These correspond to massless exchanges and reproduce exactly the pole structure expected from the $s,t,u$-channel diagrams generated by the cubic graviton vertices.
-The nonlocal $1/stu$ contribution is therefore attributed to the tree-level supergravity dynamics.
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.75\linewidth]{image.png}
-%     \caption{Schematic illustration of how $\frac{1}{stu}$ is attributed to tree-level amplitudes.}
-%     \label{fig:stu}
-% \end{figure}
-By contrast, the trailing contributions are local in the low-energy expansion.
-They are attributed to higher derivative corrections, usually accounted for by introducing terms denoted $D^{2k}R^4$, defined appropriately to absorb $(s^a+t^a+u^a)^b$.
-The $t_8t_8R^4$ kinematics is often accompanied by $\epsilon_{10}\epsilon_{10} R^4$, however the $\epsilon_{10}\epsilon_{10}$ contributions vanish at 4-point and begins to contribute at 5-point amplitudes.
+with $\zeta_{mn}^{(r)}$ inside $K$ now interpreted as the polarization of the Einstein frame graviton and all contractions are implicitly performed with the asymptotic Einstein frame metric $g_s^{1/2}\eta_{mn}$.
 
-% It is also standard to define the combination
-% \begin{equation}
-% R^4 = t_8t_8 R^4 + \epsilon_{10}\epsilon_{10}R^4
-% \end{equation}
-% as the $\epsilon_{10}\epsilon_{10}$ contraction accompanies the $t_8 t_8$
+The polynomial $K$ is analytic in the momenta and is the linear term in the expansion of $\frac{t_8 t_8 R^4}{16}$.
+The nonlocal poles at $s, t, u = 0$ correspond to massless graviton exchange and reproduce the $s,t,u$-channel structure generated by the cubic graviton vertices of the Einstein-Hilbert action; the nonlocal $1/stu$ piece is therefore attributed to the tree-level supergravity dynamics.
+Indeed it is accompanied by a single factor of $\alpha'$ which reveals its origin in the two-derivative supergravity.
 
+The next contribution appears at $O(\alpha^{\prime 4}$) which reveals an 8-derivative spacetime origin:
+\begin{equation}
+\frac{\alpha^{\prime 4}}{3 \cdot 2^3} K 2 \zeta(3) g_s^{-3/2} \cong
+\frac{\alpha^{\prime 4}}{3 \cdot 2^7} t_8t_8 R^4 (2 \zeta(3) g_s^{-3/2}) + O(\alpha^{\prime 5}).
+\end{equation}
 The next order correction comes from genus-1 amplitudes \cite{Green:1999pv}.
 It is also common in both type IIA and IIB theories, and comes with the $t_8 t_8 R^4$ factor. 
 Combining the genus-0 and genus-1 amplitudes, we have the local effective actions
@@ -127,7 +80,7 @@ Combining the genus-0 and genus-1 amplitudes, we have the local effective action
 Non-renormalization theorems suggest the perturbative corrections to $R^4$ terminate here at one-loop \cite{Green:1997tv,Kehagias:1997cq}.
 Note that $\mathcal{A}_4$ as given above no longer has SL(2, R) symmetry. 
 In fact, the SL(2, R) symmetry of the type IIB supergravity is only present at the two-derivative level together with corrections that do not depend on $\tau$.
-As soon as higher-derivative terms with non-trivial dependence on $\tau$ enter, SL(2, R) is explicitly broken, with the discretized SL(2, Z) restored when contributions from terms that are non-perturbative in $g_s$ are included. 
+As soon as higher-derivative terms with non-trivial dependence on $\tau$ enter, SL(2, R) is explicitly broken.
 
 In particular, the type IIB string path integral requires summing over the D(-1) backgrounds \eqref{D-1 background}.
 The single and multi-charged D(-1) backgrounds give rise to non-perturbative $R^4$ corrections \cite{Green:1997tv,Kehagias:1997cq} of the form
