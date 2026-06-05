@@ -196,8 +196,8 @@ u\to -y_3 .
 We can thus interpret the type IIB SL(2, Z) duality transformations as large gauge transformations in 12d.
 
 \subsection{D(-1) and D0 interpreted as 12d and 11d pp-waves}
-The other 1/2 BPS solution of the axio-dilaton action \eqref{IIB axio-dilaton action} is the D(-1), which has been recognized as a 12d pp-wave \cite{Tseytlin:1996ne}.
-We now discuss this story, in the context of the known relations between the D0 brane solution and an 11d pp-wave solution.
+The other $\frac{1}{2}$-BPS solution of the axio-dilaton action \eqref{IIB axio-dilaton action} is the D(-1) instanton, which has been recognized as a 12d pp-wave \cite{Tseytlin:1996ne}.
+We now discuss this in the context of the known relation between the D0 brane and an 11d pp-wave.
 
 Pp-waves are solutions of the vacuum Einstein equations following from the Einstein-Hilbert action, describing a gravitational wave propagating at the speed of light.
 In $d$ dimensions, written in light-cone coordinates $u,v = y\pm t$, they take the form
@@ -276,19 +276,33 @@ The momentum of the wave is the D(-1) charge.
 Recent investigations of the IKKT matrix model \cite{Hartnoll:2024csr,Komatsu:2024bop} reveal a type IIB supergravity background with axio-dilaton and the 3-form turned on. We also provide the 12d interpretation of such background in Appendix \ref{sec:IKKT uplift}.
 
 \subsection{Supersymmetry}
-We now provide a further consistency check for the relation between 12d gravity and the type IIB axio-dilaton sector, namely how the 1/2 BPS condition of the latter can be obtained by reducing the covariantly-constant equation of the former.
-From covariance alone, one can write down the most general ansatz for the Killing spinor equation of the gravitino
+We now discuss a further consistency check for the relation between 12d gravity and the type IIB axio-dilaton sector, namely how the 1/2 BPS condition of the latter can be obtained by reducing the covariantly-constant equation of the former.
+
+Disregarding the type IIB supergravity action for the moment, let us consider a generic theory in $d$ dimensions.
+The action with kinetic terms for the metric, form fields, and the gravitino takes the form
+\begin{equation}
+S = \int d^d x\, \sqrt{-g}\left[
+R
+- \frac{1}{2}\sum_n \frac{1}{n!}\,|F_n|^2
+- i\,\bar{\psi}_M \Gamma^{MNP} \nabla_N \psi_P
+\right] + \dots
+\label{generic sugra action}
+\end{equation}
+Under a local supersymmetry transformation parameterized by a spinor $\epsilon$, one can write down a general ansatz for the Killing spinor equation of the gravitino from covariance alone
 \begin{equation}
 \delta\psi_M
-= 
-\left[
-\nabla_M+\sum_n(F_{n})_M{}^{N_1N_2...}\Gamma_{N_1 N_2...} 
-+ (F_{n})_{N_1N_2...}\Gamma_M{}^{N_1N_2...}
-\right]\epsilon,
+= \left\{
+\nabla_M + \sum_n \left[
+c_n (F_{n})_M{}^{N_1 N_2 \cdots}\,\Gamma_{N_1 N_2 \cdots}
++ d_n (F_{n})_{N_1 N_2 \cdots}\,\Gamma_M{}^{N_1 N_2 \cdots}
+\right]
+\right\}\epsilon,
+\label{generic gravitino variation}
 \end{equation}
-with summation over the form fields of the given theory.
-Upon dimensional reduction, the higher-dimensional form fields reduce to lower-dimensional ones, and the lower-dimensional Killing spinor equation should be reproduced.
-If the lower-dimensional theory is a truncation whose spectrum originates from a higher-dimensional pure gravity theory, then the higher-dimensional covariant derivative, evaluated on the reduction ansatz, is expected to reduce to the differential operator that appears in the lower-dimensional Killing spinor equation.
+with summation over the form fields of the given theory, and $c_n, d_n$ are constants to be determined.
+Upon dimensional reduction, the higher-dimensional fields decompose into those of the lower-dimensional theory, and the reduction of the gravitino variation \eqref{generic gravitino variation} reproduces the lower-dimensional Killing spinor equation.
+In our case the higher-dimensional theory is pure gravity, with no form fields, so its gravitino variation \eqref{generic gravitino variation} is simply $\nabla_M\epsilon$.
+The full lower-dimensional Killing spinor equation, flux and connection terms included, must then be reproduced by reducing this covariant derivative alone.
 
 This is indeed the case in the type IIA theory.
 The type IIA pure gravity combined with the KK-vector and dilaton sector has the Killing spinor equation
@@ -299,10 +313,9 @@ The type IIA pure gravity combined with the KK-vector and dilaton sector has the
 \right)\epsilon = 0.
 \label{IIA Killing spinor equation}
 \end{equation}
-This equation arises directly from the dimensional reduction of the 11d covariantly constant spinor condition $\nabla^{(11)}_M\epsilon = 0$. See, for example, \cite{Becker:2006dvp}.
-We now demonstrate that analogously, the type IIB gravitino variation can be derived from a 12d covariant derivative.
+This equation arises directly from the dimensional reduction of the 11d covariantly constant spinor condition $\widehat{\nabla}^{(11)}_M\epsilon = 0$. See, for example, \cite{Becker:2006dvp}.
 
-A 12d covariant derivative $\nabla^{(12)}_M\epsilon = 0$ restricted to 10d takes the form
+A 12d covariant derivative $\widehat{\nabla}^{(12)}_M\epsilon = 0$ restricted to 10d takes the form
 \begin{equation}
 \nabla^{(12)}_m\epsilon
 =\left(
