@@ -1,37 +1,55 @@
 \section{Introduction}
-String theory is a framework in theoretical physics that attempts to unify the two pillars of fundamental physics: quantum mechanics and general relativity.
+String theory is a framework that attempts to unify the two pillars of fundamental physics: quantum mechanics and general relativity.
 It does so by replacing point-like particles with one-dimensional strings in the underlying mathematical description.
-Despite receiving no experimental confirmations, it is an elegant framework with astonishing mathematical consistency.
-String theory is known to be mathematically consistent only in 10 (for supersymmetric string theories) and 26 (for bosonic string theory) dimensions.
+It is known to be mathematically consistent only in 10 (for supersymmetric strings) and 26 (for bosonic strings) dimensions.
+Despite receiving no direct experimental validation, it is an elegant framework with astonishing mathematical consistency.
 
-In 10 dimensions, there are five consistent superstring theories: type IIA, type IIB, heterotic SO(32), heterotic E8 x E8, and type I.
+In 10 dimensions, there are five consistent superstring theories: type IIA, type IIB, heterotic SO(32), heterotic $E_8 \times E_8$, and type I.
 These theories are related by various dualities, and are believed to be different limits of a single underlying theory, often referred to as M-theory that is a theory of membranes in 11 dimensions.
 
-For instance, the type IIA and the heterotic E8 x E8 theories can be obtained from M-theory compactified on a circle and an interval, respectively.
-The type IIB theory is believed to be the decompactifying (strong coupling) limit of M-theory on a torus, which provides a natural explanation for its conjectured SL(2, Z) duality.
-However, this relation is somewhat unsatisfying, and it has long been conjectured that the type IIB theory may admit a more direct 12d interpretation.
+For instance, the type IIA and the heterotic $E_8 \times E_8$ theories are believed to arise from M-theory compactified on a circle and an interval, respectively.
+The type IIB theory is believed to be the decompactifying limit of the 9d theory obtained from M-theory on a torus.
+The type I theory can be obtained from the type IIB theory by an orientifold projection (gauging worldsheet parity), and is related to the heterotic SO(32) theory by S-duality.
 
-The type IIB string theory is believed to have an exact, nonperturbative SL(2, Z) symmetry.
+An intriguing feature of the type IIB theory is its conjectured SL(2, Z) duality, or global symmetry, which exchanges the fundamental string with the D1 brane.
+This duality is believed to be an exact non-perturbative symmetry of the type IIB theory, and has received support from modular-invariant $R^4$ corrections to the effective action, as well as the existence of the (p, q) strings and 7-branes.
 
-The SL(2, Z) symmetry, acting on the axio-dilaton and exchanging the fundamental string with the D1 brane, is essential to the non-perturbative consistency of the type IIB string theory in 10d. 
-Its underlying origin, however, remains obscure. 
-Although it has long been conjectured that this duality reflects an underlying 12d origin, the precise relation remains unclear.
+But why does the type IIB theory have such SL(2, Z) duality?
+One may reconcile this with the M-theory origin of the type IIB theory since SL(2, Z) is the group of large diffeomorphisms of the torus, acting on the complex structure of the torus that can be identified with the axio-dilaton.
+Yet this explanation is unsatisfactory, as the SL(2, Z) duality of the type IIB theory is a fundamental feature in 10d, thus one should not have to take a detour through 9d to understand it.
 
-After the construction of the 11d supergravity \cite{Nahm:1977tg,Cremmer1978}, it was soon realized that SO(10, 2) Majorana-Weyl spinors may offer a natural setting for a 12d supersymmetric theory \cite{Castellani:1982ke,Blencowe:1988sk}.
-Later, through the study of the 6d (2,0) gravity theory \cite{Hull:1995xh,Witten:1995em}, and the 7-brane backreacted vacua \cite{Vafa:1996xn}, more evidence for an effective 12d interpretation of the type IIB string theory have emerged.
-The latter \cite{Vafa:1996xn} has developed into a field of study on string compactifications and particle phenomenology called ``F-theory".
-
-Meanwhile, the worldvolume and bulk SL(2, Z) duality of the D3 brane had been discussed in the context of 12d \cite{Tseytlin:1996it}, and the D(-1) became understood as a 12d pp-wave reduced on a non-compact torus \cite{Tseytlin:1996ne}.
+Indeed, after the construction of the 11d supergravity \cite{Nahm:1977tg,Cremmer1978}, it was soon realized that SO(10, 2) Majorana-Weyl spinors may offer a natural setting for a 12d supersymmetric theory of gravity \cite{Castellani:1982ke,Blencowe:1988sk}.
+Later, through the study of the 6d (2,0) gravity theory \cite{Hull:1995xh,Witten:1995em}, and the 7-brane backreacted vacua \cite{Vafa:1996xn}, as well as the Euclidean D(-1) instanton \cite{Tseytlin:1996it}, more evidence for an effective 12d interpretation of the type IIB string theory have emerged.
 
 However, the construction of a 10+2d supergravity \cite{Nishino:1997gq} has faced persistent conceptual obstructions, due to its non-compact little group and the lack of a momentum generator in its algebra \cite{Hewson:1997wv}.
 To this day, no consistent 10+2d supergravity with 32 supercharges that reduces to the type IIB supergravity has been constructed. 
 On the other hand, effective 12d perspectives, arising from branes \cite{Tseytlin:1996ne}, dualities \cite{Tseytlin:1996it}, and effective actions \cite{Minasian:2015bxa} appear to be more consistent, and have provided more insights into the type IIB theory and its SL(2, Z) duality.
-The aim of this review is to organize what has been attempted, what is understood, and what might be the way forward.
+These will be reviewed in this article.
 
+Why do we seek a 12d interpretation of the type IIB theory, to understand SL(2, Z) duality?
+One can argue that the appearance of SL(2, Z) is just a manifestation of the redundancy in the parameterization that we have chosen to describe the type IIB theory.
+This is a valid point, and it will be interesting to consider whether there exists a formulation of the type IIB theory without the SL(2, Z) redundancy, and what are the implications of such a formulation on the other superstring theories and on the web of duality as a whole.
+This will not be the focus of this paper.
+Before such a formulation can be found, the formulation of the type IIB theory which makes SL(2, Z) manifest is the same as the one used in the other theories, and what reveals the web of dualities.
+
+The desire to understand the SL(2, Z) duality of the type IIB theory in 12d can also be motivated in the context of AdS/CFT. 
+A sharp form of this motivation arises in the M-theory, type IIA duality. 
+The near-horizon geometry of a stack of M2-branes is $AdS_4 \times S^7/\mathbb{Z}_k$, holographically dual to the ABJM theory \cite{Aharony:2008ug}. 
+The half-BPS circular Wilson loop of this theory, at large $N$ and fixed level $k$, admits a dual description as a wrapped M2-brane of geometry $AdS_2 \times S^1$, the $AdS_2$ ending on the loop at the boundary: the classical brane action reproduces the leading large-$N$
+exponential of the Wilson-loop expectation value, and the one-loop term in the brane partition function reproduces its subleading, $k$-dependent prefactor \cite{Giombi:2023vzg,Tseytlin:2024abc}. 
+The ABJM theory has no continuous coupling, but its discrete Chern-Simons level $k$ may be effectively treated as a coupling.
+In the work of ..., the discrete $k$ is related to the radius of the circle which one compactifies M-theory on to obtain type IIA.
+Hence we have geometrized the discrete coupling of the ABJM theory, as the radius of the M-theory circle.
+
+It is natural to ask whether an analogous relation exists on the type IIB side, for example between the $AdS_5 \times S^5$ background and the $\mathcal{N}=4$ SYM theory, which possesses its own SL(2, Z) duality that acts on its complexified coupling.
+One would be curious to see whether the $AdS_5 \times S^5$ background, like the D(-1) and D7 backgrounds, have a 12d uplift, which could allow us to wrap a 12d object on a torus, then that would provide a geometrization of the coupling of the $\mathcal{N}=4$ SYM theory.
+
+
+Thus, as a continuation of the existing line of discussions, as well as to expand to recent developments in AdS/CFT, we are motivated to revisit the topic of a 12d interpretation of the type IIB string theory. 
 
 This paper is organized as follows. We first introduce the type IIB theory and discuss its puzzles.
 For completeness, we review various attempts at formulating a 10+2d supergravity theory.
-Then we move to our main interest, that is the 12d perspectives arising from branes and effective actions.
+Then we move to 12d perspectives arising from branes and effective actions.
 We begin with the sector that most robustly admits a 12d interpretation: the axio-dilaton sector.
 We show that the D7 background may be viewed as the 12d Kaluza-Klein monopole reduced on a torus, and that the D(-1) background can be obtained by compactifying the 12d pp-wave.
 In parallel, we present the analogous stories on the type IIA side, and discuss the consistencies related to supersymmetry.
@@ -40,6 +58,4 @@ We next examine the D3 brane worldvolume action, noting that consistency require
 This interplay suggests that the D3 brane may acquire a special role in understanding 12d insights into the type IIB S-duality. 
 
 In section 6, we present a framework that embeds the full two-derivative type IIB action into a 12d-covariant formulation, in which the 10d self-duality condition on the 5-form is implemented via a 12d Hodge duality.
-Then we discuss how the higher-derivative corrections to the type IIB action may be interpreted from a 12d perspective.
-Lastly, we remark that the Kaluza-Klein modes in the type IIA and type IIB supergravity can serve as surrogates for the D0 and D(-1) backgrounds in computations of the string effective action.
-This viewpoint may offer insights into a possible 12d interpretation of these effects, and we outline how this connection might be further substantiated.
+Then we discuss how the higher-derivative corrections to the type IIB action may be interpreted from a 12d perspective, and the limitations of such an interpretation.
