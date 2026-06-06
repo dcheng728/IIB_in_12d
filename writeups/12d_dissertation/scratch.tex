@@ -12,3 +12,79 @@ The perturbative expansion of string amplitudes is organized by two parameters: 
 \begin{equation}
     \mathcal A_n = \sum_{g=0}^\infty g_s^{2g-2+n}\, \mathcal A_n^{(g)}(\alpha').
 \end{equation}
+
+% ============================================================
+% Verification of Section 6.2 (Covariant Unification in 12d):
+%   (1) sign in the definition of \tilde{\hat F}_7
+%   (2) coefficient of the Chern-Simons term in the "12d" action
+% Conventions (as used in the section, validated by the |F_4|^2 check):
+%   tau_1 = C, tau_2 = e^{-Phi};
+%   \hat g_{ab} = (1/tau_2) [[1, tau_1],[tau_1, |tau|^2]], det \hat g_{ab} = 1;
+%   \hat C_3 = B_2 ^ dz_1 + C_2 ^ dz_2,  \hat F_4 = H_3 ^ dz_1 + F_3 ^ dz_2;
+%   \hat F_7 = F_5 ^ dz_1 ^ dz_2;
+%   section's composite: \tilde F_5 = F_5 - (1/2) C_2^H_3 + (1/2) B_2^F_3;
+%   IIB CS term (2__IIB.tex): -(1/(4 kappa^2)) \int C_4 ^ H_3 ^ F_3;
+%   kappa relation: Vol(T_2)/kappa_{12}^2 = 1/kappa^2.
+% ============================================================
+
+\subsection*{Verification: $\tilde{\hat F}_7$ sign and the 12d Chern--Simons coefficient}
+
+\paragraph{Wedge lemma.}
+With $\hat C_3 = B_2\wedge dz_1 + C_2\wedge dz_2$ and $\hat F_4 = H_3\wedge dz_1 + F_3\wedge dz_2$, the
+terms with a repeated $dz_a$ vanish, leaving
+\begin{equation}
+\hat C_3\wedge\hat F_4
+= B_2\wedge dz_1\wedge F_3\wedge dz_2 + C_2\wedge dz_2\wedge H_3\wedge dz_1 .
+\end{equation}
+Using $dz_1\wedge F_3 = -F_3\wedge dz_1$ and $dz_2\wedge H_3 = -H_3\wedge dz_2$, then $dz_2\wedge dz_1=-dz_1\wedge dz_2$,
+\begin{equation}
+B_2\wedge dz_1\wedge F_3\wedge dz_2 = -\,B_2\wedge F_3\wedge dz_1\wedge dz_2,
+\qquad
+C_2\wedge dz_2\wedge H_3\wedge dz_1 = +\,C_2\wedge H_3\wedge dz_1\wedge dz_2,
+\end{equation}
+so that
+\begin{equation}
+\boxed{\;\hat C_3\wedge\hat F_4 = \big(C_2\wedge H_3 - B_2\wedge F_3\big)\wedge dz_1\wedge dz_2 .\;}
+\label{scratch-wedge}
+\end{equation}
+
+\paragraph{(1) Sign of $\tilde{\hat F}_7$.}
+With $\hat F_7 = F_5\wedge dz_1\wedge dz_2$ and the section's definition $\tilde{\hat F}_7 = \hat F_7 + \tfrac12\hat C_3\wedge\hat F_4$,
+\begin{equation}
+\tilde{\hat F}_7
+= \Big(F_5 + \tfrac12 C_2\wedge H_3 - \tfrac12 B_2\wedge F_3\Big)\wedge dz_1\wedge dz_2 .
+\end{equation}
+The bracket is \emph{not} $\tilde F_5 = F_5 - \tfrac12 C_2\wedge H_3 + \tfrac12 B_2\wedge F_3$; the two correction
+terms carry the opposite relative sign, so $|\tilde{\hat F}_7|^2 \ne |\tilde F_5|^2$ (the cross term $2F_5\!\cdot\!(\dots)$ flips).
+Choosing instead
+\begin{equation}
+\boxed{\;\tilde{\hat F}_7 \equiv \hat F_7 - \tfrac12\hat C_3\wedge\hat F_4\;}
+\end{equation}
+gives the bracket $F_5 - \tfrac12 C_2\wedge H_3 + \tfrac12 B_2\wedge F_3 = \tilde F_5$ exactly.
+\textbf{Conclusion: the ``$+$'' should be ``$-$''. This is convention-independent (fixed by the section's own $\tilde F_5$).}
+
+\paragraph{(2) Chern--Simons coefficient.}
+A 4-form wedged with itself keeps only the cross term ($b\wedge a = (-1)^{16}a\wedge b = a\wedge b$):
+\begin{equation}
+\hat F_4\wedge\hat F_4 = 2\,(H_3\wedge dz_1)\wedge(F_3\wedge dz_2)
+= -2\,H_3\wedge F_3\wedge dz_1\wedge dz_2 ,
+\end{equation}
+hence, with $\hat C_4 = C_4$ (so $\hat F_5 = d\hat C_4 = F_5$),
+\begin{equation}
+\hat C_4\wedge\hat F_4\wedge\hat F_4 = -2\,C_4\wedge H_3\wedge F_3\wedge dz_1\wedge dz_2 .
+\end{equation}
+Integrating ($\int_{T_2}dz_1\wedge dz_2 = \pm Vol(T_2)$, sign set by torus orientation),
+\begin{equation}
+\tfrac12\int_{T_2\times\mathbb R^{1,9}}\hat C_4\wedge\hat F_4\wedge\hat F_4
+= \mp\,Vol(T_2)\int_{\mathbb R^{1,9}} C_4\wedge H_3\wedge F_3 .
+\end{equation}
+So the section's display identity is correct \emph{in magnitude} (the $\tfrac12$ cancels the $2$); only its overall
+sign is orientation-dependent. The problem is the action coefficient: feeding $\int\hat C_4\hat F_4\hat F_4 = 2\,Vol(T_2)\int C_4 H_3 F_3$
+into the action term $-\tfrac{1}{4\kappa_{12}^2}\int\hat C_4\hat F_4\hat F_4$ gives
+\begin{equation}
+-\frac{1}{4\kappa_{12}^2}\cdot 2\,Vol(T_2)\int C_4\wedge H_3\wedge F_3
+= -\frac{Vol(T_2)}{2\kappa_{12}^2}\int = -\frac{1}{2\kappa^2}\int C_4\wedge H_3\wedge F_3 ,
+\end{equation}
+which is \emph{twice} the IIB value $-\tfrac{1}{4\kappa^2}\int C_4\wedge H_3\wedge F_3$.
+\textbf{Conclusion: to reproduce the IIB CS term the action prefactor must be $-\tfrac{1}{8\kappa_{12}^2}$ (not $-\tfrac{1}{4\kappa_{12}^2}$),
+equivalently the factor of $2$ from $\hat F_4\wedge\hat F_4$ was not absorbed. The overall sign should also be checked against the chosen torus orientation. Both depend only on the section's own conventions, not on any external $|F|^2$ normalization (the $|\hat F_4|^2$ kinetic check matched exactly).}

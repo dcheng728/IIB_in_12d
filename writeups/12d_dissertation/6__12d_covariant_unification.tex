@@ -95,7 +95,7 @@ The various brane-related evidence for an effective 12d interpretation of the ty
 In addition, one seeks a 12d interpretation of the type IIB RR and NSNS form fields.
 In this section, we gather the various 12d insights obtained in the previous section from the type IIB branes, and present a 12d covariant unification of $SL(2,R)\times SO(9,1)$ form fields.
 We will use hats $\hat{\;}$ to denote fields in the higher dimension.
-The 10d metric $g_{mn}$ with $m,n=0,1,...,9$ will be interpreted as embedded inside a 12d metric $\hat{g}_{MN}$, with $M,N=0,1,...,11$. We will use the calligraphic $\hat R$ to denote the Ricci scalar computed with $\hat{g}_{MN}$, and use $\hat{F}_{n+1} = d\hat{C}_{n}$ to denote form fields in 12d.
+The 10d metric $g_{mn}$ with $m,n=0,1,...,9$ will be interpreted as embedded inside a 12d metric $\hat{g}_{MN}$, with $M,N=0,1,...,11$. We will use $\hat R$ to denote the Ricci scalar computed with $\hat{g}_{MN}$, and use $\hat{F}_{n+1} = d\hat{C}_{n}$ to denote form fields in 12d.
 
 Let the 12d coordinates be parameterized by $(x^m,z_1,z_2)$, and let $\hat{g}_{ab}$ be the $2\times 2$ metric on the torus.
 The key insight from the previous section is that the axio-dilaton sector of type IIB may arise from the 12d metric embedding given by
@@ -138,8 +138,8 @@ To unify them in 12d we define a 12d 4-form field strength with exactly one leg 
 Using the 12d metric ansatz \eqref{12d metric ansatz}, the 10d 3-form field strengths and their axio-dilaton couplings follow from contracting $\hat F_4$:
 \begin{equation}
 \begin{aligned}
-|\hat{F}_4|\bigg|_{\hat{g}_{MN}}
-&=\hat{g}^{z_1 z_1}|H_3|^2+2\hat{g}^{z_1 z_2}|F_3\cdot H_3|+\hat{g}^{z_2 z_2}|F_3|^2\\
+|\hat{F}_4|^2\bigg|_{\hat{g}_{MN}}
+&=\hat{g}^{z_1 z_1}|H_3|^2+2\hat{g}^{z_1 z_2}(F_3\cdot H_3)+\hat{g}^{z_2 z_2}|F_3|^2\\
 &=\left(
 e^{-\Phi}|H_3|^2 + e^\Phi|F_3-CH_3|^2
 \right)\bigg|_{g_{mn}}.
@@ -161,7 +161,7 @@ Then note that
 |\hat{F}_5|^2\bigg|_{\hat{g}_{MN}} 
 &= |F_5|^2\bigg|_{g_{mn}},\\
 |\hat{F}_7|^2\bigg|_{\hat{g}_{MN}}
-&=\det(\hat{g}_{ab})|F_5|^2\bigg|_{g_{mn}} = |F_5|^2\bigg|_{g_{mn}}.
+&=\det(\hat{g}^{ab})|F_5|^2\bigg|_{g_{mn}} = |F_5|^2\bigg|_{g_{mn}}.
 \end{aligned}
 \end{equation}
 Then we may define a 12d 7-form
@@ -170,8 +170,8 @@ Then we may define a 12d 7-form
 \end{equation}
 that exactly supplies the type IIB composite 5-form contribution upon contraction in 12d:
 \begin{equation}
-|\tilde{\hat{F}}_7|^2\bigg|_{\hat{g}_{MN}} = 
-\det(\hat{g}_{ab})|\tilde F_5|^2\bigg|_{g_{mn}}.
+|\tilde{\hat{F}}_7|^2\bigg|_{\hat{g}_{MN}} =
+\det(\hat{g}^{ab})|\tilde F_5|^2\bigg|_{g_{mn}}.
 \end{equation}
 The additional utility of $\hat{F}_7$ is that it allows us to write the 10d self-duality condition on $F_5$ as a 12d Hodge duality condition
 \begin{equation}
@@ -203,7 +203,7 @@ S_{\text{``12"}}
 \label{12d action}
 \end{equation}
 The $\hat F_7$ does not arise from an independent degree of freedom, it is related to $\hat C_4$ by $*_{12}d\hat C_4 = \hat F_7$.
-The action \eqref{12d action} is exactly the Einstein frame type IIB action \eqref{Einstein frame IIB action} with $g_s=1$.
+The action \eqref{12d action} is exactly the Einstein frame type IIB action \eqref{eq:sl2r_invariant_einstein_frame_action} with $g_s=1$.
 The 2d integrand is just a repackaging of $1/\kappa^2$, and it is likely that $\hat C_3, \hat C_4$ do not furnish independent degrees of freedom, as has been discussed in \cite{Tseytlin:1996ne}.
 
 \paragraph{The Volume of the Torus}
