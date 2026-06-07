@@ -26,13 +26,30 @@ To perform the worldvolume electromagnetic duality transformation, one promotes 
 \Lambda^{mn} = \epsilon^{mnkl}\partial_k \tilde A_l.
 \end{equation}
 Eliminating $\mathcal F_{mn}$ through its now algebraic equation of motion leaves the dual action, expressed in terms of the dual field strength $\tilde F_{mn} = 2\partial_{[m}\tilde A_{n]}$.
-It was shown \cite{Tseytlin:1996it} that as one performs the electromagnetic duality transformation, the D3 action \eqref{D3 action} is invariant only if one simultaneously performs the following SL(2, Z) bulk transformation:
+It was shown \cite{Tseytlin:1996it} that the action is invariant only if the bulk background simultaneously undergoes an SL(2, Z) transformation; we derive this explicitly.
+To quadratic order in $\mathcal F_2$ the gauge sector of \eqref{D3 action} reads, in form notation,
 \begin{equation}
-e^{-\Phi}\to \frac{1}{e^{-\Phi}+e^\Phi C^2},\quad
-C\to -\frac{C e^\Phi}{e^{-\Phi}+e^\Phi C^2},\quad
-B_{\mu\nu} \to C_{\mu\nu},\quad
-C_{\mu\nu}\to -B_{\mu\nu}.
+\int\left[\frac{e^{-\Phi}}{2}\,\mathcal F_2\wedge\star\mathcal F_2+\frac{C}{2}\,\mathcal F_2\wedge\mathcal F_2+\hat C_2\wedge\mathcal F_2\right],\qquad \mathcal F_2 = dA+\hat B_2,
 \end{equation}
+that is, Maxwell theory whose complexified coupling is the bulk axio-dilaton $\tau = C+ie^{-\Phi}$: the NSNS field $\hat B_2$ enters through $\mathcal F_2$, and the RR field $\hat C_2$ as a linear source.
+The multiplier term is $\int \tilde F_2\wedge\mathcal F_2$, and varying the now-independent $\mathcal F_2$ gives the algebraic relation
+\begin{equation}
+e^{-\Phi}\star\mathcal F_2 + C\,\mathcal F_2 = -(\tilde F_2+\hat C_2).
+\end{equation}
+On the (anti-)self-dual parts $\star\mathcal F_2^{\pm}=\pm i\,\mathcal F_2^{\pm}$ (so $\star^2=-1$), this reads
+\begin{equation}
+(\tilde F_2+\hat C_2)^{\pm}=-(C\pm ie^{-\Phi})\,\mathcal F_2^{\pm}=\{\,-\tau\,\mathcal F_2^{+},\ -\bar\tau\,\mathcal F_2^{-}\,\}.
+\end{equation}
+In the dual frame $\tilde F_2$ is the fundamental field strength, so the dual action is again of the form \eqref{D3 action} with $dA+\hat B_2$ replaced by $\tilde F_2+\hat C_2$ and the coupling inverted; since dualising twice returns $-(dA+\hat B_2)$, the new RR form is $-\hat B_2$. Altogether the background undergoes the SL(2, Z) S-transformation
+\begin{equation}
+\begin{aligned}
+&\tau\to-\frac{1}{\tau}, \quad\text{i.e.}\quad
+e^{-\Phi}\to \frac{1}{e^{-\Phi}+e^\Phi C^2},\quad
+C\to -\frac{C e^\Phi}{e^{-\Phi}+e^\Phi C^2},\\
+&B_2 \to C_2,\qquad C_2\to -B_2.
+\end{aligned}
+\end{equation}
+The nonlinear Born--Infeld terms do not affect this conclusion: the Born--Infeld determinant is invariant under the Legendre transform \cite{Tseytlin:1996it}, so the full action \eqref{D3 action} returns to its original form under this transformation.
 Since the action is also invariant under the axion shift $C \to C+1$, the symmetry is the full SL(2, Z). Each worldvolume SL(2, Z) transformation thus maps directly to a bulk type IIB duality transformation.
 The bulk generator $T: \tau\to \tau+1$ corresponds to $\theta\to \theta + 2\pi$ on the D3 worldvolume, for the complexified coupling $\tau_{YM}\equiv \frac{\theta}{2\pi} + \frac{4\pi i}{g^2}$.
 Meanwhile, the bulk generator $S:\tau\to-1/\tau$ is mapped to the electromagnetic duality transformation on the worldvolume field strengths.
