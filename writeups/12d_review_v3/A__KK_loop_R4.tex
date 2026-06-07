@@ -1,0 +1,70 @@
+\section{Direct evaluation of the KK-loop $R^4$ coefficient}
+\label{sec:KK loop R4}
+In Section \ref{sec:KK modes} we noted that the four-point KK-loop integral may be evaluated either by the shortcut of adding a spectator dimension to the known 11d-on-$T^2$ results \cite{Green:1997as}, or directly by Poisson resummation followed by zeta-function renormalization.
+Here we carry out the direct evaluation, which makes explicit both why the modular coupling $f_0(\tau,\bar\tau)$ is reproduced, and why this reproduction is intrinsically nine-dimensional.
+
+We start from the Schwinger representation of the one-loop four-graviton amplitude with the KK tower of a 12d field on $T^2$ running inside,
+\begin{equation}
+\mathcal{A}_4
+\propto \sum_{(m,n)}\int_{\Lambda^{-2}}^\infty
+\frac{d\lambda}{\lambda^{3/2}}\,
+e^{-\lambda M_{m,n}^2}\,
+P(s,t;\lambda),\quad
+M_{m,n}^2=\frac{|m+n\tau|^2}{R^2\tau_2^2},
+\label{eq:KK-schwinger-appendix}
+\end{equation}
+with $P(s,t;\lambda)=\int_0^1 d\rho_3\int_0^{\rho_3}d\rho_2\int_0^{\rho_2}d\rho_1\,e^{-\lambda M(s,t;\rho)}$ the ordered-simplex integral of the box.
+The leading $R^4$ coefficient is the low-energy limit $s,t,u\to0$, in which $P(s,t;\lambda)\to P(0,0;\lambda)=\tfrac{1}{3!}=\tfrac16$ becomes the constant simplex volume, so that the coefficient is the lattice sum
+\begin{equation}
+\mathcal{C}=\sum_{(m,n)\neq(0,0)}\int_0^\infty \frac{d\lambda}{\lambda^{3/2}}\,e^{-\lambda M_{m,n}^2}.
+\label{eq:KK-coeff}
+\end{equation}
+The $(m,n)=(0,0)$ massless mode is excluded: it produces the non-analytic massless exchange rather than the analytic $R^4$ term.
+
+\paragraph{Proper-time integral.}
+We regulate \eqref{eq:KK-coeff} by analytic continuation in the proper-time power, defining
+\begin{equation}
+I(s)\equiv\sum_{(m,n)\neq(0,0)}\int_0^\infty d\lambda\,\lambda^{s-1}\,e^{-\lambda M_{m,n}^2}
+=\Gamma(s)\sum_{(m,n)\neq(0,0)}\big(M_{m,n}^2\big)^{-s}
+=\Gamma(s)\,R^{2s}\,\tau_2^{\,s}\,E_s(\tau),
+\label{eq:I-of-s}
+\end{equation}
+where we used $\sum_{(m,n)\neq0}|m+n\tau|^{-2s}=\tau_2^{-s}E_s(\tau)$ and introduced the non-holomorphic Eisenstein series
+\begin{equation}
+E_s(\tau)\equiv\sum_{(m,n)\neq(0,0)}\frac{\tau_2^{\,s}}{|m+n\tau|^{2s}},
+\end{equation}
+which converges for $\mathrm{Re}\,s>1$ and is defined elsewhere by analytic continuation.
+The coefficient \eqref{eq:KK-coeff} is the value at $s=-\tfrac12$ (the measure $\lambda^{-3/2}=\lambda^{s-1}$),
+\begin{equation}
+\mathcal{C}=I(-\tfrac12)=\Gamma(-\tfrac12)\,R^{-1}\,\tau_2^{-1/2}\,E_{-1/2}(\tau).
+\end{equation}
+Analytic continuation discards the power-law UV divergence at $\lambda\to0$ regulated by $\Lambda$ in \eqref{eq:KK-schwinger-appendix}; the discarded piece is the would-be higher-dimensional $R^4$ counterterm.
+
+\paragraph{Poisson resummation.}
+Poisson resummation of the sum over $m$ at fixed $n$ is encoded in the functional equation of the completed Eisenstein series $E_s^\ast(\tau)\equiv\pi^{-s}\Gamma(s)\zeta(2s)E_s(\tau)$,
+\begin{equation}
+E_s^\ast(\tau)=E_{1-s}^\ast(\tau).
+\end{equation}
+Evaluating at $s=-\tfrac12$, so that $1-s=\tfrac32$, and using $\Gamma(\tfrac32)=\tfrac{\sqrt\pi}{2}$, $\Gamma(-\tfrac12)=-2\sqrt\pi$, $\zeta(-1)=-\tfrac{1}{12}$, gives
+\begin{equation}
+E_{-1/2}(\tau)=\frac{3\zeta(3)}{\pi^2}\,E_{3/2}(\tau).
+\end{equation}
+With this normalization the constant (zero Fourier mode) part of $E_{3/2}$ is
+\begin{equation}
+E_{3/2}(\tau)=2\zeta(3)\,\tau_2^{3/2}+\frac{2\pi^2}{3}\,\tau_2^{-1/2}+(\text{exponentially suppressed instanton terms})=f_0(\tau,\bar\tau),
+\end{equation}
+which is precisely the modular coupling $f_0(\tau,\bar\tau)$ of \eqref{eq:f_0 Eisenstein}.
+Hence
+\begin{equation}
+\mathcal{C}=\Gamma(-\tfrac12)\,R^{-1}\,\tau_2^{-1/2}\,\frac{3\zeta(3)}{\pi^2}\,f_0(\tau,\bar\tau)
+=-\frac{6\zeta(3)}{\pi^{3/2}R\,\tau_2^{1/2}}\,f_0(\tau,\bar\tau)\ \propto\ f_0(\tau,\bar\tau).
+\end{equation}
+The single KK-loop sum thus reproduces the entire $f_0$: the tree ($2\zeta(3)\tau_2^{3/2}$) and genus-one ($\tfrac{2\pi^2}{3}\tau_2^{-1/2}$) perturbative terms are its constant part, and the D(-1) instanton series is carried by its exponentially suppressed Fourier modes.
+
+\paragraph{Why the weight is nine-dimensional.}
+The modular weight $\tfrac32$ is fixed entirely by the proper-time power $\lambda^{-3/2}$.
+For a one-loop box ($4$ propagators) in $d$ noncompact dimensions the measure scales as $\lambda^{\,3-d/2}$, so $\lambda^{-3/2}$ corresponds to $d=9$, i.e. eleven-dimensional supergravity on $T^2$.
+This is why the spectator-dimension shortcut is legitimate: the computation is intrinsically nine-dimensional, with the tenth dimension a passive spectator.
+Had the loop instead run in a genuine $d=10$, as a literal twelve-to-ten dimensional statement would require, the measure would be $\lambda^{-2}$, i.e. $\mathcal{C}=I(-1)$, and the functional equation would map $E_{-1}\!\to\!E_{2}$ --- the wrong modular weight, accompanied by the $\Gamma(-1)$ pole that signals the logarithmic running of $R^4$ in even dimensions.
+The KK-loop reproduction of $f_0\,t_8t_8R^4$ therefore probes the established eleven-to-nine dimensional relation \cite{Green:1997as}, consistent with $t_8t_8R^4$ not being an intrinsically ten-dimensional term.
+A genuinely ten-dimensional diagnostic requires an amplitude sensitive to all ten momenta, such as $\epsilon_{10}\epsilon_{10}R^4$, which first appears at five points.
