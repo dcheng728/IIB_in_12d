@@ -6,6 +6,10 @@ __pycache__
 *.blg
 *.synctex.gz
 *.DS_Store
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
 
 # LaTeX build output directories
 **/latex_outputs/

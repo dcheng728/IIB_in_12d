@@ -6,6 +6,7 @@
 % (Recap: Perturbative String Theory and Higher-Derivative Supergravity)
 % ============================================================
 
+\section{Scratch}
 \subsection{Recap: Perturbative String Theory and Higher-Derivative Supergravity}
 Higher-derivative corrections to supergravity are most efficiently obtained not from Feynman diagrams, but from the low-energy expansion of string amplitudes.
 The perturbative expansion of string amplitudes is organized by two parameters: $\alpha'$, governing the derivative expansion of the low-energy effective action, and $g_s$, weighting the genus expansion of the worldsheet. An $n$-point amplitude admits the expansion
@@ -93,4 +94,244 @@ the factor of $2$ from $\hat F_4\wedge\hat F_4$ halves $\tfrac14\to\tfrac18$, an
 The display identity reads $\tfrac12\int\hat C_4\hat F_4\hat F_4 = +Vol(T_2)\int C_4\wedge H_3\wedge F_3$.
 With this orientation the Hodge dual flips sign, $*_{12}F_5 = -(*_{10}F_5)\wedge dz_1\wedge dz_2 = -\hat F_7$ for self-dual $F_5$,
 so the self-duality relation reads $\hat F_7 = -*_{12}\hat F_5 \Leftrightarrow F_5 = *_{10}F_5$ (and $*_{12}d\hat C_4 = -\hat F_7$).
-All fixes applied to the main text. Independent of any external $|F|^2$ normalization (the $|\hat F_4|^2$ kinetic check matched exactly).}
+All fixes applied to the main text. Independent of any external $|F|^2$ normalization (the $|\hat F_4|^2$ kinetic check matched exactly).
+
+% ============================================================
+% Verification of Section 6.3 caveat:
+%   the F1/D1/NS5/D5 uplifts do NOT solve the 12d Einstein equation.
+%   Clean proof via the Stelle (Sec 6.1) electric-solution warp factors,
+%   avoiding a direct 12d Ricci computation.
+% ============================================================
+
+\subsection*{Verification: brane uplifts are not 12d solutions (warp-exponent argument)}
+
+\paragraph{Genuine 12d electric brane.}
+The 12d theory of Sec.~6.2 is pure gravity plus the 4-form $\hat F_4$, with \emph{no} dilaton.
+The Sec.~6.1 electric solution with $D=12$, an $n=4$ form (so worldvolume $d=n-1=3$, transverse
+$\tilde d = D-d-2 = 7$) and $\alpha=0$ has
+\begin{equation}
+\Delta = \alpha^2 + \frac{2 d\tilde d}{D-2} = \frac{2\cdot 3\cdot 7}{10} = \frac{42}{10},
+\end{equation}
+hence warp exponents
+\begin{equation}
+-\frac{4\tilde d}{\Delta(D-2)} = -\frac{28}{42} = -\frac23
+\quad(\text{worldvolume } t,x_1,z_1),
+\qquad
++\frac{4 d}{\Delta(D-2)} = \frac{12}{42} = \frac27
+\quad(\text{9 transverse}),
+\end{equation}
+so a genuine 12d electric 3-brane sourced by $\hat F_4$ would be
+\begin{equation}
+ds^2 = H^{-2/3}\big(-dt^2+dx_1^2+dz_1^2\big) + H^{2/7}\big(dx_8^2 + dz_2^2\big),
+\qquad \nabla^2_{9}H = 0 .
+\end{equation}
+
+\paragraph{The F1 uplift differs.}
+The F1 uplift of the main text is
+\begin{equation}
+ds^2 = H^{-3/4}(-dt^2+dx_1^2) + H^{1/4}dx_8^2 + H^{-1/2}dz_1^2 + H^{1/2}dz_2^2 .
+\end{equation}
+Comparing warps:
+\begin{center}
+\begin{tabular}{l|cc}
+direction & genuine 12d 3-brane & F1 uplift\\\hline
+$t,x_1$ & $H^{-2/3}$ & $H^{-3/4}$\\
+$z_1$ & $H^{-2/3}$ & $H^{-1/2}$\\
+$x_8$ (transv.) & $H^{2/7}$ & $H^{1/4}$\\
+$z_2$ & $H^{2/7}$ & $H^{1/2}$
+\end{tabular}
+\end{center}
+A genuine solution warps $(t,x_1,z_1)$ \emph{uniformly} by $H^{-2/3}$; the uplift splits them
+($H^{-3/4}$ vs $H^{-1/2}$). Hence the F1 uplift does \emph{not} solve the 12d Einstein equation
+$R_{MN}=S_{MN}[\hat F_4]$.
+
+\paragraph{What it is instead.}
+The F1 uplift is the 10d F1 (Einstein-frame) solution times a unit-area torus,
+$g_{z_1z_1}g_{z_2z_2}=H^{-1/2}H^{1/2}=1$, whose radius ratio $g_{z_1z_1}/g_{z_2z_2}=H^{-1}=e^{2\phi}$
+geometrizes the dilaton; the $H^{-3/4}/H^{1/4}$ warps are exactly the 10d F1 warps. So it solves
+the \emph{10d} equations of motion, repackaged. The same holds for D1/NS5/D5, which are obtained
+from F1 by the torus $S$-rotation and the 12d Hodge duality (the orbit
+F1\,$\to$\,D1\,$\to$\,NS5\,$\to$\,D5).
+\textbf{Note:} the earlier ``$R_{\mu\nu}=S_{\mu\nu}$ with $n=3,D=10$'' phrasing is exact only for
+constant dilaton (flat torus, $R^{(12)}_{\mu\nu}=R^{(10)}_{\mu\nu}$); with the dilaton geometrized
+into a warped torus it is not a literal identity, which is why the warp-exponent argument is preferred.
+
+% ============================================================
+% SYMBOLIC VERIFICATION via src/sugra  (SymPy)
+%   scripts:  src/examples/R_reduction_check.py
+%             src/examples/F1_12d_uplift_check.py
+% ============================================================
+
+\section*{Symbolic verification (Sec.~6.2--6.3) with \texttt{src/sugra}}
+
+\subsection*{(I) Does the 12d repackaged action reduce to the 10d IIB action?}
+
+\textbf{Yes.} The non-trivial sector is gravity. For the block-diagonal ansatz
+$\hat g = g_{\rm base}\oplus\hat g_{ab}(\tau)$ with the unit-determinant coset block
+$\hat g_{ab}=\tfrac{1}{\tau_2}\!\left(\begin{smallmatrix}1&\tau_1\\\tau_1&\tau_1^2+\tau_2^2\end{smallmatrix}\right)$,
+the 12d Ricci scalar must satisfy
+\begin{equation}
+\hat R = R_{\rm base} - \tfrac12\,\frac{|\partial\tau|^2}{\tau_2^2}.
+\end{equation}
+Checked symbolically (\texttt{R\_reduction\_check.py}) with a flat base ($R_{\rm base}=0$) and the
+algebraically-independent profiles $\tau_1=\sin x_0$, $\tau_2=e^{x_0}$: \texttt{SymPy} returns
+\[
+\hat R = -\tfrac12\big(\cos^2 x_0\,e^{-2x_0}+1\big),\qquad
+\hat R - \Big(\!-\tfrac12\tfrac{(\partial\tau_1)^2+(\partial\tau_2)^2}{\tau_2^2}\Big) = 0 .
+\]
+The coefficient is exactly $\tfrac12$. The remaining sectors were checked by hand:
+$|\hat F_4|^2 = e^{-\Phi}|H_3|^2+e^{\Phi}|F_3-CH_3|^2$,
+$|\tilde{\hat F}_7|^2=|\tilde F_5|^2$, and
+$\tfrac18\!\int\hat C_4\wedge\hat F_4\wedge\hat F_4 \to -\tfrac{1}{4\kappa^2}\!\int C_4\wedge H_3\wedge F_3$.
+So the Sec.~6.2 action reduces to the Einstein-frame IIB action ($g_s=1$).
+
+\subsection*{(II) Do the brane uplifts solve the 12d Einstein equation of that action?}
+
+For F1, D1, NS5, D5 one has $\tilde{\hat F}_7=0$ and the CS term vanishes, so the Sec.~6.2
+action is pure 12d gravity $+\hat F_4$, with Einstein equation $R_{MN}=S_{MN}[\hat F_4]$
+($n=4$, $D_{\rm trace}=12$). Results (\texttt{F1\_12d\_uplift\_check.py}):
+
+\begin{itemize}
+\item[(B)] \textbf{Control.} The genuine 12d electric membrane (warps $H^{-2/3}$ on $(t,x_1,z_1)$,
+$H^{2/7}$ on the $9$ transverse dims, flux $\tfrac{2}{\sqrt\Delta}H^{-1}$ with $\Delta=\tfrac{21}{5}$,
+$H$ harmonic in $9$) satisfies $R_{MN}=S_{MN}$ on \emph{all $12$ components}. (Validates the code.)
+\item[(A)] \textbf{F1 uplift} (warps $H^{-3/4}|H^{1/4}|H^{-1/2}|H^{1/2}$, flux $H^{-1}$, $H$ harmonic
+in $8$): \emph{mismatch on every component}. E.g. $R_{tt}=\tfrac{3H'^2}{8H^3}$ vs
+$S_{tt}=\tfrac{7H'^2}{20H^3}$; and the torus components $R_{z_1}=-\tfrac{H'^2}{4H^{11/4}}$,
+$R_{z_2}=+\tfrac{H'^2}{4H^{7/4}}$ are not matched by $S_{z_az_b}$. \emph{The F1 uplift does not
+solve the 12d Einstein equation.}
+\item[(C)] \textbf{F1 uplift with 10d weights} ($n_{\rm eff}=3$, $D_{\rm trace}=10$): the
+$t,x_1,y_i$ components now \emph{match}, but $z_1,z_2$ still fail. I.e. the uplift solves the
+\emph{10d} Einstein equations; the only equations it violates are the torus-direction components
+$\hat R_{z_az_b}=S_{z_az_b}$, which have no 10d counterpart.
+\end{itemize}
+
+\textbf{Conclusion.} The Sec.~6.2 action reduces to IIB \emph{as a 10d functional} (torus frozen),
+and the uplifts solve those 10d equations. They do \emph{not} solve the 12d Einstein equation
+obtained by varying $\hat g_{MN}$ as a dynamical 12d metric; the failure is localized precisely to
+the torus directions. This is the sharp, verified form of the ``repackaging, not a true 12d theory''
+statement.
+
+\subsection*{(III) Decomposing the torus-block failure (\texttt{F1\_torus\_decomp.py})}
+
+The torus metric depends on the moduli only through $\hat g_{ab}(\tau)$, so the torus-block Einstein
+equations are not independent of the axio-dilaton EOM: $\delta S/\delta\tau_i =
+(\delta S/\delta\hat g_{ab})(\partial\hat g_{ab}/\partial\tau_i)$. There are three torus components
+($z_1z_1,z_1z_2,z_2z_2$) but only two moduli $\tau_1,\tau_2$ plus the volume $\sigma$
+($\det\hat g_{ab}=e^{2\sigma}$) that the ansatz freezes to $1$. For the F1 uplift ($\tau_1=0$,
+genuine $n=4$, $D=12$):
+\[
+E_{z_1z_1}=R_{z_1z_1}-T_{z_1z_1}=\frac{H'^2}{10\,H^{11/4}},\qquad
+E_{z_2z_2}=\frac{H'^2}{10\,H^{7/4}},
+\]
+and, with $g^{z_1z_1}=H^{1/2}$, $g^{z_2z_2}=H^{-1/2}$,
+\[
+\underbrace{g^{z_1z_1}E_{z_1z_1}-g^{z_2z_2}E_{z_2z_2}}_{\text{volume-preserving }(\tau_2)\text{ direction}} = 0,
+\qquad
+\underbrace{g^{z_1z_1}E_{z_1z_1}+g^{z_2z_2}E_{z_2z_2}}_{\text{volume-changing (radion) direction}} = \frac{H'^2}{5\,H^{9/4}}\neq 0.
+\]
+The volume-preserving combination is the 10d axion+dilaton EOM (the trace term cancels here, so it is
+weight-independent), and it \emph{holds}. The single failing equation is the torus-volume (radion)
+modulus, sourced by $|F|^2\sim H'^2$. Freezing $\det\hat g_{ab}=1$ is thus not a consistent
+truncation, and that one scalar equation is the entire obstruction to the uplift being a genuine 12d
+solution; the axio-dilaton sector itself is perfectly consistent.
+
+The same structure holds with the 10d trace weights ($n_{\rm eff}=3$, $D_{\rm trace}=10$): there
+$E_{z_az_a}=H'^2/(8H^{\cdots})$, the volume-preserving combination is again $0$, and the radion
+combination is $H'^2/(4H^{9/4})$. Only the radion coefficient depends on the weights; the dilaton
+combination vanishes either way.
+
+\paragraph{Can the mismatch be reconciled?} Partly. The volume-preserving (axio-dilaton) part is
+\emph{exactly} the satisfied 10d $\tau$-EOM, so that part is reconciled. The irreducible piece is the
+single radion equation $\delta S/\delta\sigma\propto H'^2\neq 0$, which has no 10d counterpart. It is
+reconciled \emph{iff} the torus volume is treated as non-dynamical (the Sec.~6.2 stance: the action is
+a 10d functional, $\sigma$ frozen), in which case $\delta S/\delta\sigma=0$ is simply not imposed and
+the uplift is a bona fide solution of the actual (10d) variational problem; the nonzero residual is
+then just the constraint force on a frozen modulus. If instead $\sigma$ is dynamical, the radion EOM
+must hold, it does not, and the $10+2$ ansatz is not a consistent truncation. This is the precise
+boundary between ``a 10d solution repackaged in 12d notation'' and ``a genuine 12d solution.''
+
+\subsection*{(IV) Discussion of the 10d-weight check (C)}
+
+The diagnostic that makes the structure transparent compares the \emph{full 12d} Ricci tensor
+$R_{MN}$ of the F1 uplift against the flux stress tensor evaluated with \emph{10d weights}
+($n_{\rm eff}=3$, $D_{\rm trace}=10$, $\Phi=0$). The motivation for these weights is that
+$\hat F_4 = H_3\wedge dz_1$ carries only the degrees of freedom of a 10d 3-form, so the trace term
+$\tfrac{n_{\rm eff}-1}{D_{\rm trace}-2}|F|^2$ natural to it is the 10d-3-form one. The component
+output is
+\begin{verbatim}
+  [OK] t    R = 3*H'^2/(8*H^3)
+  [OK] x1   R = -3*H'^2/(8*H^3)
+  [OK] y0..y7  R = (H'^2 r^2 - 4 H'^2 y_i^2)/(8 H^2 r^2)
+  [XX] z1   R = -H'^2/(4*H^(11/4))
+  [XX] z2   R = +H'^2/(4*H^(7/4))
+\end{verbatim}
+
+\paragraph{The ten physical directions pass.} For $t,x_1,y_0,\dots,y_7$ one finds $R_{MN}=T_{MN}$
+exactly. These are the ten directions that exist in 10d, and the equation they satisfy is the
+\emph{10d type IIB Einstein equation} for the F1 string: the dilaton stress
+$\tfrac12\partial_m\Phi\partial_n\Phi$ that would appear on the matter side in 10d is here supplied
+by the curvature of the (geometrized) torus inside $R_{MN}^{(12)}$, while the flux supplies the
+$H_3$ stress. So this block is a direct check that the uplift's 10d content is precisely the
+ordinary 10d F1 solution.
+
+\paragraph{What the 10d weights are telling us.} Imposing the \emph{genuine} 12d form-field
+Einstein equation ($n=4$, $D_{\rm trace}=12$) component by component is the \emph{wrong} variational
+problem for a constrained embedding: it treats $\hat g_{MN}$ as twelve independent fields, which the
+ansatz does not (the torus block is the fixed function $\hat g_{ab}(\tau)$, $\det=1$). Against that
+criterion (run (A)) the uplift fails on all twelve components. The correct procedure is to vary the
+\emph{embedded} fields $g_{mn},\tau,B_2,\dots$; doing so returns the 10d IIB equations of motion,
+which the brane solutions satisfy (verified directly in 10d, \texttt{full\_recheck.py}). The
+``$10$d weights'' that make ten components agree in the diagnostic (C) are therefore not an ad hoc
+concession but a reflection of the same fact: $\hat F_4=H_3\wedge dz_1$ contracts through its single
+torus leg and gravitates as a 10d 3-form (cf.\ the genuine 12d membrane's inequivalent warps
+$-2/3,\,2/7$). With the embedded variation the ten physical equations and the axio-dilaton EOM hold;
+only the radion --- a direction the embedding does not contain --- is left over.
+
+\paragraph{The two torus directions fail --- but reducibly.} $z_1,z_2$ have no 10d counterpart, so
+$R_{z_az_b}=T_{z_az_b}$ are genuinely new equations. As shown in (III) they decompose as
+\[
+g^{z_1z_1}E_{z_1z_1}-g^{z_2z_2}E_{z_2z_2}=0\ \ (\text{axio-dilaton EOM, satisfied}),\qquad
+g^{z_1z_1}E_{z_1z_1}+g^{z_2z_2}E_{z_2z_2}=\tfrac{H'^2}{4H^{9/4}}\neq 0\ \ (\text{radion}).
+\]
+The opposite signs of $R_{z_1}<0$ and $R_{z_2}>0$ are the imprint of the two radii
+$g_{z_1z_1}=H^{-1/2},\,g_{z_2z_2}=H^{1/2}$ scaling inversely (unit volume), i.e. of the geometrized
+dilaton. The mismatch is therefore \emph{not} a sickness of the solution and \emph{not} a failure of
+the axio-dilaton sector: it is entirely the equation of motion of the frozen torus-volume modulus.
+
+\paragraph{How it is reconciled.} The radion residual is $\delta S/\delta\sigma \propto H'^2$ --- the
+``force'' on the volume modulus $\sigma$, switched on by the brane gradient. Whether this is a true
+inconsistency depends on a single modelling choice:
+\begin{itemize}
+\item[(i)] \textbf{Torus volume non-dynamical} (the Sec.~6.2 stance: after the $\int_{T_2}$ the action
+is a 10d functional and $\sigma$ is fixed by $\det\hat g_{ab}=1$). Then $\delta S/\delta\sigma=0$ is
+\emph{never imposed} --- it is not one of the equations of the variational problem --- so there is no
+inconsistency at all, and the uplift is a bona fide solution of the actual (10d) equations. The
+nonzero residual is then merely the constraint force holding the frozen modulus in place. \emph{This
+is how the mismatch is reconciled.}
+\item[(ii)] \textbf{Torus volume dynamical} (treat Sec.~6.2 as genuine 12d gravity). Then
+$\delta S/\delta\sigma=0$ must hold; it does not; so the uplift is not a solution and the $10+2$
+ansatz is not a consistent truncation --- $\sigma$ would roll, sourced by $H'^2$.
+\end{itemize}
+As $H'\to 0$ (no brane) the radion residual vanishes, so the obstruction is sourced entirely by the
+brane: the flat-torus vacuum is fine, and only the brane gradient excites the frozen modulus.
+
+\paragraph{Summary: what the quotes mean.} The upshot is constructive. Substituting the $10+2$
+ansatz into the Sec.~6.2 action returns the IIB action (sector by sector, (I)), so varying the
+embedded fields $g_{mn},\tau,B_2,C_2,C_4$ gives the IIB equations of motion --- which every IIB brane
+solution satisfies. \emph{This is precisely the content of the quotes in ``12d uplift'' and ``12d
+solution'':} the configurations solve the equations of the embedded (constrained) action, equivalently
+the 10d IIB EOM, but not the equations of \emph{unconstrained} 12d gravity. The latter contain one
+extra equation with no 10d counterpart --- the radion $\delta S/\delta\sigma\propto|\hat F_4|^2$,
+conjugate to the torus volume the embedding holds fixed. The recipe is uniform, and the radion source
+$|\hat F_4|^2$ sorts its images into two tiers:
+\begin{itemize}
+\item \textbf{No 4-form flux} (axio-dilaton sector: D7, D(-1)) --- the radion source vanishes, so the
+uplift solves even the unconstrained 12d equations: a \emph{genuine} 12d solution (the KK-monopole and
+pp-wave of Sec.~4).
+\item \textbf{With 4-form flux} (F1, D1, NS5, D5) --- the radion is sourced, so the uplift is an
+effective ``12d solution'' in the embedded sense only.
+\end{itemize}
+Thus the quotes are doing exactly the work established above: ``$12$d solution'' $=$ solution of the
+embedded action ($=$ IIB solution), promoted to a genuine 12d solution precisely when no 4-form flux
+is excited.
