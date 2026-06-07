@@ -5,7 +5,8 @@ If the type IIB theory admits certain 12d interpretation, such interpretation, a
 
 In this section, we review the current understandings in SL(2, Z) as arising from higher-derivative corrections, and their 12d interpretations.
 We will begin by reviewing how one obtains higher-derivative corrections in supergravity from perturbative string theory, most importantly how the SL(2, Z) invariance arises non-perturbatively from the D(-1) backgrounds.
-Then we discuss current understandings on 12d interpretations of SL(2, Z), and identify certain directions in advancing them.
+We then discuss a potential parallel, between type IIA and type IIB, where the D0 and D(-1) backgrounds are effectively accounted for by loops of higher-dimensional KK modes.
+We conclude by discussing how certain higher-derivative corrections of the type IIB axio-dilaton sector can be written in a 12d covariant form, and the limitations of such an interpretation.
 
 \subsection{Recap: Perturbative String Theory and Higher-Derivative Supergravity}
 {\color{orange}
@@ -105,6 +106,67 @@ f_0(\tau,\bar\tau)
 \end{equation}
 thereby restoring the SL(2, Z) duality symmetry.
 
+\subsection{KK-modes and D-brane Backgrounds}
+We saw above how summing over the D(-1) backgrounds completes the perturbative $R^4$ corrections into the Eisenstein series $f_0(\tau,\bar\tau)$, thereby restoring SL(2, Z).
+Before turning to the 12d repackaging of the effective action, we point out a closely related observation: the supergravity KK-modes on a torus act as an effective repackaging of the D0 and D(-1) backgrounds in string path integrals.
+
+We begin in 12d, with coordinates ($x^\mu,y^1,y^2)$, after identifying
+\begin{equation}
+y^1\to y^1+2\pi R,\quad
+(y^1,y^2)\to (y^1+2\pi R\tau_1,y^2+2\pi R\tau_2)
+\end{equation}
+for some radius $R$, we can Fourier expand a scalar in 12d on $T_2$:
+\begin{equation}
+\Phi(x^\mu,y^1,y^2)
+=\sum_{m,n}\Phi_{m,n}(x^\mu) \times\exp
+\left[
+\frac{i}{R\tau_2}\left(m\tau_2y^1 + (n-m\tau_1)y^2\right)
+\right].
+\end{equation}
+The massive modes are
+\begin{equation}
+[-\nabla^2_{10}-\nabla^2_2]\phi_{p,m,n}
+=\left(p_{10}^2+M_{m,n}^2\right)\phi_{p,m,n},\quad
+M^2_{m,n}
+= \frac{m^2}{R^2}+\frac{(n-m\tau_1)^2}{R^2\tau_2^2}
+=\frac{|n-m\tau|^2}{R^2\tau_2^2}.
+\end{equation}
+For 4-point amplitudes in 10d, we may evaluate contributions from loops of the infinite tower of massive KK-modes using Schwinger proper time
+\cite{Green:1997as,Beccaria:2023hhi}
+\begin{equation}
+\begin{aligned}
+\mathcal{A}_4
+\propto \sum_{n,m}\int_{\Lambda^{-2}}^\infty
+\frac{d\lambda}{\lambda^{3/2}}
+e^{-\lambda \frac{|n-m\tau|^2}{R^2\tau_2^2}}
+P(s,t;\lambda),\quad
+P(s,t;\lambda)
+=\int_0^1d\rho_3 \int_0^{\rho_3}d\rho_2\int_0^{\rho_2} d\rho_1e^{-\lambda M(s,t;\rho)},\\
+M(s,t;\rho)=s\rho_1\rho_2+t\rho_2\rho_3+u\rho_1\rho_3 + t(\rho_1-\rho_2),\quad
+s+t+u=0.
+\end{aligned}
+\label{4-point Schwinger parameter}
+\end{equation}
+To evaluate $\mathcal{A}_4$ above, one performs Poisson resummations followed by zeta-function renormalization, and a low-energy expansion over $s,t,u$.
+But there is a shortcut of adding a spectator dimension to known results of 11d amplitudes on a torus \cite{Green:1997as}.
+Either way, one finds
+\begin{equation}
+\begin{aligned}
+\mathcal{A}_4
+&\propto  f_0(\tau,\bar\tau)(s^2+t^2+u^2)+...\\
+&\sim f_0(\tau,\bar\tau)t_8t_8R^4+....
+\end{aligned}
+\end{equation}
+Viewed from string theory, this is the effective action at genus-1 with the D(-1) background.
+In other words, the tower of KK-modes on a torus acts as a surrogate for the D(-1) background.
+This is in parallel with the 10d type IIA supergravity, where the KK modes on $S_1$ running in a loop produce the D0 background in the type IIA strings \cite{Green:1997as}.
+
+We do not wish to overclaim.
+The point we are making is that what used to be a relation between 11d and 9d \cite{Green:1997as} is perfectly compatible with that between 12d and 10d.
+But this might just arise from $t_8t_8 R^4$ not being an intrinsically 10d term.
+It is worth exploring amplitudes that clearly signal 10d momenta, e.g. $\epsilon_{10}\epsilon_{10}R^4$ at 5-point.
+One may attempt to evaluate KK-loop contributions to 5-point amplitudes, using the 5-point Schwinger proper time formula analogous to \eqref{4-point Schwinger parameter}, as given in \cite{Minasian:2015bxa,Green:1999by,Liu:2022bfg}.
+
 \subsection{12d Effective Corrections}
 We begin by reviewing the known relations between type IIB and 12d, using a somewhat more general ``bottom-up" approach.
 The type IIB axio-dilaton action, at the two-derivative level, can be written as
@@ -160,7 +222,7 @@ The answer does not appear to be a clearcut yes or no, and the goal of this sect
 The 4-point 8-derivative effective action can be written \cite{Liu:2025uqu,Minasian:2015bxa,Policastro:2008hg} as
 \begin{equation}
 \begin{aligned}
-\frac{L_{\text{4pt}}}{\alpha\, f_{0}(\tau,\overline{\tau})}
+\frac{L_{\text{4pt}}}{\alpha  f_{0}(\tau,\overline{\tau})}
 &= t_{8}t_{8} \biggl[R^4+6R^{2}\left(4|\delta\nabla P|^{2}+|\nabla G_{3}|^{2}\right)+24|\delta \nabla P|^{2}|\nabla G_{3}|^{2}\\
 &+12R\left(\delta \nabla P(\nabla\overline{G}_{3})^{2}+D\overline{P}(\nabla{G}_{3})^{2}\right)\biggr]\\
 &+1536 |\nabla_m P_n \nabla^m P^n|^2\\
