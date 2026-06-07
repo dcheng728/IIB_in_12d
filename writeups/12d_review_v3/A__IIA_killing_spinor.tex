@@ -1,0 +1,135 @@
+\section{Explicit check of the 11d to 10d Killing spinor reduction}
+\label{sec:IIA killing spinor reduction}
+We verify explicitly that a covariantly-constant spinor of 11d supergravity reduces, on the standard Kaluza-Klein ansatz, to a Killing spinor of the 10d type IIA theory in the gravity, KK-vector and dilaton sector, reproducing the gravitino variation \eqref{IIA Killing spinor equation}.
+We label the eleventh coordinate $x^{10}$ and its flat (frame) index likewise by $10$; $\Gamma^{10}$ is then the 10d chirality operator usually written $\Gamma^{11}$.
+
+The reduction ansatz is
+\begin{equation}
+G_{MN}
+=e^{-2\phi/3}
+\begin{pmatrix}
+    g_{\mu\nu}+e^{2\phi} A_\mu A_\nu & e^{2\phi}A_\mu \\
+    e^{2\phi} A_\nu  & e^{2\phi}
+\end{pmatrix},
+\end{equation}
+which it is helpful to expand as
+\begin{align}
+ds^2
+&= e^{-2\phi/3}
+g_{\mu\nu} dx^\mu dx^\nu
++e^{4\phi /3}(dx^{10} + A_\mu dx^\mu)^2\\
+&= (e^{-\phi/3}e^a)(e^{-\phi/3} e^b)\eta_{ab}+[e^{2\phi/3}(dx^{10}+A_\mu dx^\mu)]^2 .
+\end{align}
+Let $\hat E^A=\hat E^A{}_B\,dx^B$ denote the 11d frame and $e^a=e^a{}_\mu dx^\mu$ the 10d frame. Reading off,
+\begin{equation}
+\hat E^a = e^{-\phi/3}e^a = e^{-\phi/3}e^a{}_\mu\, dx^\mu,\qquad
+\hat E^{10}=e^{2\phi/3}(dx^{10}+A_\mu dx^\mu).
+\end{equation}
+
+\paragraph{A note on the hats.}
+The indices $0,\dots,9$ appear both in 11d and 10d, so for a contracted object such as a scalar $T$ there is no ambiguity, but when indices are displayed there is: $T_{ab}$ may refer to an 11d or a 10d tensor, and the two differ because the frames differ by $e^{-\phi/3}$. Concretely,
+\begin{equation}
+T =\hat T_{ab}\,\hat E^a \hat E^b=T_{ab}\,e^a e^b
+\;\implies\;
+\hat T_{ab}=e^{2\phi/3}T_{ab},\qquad \hat \eta_{bc} = e^{2\phi/3}\eta_{bc}.
+\end{equation}
+We use a hat for 11d frame objects and the corresponding plain symbol for the 10d ones throughout; likewise $\hat\partial_a\equiv \hat E^\mu{}_a\partial_\mu=e^{\phi/3}e^\mu{}_a\partial_\mu=e^{\phi/3}\partial_a$.
+
+\paragraph{Spin connection.}
+The torsion-free Cartan equations split as
+\begin{equation}
+d\hat E^a+\hat W^a{}_b\wedge \hat E^b + \hat W^a{}_{10} \wedge \hat E^{10} = 0,\qquad
+d\hat E^{10}+ \hat W^{10}{}_{a}\wedge \hat E^a = 0 .
+\end{equation}
+Solving the second equation first,
+\begin{align}
+d\hat E^{10}
+&= d(e^{2\phi/3})\wedge (A+dx^{10}) + e^{2\phi/3} \,dA\\
+&=\tfrac{2}{3}\,d\phi\wedge \hat E^{10} + \tfrac{1}{2}e^{2\phi/3}\, \hat F_{ab}\, \hat E^a \wedge \hat E^b\\
+&=-\left[
+\tfrac{2}{3}\hat\partial_b\phi \,\hat E^{10}+\tfrac{1}{2}e^{2\phi/3}\hat F_{ba}\hat E^a
+\right]\wedge \hat E^b ,
+\end{align}
+with $\hat F_{ab}=e^{2\phi/3}F_{ab}$ and $F_{ab}=e^\mu{}_a e^\nu{}_b F_{\mu\nu}$, $F=dA$. Hence
+\begin{align}
+\hat W_{b,10}
+&=
+\underbrace{\left(-\tfrac{2}{3}e^{\phi/3}\partial_b\phi\right)}_{\hat W_{10,b,10}} \hat E^{10}
++ \underbrace{\left(\tfrac{1}{2}e^{4\phi/3}F_{ab}\right)}_{\hat W_{a,b,10}}\hat E^a .
+\end{align}
+For the first Cartan equation,
+\begin{align}
+d\hat E^a
+&= -\tfrac{1}{3}d\phi \wedge \hat E^a+ e^{-\phi/3}\,de^a
+=-\left[w^a{}_b-\tfrac{1}{3}\hat \partial_b\phi\, \hat E^a\right]\wedge \hat E^b ,
+\end{align}
+so that, substituting $\hat W^{10}{}_b$ and fixing $\hat W^a{}_b$ by antisymmetry,
+\begin{align}
+\hat W_{bc}
+&=\underbrace{e^{\phi/3}\left[w_{abc}+\tfrac{2}{3}e^\nu{}_{[b} \eta_{c]a}\partial_\nu \phi\right]}_{\hat W_{abc}} \hat E^a
++\underbrace{\left[-\tfrac{1}{2}e^{4\phi/3}F_{bc}\right]}_{\hat W_{10,bc}}\hat E^{10}.
+\end{align}
+Every component agrees with eq.~(22.19) of \cite{Ortin:2015hya}.
+Contracting with gamma matrices (and using $\{\Gamma^b,\Gamma^{10}\}=0$, so $\Gamma^{b,10}=\Gamma^b\Gamma^{10}$),
+\begin{align}
+\hat W_{aBC}\Gamma^{BC}
+&=e^{\phi/3}\left[w_{abc}\Gamma^{bc}-\tfrac{2}{3}\Gamma_a{}^{b}\partial_b\phi\right]
++e^{4\phi/3}F_{ab}\Gamma^{b}\Gamma^{10},\\
+\hat W_{10,BC}\Gamma^{BC}
+&=-\tfrac{1}{2}e^{4\phi/3}F_{bc}\Gamma^{bc}-\tfrac{4}{3}e^{\phi/3}\partial_\mu\phi \,\Gamma^\mu \Gamma^{10},
+\end{align}
+matching eqs.~(8.44)--(8.45) of \cite{Becker:2006dvp}.
+
+\paragraph{Covariant derivatives.}
+The 11d covariant derivative acting on a spinor (taken independent of $x^{10}$) then gives
+\begin{align}
+\hat\nabla_{10}\,\epsilon
+&=\tfrac{1}{4}\hat W_{10,BC}\Gamma^{BC}\epsilon
+=\tfrac{1}{4}e^{\phi/3}\left[
+-\tfrac{1}{2}e^{\phi}F_{bc}\Gamma^{bc}-\tfrac{4}{3}\partial_\mu\phi \,\Gamma^\mu \Gamma^{10}
+\right]\epsilon,\\
+\hat\nabla_a\,\epsilon
+&=e^{\phi/3}e^\mu{}_a
+\left[
+\nabla_\mu
+-\tfrac{1}{6}\Gamma_\mu{}^\nu\partial_\nu\phi+\tfrac{1}{4}e^\phi F_{\mu\nu}\Gamma^\nu\Gamma^{10}
+\right]\epsilon ,
+\end{align}
+with $\nabla_\mu=\partial_\mu+\tfrac14 w_{\mu bc}\Gamma^{bc}$ the 10d spinor covariant derivative.
+
+\paragraph{Reduction of the Killing spinor condition.}
+A Killing spinor of 11d gravity is covariantly constant, $\hat\nabla_{10}\epsilon=\hat\nabla_a\epsilon=0$. From $\hat\nabla_{10}\epsilon=0$, and using $(\Gamma^{10})^2=1$,
+\begin{equation}
+\Gamma^b\partial_b\phi\,\epsilon=\tfrac{3}{8}e^\phi F_{bc}\Gamma^{bc}\Gamma^{10}\epsilon .
+\label{eq:dilatino-relation}
+\end{equation}
+We now eliminate $\partial\phi$ from $\hat\nabla_a\epsilon=0$. Writing $\Gamma_\mu{}^\nu\partial_\nu\phi=\Gamma_\mu(\Gamma^\nu\partial_\nu\phi)-\partial_\mu\phi$ and inserting \eqref{eq:dilatino-relation},
+\begin{equation}
+\left(-\tfrac{1}{6}\Gamma_\mu{}^\nu\partial_\nu\phi\right)\epsilon
+=
+\left(\tfrac{1}{6}\partial_\mu\phi-\tfrac{1}{8}e^\phi F_{\mu\rho}\Gamma^\rho \Gamma^{10}-\tfrac{1}{16}e^\phi F_{\nu\rho}\Gamma_\mu{}^{\nu\rho}\Gamma^{10}\right)\epsilon ,
+\end{equation}
+where we used $\Gamma_\mu\Gamma^{\nu\rho}=\Gamma_\mu{}^{\nu\rho}+2\delta_\mu^{[\nu}\Gamma^{\rho]}$ and $F_{\nu\rho}\,2\delta_\mu^{[\nu}\Gamma^{\rho]}=2F_{\mu\nu}\Gamma^\nu$. Substituting into $\hat\nabla_a\epsilon=0$, the two $F_{\mu\nu}\Gamma^\nu\Gamma^{10}$ terms combine ($-\tfrac18+\tfrac14=+\tfrac18$) to give
+\begin{equation}
+\nabla_a\epsilon=e^{\phi/3}e^\mu{}_a
+\left(
+\nabla_\mu+\tfrac{1}{6}\partial_\mu\phi
++\tfrac{1}{8}e^\phi F_{\mu\nu}\Gamma^\nu\Gamma^{10}-\tfrac{1}{16}e^\phi F_{\nu\rho}\Gamma_\mu{}^{\nu\rho}\Gamma^{10}
+\right)\epsilon=0 .
+\label{eq:assembled}
+\end{equation}
+
+\paragraph{Final gamma-matrix reduction.}
+The rank-one term $\tfrac18 F_{\mu\nu}\Gamma^\nu$ does not stand alone: it recombines with the rank-three term into a single flux-slash acting on $\Gamma_\mu$. Using $\Gamma^{\nu\rho}\Gamma_\mu=\Gamma_\mu{}^{\nu\rho}-2\delta_\mu^{[\nu}\Gamma^{\rho]}$ and again $F_{\nu\rho}\,2\delta_\mu^{[\nu}\Gamma^{\rho]}=2F_{\mu\nu}\Gamma^\nu$,
+\begin{align}
+\tfrac{1}{8}F_{\mu\nu}\Gamma^\nu-\tfrac{1}{16}F_{\nu\rho}\Gamma_\mu{}^{\nu\rho}
+&=-\tfrac{1}{16}F_{\nu\rho}\left(\Gamma_\mu{}^{\nu\rho}-2\delta_\mu^{[\nu}\Gamma^{\rho]}\right)\\
+&=-\tfrac{1}{16}F_{\nu\rho}\,\Gamma^{\nu\rho}\Gamma_\mu .
+\end{align}
+Finally, redefining $\epsilon\to e^{-\phi/6}\epsilon$ removes the $\tfrac16\partial_\mu\phi$ term, leaving
+\begin{equation}
+\left(
+\nabla_\mu -\tfrac{1}{16}e^\phi F_{\nu\rho}\,\Gamma^{\nu\rho}\Gamma_\mu \,\Gamma^{10}
+\right)\epsilon=0 ,
+\end{equation}
+which is precisely the type IIA gravitino variation \eqref{IIA Killing spinor equation}. Thus covariantly-constant spinors in 11d are Killing spinors of 10d type IIA in the gravity, KK-vector and dilaton sector.
