@@ -135,11 +135,13 @@ One may adopt complex tangent frame coordinates $z, \overline{z}$, with vielbein
     -\tau & 1 \\ -\overline{\tau} & 1
 \end{pmatrix}$, the nonvanishing components of the 12d Riemann tensor are \cite{Liu:2025uqu}
 \begin{equation}
+\begin{gathered}
 \widehat{R}_{mrns} = R_{mrns},\quad
 R_{z\overline{z}z\overline{z}} = -\frac14 |P|^2,\quad
-R_{mnz\overline{z}} = P_{[m}\overline{P}_{n]},\quad
-R_{mzn\overline{z}} = - \frac{P_m \overline{P}_n}{2}\quad
+R_{mnz\overline{z}} = P_{[m}\overline{P}_{n]},\\
+R_{mzn\overline{z}} = - \frac{P_m \overline{P}_n}{2},\quad
 R_{mznz} = \frac{D_m P_n}{2}.
+\end{gathered}
 \label{eq:12d-Riemann-complex}
 \end{equation}
 Substituting $P_m\overline{P}_n$ in \eqref{eq:IIB-two-derivative} with $R_{mzn\overline{z}}$, we find
@@ -155,7 +157,7 @@ Hence we may map solutions of 12d Einstein gravity, such as the pp-wave \cite{Ts
 What we have been discussing is the classical, two-derivative, two field type IIB theory, which is the leading term in the $\alpha'$ expansion of the type IIB string theory.
 Under quantum corrections, \eqref{eq:IIB-two-derivative} receives higher order and higher derivative corrections, which can be computed from string perturbation theory and non-perturbative saddles.
 It is natural to ask whether such corrections can also be understood from 12d perspective, e.g. at 8-derivatives?
-The answer does not appear to be a clearcut yes or no, and the goal of this section is to discuss the current understandings.
+The answer does not appear to be a clear-cut yes or no, and the goal of this section is to discuss the current understandings.
 
 \subsection{Type IIB at 4 points}
 
@@ -179,8 +181,8 @@ Restricting to the gravity + scalar sector of \eqref{eq:PTaction}, we have
 \end{equation}
 In the 12d perspective $\tau$ is embedded in the metric.
 Suppose certain axio-dilaton couplings in the 10d effective action admits a 12d interpretation, one shall be able to rewrite such terms using 12d-covariant differential operators acting on the metric, i.e. the 12d Riemann tensor \eqref{eq:12d-Riemann-complex}. 
-Once we had replaced the 10d fields and their derivatives with their 12d counterparts, we may reexamine the resulting expression, and see if the terms group into a natuaral pattern as a result of index splitting.
-We had carried out this exercise at the two-derivative level in \eqref{eq:2-derivative-index-splitting}, we now perform the same exercise at the 8-derivative level to \eqref{eq:4pt-gravity-axiodilaton}, as a "bottom-up" approach to review the results of \cite{Minasian:2015bxa}, by arriving at their results in an alternative way.
+Once we have replaced the 10d fields and their derivatives with their 12d counterparts, we may reexamine the resulting expression, and see if the terms group into a natural pattern as a result of index splitting.
+We carried out this exercise at the two-derivative level in \eqref{eq:2-derivative-index-splitting}; we now perform the same exercise at the 8-derivative level on \eqref{eq:4pt-gravity-axiodilaton}, as a ``bottom-up'' rederivation of the results of \cite{Minasian:2015bxa}.
 
 Let us begin by expanding the $t_8t_8$ contractions.
 The $t_8t_8$ contraction with tensors of symmetries of the Riemann tensor is known \cite{Policastro:2008hg} to be 
@@ -204,13 +206,13 @@ The computation is done with Cadabra, which agrees with the results of \cite{Min
 + 4 \nabla_n P_m \nabla^r \overline{P}^s R^{mt}{}_{ru} R^{nu}{}_{st} \\
 &+ 4 \nabla_m P_n \nabla^r \overline{P}^s R_{tsur} R^{untm}
 + 4 |\nabla_m P_n \nabla^m P^n|^2 \\
-&- 4 \nabla_m P_n \nabla^n \overline{P}^r R_{rsuv} r^{smuv}
+&- 4 \nabla_m P_n \nabla^n \overline{P}^r R_{rsuv} R^{smuv}
 + \frac{1}{2} \nabla_{m} P_{n} \nabla^{m}\overline{P}^{n}R^{rstu}R_{rstu} + O(R^2 P^3).
 \end{aligned}
 \end{equation}
 
-The next step is to replace the 10d terms with their 12d counterparts. The only 10d terms that remains are $\nabla P$.
-we note that because the only 12d Riemann tensor linear in $P$ is $R_{mznz}$ and its conjugate, so we have
+The next step is to replace the 10d terms with their 12d counterparts. The only 10d terms that remain are $\nabla P$.
+We note that, because the only 12d Riemann tensor linear in $P$ is $R_{mznz}$ and its conjugate, we have
 \begin{equation}
 \widehat{R}_{ambn} \widehat{R}^{a}{}_{r}{}^{b}{}_{s} = 2 \text{Re} D_m P_n D_r \overline{P}_s + O(P^3).
 \end{equation}
@@ -241,21 +243,20 @@ For example
 \widehat{R}_{MNRS}\widehat{R}^{MNRS} = R_{mrns} R^{mnrs} + 4 \widehat{R}_{ambn} \widehat{R}^{ambn} + O(P^3),
 \end{equation}
 the factor of 4 arises from the 4 ways to choose 2 torus legs in $\widehat{R}_{MNRS}$ that contribute to 4-pt amplitudes.
-Hence the last term in \eqref{eq:4pt-gravity-axiodilaton-12d-replaced} is compatible with arising a 12d contraction $\frac{1}{32} (R_{MNRS} R^{MNRS})^2  \in t_8 t_8 \widehat{R}^4$.
+Hence the last term in \eqref{eq:4pt-gravity-axiodilaton-12d-replaced} is compatible with arising from a 12d contraction $\frac{1}{32} (R_{MNRS} R^{MNRS})^2  \in t_8 t_8 \widehat{R}^4$.
 Upon further investigation, one finds
 \begin{equation}
 \begin{aligned}
 \widehat{R}_{PNQM} \widehat{R}^{PRQS} \widehat{R}^{MT}{}_{RU} \widehat{R}^{NU}{}_{ST}
-&=
-R_{pnqm} R^{prqs} R^{mt}{}_{ru} R^{nu}{}_{st}
-+ 2 \widehat{R}_{anbm} \widehat{R}^{arbs} R^{mt}{}_{ru} R^{nu}{}_{st}+ \ldots\\
+&= R_{pnqm} R^{prqs} R^{mt}{}_{ru} R^{nu}{}_{st}\\
+&\quad + 2 \widehat{R}_{anbm} \widehat{R}^{arbs} R^{mt}{}_{ru} R^{nu}{}_{st}+ \ldots\\
 \widehat{R}_{MPNQ} \widehat{R}^{QRPS} \widehat{R}_{TSUR} \widehat{R}^{UNTM}
-&= R_{mpnq} R^{qrps} R_{tsur} R^{untm}
-+ 4 \widehat{R}_{ambn} \widehat{R}^{bras} R_{tsur} R^{untm}
-+ 2 \widehat{R}_{ambn} \widehat{R}^{bras} \widehat{R}_{csdr} \widehat{R}^{dncm}+ \ldots\\
+&= R_{mpnq} R^{qrps} R_{tsur} R^{untm}\\
+&\quad + 4 \widehat{R}_{ambn} \widehat{R}^{bras} R_{tsur} R^{untm}\\
+&\quad + 2 \widehat{R}_{ambn} \widehat{R}^{bras} \widehat{R}_{csdr} \widehat{R}^{dncm}+ \ldots\\
 \widehat{R}_{MNRS} \widehat{R}^{RSNP} \widehat{R}_{PQUV} \widehat{R}^{QMUV}
-&= R_{mnrs} R^{rsnp} R_{pquv} R^{qmuv}
- + 4 \widehat{R}_{mban} \widehat{R}^{anbp} R_{pquv} R^{qmuv}+ \ldots\\
+&= R_{mnrs} R^{rsnp} R_{pquv} R^{qmuv}\\
+&\quad + 4 \widehat{R}_{mban} \widehat{R}^{anbp} R_{pquv} R^{qmuv}+ \ldots\\
 \widehat{R}_{MNRS} \widehat{R}^{RS}{}_{PQ} \widehat{R}^{QMUV} \widehat{R}^{NP}{}_{UV}
 &= R_{mnrs} R^{rs}{}_{pq} R^{qmuv} R^{np}{}_{uv}+ \ldots\\
 \widehat{R}_{MNRS} \widehat{R}^{MNPQ} \widehat{R}_{PQUV} \widehat{R}^{UVRS}
@@ -292,7 +293,9 @@ We had previously worked with, from \eqref{eq:12d-Riemann-complex}, the 12d Riem
 \end{pmatrix}$, we find the following components of the 12d Riemann tensor
 
 \medskip
-\renewcommand{\arraystretch}{1.8}
+{\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.6}
 \begin{tabular}{c|cccccc}
 \toprule
 $\widehat{R}_{ambn}$ 
@@ -310,6 +313,7 @@ $\widehat{R}_{2m1n}$ & $-\frac{1}{2\tau_2}$ & $\frac{\tau_1}{2\tau_2^2}$ & $\fra
 $\widehat{R}_{2m2n}$ & $-\frac{\tau_1}{\tau_2}$ & $\frac{\tau_1^2-\tau_2^2}{2\tau_2^2}$ & $\frac{\tau_1^2-3\tau_2^2}{4\tau_2^3}$ & $\frac{\tau_2^2-3\tau_1^2}{4\tau_2^3}$ & $\frac{\tau_1}{\tau_2^2}$ & $\frac{\tau_1}{\tau_2^2}$ \\
 \bottomrule
 \end{tabular}
+}
 \medskip
 
 As for the rest of the non-vanishing Riemann tensor components,
