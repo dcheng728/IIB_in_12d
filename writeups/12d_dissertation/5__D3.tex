@@ -4,40 +4,52 @@ In particular, the bosonic sector of the D3 low-energy action takes the form \ci
 \begin{equation}
 \begin{aligned}
 S_{D3}
-&=\int d^4x \sqrt{-\det\big(\hat{g}_{mn} + e^{-\hat \Phi/2} (\mathcal{F}_2)_{mn}\big)}\\
-&\quad+\int \Big(\hat C_4 + \hat C_2\wedge \mathcal{F}_2 + \tfrac{1}{2} C \mathcal{F}_2\wedge\mathcal{F}_2\Big)
+&=\int d^4x \sqrt{-\det\big({g}_{mn} + e^{-\Phi/2} (\mathcal{F}_2)_{mn}\big)}\\
+&\quad+\int \Big(C_4 + C_2\wedge \mathcal{F}_2 + \tfrac{1}{2} C \mathcal{F}_2\wedge\mathcal{F}_2\Big)
 +\text{higher order},\qquad
-\mathcal{F}_2 \equiv dA+\hat B_2 .
+\mathcal{F}_2 \equiv dA+B_2 .
 \end{aligned}
 \label{D3 action}
 \end{equation}
-Here hats denote bulk fields pulled back onto the brane worldvolume, $m,n$ label worldvolume indices, $(\mathcal{F}_2)_{mn}$ are the components of the worldvolume 2-form $\mathcal{F}_2$, and $C$ is the RR axion.
+Throughout, the bulk supergravity fields are understood to be pulled back onto the brane worldvolume; $m,n$ label worldvolume indices, $(\mathcal{F}_2)_{mn}$ are the components of the worldvolume 2-form $\mathcal{F}_2$, and $C$ is the RR axion.
 The vector $A_m$ is the dynamical gauge potential on the brane worldvolume.
 It was shown \cite{Tseytlin:1996it} that the action is invariant only if the bulk background simultaneously undergoes an SL(2, Z) transformation; we derive this explicitly.
 To quadratic order in $\mathcal F_2$ the gauge sector of \eqref{D3 action} reads, in form notation,
 \begin{equation}
-\int\left[\frac{e^{-\Phi}}{2}\mathcal F_2\wedge\star\mathcal F_2+\frac{C}{2}\mathcal F_2\wedge\mathcal F_2+\hat C_2\wedge\mathcal F_2\right],\qquad \mathcal F_2 = dA+\hat B_2,
+\int\left[\frac{e^{-\Phi}}{2}\mathcal F_2\wedge\star\mathcal F_2+\frac{C}{2}\mathcal F_2\wedge\mathcal F_2+C_2\wedge\mathcal F_2\right],\qquad \mathcal F_2 = dA+B_2,
 \end{equation}
-that is, Maxwell theory whose complexified coupling is the bulk axio-dilaton $\tau = C+ie^{-\Phi}$: the NSNS field $\hat B_2$ enters through $\mathcal F_2$, and the RR field $\hat C_2$ as a linear source.
-To dualise, we promote $\mathcal F_2$ to an independent field and enforce its Bianchi identity with a dual potential $\tilde A$ as Lagrange multiplier, whose field strength $\tilde F_2 = d\tilde A$ enters through the term $\int \tilde F_2\wedge\mathcal F_2$. Varying the now-independent $\mathcal F_2$ gives the algebraic relation
+that is, Maxwell theory whose complexified coupling is the bulk axio-dilaton $\tau = C+ie^{-\Phi}$: the NSNS field $B_2$ enters through $\mathcal F_2$, and the RR field $C_2$ as a linear source.
+To dualize, we promote $\mathcal F_2$ to an independent field and add a Lagrange multiplier 
 \begin{equation}
-e^{-\Phi}\star\mathcal F_2 + C\mathcal F_2 = -(\tilde F_2+\hat C_2).
+\tilde{F}_2 \wedge (\mathcal{F}_2 - B_2)
 \end{equation}
-On the (anti-)self-dual parts $\star\mathcal F_2^{\pm}=\pm i\,\mathcal F_2^{\pm}$ (so $\star^2=-1$), this reads
+to enforce $d(\mathcal F_2-B_2) = 0$, where $\tilde F_2 = d\tilde A$ is the field strength of the dual potential $\tilde A$.
+Varying the now-independent $\mathcal F_2$ instead gives the algebraic relation
 \begin{equation}
-(\tilde F_2+\hat C_2)^{\pm}=-(C\pm ie^{-\Phi})\,\mathcal F_2^{\pm}=\{\,-\tau\,\mathcal F_2^{+},\ -\bar\tau\,\mathcal F_2^{-}\,\}.
+e^{-\Phi}\star\mathcal F_2 + C\mathcal F_2 = -(\tilde F_2+C_2).
+\label{D3-integrating-out-mathcal-F}
 \end{equation}
-In the dual frame $\tilde F_2$ is the fundamental field strength, so the dual action is again of the form \eqref{D3 action} with $dA+\hat B_2$ replaced by $\tilde F_2+\hat C_2$ and the coupling inverted; since dualising twice returns $-(dA+\hat B_2)$, the new RR form is $-\hat B_2$. Altogether the background undergoes the SL(2, Z) S-transformation
+We now integrate $\mathcal F_2$ out and ask whether the resultant D3 action is in the form \eqref{D3 action}, with $d\tilde A$ in place of $dA$. 
+Using $\star^2=-1$, we have
+\begin{equation}
+(C+e^{-\Phi}\star)^{-1} = \frac{C-e^{-\Phi}\star}{C^2+e^{-2\Phi}},
+\end{equation}
+so \eqref{D3-integrating-out-mathcal-F} solves to $\mathcal F_2 = -\dfrac{C-e^{-\Phi}\star}{C^2+e^{-2\Phi}}(\tilde F_2+C_2)$. Substituting back, the gauge sector becomes the same Maxwell form for the dual field strength $\tilde F_2+C_2$, with the coupling inverted to $\tau'\equiv C'+ie^{-\Phi'}=-1/\tau$:
 \begin{equation}
 \begin{aligned}
-&\tau\to-\frac{1}{\tau}, \quad\text{i.e.}\quad
-e^{-\Phi}\to \frac{1}{e^{-\Phi}+e^\Phi C^2},\quad
-C\to -\frac{C e^\Phi}{e^{-\Phi}+e^\Phi C^2},\\
-&B_2 \to C_2,\qquad C_2\to -B_2.
+\int\bigg[&\frac{e^{-\Phi'}}{2}(\tilde F_2+C_2)\wedge\star(\tilde F_2+C_2)\\
+&+\frac{C'}{2}(\tilde F_2+C_2)\wedge(\tilde F_2+C_2)-\tilde F_2\wedge B_2\bigg].
 \end{aligned}
 \end{equation}
+We read off that this is in the same form as the D3 action \eqref{D3 action}, with $\tilde A$ in place of $A$, provided we make the following field redefinitions
+\begin{equation}
+\tau\to-\frac{1}{\tau},\qquad
+B_2 \to C_2,\qquad C_2\to -B_2.
+\end{equation}
+This is precisely the $S$ generator of the type IIB bulk SL(2, Z) duality.
+Because the D3 action is also invariant under the axion shift $C\to C+1$, the full SL(2, Z) duality is realized on the D3 worldvolume.
+
 The nonlinear Born--Infeld terms do not affect this conclusion: the Born--Infeld determinant is invariant under the Legendre transform \cite{Tseytlin:1996it}, so the full action \eqref{D3 action} returns to its original form under this transformation.
-Since the action is also invariant under the axion shift $C \to C+1$, the symmetry is the full SL(2, Z). Each worldvolume SL(2, Z) transformation thus maps directly to a bulk type IIB duality transformation.
 The bulk generator $T: \tau\to \tau+1$ corresponds to $\theta\to \theta + 2\pi$ on the D3 worldvolume, for the complexified coupling $\tau_{YM}\equiv \frac{\theta}{2\pi} + \frac{4\pi i}{g^2}$.
 Meanwhile, the bulk generator $S:\tau\to-1/\tau$ is mapped to the electromagnetic duality transformation on the worldvolume field strengths.
 Thus the SL(2, Z) duality of $\mathcal N=4$ SYM on the D3 worldvolume is intimately linked to the type IIB SL(2, Z) duality, which acts on the bulk NSNS and RR fields. 
@@ -47,23 +59,47 @@ The analogy is not direct because there is no analogue of the SL(2, Z) duality i
 The D2 action can be written as \cite{Schmidhuber:1996fy,Tseytlin:1996it}
 \begin{equation}
 S_{D2}
-=\int d^3x \sqrt{-e^{-2\hat{\Phi}}\det (\hat{g}_{mn}+\mathcal{F}_{mn})}
-+\frac{1}{6}\epsilon^{mnl}[\hat C_{mnl}-3\hat C_m\mathcal{F}_{nl}],\quad
-\mathcal{F}_{mn}\equiv 2\partial_{[m}A_{n]}-\hat B_{mn}.
+=\int d^3x \sqrt{-e^{-2\Phi}\det (g_{mn}+(\mathcal F_2)_{mn})}
++\int\left(C_3-C_1\wedge\mathcal F_2\right),\qquad
+\mathcal F_2\equiv dA-B_2.
 \end{equation}
-By performing the worldvolume vector-scalar duality transformation, we exchange the worldvolume vector $A_n$ for a scalar $\partial_n y$, and the action becomes
+We dualize the worldvolume vector into a scalar, paralleling the D3 treatment.
+We promote $\mathcal F_2$ to an independent field and enforce $\mathcal F_2 = dA-B_2$ through a Lagrange multiplier, here a scalar $y$,
 \begin{equation}
+\int dy\wedge(\mathcal F_2 + B_2),
+\end{equation}
+whose variation imposes $d(\mathcal F_2 + B_2)=0$.
+Trading the independent $\mathcal F_{mn}$ for its dual vector through $\mathcal F_{mn}=\epsilon_{mnp}v^p$, so that $\tfrac12\mathcal F_{mn}\mathcal F^{mn}=-v_pv^p$, the action becomes
+\footnote{In three dimensions the Born--Infeld determinant collapses: for antisymmetric $\mathcal F_{mn}$ one has $\det(g_{mn}+\mathcal F_{mn})=\det g_{mn}(1+\tfrac12\mathcal F_{mn}\mathcal F^{mn})$, so the DBI term equals $e^{-\Phi}\sqrt{-g}\sqrt{1+\tfrac12\mathcal F_{mn}\mathcal F^{mn}}$.}
+algebraic in $v$,
+\begin{equation}
+S_{D2}=\int d^3x\sqrt{-g}\left[e^{-\Phi}\sqrt{1-v_pv^p}-(C_1-dy)_pv^p\right]+\int\left(C_3 + B_2\wedge dy\right).
+\end{equation}
+Integrating out $v$ using its algebraic equation of motion
+\begin{equation}
+\frac{e^{-\Phi}v_p}{\sqrt{1-v_qv^q}}=-(C_1-dy)_p,
+\label{D2-integrating-out-v}
+\end{equation}
+We find
+\begin{equation}
+S_{D2}=\int d^3x\sqrt{-g}\sqrt{e^{-2\Phi}+(C_1-dy)_p(C_1-dy)^p}+\int\left(C_3 + B_2\wedge dy\right).
+\end{equation}
+Finally, the rank-one identity $\det(a\,g_{mn}+b\,K_mK_n)=a^3\det g_{mn}(1+\tfrac{b}{a}K_pK^p)$ with $a=e^{-2\Phi/3}$, $b=e^{4\Phi/3}$ repackages the integrand into a single determinant,
+\begin{equation}
+\begin{aligned}
 S_{D2}
-=\int d^3 x\sqrt{-\hat{\mathcal{G}}} + \frac{1}{6}\epsilon^{mnl}\hat{\mathcal C}_{mnl},
+&=\int d^3 x\sqrt{-\det\big(e^{-2\Phi/3}g_{mn} + e^{4\Phi/3}(C_1-dy)_m(C_1-dy)_n\big)}\\
+&\quad+ \int\left(C_3 + B_2\wedge dy\right).
+\end{aligned}
 \end{equation}
-with
-\begin{equation}
-\hat{\mathcal G}_{mn} \equiv e^{-2\hat\Phi/3}\hat g_{mn}  + e^{4\hat\Phi/3}(\hat C_m-\partial_my)(\hat C_n-\partial_ny),\quad
-\hat{\mathcal C}_{mnl}\equiv \hat{C}_{mnl} + 3 \hat{B}_{mn}\partial_l y.
-\end{equation}
-We see that if one interprets the worldvolume scalar $y$ as a 10d scalar pulled back onto the D2 worldvolume, then this is precisely the M2 action directly reduced on $S_1$ \cite{Bergshoeff:1987cm,Tseytlin:1996it,Schmidhuber:1996fy}.
+If one interprets the worldvolume scalar $y$ as a 10d scalar pulled back onto the D2 worldvolume, then this is precisely the M2 action directly reduced on $S_1$ \cite{Bergshoeff:1987cm,Tseytlin:1996it,Schmidhuber:1996fy}: the bracketed metric is the standard Kaluza-Klein form, and $C_3+B_2\wedge dy$ the reduction of the 11d three-form.
 
-Given the fundamental role of the M2 brane in 11d supergravity, this analogy suggests that some 3-brane might play an analogous role in a speculative 12d effective description of the type IIB theory.
+Just as the M2 brane reduced on a circle gives the D2, one might hope that in a speculative 12d description the D3 arises from some 3-brane reduced on a two-torus $T^2$.
+A two-torus is built from two circles, and its shape --- their relative size and tilt --- is captured by a single complex number $\tau$.
+Different choices of which two loops to call the basic cycles are physically equivalent, and passing between them changes $\tau$ by SL(2, Z) transformations such as $\tau\to-1/\tau$, leaving the torus itself untouched.
+This is precisely how the SL(2, Z) we found acts on the IIB axio-dilaton, and hence --- through the dualization above --- on the worldvolume gauge coupling.
+It is therefore tempting to guess that the axio-dilaton is the shape of a hidden $T^2$, in which case the self-duality we derived by hand would be automatic: nothing more than the freedom to relabel the torus's two cycles.
+Whether such a torus is really present is the open question, and a closer look at the D3's degrees of freedom shows why it is not straightforward.
 A simple degrees of freedom count suggests that the D3 has enough fields to be embedded in 12d.
 However, its two on-shell bosonic degrees of freedom arise from a gauge field, which makes a direct interpretation in terms of embedding coordinates difficult.
 One can perform a double dimensional reduction of the D3 so that the vector decomposes into two scalars \cite{Jatkar:1996np,Kar:1997cx}, but this simply reproduces the standard relation between M-theory on $T_2$ and 9d supergravity \cite{Green:1997as}.
