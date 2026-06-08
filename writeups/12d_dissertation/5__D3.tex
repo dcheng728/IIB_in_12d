@@ -4,37 +4,24 @@ In particular, the bosonic sector of the D3 low-energy action takes the form \ci
 \begin{equation}
 \begin{aligned}
 S_{D3}
-=\int d^4x
-\Bigg[
-&\sqrt{-\det (\hat{g}_{mn} + e^{-\hat \Phi/2} \mathcal{F}_{mn})}\\
-&+\frac{1}{8}\epsilon^{mnkl}
-\Bigg(
-\frac{1}{3}\hat C_{mnkl}
-+2\hat C_{mn}\mathcal{F}_{kl}
-+C\mathcal{F}_{mn}\mathcal{F}_{kl}
-\Bigg)
-\Bigg]
-+\text{higher order},\\
-&\mathcal{F}_{mn} \equiv\partial_m A_n-\partial_n A_m+\hat B_{mn}.
+&=\int d^4x \sqrt{-\det\big(\hat{g}_{mn} + e^{-\hat \Phi/2} (\mathcal{F}_2)_{mn}\big)}\\
+&\quad+\int \Big(\hat C_4 + \hat C_2\wedge \mathcal{F}_2 + \tfrac{1}{2} C \mathcal{F}_2\wedge\mathcal{F}_2\Big)
++\text{higher order},\qquad
+\mathcal{F}_2 \equiv dA+\hat B_2 .
 \end{aligned}
 \label{D3 action}
 \end{equation}
-Here hats denote bulk fields pulled back onto the brane worldvolume, and $m,n$ label worldvolume indices.
+Here hats denote bulk fields pulled back onto the brane worldvolume, $m,n$ label worldvolume indices, $(\mathcal{F}_2)_{mn}$ are the components of the worldvolume 2-form $\mathcal{F}_2$, and $C$ is the RR axion.
 The vector $A_m$ is the dynamical gauge potential on the brane worldvolume.
-To perform the worldvolume electromagnetic duality transformation, one promotes $\mathcal F_{mn}$ to an independent field and enforces its Bianchi identity through a Lagrange multiplier $\tilde A_l$, the dual vector potential, entering as $\frac{1}{2}\Lambda^{mn}\mathcal F_{mn}$ with
-\begin{equation}
-\Lambda^{mn} = \epsilon^{mnkl}\partial_k \tilde A_l.
-\end{equation}
-Eliminating $\mathcal F_{mn}$ through its now algebraic equation of motion leaves the dual action, expressed in terms of the dual field strength $\tilde F_{mn} = 2\partial_{[m}\tilde A_{n]}$.
 It was shown \cite{Tseytlin:1996it} that the action is invariant only if the bulk background simultaneously undergoes an SL(2, Z) transformation; we derive this explicitly.
 To quadratic order in $\mathcal F_2$ the gauge sector of \eqref{D3 action} reads, in form notation,
 \begin{equation}
-\int\left[\frac{e^{-\Phi}}{2}\,\mathcal F_2\wedge\star\mathcal F_2+\frac{C}{2}\,\mathcal F_2\wedge\mathcal F_2+\hat C_2\wedge\mathcal F_2\right],\qquad \mathcal F_2 = dA+\hat B_2,
+\int\left[\frac{e^{-\Phi}}{2}\mathcal F_2\wedge\star\mathcal F_2+\frac{C}{2}\mathcal F_2\wedge\mathcal F_2+\hat C_2\wedge\mathcal F_2\right],\qquad \mathcal F_2 = dA+\hat B_2,
 \end{equation}
 that is, Maxwell theory whose complexified coupling is the bulk axio-dilaton $\tau = C+ie^{-\Phi}$: the NSNS field $\hat B_2$ enters through $\mathcal F_2$, and the RR field $\hat C_2$ as a linear source.
-The multiplier term is $\int \tilde F_2\wedge\mathcal F_2$, and varying the now-independent $\mathcal F_2$ gives the algebraic relation
+To dualise, we promote $\mathcal F_2$ to an independent field and enforce its Bianchi identity with a dual potential $\tilde A$ as Lagrange multiplier, whose field strength $\tilde F_2 = d\tilde A$ enters through the term $\int \tilde F_2\wedge\mathcal F_2$. Varying the now-independent $\mathcal F_2$ gives the algebraic relation
 \begin{equation}
-e^{-\Phi}\star\mathcal F_2 + C\,\mathcal F_2 = -(\tilde F_2+\hat C_2).
+e^{-\Phi}\star\mathcal F_2 + C\mathcal F_2 = -(\tilde F_2+\hat C_2).
 \end{equation}
 On the (anti-)self-dual parts $\star\mathcal F_2^{\pm}=\pm i\,\mathcal F_2^{\pm}$ (so $\star^2=-1$), this reads
 \begin{equation}
