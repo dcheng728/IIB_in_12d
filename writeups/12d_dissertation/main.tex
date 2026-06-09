@@ -18,27 +18,77 @@ linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 
 
 \title{A 12d Origin of the Type IIB String Theory?}
+\author{Chang Cheng}
+\date{\today}
 
-% \author{\footnote{Email:  }}
-
-% \author{}
-% commented out for double anonymous review
-% \author{
-% \\[2pt]
-% \large{Chang Cheng}\footnote{\href{mailto:chang.cheng24@imperial.ac.uk}{chang.cheng24@imperial.ac.uk}} 
-% \\[10pt]
-% \it{Department of Physics,}\\
-% \it{Imperial College London, SW7 2AZ, U.K.}
-% \\[2pt]
-% }
-
-\date{}
 \begin{document}
-\maketitle
 
+%==============================================================
+%  Title page
+%==============================================================
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\LARGE\bfseries A 12d Origin of the Type IIB String Theory?\par}
+\vspace{1.5cm}
+{\large Chang Cheng\par}
+\vspace{0.3cm}
+{\normalsize\href{mailto:chang.cheng24@imperial.ac.uk}{chang.cheng24@imperial.ac.uk}\par}
+\vspace{1cm}
+{\normalsize Department of Physics\\
+Imperial College London, SW7 2AZ, U.K.\par}
+\vfill
+{\normalsize A thesis submitted in partial fulfilment of the requirements for the degree of Master of Physics and the Diploma of Imperial College London.\par}
+\vspace{1.2cm}
+{\normalsize 15 June 2026\par}
+\vspace{0.4cm}
+% Word count regenerated with: texcount -1 -sum -merge <chapters 1--8>
+% Excludes abstract, equations, bibliography, and appendices, per the project guidelines.
+{\normalsize Word count: 10{,}200 \par}
+\end{titlepage}
+\pagenumbering{roman}
 
+%==============================================================
+%  Abstract
+%==============================================================
+\begin{abstract}
+\noindent
 
+Type IIB string theory possesses a conjectured non-perturbative $SL(2,\mathbb{Z})$ duality whose ten-dimensional origin remains unexplained. This thesis examines the proposal that the duality, and the theory itself, descend from a twelve-dimensional structure. We find that the $12$d interpretation is robust for the axio-dilaton and form-field sectors, but remains effective rather than fundamental.
+\end{abstract}
+
+%==============================================================
+%  Declarations and acknowledgements
+%==============================================================
+\clearpage
+\section*{Declaration of Contributions}
+This thesis examines the proposal that the type IIB string theory has a twelve-dimensional origin, and the work presented in it is my own.
+The greater parts of this thesis reviews existing literature, attributed by citation throughout: the survey of $10+2$d supergravity and superalgebras, the brane interpretations of the axio-dilaton, and the D3-brane worldvolume analysis report results due to others, principally A.~A.~Tseytlin and the works cited therein.
+
+Two results are my own.
+First, the covariant twelve-dimensional repackaging of the type IIB form-field sector in Chapter \ref{sec:covariant-unification}, in which the ten-dimensional self-duality of $F_5$ is realised as a twelve-dimensional Hodge duality.
+Second, the result of Chapter \ref{sec:effective-actions} that the $U(1)$-preserving five-point contact term of \cite{Liu:2025uqu} admits no twelve-dimensional covariant form.
+I performed these derivations and the supporting symbolic-algebra computations, and verified all results presented.
+The synthesis of work scattered across the algebraic, brane, form-field, and effective-action perspectives into a single coherent account, and the line of argument running through the thesis, are also my own.
+
+\section*{Declaration of Generative AI Usage}
+In accordance with Imperial College London's policy on the use of generative AI tools, I declare the following.
+Generative AI assistants (Anthropic's Claude) were used during the research and preparation phases of this thesis to organise and cross-check intermediate steps of derivations, to locate and summarise relevant literature, and to edit prose for clarity and concision.
+Symbolic tensor algebra was carried out with the Cadabra computer-algebra system.
+All physics results, derivations, and conclusions were verified by the author, and the scientific content---including the original contributions described above---is the author's own.
+No AI tool was used to produce results that were not independently checked.
+
+\newpage
+
+\section*{Acknowledgements}
+I am grateful to my family for their presence and support throughout my studies, in particular my parents and my grandparents, who have always believed in me and encouraged me to pursue my passions.
+
+I am grateful to my supervisor, Prof. Arkady Tseytlin, for their guidance and support throughout this project.
+
+\clearpage
 \tableofcontents
+\clearpage
+\pagenumbering{arabic}
 \input{1__introduction}
 \input{2__IIB}
 \input{3__12d_supergravity}
@@ -52,7 +102,9 @@ linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \input{A__dynkin_labels}
 \input{A__DG}
 \input{A__brane_catalog}
-\input{scratch} % TEMPORARY: scratch/verification notes, remove before submission
+\input{A__sl2r_coset}
+\input{A__form_field_reduction}
+% \input{scratch} % TEMPORARY: scratch/verification notes, remove before submission
 
 \bibliographystyle{JHEP}
 \bibliography{references}
@@ -63,4 +115,4 @@ linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 
 % What I learned from this project:
 % - you don't have to check every detail of other people's work. while it is important to understand prior work, you don't have to check every detail. the difficult part is that it is important sometimes to check something to understand it. i guess this is part of the art of doing research.
-% - related to above, at points where you have to check details, don't shy away from the technical work. otherwise you may find yourself not fully understanding something, and 8 months later realized that if you had just pushed yourself a little harder, you would have gotten it. (This is really important and perhaps generalizes to many other things in life.)
+% - related to above, at points where you have to check details, don't shy away from the technical work. otherwise you may find yourself not fully understanding something, and 8 months later realised that if you had just pushed yourself a little harder, you would have gotten it. (This is really important and perhaps generalises to many other things in life.)

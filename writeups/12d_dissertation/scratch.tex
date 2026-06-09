@@ -335,3 +335,26 @@ effective ``12d solution'' in the embedded sense only.
 Thus the quotes are doing exactly the work established above: ``$12$d solution'' $=$ solution of the
 embedded action ($=$ IIB solution), promoted to a genuine 12d solution precisely when no 4-form flux
 is excited.
+
+% ============================================================
+% VERIFICATION (sympy, anaconda python) of the 5-point obstruction (Sec. Effective Actions)
+% Metric: ds^2 = eta_{mn}dx^m dx^n + g_ab(tau) dz^a dz^b,
+%   g_ab = (1/tau2)[[1, tau1],[tau1, tau1^2+tau2^2]], tau1,tau2 functions of x^m.
+%
+% (1) The 12d Riemann components R_{ambn} were recomputed from the metric and AGREE
+%     with the table in the main text, e.g.:
+%       R_{1m1n}: dd2 -> 1/(2 t2^2),  (d t1)^2 -> 1/(4 t2^3),  (d t2)^2 -> -3/(4 t2^3)
+%       R_{2m2n}: dd1 -> -t1/t2, dd2 -> (t1^2-t2^2)/(2 t2^2),
+%                 (d t1)^2 -> (t1^2-3 t2^2)/(4 t2^3), (d t2)^2 -> (t2^2-3 t1^2)/(4 t2^3)
+%     (all four rows checked; full agreement).
+%
+% (2) No-go check. Most general 2-derivative tau-scalar from one Riemann:
+%       S = c^{ab} g^{mn} R_{ambn},  c^{ab} symmetric (alpha,beta,gamma).
+%     Imposing that the box-tau1 and box-tau2 pieces vanish (1 constraint each) leaves a
+%     1-parameter family for which sympy gives:
+%       coeff (d t1)^2 = coeff (d t2)^2 = beta/(2 t1 t2),  coeff (d t1.d t2) = 0
+%     i.e. S \propto (d tau1)^2 + (d tau2)^2 (SAME sign, no cross term) = U(1)-invariant |d tau|^2.
+%     Hence the charge-2 combination P_m P^m \propto (d t1)^2 - (d t2)^2 + 2i d t1 . d t2
+%     (opposite signs + cross term) is NOT representable. Confirms the obstruction.
+% (scripts: /tmp/riem_check.py, /tmp/obstruction_check2.py)
+% ============================================================
