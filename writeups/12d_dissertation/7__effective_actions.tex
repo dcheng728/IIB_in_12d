@@ -113,15 +113,15 @@ Before turning to the 12d repackaging of the effective action, we point out a cl
 
 We begin in 12d, with coordinates ($x^\mu,y^1,y^2)$, after identifying
 \begin{equation}
-y^1\to y^1+2\pi R,\quad
-(y^1,y^2)\to (y^1+2\pi R\tau_1,y^2+2\pi R\tau_2)
+y^1\to y^1+2\pi R_T,\quad
+(y^1,y^2)\to (y^1+2\pi R_T\tau_1,y^2+2\pi R_T\tau_2)
 \end{equation}
-for some radius $R$, we can Fourier expand a scalar in 12d on $T_2$:
+where $R_T$ is an overall radius parameter setting the scale of the torus, we can Fourier expand a scalar in 12d on $T_2$:
 \begin{equation}
 \Phi(x^\mu,y^1,y^2)
 =\sum_{m,n}\Phi_{m,n}(x^\mu) \times\exp
 \left[
-\frac{i}{R\tau_2}\left(m\tau_2y^1 + (n-m\tau_1)y^2\right)
+\frac{i}{R_T\tau_2}\left(m\tau_2y^1 + (n-m\tau_1)y^2\right)
 \right].
 \end{equation}
 The massive modes are
@@ -129,43 +129,61 @@ The massive modes are
 [-\nabla^2_{10}-\nabla^2_2]\phi_{p,m,n}
 =\left(p_{10}^2+M_{m,n}^2\right)\phi_{p,m,n},\quad
 M^2_{m,n}
-= \frac{m^2}{R^2}+\frac{(n-m\tau_1)^2}{R^2\tau_2^2}
-=\frac{|n-m\tau|^2}{R^2\tau_2^2}.
+= \frac{m^2}{R_T^2}+\frac{(n-m\tau_1)^2}{R_T^2\tau_2^2}
+=\frac{|n-m\tau|^2}{R_T^2\tau_2^2}.
 \end{equation}
 For 4-point amplitudes in 10d, we may evaluate contributions from loops of the infinite tower of massive KK-modes using Schwinger proper time
 \cite{Green:1997as,Beccaria:2023hhi}
 \begin{equation}
-\begin{aligned}
 \mathcal{A}_4
 \propto \sum_{n,m}\int_{\Lambda^{-2}}^\infty
 \frac{d\lambda}{\lambda^{3/2}}
-e^{-\lambda \frac{|n-m\tau|^2}{R^2\tau_2^2}}
+e^{-\lambda \frac{|n-m\tau|^2}{R_T^2\tau_2^2}}
 P(s,t;\lambda),\quad
-P(s,t;\lambda)
-=\int_0^1d\rho_3 \int_0^{\rho_3}d\rho_2\int_0^{\rho_2} d\rho_1e^{-\lambda M(s,t;\rho)},\\
-M(s,t;\rho)=s\rho_1\rho_2+t\rho_2\rho_3+u\rho_1\rho_3 + t(\rho_1-\rho_2),\quad
-s+t+u=0.
-\end{aligned}
+P(s,t;\lambda) = \int_{\Delta} d^3\rho  e^{-\lambda M(s,t;\rho)}
 \label{4-point Schwinger parameter}
 \end{equation}
-To evaluate $\mathcal{A}_4$ above, one performs Poisson resummations followed by zeta-function renormalization, and a low-energy expansion over $s,t,u$.
-But there is a shortcut of adding a spectator dimension to known results of 11d amplitudes on a torus \cite{Green:1997as}.
-Either way, one finds
+where the Mandelstam variables $s,t,u$ are defined as usual, the Feynman parameters $\rho_i$ are integrated over the simplex $\Delta \equiv \{0\le\rho_1\le\rho_2\le\rho_3\le1\}$, and $M(s,t;\rho)$ is defined as
 \begin{equation}
-\begin{aligned}
-\mathcal{A}_4
-&\propto  f_0(\tau,\bar\tau)(s^2+t^2+u^2)+...\\
-&\sim f_0(\tau,\bar\tau)t_8t_8R^4+....
-\end{aligned}
+M(s,t;\rho)=s\rho_1\rho_2+t\rho_2\rho_3+u\rho_1\rho_3 + t(\rho_1-\rho_2).
 \end{equation}
-Viewed from string theory, this is the effective action at genus-1 with the D(-1) background.
-In other words, the tower of KK-modes on a torus acts as a surrogate for the D(-1) background.
-This is in parallel with the 10d type IIA supergravity, where the KK modes on $S_1$ running in a loop produce the D0 background in the type IIA strings \cite{Green:1997as}.
+The local higher-derivative terms come from expanding \eqref{4-point Schwinger parameter} for small $s,t,u$.\footnote{The leading coefficient also follows from the shortcut of adding a spectator dimension to the known 11d-on-$T^2$ results \cite{Green:1997as}, but the direct route taken here keeps the dimension dependence explicit.}
+Expanding the Feynman-parameter integral,
+\begin{equation}
+P(s,t;\lambda)
+= \sum_{k=0}^\infty \frac{(-\lambda)^k}{k!}\int_{\Delta} d^3\rho  M(s,t;\rho)^k,
+\end{equation}
+each power of $M\sim(s,t,u)$ carries two derivatives, so a order-$k$ term corresponds to a coupling of the form $D^{2k}R^4$.
+The $R^4$ coupling we are after is the leading ($k=0$) term, for which $M$ drops out and $P$ reduces to the volume of the simplex $\Delta$,
+\begin{equation}
+P(0,0;\lambda) = \int_\Delta d^3\rho = \frac{1}{3!} = \frac{1}{6}.
+\end{equation}
+Replacing $P(s,t;\lambda)$ by this value $\tfrac16$ in the amplitude \eqref{4-point Schwinger parameter} gives its $R^4$ part, which we denote $\mathcal{C}$:
+\begin{equation}
+\mathcal{A}_4\big|_{R^4} \equiv \mathcal{C} \propto \sum_{(m,n)\neq(0,0)} \int_{\Lambda^{-2}}^\infty \frac{d\lambda}{\lambda^{3/2}}  e^{-\lambda M_{m,n}^2},
+\end{equation}
+the massless mode $(m,n)=(0,0)$ being dropped, as it is infrared divergent.
+The proper-time integral is ultraviolet divergent as $\lambda\to0$, a local $R^4$ counterterm regulated by $\Lambda$.
+Its renormalised finite part is fixed by the analytic continuation of $\int_0^\infty d\lambda \lambda^{s-1}e^{-\lambda M^2}=\Gamma(s)(M^2)^{-s}$.
+The measure $\lambda^{-3/2}$ corresponds to $s=-\tfrac12$,\footnote{For a $d$-dimensional loop the box measure is $\lambda^{3-d/2}$: $\lambda^{3}$ from the Jacobian of rescaling the four Schwinger parameters $\lambda_i=\lambda\rho_i$ to the proper time $\lambda$ and the Feynman parameters $\rho_i$, and $\lambda^{-d/2}$ from the loop-momentum Gaussian. The quoted $\lambda^{-3/2}$ is thus $d=9$, with $s=4-\tfrac{d}{2}=-\tfrac12$.} giving 
+\begin{equation}
+\mathcal{C}\propto\Gamma(-\tfrac12)\sum_{(m,n)\neq(0,0)}(M_{m,n}^2)^{1/2}.
+\end{equation}
+Inserting $M_{m,n}^2=|n-m\tau|^2/(R_T^2\tau_2^2)$ and applying the Eisenstein functional equation to the regularised lattice sum,\footnote{
+The sum $\sum_{(m,n)\neq(0,0)}(M_{m,n}^2)^{1/2}\propto\sum|m+n\tau|$ is the value at $s=-\tfrac12$ of the Eisenstein series $E_s(\tau)=\sum_{(m,n)\neq(0,0)}\tau_2^{s}/|m+n\tau|^{2s}$, equal to $R_T^{-1}\tau_2^{-1/2}E_{-1/2}$. With the completed series $E_s^\ast(\tau)\equiv\pi^{-s}\Gamma(s)\zeta(2s)E_s(\tau)$ obeying $E_s^\ast=E_{1-s}^\ast$, the reflection $s=-\tfrac12\to\tfrac32$ gives $E_{-1/2}=\tfrac{3\zeta(3)}{\pi^2}E_{3/2}=\tfrac{3\zeta(3)}{\pi^2}f_0$ (using $\Gamma(-\tfrac12)=-2\sqrt\pi$, $\Gamma(\tfrac32)=\tfrac{\sqrt\pi}{2}$, $\zeta(-1)=-\tfrac{1}{12}$).}
+\begin{equation}
+\mathcal{C} \propto R_T^{-1}\tau_2^{-1/2} f_0(\tau,\bar\tau).
+\label{eq:KK-R4-coefficient}
+\end{equation}
+The prefactor $R_T^{-1}\tau_2^{-1/2}=(R_T^2\tau_2)^{-1/2}=A^{-1/2}$ depends only on the torus area $A=R_T^2\tau_2$, not on the complex structure $\tau$, so the full $\tau$-dependence is carried by the modular-invariant $f_0$.
+A single KK-loop sum thus reproduces the entire $f_0$ of \eqref{eq:f0-eisenstein}: its zero modes are the tree-level and genus-one $R^4$ couplings, and its instanton modes are the D(-1) contributions.
+The KK tower on the torus thus acts as a surrogate for the D(-1) background, in parallel with the 10d type IIA supergravity, where the KK modes on $S_1$ produce the D0 background \cite{Green:1997as}.
+The reproduction is, however, intrinsically nine-dimensional, as only $d=9$ lands on $E_{3/2}=f_0$.
+Had the loop instead run in a genuine $d=10$, as a literal twelve-to-ten-dimensional statement would require, one would have $s=-1$, which the functional equation maps to $E_2$, the wrong modular weight, with the pole of $\Gamma(4-\tfrac{d}{2})=\Gamma(-1)$ signalling the logarithmic running of $R^4$ in even dimensions.
 
 We do not wish to overclaim.
-The point we are making is that what used to be a relation between 11d and 9d \cite{Green:1997as} is perfectly compatible with that between 12d and 10d.
-But this might just arise from $t_8t_8 R^4$ not being an intrinsically 10d term.
-It is worth exploring amplitudes that clearly signal 10d momenta, e.g. $\epsilon_{10}\epsilon_{10}R^4$ at 5-point.
+The KK-loop reproduction of $f_0$ therefore probes the established eleven-to-nine-dimensional relation \cite{Green:1997as}: it is compatible with a twelve-to-ten-dimensional reading but does not establish one, reflecting that the $R^4$ coupling is not an intrinsically 10d quantity.
+A genuinely ten-dimensional diagnostic requires an amplitude sensitive to all ten momenta, such as $\epsilon_{10}\epsilon_{10}R^4$, which first appears at five points.
 One may attempt to evaluate KK-loop contributions to 5-point amplitudes, using the 5-point Schwinger proper time formula analogous to \eqref{4-point Schwinger parameter}, as given in \cite{Minasian:2015bxa,Green:1999by,Liu:2022bfg}.
 
 \subsection{12d Effective Corrections}
