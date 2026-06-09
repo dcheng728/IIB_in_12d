@@ -324,12 +324,12 @@ For the standard Kaluza-Klein ansatz \eqref{string frame KK reduction ansatz}, a
 Hence the 11d covariant constancy condition reduces to
 \begin{equation}
 \begin{aligned}
-\tfrac14 e^{\phi/3}\left[-\tfrac12 e^\phi F_{bc}\Gamma^{bc}-\tfrac43\partial_m\phi\Gamma^m\Gamma^{11}\right]\epsilon &= 0\\
-e^{\phi/3}e^m{}_a\left[\nabla_m-\tfrac16\Gamma_m{}^n\partial_n\phi+\tfrac14 e^\phi F_{mn}\Gamma^n\Gamma^{11}\right]\epsilon &= 0,
+\left[-\tfrac12 e^\phi F_{bc}\Gamma^{bc}-\tfrac43\partial_m\phi\Gamma^m\Gamma^{11}\right]\epsilon &= 0\\
+\left[\nabla_m-\tfrac16\Gamma_m{}^n\partial_n\phi+\tfrac14 e^\phi F_{mn}\Gamma^n\Gamma^{11}\right]\epsilon &= 0,
 \label{IIA spacetime gravitino}
 \end{aligned}
 \end{equation}
-The first equation is algebraic, and using $(\Gamma^{11})^2=1$ it becomes
+The first equation is algebraic in $\epsilon$. Multiplying by $\Gamma^{11}$ and using $(\Gamma^{11})^2=1$, it becomes the type IIA dilatino variation,
 \begin{equation}
 \Gamma^b\partial_b\phi\epsilon=\tfrac38 e^\phi F_{bc}\Gamma^{bc}\Gamma^{11}\epsilon .
 \label{IIA dilatino relation}
@@ -337,7 +337,7 @@ The first equation is algebraic, and using $(\Gamma^{11})^2=1$ it becomes
 We now use \eqref{IIA dilatino relation} to remove $\partial\phi$ from the spacetime equation \eqref{IIA spacetime gravitino}.
 Writing $\Gamma_m{}^n\partial_n\phi=\Gamma_m(\Gamma^n\partial_n\phi)-\partial_m\phi$ and inserting \eqref{IIA dilatino relation}, the flux term it produces combines with the $\tfrac14 e^\phi F_{mn}\Gamma^n\Gamma^{11}$ already present, giving
 \begin{equation}
-\widehat\nabla_a\epsilon=e^{\phi/3}e^m{}_a\left(\nabla_m+\tfrac16\partial_m\phi+\tfrac18 e^\phi F_{mn}\Gamma^n\Gamma^{11}-\tfrac1{16}e^\phi F_{np}\Gamma_m{}^{np}\Gamma^{11}\right)\epsilon ,
+\widehat\nabla_m\epsilon=e^{\phi/3}\left(\nabla_m+\tfrac16\partial_m\phi+\tfrac18 e^\phi F_{mn}\Gamma^n\Gamma^{11}-\tfrac1{16}e^\phi F_{np}\Gamma_m{}^{np}\Gamma^{11}\right)\epsilon ,
 \label{IIA assembled}
 \end{equation}
 where we used $\Gamma_m\Gamma^{np}=\Gamma_m{}^{np}+2\delta_m^{[n}\Gamma^{p]}$.
@@ -345,15 +345,14 @@ The rank-one and rank-three flux terms then recombine into a single flux-slash a
 \begin{equation}
 \tfrac18 F_{mn}\Gamma^n-\tfrac1{16}F_{np}\Gamma_m{}^{np}=-\tfrac1{16}F_{np}\Gamma^{np}\Gamma_m .
 \end{equation}
-Finally, the Weyl rescaling $\epsilon\to e^{-\phi/6}\epsilon$ removes the $\tfrac16\partial_m\phi$ term, leaving the type IIA Killing spinor equation in the gravity, KK-vector and dilaton sector,
+Finally, the Weyl rescaling $\epsilon\to e^{-\phi/6}\epsilon$ removes the $\tfrac16\partial_m\phi$ term, leaving us precisely with the type IIA Killing spinor equation in the gravity, KK-vector and dilaton sector,
 \begin{equation}
 \delta \psi_m =
 \left(
 \nabla_m - \tfrac{1}{16}e^\phi F_{np}\Gamma^{np}\Gamma_m\Gamma^{11}
-\right)\epsilon = 0,
+\right)\epsilon = 0.
 \label{IIA Killing spinor equation}
 \end{equation}
-with $F_{mn}=\partial_m A_n-\partial_n A_m$. This is eq.~(8.51) of \cite{Becker:2006dvp} restricted to vanishing $H_3$ and $F_4$.
 
 \paragraph{From 12d to type IIB.}
 A 12d covariant derivative $\widehat{\nabla}^{(12)}_M\epsilon = 0$ restricted to 10d takes the form
@@ -378,11 +377,12 @@ The 12d covariant derivative \eqref{12d covariant derivative} thus becomes
 \nabla_m -\frac{i}{4}\frac{\partial_m(\tau+\bar\tau)}{\tau-\bar\tau}\Gamma_{10,11}
 \right]\epsilon.
 \end{equation}
-After performing a similarity transformation one obtains precisely the axio-dilaton sector Killing spinor equation \eqref{9+1 IIB axio-dilaton Killing spinor equations}.
-Here we have used that, on the Euclidean torus,
+We note that on a Euclidean torus
 \begin{equation}
 \Gamma_{10,11} = \Gamma_{10}\Gamma_{11},\quad
 (\Gamma_{10,11})^2 =-\Gamma_{10}^2\Gamma_{11}^2 = -1,
 \end{equation}
-so that $\Gamma_{10,11}$ is, up to a similarity transformation, $i$ times the U(1) generator.
-This would also hold had we compactified a non-compact torus instead, to obtain a Euclidean type IIB theory: one then compactifies on a 1+1 torus, and a factor of $i$ arises both in identifying the U(1) generator from $\Gamma_{11,12}$ and in defining the Euclidean compact scalar $C = i\mathcal C$, so that the 12d covariant derivative again reproduces the type IIB gravitino variation.
+so $\Gamma_{10,11}$ is, up to a similarity transformation, $i$ times the U(1) generator.
+After performing a similarity transformation one obtains precisely the axio-dilaton sector Killing spinor equation \eqref{9+1 IIB axio-dilaton Killing spinor equations}.
+This would also hold had we compactified a non-compact torus instead, to obtain a Euclidean type IIB theory.
+In the case of compactifying on a torus of signature (1,1), a factor of $i$ arises both in identifying the U(1) generator from $\Gamma_{11,12}$ and in defining the Euclidean compact scalar $C = i\mathcal C$, so that the 12d covariant derivative again reproduces the type IIB gravitino variation.
