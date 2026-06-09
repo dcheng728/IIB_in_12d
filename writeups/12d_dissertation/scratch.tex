@@ -358,3 +358,114 @@ is excited.
 %     (opposite signs + cross term) is NOT representable. Confirms the obstruction.
 % (scripts: /tmp/riem_check.py, /tmp/obstruction_check2.py)
 % ============================================================
+
+% ============================================================
+% DETAILED KK-loop R^4 derivation (for Section 7.2, to be truncated)
+% Goal: extract the R^4 coefficient from the existing 4-point KK-loop
+%       integral \eqref{4-point Schwinger parameter}, following the
+%       standard procedure (low-energy expansion -> simplex -> proper-time
+%       integral -> lattice sum -> Eisenstein functional equation),
+%       and identify the dimension dependence.
+% ============================================================
+
+\section*{Detailed KK-loop $R^4$ coefficient (working)}
+
+\paragraph{Starting point.}
+The existing 4-point KK-loop integral (Section 7.2) is
+\begin{equation}
+\mathcal{A}_4 \propto \sum_{m,n}\int_{\Lambda^{-2}}^\infty \frac{d\lambda}{\lambda^{3/2}}\,
+e^{-\lambda M_{m,n}^2}\, P(s,t;\lambda),\qquad
+M_{m,n}^2 = \frac{|n-m\tau|^2}{R^2\tau_2^2},
+\end{equation}
+\begin{equation}
+P(s,t;\lambda) = \int_0^1 d\rho_3\int_0^{\rho_3}d\rho_2\int_0^{\rho_2}d\rho_1\,
+e^{-\lambda M(s,t;\rho)},\qquad
+M(s,t;\rho) = s\rho_1\rho_2 + t\rho_2\rho_3 + u\rho_1\rho_3 + t(\rho_1-\rho_2).
+\end{equation}
+
+\paragraph{Step 1: low-energy expansion (this gives the local terms).}
+The local higher-derivative terms come from expanding $P$ in powers of the external momenta:
+\begin{equation}
+P(s,t;\lambda) = \int_\Delta d^3\rho\, e^{-\lambda M(s,t;\rho)}
+= \sum_{k=0}^\infty \frac{(-\lambda)^k}{k!}\int_\Delta d^3\rho\, M(s,t;\rho)^k,
+\end{equation}
+where $\Delta = \{0\le\rho_1\le\rho_2\le\rho_3\le1\}$.
+Since $M \sim (\text{Mandelstam}) \sim (\text{momentum})^2$, the order-$k$ term carries $2k$ extra derivatives and produces the $D^{2k}R^4$ contact term.
+The leading ($k=0$) term is the $R^4$ coefficient, equal to the simplex volume
+\begin{equation}
+P(0,0;\lambda) = \int_\Delta d^3\rho
+= \int_0^1 d\rho_3\,\frac{\rho_3^2}{2} = \frac{1}{3!} = \frac{1}{6}.
+\end{equation}
+
+\paragraph{Step 2: the $R^4$ coefficient as a regulated proper-time sum.}
+Hence
+\begin{equation}
+\mathcal{C} \;\propto\; \sum_{(m,n)\neq(0,0)} \int_{\Lambda^{-2}}^\infty \frac{d\lambda}{\lambda^{3/2}}\, e^{-\lambda M_{m,n}^2}.
+\end{equation}
+The massless mode $(m,n)=(0,0)$ is omitted: with $M=0$ the integral is IR divergent and gives the
+non-analytic supergravity exchange ($1/stu$), not a local term.
+The $\lambda\to0$ end is UV divergent (regulated by $\Lambda$); that divergence is a local $R^4$
+counterterm. The renormalised finite part is the analytic continuation of
+\begin{equation}
+\int_0^\infty d\lambda\, \lambda^{s-1} e^{-\lambda M^2} = \Gamma(s)\,(M^2)^{-s}.
+\end{equation}
+
+\paragraph{Step 3: the measure fixes $s$.}
+For a $d$-dimensional loop the box proper-time measure is $\lambda^{3-d/2}$
+($\lambda^3$ from the Jacobian of the four Feynman parameters $\lambda_i=\lambda\rho_i$, and
+$\lambda^{-d/2}$ from the loop-momentum Gaussian $\int d^dk\,e^{-\lambda k^2}$).
+The quoted measure $\lambda^{-3/2}$ is therefore $d=9$:
+\begin{equation}
+3-\tfrac{d}{2} = -\tfrac32 \;\Rightarrow\; d=9,\qquad
+s \equiv 4-\tfrac{d}{2} = -\tfrac12,\ \text{consistent with}\ \lambda^{s-1}=\lambda^{-3/2}\Rightarrow s=-\tfrac12 .
+\end{equation}
+[NOTE/CHECK: the integrand power is $s-1 = -3/2$, i.e. $s=-1/2$, which is the value entering
+$\int d\lambda\,\lambda^{s-1}e^{-\lambda M^2}=\Gamma(s)(M^2)^{-s}$. The ``$4-d/2$'' bookkeeping
+($\nu=4$ propagators, $\int d^dp\,(p^2+M^2)^{-4}$) gives the same $s=-1/2$ at $d=9$. Tension to flag
+to author: the setup writes a 10d loop momentum $\nabla^2_{10}$, which would be $d=10$,
+$\lambda^{-2}$, $s=-1$; but the measure as written is $\lambda^{-3/2}$, i.e. $d=9$.]
+With $s=-\tfrac12$,
+\begin{equation}
+\mathcal{C} \;\propto\; \Gamma\!\left(-\tfrac12\right)\sum_{(m,n)\neq(0,0)} (M_{m,n}^2)^{1/2}.
+\end{equation}
+
+\paragraph{Step 4: lattice sum $\to$ Eisenstein.}
+With $(M_{m,n}^2)^{1/2} = |n-m\tau|/(R\tau_2)$ and the bijection $(m,n)\mapsto(n,-m)$ of
+$\mathbb{Z}^2\setminus\{0\}$ (so $\sum|n-m\tau|^a = \sum|m+n\tau|^a$),
+\begin{equation}
+\sum_{(m,n)\neq(0,0)} (M_{m,n}^2)^{1/2}
+= \frac{1}{R\tau_2}\sum_{(m,n)\neq(0,0)} |m+n\tau|
+= \frac{1}{R}\,\tau_2^{-1/2}\, E_{-1/2}(\tau),
+\end{equation}
+where $E_s(\tau)\equiv\sum_{(m,n)\neq(0,0)}\tau_2^{s}/|m+n\tau|^{2s}$, used at $s=-\tfrac12$ so that
+$|m+n\tau|^{-2s}=|m+n\tau|$ and the extracted $\tau_2^{-s}=\tau_2^{1/2}$ combines with the $1/\tau_2$
+to give $\tau_2^{-1/2}$.
+
+\paragraph{Step 5: functional equation $\to f_0=E_{3/2}$.}
+The completed series $E_s^\ast(\tau)\equiv\pi^{-s}\Gamma(s)\zeta(2s)E_s(\tau)$ obeys $E_s^\ast=E_{1-s}^\ast$.
+At $s=-\tfrac12$ ($1-s=\tfrac32$), with $\Gamma(-\tfrac12)=-2\sqrt\pi$, $\Gamma(\tfrac32)=\tfrac{\sqrt\pi}{2}$, $\zeta(-1)=-\tfrac{1}{12}$:
+\begin{equation}
+\underbrace{\pi^{1/2}(-2\sqrt\pi)(-\tfrac{1}{12})}_{=\pi/6}\,E_{-1/2}
+= \underbrace{\pi^{-3/2}\tfrac{\sqrt\pi}{2}\zeta(3)}_{=\zeta(3)/2\pi}\,E_{3/2}
+\;\Rightarrow\;
+E_{-1/2} = \frac{3\zeta(3)}{\pi^2}\,E_{3/2} = \frac{3\zeta(3)}{\pi^2}\, f_0 .
+\end{equation}
+
+\paragraph{Result.}
+Collecting, and writing $R^{-1}\tau_2^{-1/2}=(R^2\tau_2)^{-1/2}=A^{-1/2}$ with $A=R^2\tau_2$ the torus area,
+\begin{equation}
+\boxed{\;\mathcal{C} \;\propto\; \Gamma\!\left(-\tfrac12\right)\frac{3\zeta(3)}{\pi^2}\, A^{-1/2}\, f_0(\tau,\bar\tau)\;}
+\end{equation}
+The $\tau$-dependence is entirely in $f_0=E_{3/2}$; the prefactor $A^{-1/2}$ is independent of the
+complex structure at fixed area, so the result is modular invariant.
+This matches the zero-mode part of the perturbative effective action (Section 7.1):
+$f_0 = 2\zeta(3)\tau_2^{3/2}+\tfrac{2\pi^2}{3}\tau_2^{-1/2}+(\text{D(-1) instantons})$.
+
+\paragraph{Diagnostic ($d=9$ vs $d=10$).}
+Only the $d=9$ measure ($s=-\tfrac12$) reflects onto $E_{3/2}=f_0$.
+A genuine $d=10$ loop would carry $\lambda^{-2}$, i.e. $s=-1$, which $E_s^\ast=E_{1-s}^\ast$ maps to
+$E_2$ (weight 2, not invariant), and $\Gamma(4-\tfrac d2)=\Gamma(-1)$ has a pole (the log running of
+$R^4$ in even dimensions). [Cross-check with author's functional-determinant computation: the genuine
+$d=10$ loop there ($\int d^{10}p$) gives the modular-COVARIANT $E_6$ for the vacuum energy -- a
+different observable, but the same lesson: a true 12d/$d=10$ loop does not give the invariant $f_0$.]
+% ============================================================

@@ -44,7 +44,7 @@ Imperial College London, SW7 2AZ, U.K.\par}
 \vspace{0.4cm}
 % Word count regenerated with: texcount -1 -sum -merge <chapters 1--8>
 % Excludes abstract, equations, bibliography, and appendices, per the project guidelines.
-{\normalsize Word count: 10{,}200 \par}
+{\normalsize Word count: 10{,}842 \par}
 \end{titlepage}
 \pagenumbering{roman}
 
@@ -54,7 +54,17 @@ Imperial College London, SW7 2AZ, U.K.\par}
 \begin{abstract}
 \noindent
 
-Type IIB string theory possesses a conjectured non-perturbative $SL(2,\mathbb{Z})$ duality whose ten-dimensional origin remains unexplained. This thesis examines the proposal that the duality, and the theory itself, descend from a twelve-dimensional structure. We find that the $12$d interpretation is robust for the axio-dilaton and form-field sectors, but remains effective rather than fundamental.
+Type IIB string theory possesses a conjectured non-perturbative $\mathrm{SL}(2,\mathbb{Z})$ S-duality whose ten-dimensional origin is not manifest. This thesis examines the proposal that the duality, and the theory itself, descend from a twelve-dimensional structure, following four lines of investigation:
+\begin{enumerate}
+    \item We establish a 12d geometric interpretation of the axio-dilaton sector. The D7 brane and D($-1$) instanton backgrounds arise as a Kaluza-Klein monopole and pp-wave of 12d gravity reduced on a torus. The $\mathrm{SL}(2,\mathbb{Z})$ generators act geometrically as large diffeomorphisms in 12d, and reduction of the 12d covariantly-constant spinor condition reproduces the type IIB Killing spinor equations.
+    \item We propose a covariant 12d unification of the type IIB form-field sector. The $\mathrm{SL}(2,\mathbb{R})$-doublet 3-forms are assembled into a 12d 4-form, and the ten-dimensional self-duality condition on the 5-form field strength is realised as a 12d Hodge duality relation.
+    \item We review the known link between the worldvolume and bulk dualities on the D3 brane.
+    Its worldvolume electromagnetic duality leaves the brane action invariant only when the bulk fields undergo a simultaneous $\mathrm{SL}(2,\mathbb{Z})$ transformation, identifying the worldvolume S-duality with the type IIB $\mathrm{SL}(2,\mathbb{Z})$.
+    \item We examine the higher-derivative corrections to the effective action.
+    At four points the 8-derivative couplings admit a 12d-covariant form. At five points, a U(1)-preserving axio-dilaton coupling is shown to admit no 12d-covariant expression, constituting an obstruction to the interpretation.
+\end{enumerate}
+Taken together, the 12d picture remains an effective repackaging of the 10d theory, and we discuss its limits across the brane, form-field, and higher-derivative sectors.
+
 \end{abstract}
 
 %==============================================================
@@ -62,28 +72,34 @@ Type IIB string theory possesses a conjectured non-perturbative $SL(2,\mathbb{Z}
 %==============================================================
 \clearpage
 \section*{Declaration of Contributions}
+
 This thesis examines the proposal that the type IIB string theory has a twelve-dimensional origin, and the work presented in it is my own.
-The greater parts of this thesis reviews existing literature, attributed by citation throughout: the survey of $10+2$d supergravity and superalgebras, the brane interpretations of the axio-dilaton, and the D3-brane worldvolume analysis report results due to others, principally A.~A.~Tseytlin and the works cited therein.
+The greater part of this thesis reviews existing literature, attributed by citation throughout: the survey of $10+2$d supergravity and superalgebras, the brane interpretations of the axio-dilaton, and the D3-brane worldvolume analysis report results due to others, principally A.~A.~Tseytlin and the works cited therein.
 
 Two results are my own.
 First, the covariant twelve-dimensional repackaging of the type IIB form-field sector in Chapter \ref{sec:covariant-unification}, in which the ten-dimensional self-duality of $F_5$ is realised as a twelve-dimensional Hodge duality.
 Second, the result of Chapter \ref{sec:effective-actions} that the $U(1)$-preserving five-point contact term of \cite{Liu:2025uqu} admits no twelve-dimensional covariant form.
-I performed these derivations and the supporting symbolic-algebra computations, and verified all results presented.
 The synthesis of work scattered across the algebraic, brane, form-field, and effective-action perspectives into a single coherent account, and the line of argument running through the thesis, are also my own.
 
 \section*{Declaration of Generative AI Usage}
+
 In accordance with Imperial College London's policy on the use of generative AI tools, I declare the following.
 Generative AI assistants (Anthropic's Claude) were used during the research and preparation phases of this thesis to organise and cross-check intermediate steps of derivations, to locate and summarise relevant literature, and to edit prose for clarity and concision.
 Symbolic tensor algebra was carried out with the Cadabra computer-algebra system.
-All physics results, derivations, and conclusions were verified by the author, and the scientific content---including the original contributions described above---is the author's own.
+All physics results, derivations, and conclusions were verified by the author, and the scientific content (including the original contributions described above) is the author's own.
 No AI tool was used to produce results that were not independently checked.
 
 \newpage
 
 \section*{Acknowledgements}
-I am grateful to my family for their presence and support throughout my studies, in particular my parents and my grandparents, who have always believed in me and encouraged me to pursue my passions.
 
-I am grateful to my supervisor, Prof. Arkady Tseytlin, for their guidance and support throughout this project.
+I am deeply grateful to my family, especially my parents and grandparents, for their unwavering belief in me and their encouragement to pursue my passions.
+
+I owe a great deal to my supervisor, Prof.\ Arkady Tseytlin, for his guidance and support throughout this project, and to Prof.\ Amihay Hanany, whose lectures on string theory have been a tremendous source of insight.
+
+I would also like to thank my friends Carl Bouchard and Tim Wong for their camaraderie and encouragement. 
+
+Finally, I am grateful to the many friends whom I have had the pleasure of spending time with at Imperial, particularly in the Abdus Salam Library, who made my time here memorable.
 
 \clearpage
 \tableofcontents
@@ -100,9 +116,9 @@ I am grateful to my supervisor, Prof. Arkady Tseytlin, for their guidance and su
 
 \appendix
 \input{A__dynkin_labels}
+\input{A__sl2r_coset}
 \input{A__DG}
 \input{A__brane_catalog}
-\input{A__sl2r_coset}
 \input{A__form_field_reduction}
 % \input{scratch} % TEMPORARY: scratch/verification notes, remove before submission
 
