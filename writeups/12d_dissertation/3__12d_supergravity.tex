@@ -86,9 +86,31 @@ More recently, it has been claimed that F-theory \cite{Vafa:1996xn} admits a 12d
 \label{Choi action}
 % \tag{1504.00602 eq 2.3}
 \end{equation}
-Upon closer examination, we find \eqref{Choi action} is just 11d supergravity integrated over a spectator dimension\footnote{
-We provide support for this claim in Appendix \ref{sec:Action for 11d on a circle}.
-}.
+Upon closer examination, we find \eqref{Choi action} is just 11d supergravity integrated over a spectator dimension.
+To see this, we follow \cite{Choi:2014vya,Choi:2015gia} and package all dependence on the twelfth coordinate $y$ into a single scalar $r\equiv r(x^m,y)$, which also enters the metric:
+\begin{equation}
+\hat{C}_4(x^m,y) \equiv r(x^m,y)\,C_3(x)\wedge dy,\quad
+\hat{F}_5(x^m,y) \equiv r(x^m,y)\,F_4\wedge dy,
+\end{equation}
+\begin{equation}
+\hat{g}_{mn}(x) = g_{mn}(x),\quad
+\hat{g}_{my} = 0,\quad
+\hat{g}_{yy}(x,y) = r(x,y)^2,
+\end{equation}
+where $F_4 = dC_3$ and straight letters denote 11d fields.
+Substituting these into \eqref{Choi action} and evaluating $\int \sqrt{-\hat{g}}\,\hat{R}$, the action reduces to
+\begin{equation}
+S =
+\int d^{11}x
+\left[
+\left(\sqrt{-g}\,R-\frac{1}{2}|F_4|^2\right)
++\frac{1}{6}\int C_3\wedge F_4\wedge F_4
+\right]
+\lambda(x)
++\text{boundary},\quad
+\lambda(x)\equiv \int dy\, r(x,y).
+\end{equation}
+This is nothing but the bosonic action of 11d supergravity, multiplied by an auxiliary field $\lambda(x)$ whose equation of motion imposes that the 11d bosonic action vanishes.
 In an attempt to unify the various string theory dualities, an SL(2, R)$\times R^+$ Exceptional Field Theory had been proposed \cite{Berman:2015rcc,Rudolph:2017vzy}.
 The idea is to realise unified dualities with extended coordinates, but this is not a 12d theory.
 
