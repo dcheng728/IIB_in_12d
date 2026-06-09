@@ -269,7 +269,9 @@ v,u = y\pm t.
 By comparison with \eqref{d-dim pp-wave}, we see that the uplift of D(-1) is a pp-wave in 11+1 dimensions.
 One may view the Euclidean D(-1) as a ``slice" of the 10d homogeneous wavefront of a 12d pp-wave.
 The momentum of the wave is the D(-1) charge.
-Recent investigations of the IKKT matrix model \cite{Hartnoll:2024csr,Komatsu:2024bop} reveal a type IIB supergravity background with axio-dilaton and the 3-form turned on. We also provide the 12d interpretation of such background in Appendix \ref{sec:IKKT uplift}.
+Recent investigations of the IKKT matrix model \cite{Hartnoll:2024csr,Komatsu:2024bop} reveal a type IIB supergravity background with axio-dilaton and the 3-form turned on, which admits a similar 12d interpretation.\footnote{
+The mass-deformed model is dual to a probe D1 brane in the Einstein-frame-flat background $ds_{10}^2 = \sum_i dx_i^2$, $e^\phi = 1 - \frac{\mu^2}{32}\left(\sum_{A=1}^7 x_A^2 + 3\sum_{a=9}^{10}x_a^2\right)$, $H_3 = \mu dx^8\wedge dx^9\wedge dx^{10}$, valid in the ellipsoidal region where $e^\phi\ge0$ \cite{Hartnoll:2024csr}. Uplifting to 12d (Wick rotating to keep $ds^2$ real) gives the Brinkmann-form metric $ds_{12}^2 = 2dudv + e^\phi du^2 + \sum_{i=1}^{10}dx_i^2$, whose only non-vanishing Ricci component is $R_{uu}=\mu^2/2$. Since $e^\phi$ is not harmonic it is not a pp-wave, but it solves 12d gravity coupled to a 4-form, $S = \int d^{12}x\sqrt{-\hat{g}}\left(\hat{R}-\tfrac12|\hat{F}_4|^2\right)$ with $\hat{F}_4 = \mu du\wedge dx^8\wedge dx^9\wedge dx^{10} = du\wedge H_3$.
+}
 
 \subsection{Supersymmetry}
 We now discuss a further consistency check for the relation between 12d gravity and the type IIB axio-dilaton sector, namely how the 1/2 BPS condition of the latter can be obtained by reducing the covariantly-constant equation of the former.
@@ -300,17 +302,24 @@ Upon dimensional reduction, the higher-dimensional fields decompose into those o
 In our case the higher-dimensional theory is pure gravity, with no form fields, so its gravitino variation \eqref{generic gravitino variation} is simply $\nabla_M\epsilon$.
 The full lower-dimensional Killing spinor equation, flux and connection terms included, must then be reproduced by reducing this covariant derivative alone.
 
+\paragraph{From 11d to type IIA.}
 This is indeed the case in the type IIA theory.
-The type IIA pure gravity combined with the KK-vector and dilaton sector has the Killing spinor equation
+Reducing the 11d covariantly-constant condition $\widehat\nabla_M\epsilon=0$ on the standard Kaluza--Klein ansatz
+\begin{equation}
+ds^2_{11}=e^{-2\phi/3}g_{mn}dx^m dx^n+e^{4\phi/3}(dx^{11}+A_m dx^m)^2,
+\end{equation}
+in which the 11d metric repackages the 10d metric $g_{mn}$, the dilaton $\phi$, and the KK-vector $A_m$ --- with the eleventh coordinate $x^{11}$ an isometry and $\Gamma^{11}$ the gamma matrix along the circle, i.e. the 10d chirality operator --- the condition $\widehat\nabla_M\epsilon=0$ splits into one component along the circle and ten along the spacetime directions.
+The internal component is algebraic and reduces to the type IIA dilatino variation; the spacetime components, after the standard Weyl rescaling $\epsilon\to e^{-\phi/6}\epsilon$ and the redefinition of the gravitino that mixes in the dilatino, give the type IIA Killing spinor equation in the gravity, KK-vector and dilaton sector \cite{Becker:2006dvp}:
 \begin{equation}
 \delta \psi_m =
 \left(
-\nabla_m - \frac{1}{8}e^\phi F_{np}\Gamma_m{}^{np\rho} \Gamma^{11}
-\right)\epsilon = 0.
+\nabla_m - \frac{1}{8}e^\phi F_{np}\Gamma_m{}^{np}\Gamma^{11}
+\right)\epsilon = 0,
 \label{IIA Killing spinor equation}
 \end{equation}
-This equation arises directly from the dimensional reduction of the 11d covariantly constant spinor condition $\widehat{\nabla}^{(11)}_M\epsilon = 0$. See, for example, \cite{Becker:2006dvp}.
+with $F_{mn}=\partial_m A_n-\partial_n A_m$; this is eq.~(8.51) of \cite{Becker:2006dvp} restricted to vanishing $H_3$ and $F_4$.
 
+\paragraph{From 12d to type IIB.}
 A 12d covariant derivative $\widehat{\nabla}^{(12)}_M\epsilon = 0$ restricted to 10d takes the form
 \begin{equation}
 \nabla^{(12)}_m\epsilon
@@ -318,7 +327,7 @@ A 12d covariant derivative $\widehat{\nabla}^{(12)}_M\epsilon = 0$ restricted to
 \nabla^{(10)}_m
 +\frac{1}{2}\omega_m{}^{10,n}\Gamma_{10,n}
 +\frac{1}{2}\omega_m{}^{11,n}\Gamma_{11,n}
-+\frac{1}{4}\omega_m{}^{10,11}\Gamma_{10,11}\right)\epsilon = 0,
++\frac{1}{2}\omega_m{}^{10,11}\Gamma_{10,11}\right)\epsilon = 0,
 \label{12d covariant derivative}
 \end{equation}
 where $\omega_{M}{}^{NP}$ denotes the spin connections.

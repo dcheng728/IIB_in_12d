@@ -1,0 +1,161 @@
+\section{Direct evaluation of the KK-loop $R^4$ coefficient}
+\label{sec:KK loop R4}
+In Section \ref{sec:KK modes} we noted that the four-point KK-loop integral may be evaluated either by the shortcut of adding a spectator dimension to the known 11d-on-$T^2$ results \cite{Green:1997as}, or directly by Poisson resummation followed by zeta-function renormalization.
+Here we carry out the direct evaluation step by step.
+The result is twofold: it makes explicit why the modular coupling $f_0(\tau,\bar\tau)$ is reproduced, and it exposes that this reproduction is intrinsically nine-dimensional.
+
+\subsection*{Setup: the four-graviton box with a KK tower}
+A 12d field on a $T^2$ of complex structure $\tau=\tau_1+i\tau_2$ and radius $R$ has the Kaluza-Klein spectrum
+\begin{equation}
+M_{m,n}^2=\frac{|m+n\tau|^2}{R^2\tau_2^2},\qquad (m,n)\in\mathbb{Z}^2,
+\label{eq:KK-spectrum}
+\end{equation}
+since $|m+n\tau|^2=(m+n\tau_1)^2+n^2\tau_2^2$ is the norm-squared of the momentum lattice dual to the torus.
+We treat each KK level as a massive particle of mass $M_{m,n}$ propagating in the $d$ remaining noncompact dimensions, and compute the one-loop four-graviton amplitude with the whole tower running inside.
+
+In a theory with maximal supersymmetry the one-loop four-graviton amplitude has a special structure: after the fermionic and tensor algebra, the eight powers of external momenta combine into the kinematic factor $t_8t_8R^4$, and what multiplies it is the \emph{scalar} box integral \cite{Green:1997as,Green:1999pv},
+\begin{equation}
+\mathcal{A}_4\ \propto\ t_8t_8R^4\;\sum_{(m,n)} I_4\big(s,t;M_{m,n}\big),\qquad
+I_4=\int\frac{d^dp}{(2\pi)^d}\prod_{i=1}^{4}\frac{1}{(p+\ell_i)^2+M_{m,n}^2},
+\label{eq:box}
+\end{equation}
+where $\ell_i$ are partial sums of the external momenta and $s,t,u$ are the Mandelstam invariants with $s+t+u=0$.
+The coefficient of $R^4$ in the low-energy effective action is the leading term of \eqref{eq:box} as $s,t,u\to0$, i.e. the box evaluated at vanishing external momenta,
+\begin{equation}
+\mathcal{C}\ \equiv\ \sum_{(m,n)\neq(0,0)}\int\frac{d^dp}{(2\pi)^d}\frac{1}{\big(p^2+M_{m,n}^2\big)^{4}} .
+\label{eq:coeff-momentum}
+\end{equation}
+The massless mode $(m,n)=(0,0)$ is excluded: with $M=0$ the box is infrared singular and produces the non-analytic massless exchange ($1/stu$ and logarithms), not the analytic $R^4$ contact term.
+Higher orders in the $s,t,u$ expansion of \eqref{eq:box} produce the $D^{2k}R^4$ couplings; we keep only the leading $R^4$ term here.
+
+\subsection*{The proper-time measure, and why the power is $\lambda^{-3/2}$}
+Schwinger-parametrize each propagator, $A^{-1}=\int_0^\infty d\lambda_i e^{-\lambda_i A}$, and set $\lambda=\sum_i\lambda_i$, $\lambda_i=\lambda\rho_i$ with $\sum_i\rho_i=1$.
+The Jacobian gives $\prod_{i=1}^4 d\lambda_i=\lambda^{3} d\lambda d^3\rho$, and the Gaussian momentum integral gives $\int d^dp e^{-\lambda p^2}\propto\lambda^{-d/2}$.
+For \eqref{eq:coeff-momentum} the four masses are equal, so the simplex integral decouples and contributes its volume $\int_{\Delta}d^3\rho=\tfrac{1}{3!}=\tfrac16$, leaving
+\begin{equation}
+\mathcal{C}\ \propto\ \sum_{(m,n)\neq(0,0)}\int_{0}^{\infty} d\lambda \lambda^{ 3-d/2} e^{-\lambda M_{m,n}^2}.
+\label{eq:coeff-schwinger}
+\end{equation}
+This fixes the proper-time power: the ``$3$'' is $n_{\rm prop}-1=3$ from the four box propagators, and the ``$-d/2$'' is the loop Gaussian.
+Equivalently, one may bypass the parametrization with the standard one-loop master integral
+\begin{equation}
+\int\frac{d^dp}{(2\pi)^d}\frac{1}{(p^2+M^2)^{n}}
+=\frac{1}{(4\pi)^{d/2}}\frac{\Gamma\left(n-\tfrac{d}{2}\right)}{\Gamma(n)} (M^2)^{ d/2-n},
+\label{eq:master}
+\end{equation}
+which at $n=4$ reproduces \eqref{eq:coeff-schwinger} term by term (note $1/\Gamma(4)=1/3!=1/6$, the simplex volume).
+For the eleven-dimensional supergravity loop on $T^2$ the noncompact dimension is $d=9$, so
+\begin{equation}
+3-\tfrac{d}{2}=3-\tfrac{9}{2}=-\tfrac32,
+\end{equation}
+which is the $\lambda^{-3/2}$ measure quoted in Section \ref{sec:KK modes}.
+We return to the dependence on $d$ at the end.
+
+\subsection*{Lattice sum and analytic continuation}
+Carry out the $\lambda$-integral by analytic continuation in the power, defining for general $s$
+\begin{equation}
+I(s)\equiv\sum_{(m,n)\neq(0,0)}\int_0^\infty d\lambda \lambda^{ s-1} e^{-\lambda M_{m,n}^2}
+=\Gamma(s)\sum_{(m,n)\neq(0,0)}\big(M_{m,n}^2\big)^{-s}.
+\label{eq:I-gamma}
+\end{equation}
+Inserting the spectrum \eqref{eq:KK-spectrum} and using $M_{m,n}^{-2s}=(R^2\tau_2^2)^{s} |m+n\tau|^{-2s}$,
+\begin{equation}
+I(s)=\Gamma(s) (R^2\tau_2^2)^{s}\sum_{(m,n)\neq(0,0)}\frac{1}{|m+n\tau|^{2s}}
+=\Gamma(s) R^{2s} \tau_2^{ s} E_s(\tau),
+\label{eq:I-eisenstein}
+\end{equation}
+where in the last step we extracted one factor $\tau_2^{-s}$ to form the non-holomorphic Eisenstein series
+\begin{equation}
+E_s(\tau)\equiv\sum_{(m,n)\neq(0,0)}\frac{\tau_2^{ s}}{|m+n\tau|^{2s}}.
+\label{eq:eisenstein-def}
+\end{equation}
+The lattice sum converges only for $\mathrm{Re} s>1$; elsewhere $E_s$ is \emph{defined} by analytic continuation, and likewise $I(s)$.
+The $R^4$ coefficient \eqref{eq:coeff-schwinger} is the value at $s-1=3-\tfrac{d}{2}$, i.e. $s=4-\tfrac{d}{2}$.
+For $d=9$ this is $s=-\tfrac12$:
+\begin{equation}
+\mathcal{C}\ \propto\ I\left(-\tfrac12\right)=\Gamma\left(-\tfrac12\right)R^{-1} \tau_2^{-1/2} E_{-1/2}(\tau).
+\label{eq:C-as-Eminushalf}
+\end{equation}
+The analytic continuation is the content of ``zeta-function renormalization'': it discards the power-law ultraviolet divergence of \eqref{eq:coeff-schwinger} at $\lambda\to0$ (regulated by a short-proper-time cutoff $\lambda\geq\Lambda^{-2}$); the discarded piece is the would-be higher-dimensional $R^4$ counterterm, while the finite remainder is the modular function we now identify.
+
+\subsection*{Poisson resummation: the functional equation}
+Poisson-resumming the sum over $m$ at fixed $n$ unfolds $E_s$ and yields its defining functional equation.
+In terms of the completed series
+\begin{equation}
+E_s^{\ast}(\tau)\equiv\pi^{-s} \Gamma(s) \zeta(2s) E_s(\tau),
+\end{equation}
+the statement is the reflection symmetry
+\begin{equation}
+E_s^{\ast}(\tau)=E_{1-s}^{\ast}(\tau).
+\label{eq:functional-eq}
+\end{equation}
+We need it at $s=-\tfrac12$, which is reflected to $1-s=\tfrac32$:
+\begin{equation}
+\pi^{1/2} \Gamma\left(-\tfrac12\right)\zeta(-1) E_{-1/2}
+=\pi^{-3/2} \Gamma\left(\tfrac32\right)\zeta(3) E_{3/2}.
+\end{equation}
+Substituting $\Gamma(-\tfrac12)=-2\sqrt\pi$, $\Gamma(\tfrac32)=\tfrac{\sqrt\pi}{2}$ and $\zeta(-1)=-\tfrac{1}{12}$, the two prefactors evaluate to
+\begin{equation}
+\text{LHS coeff}=\pi^{1/2}(-2\sqrt\pi)\left(-\tfrac{1}{12}\right)=\frac{\pi}{6},
+\qquad
+\text{RHS coeff}=\pi^{-3/2}\frac{\sqrt\pi}{2} \zeta(3)=\frac{\zeta(3)}{2\pi},
+\end{equation}
+so that
+\begin{equation}
+\frac{\pi}{6} E_{-1/2}=\frac{\zeta(3)}{2\pi} E_{3/2}
+\quad\Longrightarrow\quad
+\boxed{ E_{-1/2}(\tau)=\frac{3\zeta(3)}{\pi^2} E_{3/2}(\tau) }.
+\label{eq:Eminushalf-to-E3half}
+\end{equation}
+
+\subsection*{Identification with $f_0$}
+It remains to recognise $E_{3/2}$ as the coupling $f_0$.
+The Fourier expansion of \eqref{eq:eisenstein-def} in $\tau_1$ has the general form
+\begin{equation}
+E_s(\tau)=\underbrace{2\zeta(2s) \tau_2^{ s}}_{\text{zero mode (a)}}
++\underbrace{2\sqrt\pi \frac{\Gamma\left(s-\tfrac12\right)}{\Gamma(s)} \zeta(2s-1) \tau_2^{ 1-s}}_{\text{zero mode (b)}}
++\underbrace{\frac{8\pi^{s}}{\Gamma(s)}\sqrt{\tau_2}\sum_{N\geq1} N^{s-1/2}\sigma_{1-2s}(N)\cos(2\pi N\tau_1)K_{s-1/2}(2\pi N\tau_2)}_{\text{instanton modes}},
+\label{eq:eisenstein-fourier}
+\end{equation}
+with $\sigma_a(N)=\sum_{d\mid N}d^{a}$ the divisor function and $K_\nu$ the modified Bessel function.
+At $s=\tfrac32$ the two zero-mode terms give
+\begin{equation}
+2\zeta(3) \tau_2^{3/2}
+\;+\;2\sqrt\pi \frac{\Gamma(1)}{\Gamma(\tfrac32)} \zeta(2) \tau_2^{-1/2}
+=2\zeta(3) \tau_2^{3/2}+\frac{2\pi^2}{3} \tau_2^{-1/2},
+\label{eq:E32-zero-modes}
+\end{equation}
+where we used $\Gamma(\tfrac32)=\tfrac{\sqrt\pi}{2}$ and $\zeta(2)=\tfrac{\pi^2}{6}$ so that $2\sqrt\pi\cdot 2\cdot\tfrac{\pi^2}{6}=\tfrac{2\pi^2}{3}$.
+These are precisely the tree-level and genus-one terms of $f_0$ in \eqref{eq:f_0 Eisenstein}.
+The instanton modes of \eqref{eq:eisenstein-fourier}, upon inserting the large-argument expansion $K_{1}(z)\sim\sqrt{\tfrac{\pi}{2z}} e^{-z}(1+\dots)$ and reorganising the divisor sum $\sigma_{-2}(N)$ as a double sum over $(m,n)$, reproduce the exponentially suppressed D(-1) series of \eqref{eq:f_0 Eisenstein}.
+Hence $E_{3/2}(\tau)=f_0(\tau,\bar\tau)$, and combining with \eqref{eq:C-as-Eminushalf} and \eqref{eq:Eminushalf-to-E3half},
+\begin{equation}
+\mathcal{C}\ \propto\ \Gamma\left(-\tfrac12\right)R^{-1}\tau_2^{-1/2} E_{-1/2}(\tau)
+=\Gamma\left(-\tfrac12\right)\frac{3\zeta(3)}{\pi^2} R^{-1}\tau_2^{-1/2} f_0(\tau,\bar\tau).
+\label{eq:final-coeff}
+\end{equation}
+The modular-invariant content here is $f_0=E_{3/2}$; the accompanying $\tau_2^{-1/2}$ is not a breaking of SL(2,Z) invariance but the complex-structure dependence of the torus area at fixed first-cycle radius.
+Indeed the spectrum \eqref{eq:KK-spectrum} may be written $M_{m,n}^2=|m+n\tau|^2/(A\tau_2)$ with $A=R^2\tau_2$ the torus area, so that \eqref{eq:final-coeff} reads $\mathcal{C}\propto A^{-1/2}f_0$, with a prefactor independent of the complex structure $\tau$ at fixed area.
+The remaining $\tau$-independent numerical constant (the loop factor $(4\pi)^{-d/2}$ and the sign of $\Gamma(-\tfrac12)$) is scheme dependent and we do not track it.
+A single KK-loop sum thus reproduces the \emph{entire} $f_0$: its constant part \eqref{eq:E32-zero-modes} is the perturbative (tree $+$ genus-one) $R^4$ coupling, and its instanton modes are the D(-1) contributions.
+This is the precise sense in which the KK-tower on $T^2$ is a surrogate for the D(-1) background.
+
+\subsection*{Why the weight is nine-dimensional}
+The whole computation hinges on the value $s=4-\tfrac{d}{2}$, fixed by the loop dimension $d$ through the measure $\lambda^{ 3-d/2}$:
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{c|c|c|c|c}
+\toprule
+$d$ (noncompact) & origin & measure & sum at $s=4-\tfrac{d}{2}$ & reflected weight\\
+\midrule
+$9$  & 11d on $T^2$ & $\lambda^{-3/2}$ & $\Gamma(-\tfrac12) E_{-1/2}$ & $E_{3/2}=f_0$ \quad\checkmark\\
+$10$ & 12d on $T^2$ & $\lambda^{-2}$   & $\Gamma(-1) E_{-1}$         & $E_{2}$ \;(+ pole)\\
+$11$ & --           & $\lambda^{-5/2}$ & $\Gamma(-\tfrac32) E_{-3/2}$ & $E_{5/2}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Only $d=9$ lands on the weight-$\tfrac32$ series $E_{3/2}=f_0$, i.e. the correct type IIB $R^4$ coefficient.
+This is why the spectator-dimension shortcut is legitimate: the computation is intrinsically nine-dimensional, with the tenth dimension a passive spectator carrying only an overall volume factor.
+Had the loop instead run in a genuine $d=10$ --- as a literal twelve-to-ten dimensional statement would demand --- the measure would be $\lambda^{-2}$, the sum would be $E_{-1}$, and the functional equation would map it to $E_{2}$, the wrong modular weight, with the $\Gamma(-1)$ pole signalling the logarithmic running of $R^4$ in even dimensions.
+The KK-loop reproduction of $f_0 t_8t_8R^4$ therefore probes the established eleven-to-nine dimensional relation \cite{Green:1997as}, consistent with $t_8t_8R^4$ not being an intrinsically ten-dimensional term (Section \ref{sec:12d effective corrections}).
+A genuinely ten-dimensional diagnostic requires an amplitude sensitive to all ten momenta, such as $\epsilon_{10}\epsilon_{10}R^4$, which first appears at five points.

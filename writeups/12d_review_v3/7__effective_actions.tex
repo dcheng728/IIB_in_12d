@@ -103,10 +103,12 @@ f_0(\tau,\bar\tau)
 1+\sum_{k=1}^\infty(4\pi mn\tau_2)^{-k}\frac{\Gamma[k-1/2]}{\Gamma[-k-1/2]k!}
 \right),
 \end{aligned}
+\label{eq:f_0 Eisenstein}
 \end{equation}
 thereby restoring the SL(2, Z) duality symmetry.
 
 \subsection{12d Effective Corrections}
+\label{sec:12d effective corrections}
 From our previous discussion, the type IIB 4-graviton effective action takes on the following schematic form \cite{Kehagias:1997cq,Green:1997tv}
 \begin{equation}
 L^{(3)} \propto f_0(\tau,\bar\tau)t_8t_8 R^4
@@ -159,62 +161,23 @@ Alternatively, one may still hope that certain 12d tensor contraction structure 
 
 
 \subsection{KK-modes and D-brane Backgrounds}
-Previously we argued that the type IIB effective action at 5-point is critical in validating the 12d repackaging of the 10d effective actions.
-The significance of the 5-point amplitudes is further elevated in a separate but closely related context of the type IIB effective actions, namely the role of the supergravity KK-modes as an effective repackaging of the D0 and D(-1) backgrounds in string path integrals. 
+\label{sec:KK modes}
+The 12d perspective suggests one further parallel between the type IIA and type IIB effective actions, concerning the role of supergravity KK-modes as surrogates for the D0 and D(-1) backgrounds in the string path integral.
+In the type IIA theory, the tower of KK-modes on the M-theory circle $S_1$, running in a loop, reproduces the $t_8t_8R^4$ coupling together with its D0-brane (worldline instanton) completion \cite{Green:1997as}.
+The analogue on the type IIB side is that the KK-modes of a 12d field on $T_2$ reproduce the genus-1 and D(-1) contributions to the $R^4$ coupling.
 
-We begin in 12d, with coordinates ($x^\mu,y^1,y^2)$, after identifying
+Compactifying $(x^\mu,y^1,y^2)$ on a $T_2$ of complex structure $\tau$ and radius $R$, a 12d scalar acquires the KK spectrum $M_{m,n}^2=|m+n\tau|^2/(R^2\tau_2^2)$.
+Evaluating the one-loop four-graviton box with this tower running inside --- via the Schwinger representation, performing the Poisson resummation and zeta-function renormalization explicitly (Appendix \ref{sec:KK loop R4}), or by the shortcut of adding a spectator dimension to the known 11d-on-$T_2$ results \cite{Green:1997as,Beccaria:2023hhi} --- one finds
 \begin{equation}
-y^1\to y^1+2\pi R,\quad
-(y^1,y^2)\to (y^1+2\pi R\tau_1,y^2+2\pi R\tau_2)
-\end{equation}
-for some radius $R$, we can Fourier expand a scalar in 12d on $T_2$:
-\begin{equation}
-\Phi(x^\mu,y^1,y^2)
-=\sum_{m,n}\Phi_{m,n}(x^\mu) \times\exp
-\left[
-\frac{i}{R\tau_2}\left(m\tau_2y^1 + (n-m\tau_1)y^2\right)
-\right].
-\end{equation}
-The massive modes are
-\begin{equation}
-[-\nabla^2_{10}-\nabla^2_2]\phi_{p,m,n}
-=\left(p_{10}^2+M_{m,n}^2\right)\phi_{p,m,n},\quad
-M^2_{m,n} 
-= \frac{m^2}{R^2}+\frac{(n-m\tau_1)^2}{R^2\tau_2^2}
-=\frac{|n-m\tau|^2}{R^2\tau_2^2}.
-\end{equation}
-For 4-point amplitudes in 10d, we may evaluate contributions from loops of the infinite tower of massive KK-modes using Schwinger proper time
-\cite{Green:1997as,Beccaria:2023hhi}
-\begin{equation}
-\begin{aligned}
 \mathcal{A}_4
-\propto \sum_{n,m}\int_{\Lambda^{-2}}^\infty
-\frac{d\lambda}{\lambda^{3/2}}
-e^{-\lambda \frac{|n+m\tau|^2}{R^2\tau_2^2}}
-P(s,t;\lambda),\quad
-P(s,t;\lambda)
-=\int_0^1d\rho_3 \int_0^{\rho_3}d\rho_2\int_0^{\rho_2} d\rho_1e^{-\tau M(s,t;\rho)},\\
-M(s,t;\rho)=s\rho_1\rho_2+t\rho_2\rho_3+u\rho_1\rho_3 + t(\rho_1-\rho_2),\quad
-s+t+u=0.
-\end{aligned}
-\label{4-point Schwinger parameter}
+\propto  f_0(\tau,\bar\tau)(s^2+t^2+u^2)+\ldots
+\sim f_0(\tau,\bar\tau)t_8t_8R^4+\ldots.
 \end{equation}
-To evaluate $\mathcal{A}_4$ above, one performs Poisson resummations followed by zeta-function renormalization, and a low-energy expansion over $s,t,u$.
-But there is a shortcut of adding a spectator dimension to known results of 11d amplitudes on a torus \cite{Green:1997as}.
-Either way, one finds
-\begin{equation}
-\begin{aligned}
-\mathcal{A}_4
-&\propto  f_0(\tau,\bar\tau)(s^2+t^2+u^2)+...\\
-&\sim f_0(\tau,\bar\tau)t_8t_8R^4+....
-\end{aligned}
-\end{equation}
-Viewed from string theory, this is the effective action at genus-1 with the D(-1) background.
-In other words, the tower of KK-modes on a torus acts as a surrogate for the D(-1) background.
-This is in parallel with the 10d type IIA supergravity, where the KK modes on $S_1$ running in a loop produce the D0 background in the type IIA strings \cite{Green:1997as}.
+The single KK-loop sum thus reproduces the entire modular coupling $f_0$ of \eqref{eq:f_0 Eisenstein}: the tree and genus-1 terms appear as its constant part, and the D(-1) instanton series as its exponentially suppressed modes.
+In this sense the KK-tower on $T_2$ acts as a surrogate for the D(-1) background, in parallel with the type IIA KK-tower on $S_1$ and the D0 background \cite{Green:1997as}.
 
 We do not wish to overclaim.
-The point we are making is that what used to be a relation between 11d and 9d \cite{Green:1997as} is perfectly compatible with that between 12d and 10d.
-But this might just arise from $t_8t_8 R^4$ not being an intrinsically 10d term.
-It is worth exploring amplitudes that clearly signal 10d momenta, e.g. $\epsilon_{10}\epsilon_{10}R^4$ at 5-point.
-One may attempt to evaluate KK-loop contributions to 5-point amplitudes, using the 5-point Schwinger proper time formula analogous to \eqref{4-point Schwinger parameter}, as given in \cite{Minasian:2015bxa,Green:1999by,Liu:2022bfg}.
+As shown in Appendix \ref{sec:KK loop R4}, the modular weight of $f_0$ is fixed by the proper-time power $\lambda^{-3/2}$, which is the one-loop box measure in \emph{nine} noncompact dimensions; the computation is therefore the established 11d-on-$T_2$ relation \cite{Green:1997as} carried along by a spectator tenth dimension, rather than an intrinsically 12d-to-10d statement.
+This is consistent with $t_8t_8R^4$ not being an intrinsically 10d term, as discussed in Section \ref{sec:12d effective corrections}.
+A genuine 12d-to-10d diagnostic would require an amplitude that signals all ten momenta, e.g. $\epsilon_{10}\epsilon_{10}R^4$, which first appears at 5-point.
+One may attempt the analogous KK-loop evaluation at 5-point using the proper-time formulae of \cite{Minasian:2015bxa,Green:1999by,Liu:2022bfg}.

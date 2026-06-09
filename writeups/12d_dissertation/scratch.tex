@@ -11,7 +11,7 @@
 Higher-derivative corrections to supergravity are most efficiently obtained not from Feynman diagrams, but from the low-energy expansion of string amplitudes.
 The perturbative expansion of string amplitudes is organized by two parameters: $\alpha'$, governing the derivative expansion of the low-energy effective action, and $g_s$, weighting the genus expansion of the worldsheet. An $n$-point amplitude admits the expansion
 \begin{equation}
-    \mathcal A_n = \sum_{g=0}^\infty g_s^{2g-2+n}\, \mathcal A_n^{(g)}(\alpha').
+    \mathcal A_n = \sum_{g=0}^\infty g_s^{2g-2+n}  \mathcal A_n^{(g)}(\alpha').
 \end{equation}
 
 % ============================================================
@@ -39,9 +39,9 @@ terms with a repeated $dz_a$ vanish, leaving
 \end{equation}
 Using $dz_1\wedge F_3 = -F_3\wedge dz_1$ and $dz_2\wedge H_3 = -H_3\wedge dz_2$, then $dz_2\wedge dz_1=-dz_1\wedge dz_2$,
 \begin{equation}
-B_2\wedge dz_1\wedge F_3\wedge dz_2 = -\,B_2\wedge F_3\wedge dz_1\wedge dz_2,
+B_2\wedge dz_1\wedge F_3\wedge dz_2 = - B_2\wedge F_3\wedge dz_1\wedge dz_2,
 \qquad
-C_2\wedge dz_2\wedge H_3\wedge dz_1 = +\,C_2\wedge H_3\wedge dz_1\wedge dz_2,
+C_2\wedge dz_2\wedge H_3\wedge dz_1 = + C_2\wedge H_3\wedge dz_1\wedge dz_2,
 \end{equation}
 so that
 \begin{equation}
@@ -67,28 +67,28 @@ gives the bracket $F_5 - \tfrac12 C_2\wedge H_3 + \tfrac12 B_2\wedge F_3 = \tild
 \paragraph{(2) Chern--Simons coefficient.}
 A 4-form wedged with itself keeps only the cross term ($b\wedge a = (-1)^{16}a\wedge b = a\wedge b$):
 \begin{equation}
-\hat F_4\wedge\hat F_4 = 2\,(H_3\wedge dz_1)\wedge(F_3\wedge dz_2)
-= -2\,H_3\wedge F_3\wedge dz_1\wedge dz_2 ,
+\hat F_4\wedge\hat F_4 = 2 (H_3\wedge dz_1)\wedge(F_3\wedge dz_2)
+= -2 H_3\wedge F_3\wedge dz_1\wedge dz_2 ,
 \end{equation}
 hence, with $\hat C_4 = C_4$ (so $\hat F_5 = d\hat C_4 = F_5$),
 \begin{equation}
-\hat C_4\wedge\hat F_4\wedge\hat F_4 = -2\,C_4\wedge H_3\wedge F_3\wedge dz_1\wedge dz_2 .
+\hat C_4\wedge\hat F_4\wedge\hat F_4 = -2 C_4\wedge H_3\wedge F_3\wedge dz_1\wedge dz_2 .
 \end{equation}
 Integrating ($\int_{T_2}dz_1\wedge dz_2 = \pm Vol(T_2)$, sign set by torus orientation),
 \begin{equation}
 \tfrac12\int_{T_2\times\mathbb R^{1,9}}\hat C_4\wedge\hat F_4\wedge\hat F_4
-= \mp\,Vol(T_2)\int_{\mathbb R^{1,9}} C_4\wedge H_3\wedge F_3 .
+= \mp Vol(T_2)\int_{\mathbb R^{1,9}} C_4\wedge H_3\wedge F_3 .
 \end{equation}
 So the section's display identity is correct \emph{in magnitude} (the $\tfrac12$ cancels the $2$); only its overall
-sign is orientation-dependent. The problem is the action coefficient: feeding $\int\hat C_4\hat F_4\hat F_4 = 2\,Vol(T_2)\int C_4 H_3 F_3$
+sign is orientation-dependent. The problem is the action coefficient: feeding $\int\hat C_4\hat F_4\hat F_4 = 2 Vol(T_2)\int C_4 H_3 F_3$
 into the action term $-\tfrac{1}{4\kappa_{12}^2}\int\hat C_4\hat F_4\hat F_4$ gives
 \begin{equation}
--\frac{1}{4\kappa_{12}^2}\cdot 2\,Vol(T_2)\int C_4\wedge H_3\wedge F_3
+-\frac{1}{4\kappa_{12}^2}\cdot 2 Vol(T_2)\int C_4\wedge H_3\wedge F_3
 = -\frac{Vol(T_2)}{2\kappa_{12}^2}\int = -\frac{1}{2\kappa^2}\int C_4\wedge H_3\wedge F_3 ,
 \end{equation}
 which is \emph{twice} the IIB value $-\tfrac{1}{4\kappa^2}\int C_4\wedge H_3\wedge F_3$.
 \textbf{Resolution (chosen orientation $dz_2\wedge dz_1 > 0$, i.e. $\int_{T_2}dz_1\wedge dz_2 = -Vol(T_2)$):}
-With this orientation $\int\hat C_4\hat F_4\hat F_4 = +2\,Vol(T_2)\int C_4\wedge H_3\wedge F_3$, so to reproduce the IIB term
+With this orientation $\int\hat C_4\hat F_4\hat F_4 = +2 Vol(T_2)\int C_4\wedge H_3\wedge F_3$, so to reproduce the IIB term
 $-\tfrac{1}{4\kappa^2}\int C_4\wedge H_3\wedge F_3$ the action prefactor must be $-\tfrac{1}{8\kappa_{12}^2}$ (replacing $-\tfrac{1}{4\kappa_{12}^2}$):
 the factor of $2$ from $\hat F_4\wedge\hat F_4$ halves $\tfrac14\to\tfrac18$, and this orientation keeps the conventional minus sign.
 The display identity reads $\tfrac12\int\hat C_4\hat F_4\hat F_4 = +Vol(T_2)\int C_4\wedge H_3\wedge F_3$.
@@ -151,7 +151,7 @@ $g_{z_1z_1}g_{z_2z_2}=H^{-1/2}H^{1/2}=1$, whose radius ratio $g_{z_1z_1}/g_{z_2z
 geometrizes the dilaton; the $H^{-3/4}/H^{1/4}$ warps are exactly the 10d F1 warps. So it solves
 the \emph{10d} equations of motion, repackaged. The same holds for D1/NS5/D5, which are obtained
 from F1 by the torus $S$-rotation and the 12d Hodge duality (the orbit
-F1\,$\to$\,D1\,$\to$\,NS5\,$\to$\,D5).
+F1 $\to$ D1 $\to$ NS5 $\to$ D5).
 \textbf{Note:} the earlier ``$R_{\mu\nu}=S_{\mu\nu}$ with $n=3,D=10$'' phrasing is exact only for
 constant dilaton (flat torus, $R^{(12)}_{\mu\nu}=R^{(10)}_{\mu\nu}$); with the dilaton geometrized
 into a warped torus it is not a literal identity, which is why the warp-exponent argument is preferred.
@@ -171,12 +171,12 @@ $\hat g = g_{\rm base}\oplus\hat g_{ab}(\tau)$ with the unit-determinant coset b
 $\hat g_{ab}=\tfrac{1}{\tau_2}\!\left(\begin{smallmatrix}1&\tau_1\\\tau_1&\tau_1^2+\tau_2^2\end{smallmatrix}\right)$,
 the 12d Ricci scalar must satisfy
 \begin{equation}
-\hat R = R_{\rm base} - \tfrac12\,\frac{|\partial\tau|^2}{\tau_2^2}.
+\hat R = R_{\rm base} - \tfrac12 \frac{|\partial\tau|^2}{\tau_2^2}.
 \end{equation}
 Checked symbolically (\texttt{R\_reduction\_check.py}) with a flat base ($R_{\rm base}=0$) and the
 algebraically-independent profiles $\tau_1=\sin x_0$, $\tau_2=e^{x_0}$: \texttt{SymPy} returns
 \[
-\hat R = -\tfrac12\big(\cos^2 x_0\,e^{-2x_0}+1\big),\qquad
+\hat R = -\tfrac12\big(\cos^2 x_0 e^{-2x_0}+1\big),\qquad
 \hat R - \Big(\!-\tfrac12\tfrac{(\partial\tau_1)^2+(\partial\tau_2)^2}{\tau_2^2}\Big) = 0 .
 \]
 The coefficient is exactly $\tfrac12$. The remaining sectors were checked by hand:
@@ -221,14 +221,14 @@ equations are not independent of the axio-dilaton EOM: $\delta S/\delta\tau_i =
 ($\det\hat g_{ab}=e^{2\sigma}$) that the ansatz freezes to $1$. For the F1 uplift ($\tau_1=0$,
 genuine $n=4$, $D=12$):
 \[
-E_{z_1z_1}=R_{z_1z_1}-T_{z_1z_1}=\frac{H'^2}{10\,H^{11/4}},\qquad
-E_{z_2z_2}=\frac{H'^2}{10\,H^{7/4}},
+E_{z_1z_1}=R_{z_1z_1}-T_{z_1z_1}=\frac{H'^2}{10 H^{11/4}},\qquad
+E_{z_2z_2}=\frac{H'^2}{10 H^{7/4}},
 \]
 and, with $g^{z_1z_1}=H^{1/2}$, $g^{z_2z_2}=H^{-1/2}$,
 \[
 \underbrace{g^{z_1z_1}E_{z_1z_1}-g^{z_2z_2}E_{z_2z_2}}_{\text{volume-preserving }(\tau_2)\text{ direction}} = 0,
 \qquad
-\underbrace{g^{z_1z_1}E_{z_1z_1}+g^{z_2z_2}E_{z_2z_2}}_{\text{volume-changing (radion) direction}} = \frac{H'^2}{5\,H^{9/4}}\neq 0.
+\underbrace{g^{z_1z_1}E_{z_1z_1}+g^{z_2z_2}E_{z_2z_2}}_{\text{volume-changing (radion) direction}} = \frac{H'^2}{5 H^{9/4}}\neq 0.
 \]
 The volume-preserving combination is the 10d axion+dilaton EOM (the trace term cancels here, so it is
 weight-independent), and it \emph{holds}. The single failing equation is the torus-volume (radion)
@@ -285,7 +285,7 @@ which the brane solutions satisfy (verified directly in 10d, \texttt{full\_reche
 ``$10$d weights'' that make ten components agree in the diagnostic (C) are therefore not an ad hoc
 concession but a reflection of the same fact: $\hat F_4=H_3\wedge dz_1$ contracts through its single
 torus leg and gravitates as a 10d 3-form (cf.\ the genuine 12d membrane's inequivalent warps
-$-2/3,\,2/7$). With the embedded variation the ten physical equations and the axio-dilaton EOM hold;
+$-2/3, 2/7$). With the embedded variation the ten physical equations and the axio-dilaton EOM hold;
 only the radion --- a direction the embedding does not contain --- is left over.
 
 \paragraph{The two torus directions fail --- but reducibly.} $z_1,z_2$ have no 10d counterpart, so
@@ -295,7 +295,7 @@ g^{z_1z_1}E_{z_1z_1}-g^{z_2z_2}E_{z_2z_2}=0\ \ (\text{axio-dilaton EOM, satisfie
 g^{z_1z_1}E_{z_1z_1}+g^{z_2z_2}E_{z_2z_2}=\tfrac{H'^2}{4H^{9/4}}\neq 0\ \ (\text{radion}).
 \]
 The opposite signs of $R_{z_1}<0$ and $R_{z_2}>0$ are the imprint of the two radii
-$g_{z_1z_1}=H^{-1/2},\,g_{z_2z_2}=H^{1/2}$ scaling inversely (unit volume), i.e. of the geometrized
+$g_{z_1z_1}=H^{-1/2}, g_{z_2z_2}=H^{1/2}$ scaling inversely (unit volume), i.e. of the geometrized
 dilaton. The mismatch is therefore \emph{not} a sickness of the solution and \emph{not} a failure of
 the axio-dilaton sector: it is entirely the equation of motion of the frozen torus-volume modulus.
 
