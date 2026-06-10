@@ -13,7 +13,7 @@ S = \int d^Dx\sqrt{-g}\left[
     R - \frac{1}{2}(\partial\phi)^2 - \frac{1}{2}e^{\alpha\phi}|F_n|^2
 \right],
 \end{equation}
-the equations of motion, together with Bianchi identity (assuming $F = dA$) are given by
+the equations of motion, together with the Bianchi identity (assuming $F = dA$), are given by
 \begin{equation}
 \begin{aligned}
 R_{MN}
@@ -31,7 +31,7 @@ S_{MN}\big|_{F}\equiv
     -\frac{n-1}{D-2}\left(\frac{1}{n!}F^2\right)g_{MN}
 \right],
 \end{equation}
-and $\Delta\equiv \alpha^2 +\frac{2 d \tilde{d}}{D-2}$.
+and $\Delta\equiv \alpha^2 +\frac{2 d \tilde{d}}{D-2}$, with $\tilde{d} \equiv D-d-2$.
 There exists the electric solution, defined as the case where the form-field potential has legs along the worldvolume directions,
 \begin{equation}
 \begin{aligned}
@@ -72,7 +72,7 @@ In Table~\ref{tab:10d-12d-dof} we summarise the 10d massless on-shell degrees of
 \hline
  & metric & scalar & 1-form & 2-form & 3-form & 4-form & 5-form \\
 \hline
-Type IIB $SO(8)$ & $35$ & $2\times 1$ & $0\times 8$ & $2\times 28$ & $0\times 56$ & $1\times 35$ & $-$ \\
+Type IIB $SO(8)$ & $1\times 35$ & $2\times 1$ & $0\times 8$ & $2\times 28$ & $0\times 56$ & $1\times 35$ & $-$ \\
 12d $SO(10)$ & $54$ & $-$ & $10$ & $45$ & $120$ & $210$ & $126$ \\
 \hline
 \end{tabular}
@@ -98,7 +98,7 @@ We will use hats $\hat{\phantom{x}}$ to denote fields in the higher dimension.
 The 10d metric $g_{mn}$ with $m,n=0,1,...,9$ will be interpreted as embedded inside a 12d metric $\hat{g}_{MN}$, with $M,N=0,1,...,11$. We will use $\hat R$ to denote the Ricci scalar computed with $\hat{g}_{MN}$, and use $\hat{F}_{n+1} = d\hat{C}_{n}$ to denote form fields in 12d.
 
 Let the 12d coordinates be parameterised by $(x^m,z_1,z_2)$, and let $\hat{g}_{ab}$ be the $2\times 2$ metric on the torus.\footnote{
-We orient the torus so that $dz_2\wedge dz_1$ is the positively-oriented volume element, i.e. $\int_{T_2}dz_1\wedge dz_2 = -Vol(T_2)$. This fixes the sign of the 12d Hodge dual $*_{12}$, and hence the signs in the self-duality relation \eqref{12d interpretation of 10d self-duality} and in the Chern--Simons term.
+We orient the torus so that $dz_2\wedge dz_1$ is the positively-oriented volume element, i.e. $\int_{T_2}dz_1\wedge dz_2 = -\mathrm{Vol}(T_2)$. This fixes the sign of the 12d Hodge dual $*_{12}$, and hence the signs in the self-duality relation \eqref{12d interpretation of 10d self-duality} and in the Chern--Simons term.
 }
 The key insight from the previous section is that the axio-dilaton sector of type IIB may arise from the 12d metric embedding given by
 \begin{equation}
@@ -120,14 +120,14 @@ In particular,
 R - \frac{|\nabla \tau|^2}{2\tau_2^2}
 \right)
 &=
-\frac{Vol(T_2)}{2\kappa_{12}^2}\int d^{10}x \sqrt{-\hat{g}} \hat{R}\\
+\frac{\mathrm{Vol}(T_2)}{2\kappa_{12}^2}\int d^{10}x \sqrt{-\hat{g}} \hat{R}\\
 &=\frac{1}{2\kappa_{12}^2}\int_{T_2}dz_1 dz_2\int d^{10}x\sqrt{-\hat{g}}\hat{R},
 \end{aligned}
 \label{axio-dilaton 12d uplift}
 \end{equation}
 where we have schematically defined $\kappa_{12}$ by 
 \begin{equation}
-\frac{1}{\kappa^2} = \frac{Vol(T_2)}{\kappa_{12}^2}
+\frac{1}{\kappa^2} = \frac{\mathrm{Vol}(T_2)}{\kappa_{12}^2}
 =\frac{1}{\kappa_{12}^2}\int_{T_2}*_2 1,\quad
 [\kappa_{12}^2] = L^{10}.
 \end{equation}
@@ -143,7 +143,7 @@ Using the 12d metric ansatz \eqref{12d metric ansatz}, the 10d 3-form field stre
 |\hat{F}_4|^2\bigg|_{\hat{g}_{MN}}
 &=\hat{g}^{z_1 z_1}|H_3|^2+2\hat{g}^{z_1 z_2}(F_3\cdot H_3)+\hat{g}^{z_2 z_2}|F_3|^2\\
 &=\left(
-e^{-\Phi}|H_3|^2 + e^\Phi|F_3-CH_3|^2
+e^{-\Phi}|H_3|^2 + e^\Phi|F_3-C_0H_3|^2
 \right)\bigg|_{g_{mn}}.
 \end{aligned}
 \end{equation}
@@ -152,8 +152,8 @@ One observes that in 10d, the composite SL(2, R) singlet 5-form
 \begin{equation}
 \tilde F_5 = F_5 - \frac12 C_2 \wedge H_3 + \frac{1}{2}B_2\wedge F_3    
 \end{equation}
-can not be sensibly constructed in 12d, due to the lack of a pair of form field potential and strength with ranks that sum to 5 in 12d.
-However, the 10d self-dual 5-form field strength admits two possible uplifts to 12d:
+cannot be sensibly constructed in 12d, due to the lack of a pair of form field potential and strength with ranks that sum to 5 in 12d.
+However, the 10d five-form field strength admits two possible uplifts to 12d:
 \begin{equation}
 \hat{F}_5 = F_5,\quad \hat{F}_7=F_5\wedge dz_1 \wedge dz_2.
 \end{equation}
@@ -168,14 +168,15 @@ Then note that
 \end{equation}
 Then we may define a 12d 7-form
 \begin{equation}
-\tilde{\hat{F}}_7 \equiv \hat{F}_7 - \frac{1}{2}\hat{C}_3 \wedge \hat{F}_4
+\widetilde{\hat{F}}_7 \equiv \hat{F}_7 - \frac{1}{2}\hat{C}_3 \wedge \hat{F}_4
 \end{equation}
 that exactly supplies the type IIB composite 5-form contribution upon contraction in 12d:
 \begin{equation}
-|\tilde{\hat{F}}_7|^2\bigg|_{\hat{g}_{MN}} =
+|\widetilde{\hat{F}}_7|^2\bigg|_{\hat{g}_{MN}} =
 \det(\hat{g}^{ab})|\tilde F_5|^2\bigg|_{g_{mn}}.
 \end{equation}
-The additional utility of $\hat{F}_7$ is that it allows us to write the 10d self-duality condition on $F_5$ as a 12d Hodge duality condition
+Writing $\widetilde{\hat{F}}_5\equiv\tilde F_5$ for the corresponding torus-leg-free five-form uplift, the reduction in Appendix~\ref{sec:form-field-reduction} gives $\widetilde{\hat{F}}_7=\widetilde{\hat{F}}_5\wedge dz_1\wedge dz_2$.
+The additional utility of the composite seven-form is that it lets us write the genuine 10d self-duality condition on the composite five-form $\tilde F_5$ as a 12d Hodge duality condition
 \begin{equation}
 \hat{F}_7 = -*_{12}\hat{F}_5\quad
 \Leftrightarrow\quad
@@ -185,21 +186,21 @@ F_5 = *_{10}F_5.
 The 10d Chern-Simons term can also be obtained using the 12d potentials and their corresponding field strengths:
 \begin{equation}
 \frac{1}{2}\int_{T_2\times \mathbb{R}^{1,9}} \hat{C}_4\wedge \hat{F}_4\wedge\hat{F}_4=
-Vol(T_2)\int_{\mathbb{R}^{1,9}}C_4\wedge H_3\wedge F_3.
+\mathrm{Vol}(T_2)\int_{\mathbb{R}^{1,9}}C_4\wedge H_3\wedge F_3.
 \end{equation}
-We note that reproducing the type IIB Chern-Simons term in 12d necessitates the inclusion of both 4- and 5-form field strengths.
-One can write down a ``12d"\footnote{
+We note that reproducing the type IIB Chern-Simons term in 12d necessitates both the 4-form field strength $\hat F_4$ and the 4-form potential $\hat C_4$, whose field strength is the 5-form $\hat F_5$.
+One can write down a ``12d''\footnote{
 Not dynamical 12d, but dynamical 10d times a 2-torus.
 }
 action
 \begin{equation}
 \begin{aligned}
 S_{IIB}=
-S_{\text{``12"}}
+S_{\text{``12''}}
 = \frac{1}{2\kappa_{12}^2}\int_{T_2}dz_1 dz_2\int d^{10}x
 \sqrt{-\hat{g}}
 \left(
-\hat{R} - \frac{1}{2}|\hat F_4|^2-\frac{1}{4}|\tilde{\hat{F}}_7|^2
+\hat{R} - \frac{1}{2}|\hat F_4|^2-\frac{1}{4}|\widetilde{\hat{F}}_7|^2
 \right)-\frac{1}{8\kappa_{12}^2}\int_{T_2\times \mathbb{R}^{1,9}}\hat{C}_4\wedge \hat{F}_4\wedge \hat{F}_4.
 \end{aligned}
 \label{12d action}
@@ -211,10 +212,10 @@ The 2d integrand is just a repackaging of $1/\kappa^2$, and it is likely that $\
 \subsection{Uplift of type IIB branes}
 We now present the 12d ``uplifts'' of the various type IIB brane solutions, using the effective 12d ``action''.
 
-Although one often thinks of F1 and NS5, D1 and D5 as EM dual pairs, their form fields $H_3$ and $F_3$ configurations are not related by EM duality in 10d, and of course they have opposite dilaton profiles as well\footnote{The brane solutions are listed in \ref{sec:10d IIB branes}}.
+Although one often thinks of F1 and NS5, D1 and D5 as EM dual pairs, their $H_3$ and $F_3$ configurations are not related by EM duality in 10d, and of course they have opposite dilaton profiles as well\footnote{The brane solutions are listed in \ref{sec:10d IIB branes}}.
 
 To obtain the NS5 from F1 by EM duality, one actually has to perform an accompanying SL(2, Z) transformation to invert the dilaton.
-Similar situation is encountered on the D3 brane worldvolume \cite{Tseytlin:1996it}.
+A similar situation is encountered on the D3 brane worldvolume \cite{Tseytlin:1996it}.
 Using the unification proposed in the previous subsection, let us uplift the F1, D1, NS5, D5 branes to 12d.
 
 \paragraph{F1}
@@ -322,12 +323,12 @@ ds^2
 
 
 \paragraph{Comments on Role of dilaton and F-theory}
-Usually, in supergravity theories, the dilaton is the volume of the compact manifold.
+Usually, in supergravity theories, the dilaton is related to the volume of the compact manifold.
 In type IIB, however, the compact torus has fixed volume: as the radius of one circle grows, the other shrinks.
 The natural place for the non-compact scalar dilaton to live is the radius of one of the circles $R_1 \sim e^{\Phi}$, while the radius of the other circle scales inversely, $R_2 \sim e^{-\Phi}$.
-In this way, type IIB backgrounds can not have a 12d decompactifying limit, because taking the decompactifying limit of one circle immediately compactifies the other circle.
+In this way, type IIB backgrounds cannot have a 12d decompactifying limit, because taking the decompactifying limit of one circle immediately compactifies the other circle.
 The exception is the D(-1)-instanton uplift, where the pp-wave propagates inside a non-compact torus.
-The KK-Monopole uplift of D7-brane is not an exception because a 12d KK-monopole is localised on $S_1 \times \mathbb{R}^3$: there is indeed a compact circle in 12d.
+The KK-monopole uplift of the D7-brane is not an exception because a 12d KK-monopole is localised on $S^1 \times \mathbb{R}^3$: there is indeed a compact circle in 12d.
 
 While the two circle radii scale inversely to each other, one may consider the case where they are equal: $e^\Phi = e^{-\Phi} = 1$.
 This implies that the radii of both circles are finite, hence a compactification limit of the full torus.
