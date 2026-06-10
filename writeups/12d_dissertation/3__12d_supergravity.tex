@@ -5,119 +5,118 @@ These constructions will be reviewed for completeness.
 The objective here is to present these attempts in an organised fashion, discuss their obstructions, and set the stage for the brane and effective action discussions later.
 
 In 12d the complex Dirac spinor has 64 components and decomposes into two 32-component Weyl spinors.
-In general, they are complex, but for the Lorentz group SO(10, 2)\footnote{Here $s$ and $t$ are integer entries in the special orthogonal group SO(s, t).}, because
+In general, they are complex, but for the Lorentz group SO(10, 2)\footnote{We write SO(s, t) for the orthogonal group of a metric with $s$ spacelike and $t$ timelike directions, so SO(10, 2) has signature $(10, 2)$.}, because
 \begin{equation}
-s-t=0\mod 8,
+s-t\equiv 0 \pmod 8,
 \end{equation}
-one can impose a Majorana condition compatible with chirality, to find Majorana-Weyl spinors with 32 real components \cite{VanProeyen:1999ni}.
+one can impose a Majorana condition compatible with chirality to find Majorana-Weyl spinors with 32 real components \cite{VanProeyen:1999ni}.
 The corresponding superalgebra contains a 2-form and a self-dual 6-form charge
 \cite{vanHolten:1982mx}
 \begin{equation}
-\text{Sym}^2[000001]_{SO(10, 2)} = [010000]_{SO(10, 2)} + [000020]_{SO(10, 2)}.
+\operatorname{Sym}^2[000001]_{SO(10, 2)} = [010000]_{SO(10, 2)} + [000020]_{SO(10, 2)}.
 \label{OSp algebra}
 \end{equation}
 This algebra is often referred to as the $\mathrm{OSp}(1|32)$ algebra \cite{Bergshoeff:2000qu} or the F-theory algebra \cite{Hewson:1999tf}.
 It reduces to the 11d algebra
 \begin{equation}
-\text{Sym}^2[00001]_{SO(10,1)} = [10000]_{SO(10,1)} + [01000]_{SO(10,1)} + [00002]_{SO(10,1)}.
+\operatorname{Sym}^2[00001]_{SO(10, 1)} = [10000]_{SO(10, 1)} + [01000]_{SO(10, 1)} + [00002]_{SO(10, 1)}.
 \end{equation}
 Historically, \eqref{OSp algebra} led to interest in formulating supergravity theories in 10+2d \cite{Castellani:1982ke}.
 It was also understood that 2+2d branes are allowed to propagate in (10,2) spacetime \cite{Blencowe:1988sk}.
 Interestingly, \eqref{OSp algebra} also reduces to the 10d type IIA and 10d IIB algebra \cite{Bergshoeff:2000qu,Bergshoeff:2000vg,Bergshoeff:2000vh}.
-The BPS states in the OSp(1$|$32) algebra have been studied \cite{Ueno:1999xa}, and the various consistent fractions of preserved supersymmetry were worked out \cite{Manvelyan:1998kx}.
-At an algebraic level, ideas for the unification of the various dualities in 12, 13 dimensions \cite{Bars:1996dz,Bars:1996us,Bars:1996ab,Bars:1996hr}, and even 14 dimensions have been suggested \cite{Rudychev:1997ui,Bars:1997ug}.
+The BPS states in the $\mathrm{OSp}(1|32)$ algebra have been studied \cite{Ueno:1999xa}, and the various consistent fractions of preserved supersymmetry were worked out \cite{Manvelyan:1998kx}.
+At an algebraic level, ideas for the unification of the various dualities in 12 and 13 dimensions \cite{Bars:1996dz,Bars:1996us,Bars:1996ab,Bars:1996hr}, and even 14 dimensions, have been suggested \cite{Rudychev:1997ui,Bars:1997ug}.
 
 However, the possibility of a 10+2d theory hinges on there being two time-like directions, and there are fundamental issues with formulating a supersymmetric theory with two times.
-The little group of an SO(10, 2) theory is the non-compact SO(9, 1), with no nontrivial unitary irreducible representations \cite{Weinberg:1995mt}.
+The little group of an SO(10, 2) theory is the non-compact SO(9, 1), which has no nontrivial finite-dimensional unitary representations \cite{Weinberg:1995mt}.
 For unitary representations of the supersymmetry algebra, we may write the supercharge anticommutator 
 \begin{equation}
-\{Q,Q^\dagger\}=2|Q|^2=\sum_n\Gamma_n Z_n.
+\{Q_\alpha,Q_\beta^\dagger\}=\sum_n(\Gamma_n)_{\alpha\beta} Z_n,
 \end{equation}
-Because the RHS is symmetric and positive definite, we can diagonalise it.
+Here $\Gamma_n$ denotes the antisymmetrised gamma-matrix structures and $Z_n$ the corresponding central charges (the 2-form and self-dual 6-form charges of \eqref{OSp algebra}). Because the RHS is symmetric and positive definite, we can diagonalise it.
 Then we obtain fermionic raising and lowering operators, which implies that there are 256 states in the system. 
-However, this can not be carried out if the representation is non-unitary.
+However, this cannot be carried out if the representation is non-unitary.
 In any known one-time supergravity theory with 32 supercharges there are 128+128 states, suggesting the same starting point.
-But the gravitino representation of SO(10) already has 144 states, exceeding the budget for fermions. There is indeed a way to add up to 144 + 144 states for SO(10) without too many scalars: a single gravitino in the fermion sector plus a graviton and two 2-forms in the bosonic sector. This is not related to any known 10d or 11d multiplets.
+On-shell states are counted against the compact little group SO(10), that of a one-time $11+1$ dimensional theory.
+But the gravitino representation of SO(10) already has 144 states, exceeding the budget for fermions. 
+There is indeed a way to reach 144 + 144 states for SO(10) without too many scalars: a single gravitino ($144$) in the fermion sector, plus a graviton ($54$) and two 2-forms ($2\times 45 = 90$) in the bosonic sector. 
+This matches no known 10d or 11d multiplet.
 
 
-Another issue that accompanies a non-compact little group is negative-norm states, or ``ghosts".
+Another issue that accompanies a non-compact little group is negative-norm states, or ``ghosts''.
 Partially motivated by studying the 10+2d theory, a practical two-time framework has been developed \cite{Bars:1998cs,Bars:1998ui,Bars:1999nk,Bars:1999uq,Bars:2000qm}. 
 The key ingredient is a local Sp(2, R) gauge symmetry acting on the phase-space variables, treated as a two-component vector.
 Different gauge choices lead to different one-time systems that share a common (d-2, 2) parent description.
 The various approaches to formulating 10+2d theories largely follow this logic.
 
-There have been some attempts at 10+2d SYM \cite{Nishino:1996wp,Sezgin:1997gr,Nishino:1997hk,Nishino:1997ia,Nishino:1999ck} and 10+2d supergravity \cite{Nishino:1997gq,Nishino:1997sw,Nishino:1998qn}, but none of them has achieved satisfactory results, as they either introduce null projectors that explicitly break SO(10, 2),
+There have been some attempts at 10+2d SYM \cite{Nishino:1996wp,Sezgin:1997gr,Nishino:1997hk,Nishino:1997ia,Nishino:1999ck} and 10+2d supergravity \cite{Nishino:1997gq,Nishino:1997sw,Nishino:1998qn}, but none of them have achieved satisfactory results, as they either introduce null projectors that explicitly break SO(10, 2),
 or fail to construct vielbeins due to the lack of a momentum generator \cite{Hewson:1999tf} in the algebra \eqref{OSp algebra}. 
 
-After it was shown that the (2+2)-brane can propagate in 10+2d spacetime \cite{Blencowe:1988sk}, the $\mathcal N=(2,1)$ string was studied \cite{Kutasov:1996fp, Kutasov:1996zm, Martinec:1996wn}. The $\mathcal N=1$ sector contains an effective 10+2d target space, with the $\mathcal N=2$ sector on a 2+2d target.
-Later, a $\mathcal{N}=1$ superstring with a 2+2d target space was constructed \cite{Khviengia:1995pm,Lu:1995pn}.
-Further work investigated whether self-dual gravity in 2+2 dimensions admits a stringy description \cite{Sezgin:1995fj} and related these self-dual 2+2d strings to supersymmetric membrane action with OSp(1$|$32) and OSp(8$|$2) subgroup structure \cite{Ketov:1996gr}.
-In parallel, a Green-Schwarz type super 2+2d brane embedded in 10+2d background framework was constructed \cite{Hewson:1996yh,Hewson:1997wv,Hewson:1998sw}.
+After it was shown that the (2+2)-brane can propagate in 10+2d spacetime \cite{Blencowe:1988sk}, the $\mathcal{N}=(2,1)$ string was studied \cite{Kutasov:1996fp,Kutasov:1996zm,Martinec:1996wn}. The $\mathcal{N}=1$ sector contains an effective 10+2d target space, with the $\mathcal{N}=2$ sector on a 2+2d target.
+Later, an $\mathcal{N}=1$ superstring with a 2+2d target space was constructed \cite{Khviengia:1995pm,Lu:1995pn}.
+Further work investigated whether self-dual gravity in 2+2 dimensions admits a stringy description \cite{Sezgin:1995fj} and related these self-dual 2+2d strings to a supersymmetric membrane action with $\mathrm{OSp}(1|32)$ and $\mathrm{OSp}(8|2)$ subgroup structure \cite{Ketov:1996gr}.
+In parallel, a Green-Schwarz-type super 2+2d brane embedded in a 10+2d background was constructed \cite{Hewson:1996yh,Hewson:1997wv,Hewson:1998sw}.
 
-There were also investigations on higher dimensional bosonic field theories, that upon compactifications and truncations, may produce the known theories.
+There were also investigations into higher-dimensional bosonic field theories that, upon compactification and truncation, may produce the known theories.
 In \cite{Khviengia:1997rh}, a 12d action with imaginary dilaton couplings was suggested as
 \begin{equation}
 2\kappa_{12}^2S
-=\int d^{12}x\sqrt{-\hat{g}}
+=\int d^{12}x\sqrt{-\widehat{g}}
 \left[
-\hat R-\frac{1}{2}(\partial\hat{\Phi})^2
--\frac{1}{2} e^{\frac{2i}{\sqrt{5}} \hat{\Phi}}|\hat{F}_5|^2
--\frac{1}{2}e^{\frac{i}{\sqrt{5}}\hat{\Phi} }|\hat{F}_4|^2
+\widehat R-\frac{1}{2}(\partial\widehat{\Phi})^2
+-\frac{1}{2}e^{\frac{2i}{\sqrt{5}}\widehat{\Phi}}|\widehat{F}_5|^2
+-\frac{1}{2}e^{\frac{i}{\sqrt{5}}\widehat{\Phi}}|\widehat{F}_4|^2
 \right]
-+\frac{\sqrt{3}}{4}\int \hat{C}_4\wedge d\hat{C}_3 \wedge d\hat{C}_3
++\frac{\sqrt{3}}{4}\int \widehat{C}_4\wedge \widehat{F}_4 \wedge \widehat{F}_4
 \label{Khviengia action}
 \end{equation}
-where $[\kappa_{12}^2]=L^{10}$ and $\hat{\Phi}$ here is a 12d dilaton-like scalar.
-We will use hats $\hat{\phantom{x}}$ for higher dimensional fields and standard letters $g_{mn},C_n,F_{n+1}$ for lower dimensional fields. 
-This will be discussed more clearly in a later section.
+where $\widehat{F}_5 = d\widehat{C}_4$, $\widehat{F}_4 = d\widehat{C}_3$, $[\kappa_{12}^2]=L^{10}$, and $\widehat{\Phi}$ here is a 12d dilaton-like scalar.
+We will use hats $\widehat{\phantom{x}}$ for higher-dimensional fields and straight letters $g_{mn},C_n,F_{n+1}$ for lower-dimensional fields. 
+This will be discussed more clearly in Section~\ref{sec:covariant-unification}.
 This action \eqref{Khviengia action} was subsequently studied by \cite{Bakhtiarizadeh:2018upg} at higher derivatives.
 The most prominent feature of the proposal \eqref{Khviengia action} by \cite{Khviengia:1997rh} is the 12d dilaton and its imaginary couplings.
 It was introduced based on a certain scalar invariant \cite{Lu:1995cs} across 11d and 10d type IIB brane solutions \cite{Khviengia:1997rh}.
 
 More recently, it has been claimed that F-theory \cite{Vafa:1996xn} admits a 12d action \cite{Choi:2014vya,Choi:2015gia}, taking the form
 \begin{equation}
-2\kappa_{12}^2S = \int d^{11}x dy \sqrt{-\hat{g}}
+2\kappa_{12}^2S = \int d^{11}x dy \sqrt{-\widehat{g}}
 \left(
-\hat{R}-\frac{1}{2}|\hat{F}_5|^2
+\widehat{R}-\frac{1}{2}|\widehat{F}_5|^2
 \right)
 +\frac{1}{6}
-\int \hat{C}_4\wedge \hat{F}_4 \wedge \hat{F}_4.
+\int \widehat{C}_4\wedge \widehat{F}_4 \wedge \widehat{F}_4.
 \label{Choi action}
-% \tag{1504.00602 eq 2.3}
 \end{equation}
+Here $\widehat{F}_5 = d\widehat{C}_4$ and $\widehat{F}_4 = d\widehat{C}_3$. 
 Upon closer examination, we find \eqref{Choi action} is just 11d supergravity integrated over a spectator dimension.
-To see this, we follow \cite{Choi:2014vya,Choi:2015gia} and package all dependence on the twelfth coordinate $y$ into a single scalar $r\equiv r(x^m,y)$, which also enters the metric:
+To see this, we split the 12d space as $11+1$, an 11d base $x^m$ together with a single extra coordinate $y$, in contrast to the $10+2$ torus split $(x^m,z_1,z_2)$ used in Section~\ref{sec:covariant-unification}. Following \cite{Choi:2014vya,Choi:2015gia}, we package all dependence on the twelfth coordinate $y$ into a single scalar $r\equiv r(x,y)$, which also enters the metric:
 \begin{equation}
-\hat{C}_4(x^m,y) \equiv r(x^m,y) C_3(x)\wedge dy,\quad
-\hat{F}_5(x^m,y) \equiv r(x^m,y) F_4\wedge dy,
+\widehat{C}_4(x,y) \equiv r(x,y) C_3\wedge dy,\quad
+\widehat{F}_5(x,y) \equiv r(x,y) F_4\wedge dy,
 \end{equation}
 \begin{equation}
-\hat{g}_{mn}(x) = g_{mn}(x),\quad
-\hat{g}_{my} = 0,\quad
-\hat{g}_{yy}(x,y) = r(x,y)^2,
+\widehat{g}_{mn} = g_{mn},\quad
+\widehat{g}_{my} = 0,\quad
+\widehat{g}_{yy} = r^2,
 \end{equation}
 where $F_4 = dC_3$ and straight letters denote 11d fields.
-Substituting these into \eqref{Choi action} and evaluating $\int \sqrt{-\hat{g}} \hat{R}$, the action reduces to
+Substituting these into \eqref{Choi action} and evaluating $\int d^{11}x dy \sqrt{-\widehat{g}} \widehat{R}$, the action reduces to
 \begin{equation}
-S =
-\int d^{11}x
-\left[
-\sqrt{-g}
+2\kappa_{12}^2 S =
+\int d^{11}x \lambda(x)\sqrt{-g}
 \left(R-\frac{1}{2}|F_4|^2\right)
-+\frac{1}{6}\int C_3\wedge F_4\wedge F_4
-\right]
-\lambda(x)
++\frac{1}{6}\int \lambda(x) C_3\wedge F_4\wedge F_4
 +\text{boundary},\quad
-\lambda(x)\equiv \int dy  r(x,y).
+\lambda(x)\equiv \int dy r(x,y).
 \end{equation}
-This is nothing but the bosonic action of 11d supergravity, multiplied by an auxiliary field $\lambda(x)$ whose equation of motion imposes that the 11d bosonic action vanishes.
-In an attempt to unify the various string theory dualities, an SL(2, R)$\times R^+$ Exceptional Field Theory was proposed \cite{Berman:2015rcc,Rudolph:2017vzy}.
+This is nothing but the bosonic action of 11d supergravity, multiplied by an auxiliary field $\lambda(x)$ whose equation of motion imposes that the 11d bosonic Lagrangian vanishes.
+In an attempt to unify the various string theory dualities, an SL(2, R)$\times \mathbb{R}^+$ Exceptional Field Theory was proposed \cite{Berman:2015rcc,Rudolph:2017vzy}.
 The idea is to realise unified dualities with extended coordinates, but this is not a 12d theory.
 
 Related insights on a 12d viewpoint include proposals in which the type IIB theory is an edge mode of a gapped 12d bulk theory, motivated by a 6d generalisation of the fractional quantum Hall effect \cite{Heckman:2017uxe}, as well as the perspectives that 2+2 signature spacetime may be a tool for studying Lorentzian QFT \cite{Heckman:2018mxl,Heckman:2022peq}. 
-We also note a recent supergravity construction of a locally supersymmetric $SO(10,2)$-invariant action in $D=10+2$,
-of MacDowell-Mansouri type and containing the Einstein-Hilbert term \cite{Castellani:2017vbi}, whose physical degrees of freedom and the relation to standard 10d/11d supergravity remains to be clarified.
+We also note a recent supergravity construction of a locally supersymmetric $SO(10, 2)$-invariant action in $D=10+2$,
+of MacDowell-Mansouri type and containing the Einstein-Hilbert term \cite{Castellani:2017vbi}, whose physical degrees of freedom and relation to standard 10d/11d supergravity remain to be clarified.
 
-The persistent obstructions reviewed above (the non-compact little group, the absence of a momentum generator in the OSp(1$|$32) algebra, and the failure to match known 10d or 11d multiplets) suggest that a dynamical 10+2d supergravity with 32 supercharges reducing to the type IIB theory is not available.
+The persistent obstructions reviewed above (the non-compact little group, the absence of a momentum generator in the $\mathrm{OSp}(1|32)$ algebra, and the failure to match known 10d or 11d multiplets) suggest that a dynamical 10+2d supergravity with 32 supercharges reducing to the type IIB theory is not available.
 A more modest strategy is then to ask whether specific solutions of the known 10d theories admit a 12d geometric interpretation, without requiring a full dynamical 12d theory.
 This is the approach taken in the following sections.

@@ -21,7 +21,7 @@ In the type IIB theory, the R-symmetry is local $SO(2)\cong U(1)$, and the Killi
 \delta\psi_\mu
 &=
 \left(
-\partial_\mu+\frac{1}{4}\omega_\mu{}^{ab}\gamma_{ab} -\frac{i}{2}\frac{\partial_m \tau_1}{2\tau_2}
+\partial_\mu+\frac{1}{4}\omega_\mu{}^{ab}\gamma_{ab} -\frac{i}{2}\frac{\partial_\mu \tau_1}{2\tau_2}
 \right)\epsilon
 \equiv\left(\nabla_\mu+\frac{i}{2}Q_\mu\right)\epsilon.
 \end{aligned}
@@ -46,7 +46,7 @@ The general $N$ D7 brane solution can be written as \cite{Greene:1989ya,Gibbons:
 ds_{D7}^2 = -dt^2 + d\vec{x}_7^2 + \text{Im} \tau dz d\bar z,
 \label{D7 solution}
 \end{equation}
-where $\tau = C^{(0)} + i e^{-\Phi}$ is the axio-dilaton, and takes the form
+where $\tau = C_0 + i e^{-\Phi}$ is the axio-dilaton, and takes the form
 \begin{equation}
 j(\tau(z)) = \frac{P_N(z)}{P_{N-1}(z)},
 \end{equation}
@@ -62,7 +62,7 @@ The D(-1) is a solution to the Euclidean type IIB theory, within the axio-dilato
 In Einstein frame, it can be written as
 \begin{equation}
 ds_{10}^2 = \sum_{i=1}^{10} dx_i^2,\quad
-e^\Phi = H, \quad\mathcal C\equiv-iC = H^{-1}-1,\quad
+e^\Phi = H, \quad\mathcal C\equiv-iC_0 = H^{-1}-1,\quad
 H=1+\frac{Q}{r^8}.
 \end{equation}
 
@@ -71,12 +71,12 @@ H=1+\frac{Q}{r^8}.
 % Nevertheless, they can acquire a more dynamical interpretation.
 We will now show that the D7 solution can be interpreted as a 12d KK-monopole geometry compactified on a torus.
 Remarkably, this story is in parallel with the story on the type IIA side, between the D6 brane and an 11d KK-monopole geometry.
-The ``Kaluza-Klein monopole (KK-monopole)" \cite{Gross:1983hb,Sorkin:1983ns} refers to the solution of the Einstein-Hilbert action whose KK reduction yields a magnetic monopole.
+The ``Kaluza-Klein monopole (KK-monopole)'' \cite{Gross:1983hb,Sorkin:1983ns} refers to the solution of the Einstein-Hilbert action whose KK reduction yields a magnetic monopole.
 Thus it can also be understood as the product of Minkowski space and the Taub-NUT space \cite{Ortin:2015hya}.
 In $d$ dimensions, the KK-monopole geometry is given by
 \cite{Eguchi:1980jx}
 \begin{equation}
-ds_d^2 = ds_{1,d-5}^2 + H(\vec{y})(du + \vec{A}\cdot d\vec{y})^2,
+ds_d^2 = ds_{1,d-5}^2 + H(\vec{y})d\vec{y}^2 + H(\vec{y})^{-1}(du + \vec{A}\cdot d\vec{y})^2,
 \label{d-dim KK-monopole}
 \end{equation}
 \begin{equation}
@@ -197,7 +197,7 @@ The other $\frac{1}{2}$-BPS solution of the axio-dilaton action \eqref{IIB axio-
 We now discuss this in the context of the known relation between the D0 brane and an 11d pp-wave.
 
 Pp-waves are solutions of the vacuum Einstein equations following from the Einstein-Hilbert action, describing a gravitational wave propagating at the speed of light.
-In $d$ dimensions, written in light-cone coordinates $u,v = y\pm t$, they take the form
+In $d$ dimensions, written in light-cone coordinates $v,u = y\pm t$, they take the form
 \begin{equation}
 ds^2 = dudv+(H-1)du^2+\sum_{i=1}^{d-2}dx_i^2,\quad
 \nabla^2_{d-2} H(\vec{x})=0,
@@ -217,7 +217,7 @@ By specialising \eqref{d-dim pp-wave} to 11d, we find the 11d pp-wave solution
 ds_{11}^2
 =
 -H^{-1}dt^2+H[dy+(H^{-1}-1)dt]^2
-+\sum_{i=1}^9x_i^2,\quad
++\sum_{i=1}^9 dx_i^2,\quad
 H=1+\frac{Q}{r^7}.
 \end{equation}
 This can be reduced to 10d by comparison with the KK reduction ansatz \eqref{string frame KK reduction ansatz}.
@@ -226,7 +226,7 @@ Doing so we find precisely the 10d D0 brane solution \cite{Stelle:1998xg}
 ds_{10,string}^2
 =-H^{-1/2} dt^2+H^{1/2}ds_9^2,\quad
 e^{\phi} = H^{3/4},\quad
-A_0 = H^{-1}-1.
+(C_1)_0 = H^{-1}-1.
 \end{equation}
 Like the relation between the 11d KK-monopole and 10d D6 brane in the type IIA theory, the connection between the 11d pp-wave and the D0 brane is part of the established S-duality between the type IIA theory and M-theory. Remarkably, despite the absence of a 12d supergravity theory, this story also has a similar analogue on the type IIB side, between a 12d pp-wave and the type IIB D(-1) solution.
 
@@ -234,11 +234,11 @@ Like the relation between the 11d KK-monopole and 10d D6 brane in the type IIA t
 \paragraph{D(-1) instanton from reduction of the 12d pp-wave}
 
 The D(-1) is a solution to the Euclidean type IIB theory, within the axio-dilaton sector \cite{Gibbons:1995vg}.
-In Einstein frame, it can be written as\footnote{In the Euclidean type IIB theory, the compact scalar $C$ gets a wrong sign kinetic term, thus becomes purely imaginary. One instead works with $\mathcal C$. This is discussed in \cite{Gibbons:1995vg}.}
+In Einstein frame, it can be written as\footnote{In the Euclidean type IIB theory, the compact scalar $C_0$ gets a wrong sign kinetic term, thus becomes purely imaginary. One instead works with $\mathcal C$. This is discussed in \cite{Gibbons:1995vg}.}
 \begin{equation}
 ds_{10}^2 = \sum_{i=1}^{10} dx_i^2,\quad
 e^\Phi = H, \quad
-\mathcal C\equiv-iC = H^{-1}-1,\quad
+\mathcal C\equiv-iC_0 = H^{-1}-1,\quad
 H=1+\frac{Q}{r^8}.
 \label{D-1 background}
 \end{equation}
@@ -268,10 +268,10 @@ dudv
 v,u = y\pm t.
 \end{equation}
 By comparison with \eqref{d-dim pp-wave}, we see that the uplift of D(-1) is a pp-wave in 11+1 dimensions.
-One may view the Euclidean D(-1) as a ``slice" of the 10d homogeneous wavefront of a 12d pp-wave.
+One may view the Euclidean D(-1) as a ``slice'' of the 10d homogeneous wavefront of a 12d pp-wave.
 The momentum of the wave is the D(-1) charge.
 Recent investigations of the IKKT matrix model \cite{Hartnoll:2024csr,Komatsu:2024bop} reveal a type IIB supergravity background with axio-dilaton and the 3-form turned on, which admits a similar 12d interpretation.\footnote{
-The mass-deformed model is dual to a probe D1 brane in the Einstein-frame-flat background $ds_{10}^2 = \sum_i dx_i^2$, $e^\phi = 1 - \frac{\mu^2}{32}\left(\sum_{A=1}^7 x_A^2 + 3\sum_{a=9}^{10}x_a^2\right)$, $H_3 = \mu dx^8\wedge dx^9\wedge dx^{10}$, valid in the ellipsoidal region where $e^\phi\ge0$ \cite{Hartnoll:2024csr}. Uplifting to 12d (Wick rotating to keep $ds^2$ real) gives the Brinkmann-form metric $ds_{12}^2 = 2dudv + e^\phi du^2 + \sum_{i=1}^{10}dx_i^2$, whose only non-vanishing Ricci component is $R_{uu}=\mu^2/2$. Since $e^\phi$ is not harmonic it is not a pp-wave, but it solves 12d gravity coupled to a 4-form, $S = \int d^{12}x\sqrt{-\hat{g}}\left(\hat{R}-\tfrac12|\hat{F}_4|^2\right)$ with $\hat{F}_4 = \mu du\wedge dx^8\wedge dx^9\wedge dx^{10} = du\wedge H_3$.
+The mass-deformed model is dual to a probe D1 brane in the Einstein-frame-flat background $ds_{10}^2 = \sum_i dx_i^2$, $e^\phi = 1 - \frac{\mu^2}{32}\left(\sum_{A=1}^7 x_A^2 + 3\sum_{a=9}^{10}x_a^2\right)$, $H_3 = \mu dx^8\wedge dx^9\wedge dx^{10}$, valid in the ellipsoidal region where $e^\phi\ge0$ \cite{Hartnoll:2024csr}. Uplifting to 12d (Wick rotating to keep $ds^2$ real) gives the Brinkmann-form metric $ds_{12}^2 = 2dudv + e^\phi du^2 + \sum_{i=1}^{10}dx_i^2$, whose only non-vanishing Ricci component is $R_{uu}=\mu^2/2$. Since $e^\phi$ is not harmonic it is not a pp-wave, but it solves 12d gravity coupled to a 4-form, $S = \int d^{12}x\sqrt{-\widehat{g}}\left(\widehat{R}-\tfrac12|\widehat{F}_4|^2\right)$ with $\widehat{F}_4 = \mu du\wedge dx^8\wedge dx^9\wedge dx^{10} = du\wedge H_3$.
 }
 
 \subsection{Supersymmetry}
@@ -308,16 +308,16 @@ Let us consider the equation $\widehat{\nabla}_M \epsilon = 0$ that states the c
 Splitting the 11d indices into 10d spacetime and the M-theory circle, we have
 \begin{equation}
 \begin{aligned}
-\widehat{\nabla}_m \epsilon = \nabla_m \epsilon + \frac{1}{4} \hat{w}_{mBC} \Gamma^{BC} \epsilon &= 0,\\
+\widehat{\nabla}_m \epsilon = \nabla_m \epsilon + \frac{1}{4} \widehat{w}_{mBC} \Gamma^{BC} \epsilon &= 0,\\
 \widehat{w}_{11,BC} \Gamma^{BC} \epsilon &= 0.
 \end{aligned}
 \end{equation}
 For the standard Kaluza-Klein ansatz \eqref{string frame KK reduction ansatz}, and substituting the reduced spin connection (see \cite{Becker:2006dvp}), we find
 \begin{equation}
 \begin{aligned}
-\hat w_{aBC}\Gamma^{BC}
+\widehat w_{aBC}\Gamma^{BC}
 &=e^{\phi/3}\left[w_{abc}\Gamma^{bc}-\tfrac23\Gamma_a{}^b\partial_b\phi\right]+e^{4\phi/3}F_{ab}\Gamma^b\Gamma^{11},\\
-\hat w_{11,BC}\Gamma^{BC}
+\widehat w_{11,BC}\Gamma^{BC}
 &=-\tfrac12 e^{4\phi/3}F_{bc}\Gamma^{bc}-\tfrac43 e^{\phi/3}\partial_m\phi\Gamma^m\Gamma^{11}.
 \end{aligned}
 \end{equation}
@@ -385,4 +385,4 @@ We note that on a Euclidean torus
 so $\Gamma_{11,12}$ is, up to a similarity transformation, $i$ times the U(1) generator.
 After performing a similarity transformation one obtains precisely the axio-dilaton sector Killing spinor equation \eqref{9+1 IIB axio-dilaton Killing spinor equations}.
 This would also hold had we compactified a non-compact torus instead, to obtain a Euclidean type IIB theory.
-In the case of compactifying on a torus of signature (1,1), a factor of $i$ arises both in identifying the U(1) generator from $\Gamma_{11,12}$ and in defining the Euclidean compact scalar $C = i\mathcal C$, so that the 12d covariant derivative again reproduces the type IIB gravitino variation.
+In the case of compactifying on a torus of signature (1,1), a factor of $i$ arises both in identifying the U(1) generator from $\Gamma_{11,12}$ and in defining the Euclidean compact scalar $C_0 = i\mathcal C$, so that the 12d covariant derivative again reproduces the type IIB gravitino variation.

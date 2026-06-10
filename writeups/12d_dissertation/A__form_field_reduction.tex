@@ -4,39 +4,39 @@ This appendix collects the wedge-product identities underlying the covariant 12d
 Throughout, the torus is oriented so that $\int_{T_2}dz_1\wedge dz_2 = -Vol(T_2)$, as fixed in Section~\ref{sec:a-covariant-unification-in-12d}.
 
 \subsection{The four-form wedge product}
-With $\hat C_3 = B_2\wedge dz_1 + C_2\wedge dz_2$ and $\hat F_4 = H_3\wedge dz_1 + F_3\wedge dz_2$, any term carrying a repeated torus leg vanishes, so
+With $\widehat C_3 = B_2\wedge dz_1 + C_2\wedge dz_2$ and $\widehat F_4 = H_3\wedge dz_1 + F_3\wedge dz_2$, any term carrying a repeated torus leg vanishes, so
 \begin{equation}
-\hat C_3\wedge\hat F_4 = B_2\wedge dz_1\wedge F_3\wedge dz_2 + C_2\wedge dz_2\wedge H_3\wedge dz_1 .
+\widehat C_3\wedge\widehat F_4 = B_2\wedge dz_1\wedge F_3\wedge dz_2 + C_2\wedge dz_2\wedge H_3\wedge dz_1 .
 \end{equation}
 Anticommuting the torus one-forms through the odd-degree 10d forms, $dz_1\wedge F_3 = -F_3\wedge dz_1$ and $dz_2\wedge H_3 = -H_3\wedge dz_2$, and then using $dz_2\wedge dz_1 = -dz_1\wedge dz_2$, gives
 \begin{equation}
-\hat C_3\wedge\hat F_4 = \big(C_2\wedge H_3 - B_2\wedge F_3\big)\wedge dz_1\wedge dz_2 .
+\widehat C_3\wedge\widehat F_4 = \big(C_2\wedge H_3 - B_2\wedge F_3\big)\wedge dz_1\wedge dz_2 .
 \label{eq:C3F4-wedge}
 \end{equation}
 
 \subsection{The composite seven-form}
-With $\hat F_7 = F_5\wedge dz_1\wedge dz_2$ and \eqref{eq:C3F4-wedge}, the composite seven-form of Section~\ref{sec:a-covariant-unification-in-12d} is
+With $\widehat F_7 = F_5\wedge dz_1\wedge dz_2$ and \eqref{eq:C3F4-wedge}, the composite seven-form of Section~\ref{sec:a-covariant-unification-in-12d} is
 \begin{equation}
-\tilde{\hat F}_7 \equiv \hat F_7 - \tfrac12\hat C_3\wedge\hat F_4
+\widetilde{\widehat F}_7 \equiv \widehat F_7 - \tfrac12\widehat C_3\wedge\widehat F_4
 = \Big(F_5 - \tfrac12 C_2\wedge H_3 + \tfrac12 B_2\wedge F_3\Big)\wedge dz_1\wedge dz_2
 = \tilde F_5\wedge dz_1\wedge dz_2 ,
 \end{equation}
 so its torus bracket is exactly the 10d composite $\tilde F_5 = F_5 - \tfrac12 C_2\wedge H_3 + \tfrac12 B_2\wedge F_3$.
-The relative sign is fixed by this requirement: the opposite choice $\hat F_7 + \tfrac12\hat C_3\wedge\hat F_4$ would reverse the two correction terms relative to $\tilde F_5$ and spoil the contraction $|\tilde{\hat F}_7|^2 = \det(\hat g^{ab})\,|\tilde F_5|^2$.
+The relative sign is fixed by this requirement: the opposite choice $\widehat F_7 + \tfrac12\widehat C_3\wedge\widehat F_4$ would reverse the two correction terms relative to $\tilde F_5$ and spoil the contraction $|\widetilde{\widehat F}_7|^2 = \det(\widehat g^{ab})\,|\tilde F_5|^2$.
 
 \subsection{The Chern--Simons coefficient}
 A four-form wedged with itself retains only the cross term,
 \begin{equation}
-\hat F_4\wedge\hat F_4 = 2\,(H_3\wedge dz_1)\wedge(F_3\wedge dz_2) = -2\,H_3\wedge F_3\wedge dz_1\wedge dz_2 ,
+\widehat F_4\wedge\widehat F_4 = 2\,(H_3\wedge dz_1)\wedge(F_3\wedge dz_2) = -2\,H_3\wedge F_3\wedge dz_1\wedge dz_2 ,
 \end{equation}
-so with $\hat C_4 = C_4$,
+so with $\widehat C_4 = C_4$,
 \begin{equation}
-\hat C_4\wedge\hat F_4\wedge\hat F_4 = -2\,C_4\wedge H_3\wedge F_3\wedge dz_1\wedge dz_2 .
+\widehat C_4\wedge\widehat F_4\wedge\widehat F_4 = -2\,C_4\wedge H_3\wedge F_3\wedge dz_1\wedge dz_2 .
 \end{equation}
 Integrating over the torus with the chosen orientation $\int_{T_2}dz_1\wedge dz_2 = -Vol(T_2)$,
 \begin{equation}
-\tfrac12\int_{T_2\times\mathbb R^{1,9}}\hat C_4\wedge\hat F_4\wedge\hat F_4
+\tfrac12\int_{T_2\times\mathbb R^{1,9}}\widehat C_4\wedge\widehat F_4\wedge\widehat F_4
 = Vol(T_2)\int_{\mathbb R^{1,9}} C_4\wedge H_3\wedge F_3 ,
 \end{equation}
 reproducing the display identity of Section~\ref{sec:a-covariant-unification-in-12d}.
-The factor of two from $\hat F_4\wedge\hat F_4$ is why the action prefactor in \eqref{12d action} is $-1/(8\kappa_{12}^2)$ rather than $-1/(4\kappa_{12}^2)$: substituting this identity into $-\tfrac{1}{8\kappa_{12}^2}\int\hat C_4\wedge\hat F_4\wedge\hat F_4$ returns the type IIB Chern--Simons term $-\tfrac{1}{4\kappa^2}\int C_4\wedge H_3\wedge F_3$.
+The factor of two from $\widehat F_4\wedge\widehat F_4$ is why the action prefactor in \eqref{12d action} is $-1/(8\kappa_{12}^2)$ rather than $-1/(4\kappa_{12}^2)$: substituting this identity into $-\tfrac{1}{8\kappa_{12}^2}\int\widehat C_4\wedge\widehat F_4\wedge\widehat F_4$ returns the type IIB Chern--Simons term $-\tfrac{1}{4\kappa^2}\int C_4\wedge H_3\wedge F_3$.
