@@ -1,8 +1,24 @@
 \section{The Axio-Dilaton Sector and 12d Gravity}
 \label{sec:axio-dilaton-12d}
 We now turn to the 12d structures suggested by brane solutions.
-Remarkably, this higher-dimensional effective description is in parallel with what is known between the type IIA theory and M-theory.
+Remarkably, this higher-dimensional effective description is in parallel with what is known between the type IIA theory and M-theory (Table~\ref{tab:iia-iib-uplift}).
 The 12d interpretations of the type IIB D7 and D(-1) backgrounds were first identified in \cite{Tseytlin:1996ne}. Here we derive them explicitly, alongside the corresponding type IIA constructions, and use them to read off how the type IIB SL(2, Z) duality acts geometrically in 12d.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lcc}
+\toprule
+ & \multicolumn{2}{c}{reduced on a circle or torus to}\\
+\cmidrule(l){2-3}
+higher-dimensional solution & type IIA (from 11d) & type IIB (from 12d)\\
+\midrule
+Kaluza-Klein monopole & D6 brane & D7 brane\\
+pp-wave               & D0 brane & D($-1$) instanton\\
+\bottomrule
+\end{tabular}
+\caption{The parallel that organises this chapter. Two solutions of eleven-dimensional supergravity reduce on the M-theory circle to the type IIA D6 brane and D0 brane. The same two geometries in twelve dimensions reduce on a torus to the type IIB D7 brane and D($-1$) instanton, the latter after a Wick rotation that renders the instanton Euclidean. No dynamical twelve-dimensional supergravity underlies the right-hand column.}
+\label{tab:iia-iib-uplift}
+\end{table}
 We start with the sector that provides the clearest indications of 12d interpretation: the axio-dilaton sector.
 One can truncate the type IIB action \eqref{eq:sl2r_invariant_einstein_frame_action} to the axio-dilaton sector
 \begin{equation}
@@ -51,12 +67,28 @@ where $\tau = C_0 + i e^{-\Phi}$ is the axio-dilaton, and takes the form
 j(\tau(z)) = \frac{P_N(z)}{P_{N-1}(z)},
 \end{equation}
 with $j(\tau)$ the holomorphic modular invariant function, and $P_N(z)$ a degree $N$ polynomial, the roots of which are the locations of the D7 branes.
-For the case of a single D7 brane localised at $z_i$, the axio-dilaton profile near $z_i$ is dictated by monodromies to be
+For the case of a single D7 brane localised at $z_i$ (Figure~\ref{fig:d7-monodromy}), the axio-dilaton profile near $z_i$ is dictated by monodromies to be
 \begin{equation}
 \tau \sim \frac{1}{2\pi i}\ln (z-z_i)+\text{const}
  = \frac{\text{Arg}(z-z_i)}{2\pi} -i\frac{\ln |z-z_i|}{2\pi}+\text{const}.
  \label{D7 axio-dilaton profile}
 \end{equation}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[>=Stealth]
+  \draw[->] (-0.3,0) -- (5.2,0) node[right] {\footnotesize $\operatorname{Re} z$};
+  \draw[->] (0,-0.3) -- (0,3) node[above] {\footnotesize $\operatorname{Im} z$};
+  \draw[decorate, decoration={snake, amplitude=0.6pt, segment length=5pt}, thick]
+       (2,1.4) -- (4.9,1.4) node[pos=0.74, above] {\footnotesize branch cut};
+  \draw[->, thick, blue] (2,1.4) ++(8:0.8) arc (8:352:0.8);
+  \node[blue, font=\footnotesize] at (2,2.55) {$\tau\to\tau+1$};
+  \fill (2,1.4) circle (2pt);
+  \node[anchor=north east] at (1.9,1.33) {\footnotesize $z_i$};
+\end{tikzpicture}
+\caption{The axio-dilaton around a single D7 brane in the transverse complex plane $z$. Encircling the brane at $z_i$ once sends $\tau\to\tau+1$ through the monodromy $\tau\sim\frac{1}{2\pi i}\ln(z-z_i)$, so $\tau$ is single-valued only across a branch cut. Because $\tau_2=-\frac{1}{2\pi}\ln|z-z_i|$ varies logarithmically rather than approaching a constant, the transverse geometry is not asymptotically flat, the hallmark of the co-dimension-two D7.}
+\label{fig:d7-monodromy}
+\end{figure}
 
 The D(-1) is a solution to the Euclidean type IIB theory, within the axio-dilaton sector \cite{Gibbons:1995vg}.
 In Einstein frame, it can be written as
@@ -69,7 +101,7 @@ H=1+\frac{Q}{r^8}.
 \subsection{D7 and D6 interpreted as 12d and 11d KK-monopoles}
 % As discussed earlier, the additional two coordinates introduced in F-theory \cite{Vafa:1996xn} must be treated as auxiliary in order to keep the D7 energy density finite.
 % Nevertheless, they can acquire a more dynamical interpretation.
-We will now show that the D7 solution can be interpreted as a 12d KK-monopole geometry compactified on a torus.
+We will now show that the D7 solution can be interpreted as a 12d KK-monopole geometry compactified on a torus (Figure~\ref{fig:d7-kkmonopole}).
 Remarkably, this story is in parallel with the story on the type IIA side, between the D6 brane and an 11d KK-monopole geometry.
 The ``Kaluza-Klein monopole (KK-monopole)'' \cite{Gross:1983hb,Sorkin:1983ns} refers to the solution of the Einstein-Hilbert action whose KK reduction yields a magnetic monopole.
 Thus it can also be understood as the product of Minkowski space and the Taub-NUT space \cite{Ortin:2015hya}.
@@ -85,6 +117,24 @@ ds_d^2 = ds_{1,d-5}^2 + H(\vec{y})d\vec{y}^2 + H(\vec{y})^{-1}(du + \vec{A}\cdot
 \label{kk monopole einstein eqs}
 \end{equation}
 where $\vec{y}$ is a 3d Euclidean vector, together with the compact coordinate $u$ they form a 4d space that is an $S_1$ fibration over $\mathbb{R}^3$.
+
+\begin{figure}[ht]
+\centering
+% PLACEHOLDER -- replace this tikzpicture with \includegraphics{figures/d7-kk-monopole}
+% once the artwork exists. Drawing brief: a horizontal sheet for the R^3 base y; over a
+% generic point draw the compact fibre circle u; at the monopole locus the fibre pinches
+% to a point (the NUT). Mark the two torus cycles u and v = -y_3. A downward arrow
+% "reduce on torus" maps the 12d geometry to the 10d D7, with tau = -A_3 + i H read off
+% from the one-form du + tau dv.
+\begin{tikzpicture}
+  \node[draw, dashed, rounded corners, fill=gray!3,
+        minimum width=0.7\textwidth, minimum height=5.5cm,
+        align=center, text width=0.62\textwidth, font=\small\itshape]
+       {Placeholder for hand-drawn artwork.\\ See the caption and the source comment for the drawing brief.};
+\end{tikzpicture}
+\caption{The twelve-dimensional Kaluza-Klein monopole that reduces to the D7 brane. The compact circle $u$ is fibred over the three-dimensional base $\vec y$ and pinches off at the monopole locus (the NUT). Compactifying the further direction $v=-y_3$ makes the fibre a torus, and reducing on that torus gives the ten-dimensional D7 brane, with axio-dilaton $\tau=-A_3+iH$ read off from the fibration one-form $du+\tau dv$.}
+\label{fig:d7-kkmonopole}
+\end{figure}
 
 \paragraph{D6 brane from reduction of the 11d KK-monopole}
 Specialising to 11d, the KK-monopole is given by
