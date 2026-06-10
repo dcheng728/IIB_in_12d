@@ -215,18 +215,19 @@ g_{mn} & 0 \\
 \end{equation}
 One may adopt complex tangent frame coordinates $z, \overline{z}$, with vielbein $e_{\alpha}{}^a = \frac{1}{2\sqrt{\tau_2}}\begin{pmatrix}
     -\tau & 1 \\ -\overline{\tau} & 1
-\end{pmatrix}$, the nonvanishing components of the 12d Riemann tensor are \cite{Liu:2025uqu}
+\end{pmatrix}$. 
+The nonvanishing components of the 12d Riemann tensor are \cite{Liu:2025uqu}
 \begin{equation}
 \begin{gathered}
 \widehat{R}_{mrns} = R_{mrns},\quad
-R_{z\overline{z}z\overline{z}} = -\frac14 |P|^2,\quad
-R_{mnz\overline{z}} = P_{[m}\overline{P}_{n]},\\
-R_{mzn\overline{z}} = - \frac{P_m \overline{P}_n}{2},\quad
-R_{mznz} = \frac{D_m P_n}{2}.
+\widehat{R}_{z\overline{z}z\overline{z}} = -\frac14 |P|^2,\quad
+\widehat{R}_{mnz\overline{z}} = P_{[m}\overline{P}_{n]},\\
+\widehat{R}_{mzn\overline{z}} = - \frac{P_m \overline{P}_n}{2},\quad
+\widehat{R}_{mznz} = \frac{D_m P_n}{2}.
 \end{gathered}
 \label{eq:12d-Riemann-complex}
 \end{equation}
-Substituting $P_m\overline{P}_n$ in \eqref{eq:IIB-two-derivative} with $R_{mzn\overline{z}}$, we find
+Substituting $P_m\overline{P}_n$ in \eqref{eq:IIB-two-derivative} with $\widehat{R}_{mzn\overline{z}}$, we find
 \begin{equation}
 \sqrt{-g}[R - 2 P_m \overline{P}^m]
 =\sqrt{-\widehat{g}}[R + \widehat{R}^{mz}{}_{mz} + \widehat{R}^{m\overline{z}}{}_{m\overline{z}}]
@@ -236,32 +237,32 @@ Substituting $P_m\overline{P}_n$ in \eqref{eq:IIB-two-derivative} with $R_{mzn\o
 which verifies that the F-theory ansatz \eqref{eq:F-theory-ansatze} relates the 10d axio-dilaton action to a 12d Einstein-Hilbert term.
 Hence we may map solutions of 12d Einstein gravity, such as the pp-wave \cite{Tseytlin:1996ne} and the KK-monopole solutions, to type IIB geometries with nontrivial axio-dilaton profile.
 
-What we have been discussing is the classical, two-derivative, two field type IIB theory, which is the leading term in the $\alpha'$ expansion of the type IIB string theory.
-It is natural to ask whether type IIB higher-derivative corrections (e.g. at 8-derivatives) can also be understood from a 12d perspective?
-The answer does not appear to be a clear-cut yes or no, and the goal of this section is to discuss the current understandings.
+What we have been discussing is the classical, two-derivative, two-field type IIB theory, which is the leading term in the $\alpha'$ expansion of the type IIB string theory.
+It is natural to ask whether type IIB higher-derivative corrections (e.g. at 8-derivatives) can also be understood from a 12d perspective.
+The answer does not appear to be a clear-cut yes or no, and the goal of this section is to discuss the current understanding.
 
 \subsection{Type IIB at 4 points}
 
 The 4-point 8-derivative effective action can be written \cite{Liu:2025uqu,Minasian:2015bxa,Policastro:2008hg} as
 \begin{equation}
 \begin{aligned}
-\frac{L_{\text{4pt}}}{\alpha  f_{0}(\tau,\overline{\tau})}
+\frac{L_{\text{4pt}}}{\beta  f_{0}(\tau,\overline{\tau})}
 &= t_{8}t_{8} \biggl[R^4+6R^{2}\left(4|\delta\nabla P|^{2}+|\nabla G_{3}|^{2}\right)+24|\delta \nabla P|^{2}|\nabla G_{3}|^{2}\\
-&+12R\left(\delta \nabla P(\nabla\overline{G}_{3})^{2}+D\overline{P}(\nabla{G}_{3})^{2}\right)\biggr]\\
+&+12R\left(\delta \nabla P(\nabla\overline{G}_{3})^{2}+\delta \nabla \overline{P}(\nabla{G}_{3})^{2}\right)\biggr]\\
 &+1536 |\nabla_m P_n \nabla^m P^n|^2\\
 &+O_{2}\left((|\nabla G_{3}|^{2})^{2}\right)
 \label{eq:PTaction}
 \end{aligned}
 \end{equation}
-where $\alpha = \frac{(\alpha')^3}{3 \cdot 2^{12}}$ and $(\delta \nabla P)_{mrns} \equiv g_{[m[n} \nabla_{r]} P_{s]}$ is defined to have the same symmetries as the Riemann tensor, up to $\delta$-functions located at the sources of $\tau$.
+where $\beta = \frac{\alpha^{\prime 3}}{3 \cdot 2^{12}}$ and $(\delta \nabla P)_{mrns} \equiv g_{[m[n} \nabla_{r]} P_{s]}$ is defined to have the same symmetries as the Riemann tensor, up to $\delta$-functions located at the sources of $\tau$.
 Restricting to the gravity + scalar sector of \eqref{eq:PTaction}, we have
 \begin{equation}
-\frac{L_{\text{4pt},\tau}}{\alpha f_0(\tau,\overline{\tau})} = t_8t_8
+\frac{L_{\text{4pt},\tau}}{\beta f_0(\tau,\overline{\tau})} = t_8t_8
 (R^4 + 24 R^2 |\delta \nabla P|^2) + 1536 (\nabla_m P_n \nabla^m P^n)(\nabla_r \overline{P}_s \nabla^r \overline{P}^s).
 \label{eq:4pt-gravity-axiodilaton}
 \end{equation}
 In the 12d perspective $\tau$ is embedded in the metric.
-Suppose certain axio-dilaton couplings in the 10d effective action admits a 12d interpretation, one shall be able to rewrite such terms using 12d-covariant differential operators acting on the metric, i.e. the 12d Riemann tensor \eqref{eq:12d-Riemann-complex}. 
+If certain axio-dilaton couplings in the 10d effective action admit a 12d interpretation, one should be able to rewrite such terms using 12d-covariant differential operators acting on the metric, i.e. the 12d Riemann tensor \eqref{eq:12d-Riemann-complex}. 
 Once we have replaced the 10d fields and their derivatives with their 12d counterparts, we may reexamine the resulting expression, and see if the terms group into a natural pattern as a result of index splitting.
 We carried out this exercise at the two-derivative level in \eqref{eq:2-derivative-index-splitting}. We now perform the same exercise at the 8-derivative level on \eqref{eq:4pt-gravity-axiodilaton}, as a ``bottom-up'' rederivation of the results of \cite{Minasian:2015bxa}.
 
@@ -281,7 +282,7 @@ The computation is done with Cadabra, which agrees with the results of \cite{Min
 }
 \begin{equation}
 \begin{aligned}
-\frac{1}{3 \cdot 2^{8}\zeta(3) \tau_2^{3/2}}\frac{L_{\text{4pt},\tau}}{\alpha}
+\frac{1}{3 \cdot 2^{8}\zeta(3) \tau_2^{3/2}}\frac{L_{\text{4pt},\tau}}{\beta}
 &=  \frac{t_8 t_8 R^4}{3 \cdot 2^7}
 + 4 \nabla_n P_m \nabla^r \overline{P}^s R^{mt}{}_{ru} R^{nu}{}_{st} \\
 &+ 4 \nabla_m P_n \nabla^r \overline{P}^s R_{tsur} R^{untm}
@@ -293,12 +294,12 @@ The computation is done with Cadabra, which agrees with the results of \cite{Min
 The next step is to replace the 10d terms with their 12d counterparts. The only 10d terms that remain are $\nabla P$.
 We note that, because the only 12d Riemann tensor linear in $P$ is $R_{mznz}$ and its conjugate, we have
 \begin{equation}
-\widehat{R}_{ambn} \widehat{R}^{a}{}_{r}{}^{b}{}_{s} = 2 \text{Re} D_m P_n D_r \overline{P}_s + O(P^3).
+\widehat{R}_{ambn} \widehat{R}^{a}{}_{r}{}^{b}{}_{s} = 2 \operatorname{Re}\left(D_m P_n D_r \overline{P}_s\right) + O(P^3).
 \end{equation}
 Substituting this as well as $t_8 t_8 R^4$, we find
 \begin{equation}
 \begin{aligned}
-\frac{1}{3 \cdot 2^{8}\zeta(3) \tau_2^{3/2}}\frac{L_{\text{4pt},\tau}}{\alpha}
+\frac{1}{3 \cdot 2^{8}\zeta(3) \tau_2^{3/2}}\frac{L_{\text{4pt},\tau}}{\beta}
 &=
 R_{pnqm} R^{prqs} R^{mt}{}_{ru} R^{nu}{}_{st}
 + 2 \widehat{R}_{anbm} \widehat{R}^{arbs} R^{mt}{}_{ru} R^{nu}{}_{st}\\

@@ -271,7 +271,7 @@ By comparison with \eqref{d-dim pp-wave}, we see that the uplift of D(-1) is a p
 One may view the Euclidean D(-1) as a ``slice'' of the 10d homogeneous wavefront of a 12d pp-wave.
 The momentum of the wave is the D(-1) charge.
 Recent investigations of the IKKT matrix model \cite{Hartnoll:2024csr,Komatsu:2024bop} reveal a type IIB supergravity background with axio-dilaton and the 3-form turned on, which admits a similar 12d interpretation.\footnote{
-The mass-deformed model is dual to a probe D1 brane in the Einstein-frame-flat background $ds_{10}^2 = \sum_i dx_i^2$, $e^\phi = 1 - \frac{\mu^2}{32}\left(\sum_{A=1}^7 x_A^2 + 3\sum_{a=9}^{10}x_a^2\right)$, $H_3 = \mu dx^8\wedge dx^9\wedge dx^{10}$, valid in the ellipsoidal region where $e^\phi\ge0$ \cite{Hartnoll:2024csr}. Uplifting to 12d (Wick rotating to keep $ds^2$ real) gives the Brinkmann-form metric $ds_{12}^2 = 2dudv + e^\phi du^2 + \sum_{i=1}^{10}dx_i^2$, whose only non-vanishing Ricci component is $R_{uu}=\mu^2/2$. Since $e^\phi$ is not harmonic it is not a pp-wave, but it solves 12d gravity coupled to a 4-form, $S = \int d^{12}x\sqrt{-\hat{g}}\left(\hat{R}-\tfrac12|\hat{F}_4|^2\right)$ with $\hat{F}_4 = \mu du\wedge dx^8\wedge dx^9\wedge dx^{10} = du\wedge H_3$.
+The mass-deformed model is dual to a probe D1 brane in the Einstein-frame-flat background $ds_{10}^2 = \sum_i dx_i^2$, $e^\phi = 1 - \frac{\mu^2}{32}\left(\sum_{A=1}^7 x_A^2 + 3\sum_{a=9}^{10}x_a^2\right)$, $H_3 = \mu dx^8\wedge dx^9\wedge dx^{10}$, valid in the ellipsoidal region where $e^\phi\ge0$ \cite{Hartnoll:2024csr}. Uplifting to 12d (Wick rotating to keep $ds^2$ real) gives the Brinkmann-form metric $ds_{12}^2 = 2dudv + e^\phi du^2 + \sum_{i=1}^{10}dx_i^2$, whose only non-vanishing Ricci component is $R_{uu}=\mu^2/2$. Since $e^\phi$ is not harmonic it is not a pp-wave, but it solves 12d gravity coupled to a 4-form, $S = \int d^{12}x\sqrt{-\widehat{g}}\left(\widehat{R}-\tfrac12|\widehat{F}_4|^2\right)$ with $\widehat{F}_4 = \mu du\wedge dx^8\wedge dx^9\wedge dx^{10} = du\wedge H_3$.
 }
 
 \subsection{Supersymmetry}
@@ -304,20 +304,20 @@ In our case the higher-dimensional theory is pure gravity, with no form fields, 
 The full lower-dimensional Killing spinor equation, flux and connection terms included, must then be reproduced by reducing this covariant derivative alone.
 
 \paragraph{From 11d to type IIA.}
-Let us consider the equation $\hat{\nabla}_M \epsilon = 0$ that states the covariant constancy of an 11d spinor $\epsilon$.
+Let us consider the equation $\widehat{\nabla}_M \epsilon = 0$ that states the covariant constancy of an 11d spinor $\epsilon$.
 Splitting the 11d indices into 10d spacetime and the M-theory circle, we have
 \begin{equation}
 \begin{aligned}
-\hat{\nabla}_m \epsilon = \nabla_m \epsilon + \frac{1}{4} \hat{w}_{mBC} \Gamma^{BC} \epsilon &= 0,\\
-\hat{w}_{11,BC} \Gamma^{BC} \epsilon &= 0.
+\widehat{\nabla}_m \epsilon = \nabla_m \epsilon + \frac{1}{4} \widehat{w}_{mBC} \Gamma^{BC} \epsilon &= 0,\\
+\widehat{w}_{11,BC} \Gamma^{BC} \epsilon &= 0.
 \end{aligned}
 \end{equation}
 For the standard Kaluza-Klein ansatz \eqref{string frame KK reduction ansatz}, and substituting the reduced spin connection (see \cite{Becker:2006dvp}), we find
 \begin{equation}
 \begin{aligned}
-\hat w_{aBC}\Gamma^{BC}
+\widehat w_{aBC}\Gamma^{BC}
 &=e^{\phi/3}\left[w_{abc}\Gamma^{bc}-\tfrac23\Gamma_a{}^b\partial_b\phi\right]+e^{4\phi/3}F_{ab}\Gamma^b\Gamma^{11},\\
-\hat w_{11,BC}\Gamma^{BC}
+\widehat w_{11,BC}\Gamma^{BC}
 &=-\tfrac12 e^{4\phi/3}F_{bc}\Gamma^{bc}-\tfrac43 e^{\phi/3}\partial_m\phi\Gamma^m\Gamma^{11}.
 \end{aligned}
 \end{equation}
@@ -337,7 +337,7 @@ The first equation is algebraic in $\epsilon$. Multiplying by $\Gamma^{11}$ and 
 We now use \eqref{IIA dilatino relation} to remove $\partial\phi$ from the spacetime equation \eqref{IIA spacetime gravitino}.
 Writing $\Gamma_m{}^n\partial_n\phi=\Gamma_m(\Gamma^n\partial_n\phi)-\partial_m\phi$ and inserting \eqref{IIA dilatino relation}, the flux term it produces combines with the $\tfrac14 e^\phi F_{mn}\Gamma^n\Gamma^{11}$ already present, giving
 \begin{equation}
-\hat\nabla_m\epsilon=e^{\phi/3}\left(\nabla_m+\tfrac16\partial_m\phi+\tfrac18 e^\phi F_{mn}\Gamma^n\Gamma^{11}-\tfrac1{16}e^\phi F_{np}\Gamma_m{}^{np}\Gamma^{11}\right)\epsilon ,
+\widehat\nabla_m\epsilon=e^{\phi/3}\left(\nabla_m+\tfrac16\partial_m\phi+\tfrac18 e^\phi F_{mn}\Gamma^n\Gamma^{11}-\tfrac1{16}e^\phi F_{np}\Gamma_m{}^{np}\Gamma^{11}\right)\epsilon ,
 \label{IIA assembled}
 \end{equation}
 where we used $\Gamma_m\Gamma^{np}=\Gamma_m{}^{np}+2\delta_m^{[n}\Gamma^{p]}$.
@@ -355,7 +355,7 @@ Finally, the Weyl rescaling $\epsilon\to e^{-\phi/6}\epsilon$ removes the $\tfra
 \end{equation}
 
 \paragraph{From 12d to type IIB.}
-A 12d covariant derivative $\hat{\nabla}^{(12)}_M\epsilon = 0$ restricted to 10d takes the form
+A 12d covariant derivative $\widehat{\nabla}^{(12)}_M\epsilon = 0$ restricted to 10d takes the form
 \begin{equation}
 \nabla^{(12)}_m\epsilon
 =\left(
