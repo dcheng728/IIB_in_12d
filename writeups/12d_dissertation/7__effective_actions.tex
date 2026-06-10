@@ -323,7 +323,7 @@ For example
 \widehat{R}_{MNRS}\widehat{R}^{MNRS} = R_{mrns} R^{mnrs} + 4 \widehat{R}_{ambn} \widehat{R}^{ambn} + O(P^3),
 \end{equation}
 the factor of 4 arises from the 4 ways to choose 2 torus legs in $\widehat{R}_{MNRS}$ that contribute to 4-pt amplitudes.
-Hence the last term in \eqref{eq:4pt-gravity-axiodilaton-12d-replaced} is compatible with arising from a 12d contraction $\frac{1}{32} (R_{MNRS} R^{MNRS})^2  \in t_8 t_8 \widehat{R}^4$.
+Hence the last term in \eqref{eq:4pt-gravity-axiodilaton-12d-replaced} is compatible with arising from a 12d contraction $\frac{1}{32} (\widehat{R}_{MNRS} \widehat{R}^{MNRS})^2 \in t_8 t_8 \widehat{R}^4$.
 Upon further investigation, one finds
 \begin{equation}
 \begin{aligned}
@@ -349,10 +349,10 @@ Upon further investigation, one finds
 where the ellipses denote terms with more than 4 fields in 10d, or terms that vanish when summed with the coefficients in \eqref{eq:t8t8R4}.
 Thus, every term in \eqref{eq:4pt-gravity-axiodilaton-12d-replaced} has an origin from a 12d contraction $t_8 t_8 \widehat{R}^4$, upon substituting the specific F-theory ansatz \eqref{eq:F-theory-ansatze}.
 
-The relation above was first noted in \cite{Minasian:2015bxa} in a ``top-down" fashion, by making an informed guess of a 12d effective action, then showing that the resulting 10d action matches the known gravity and axio-dilaton amplitudes.
-The ``bottom-up" approach outlined here, despite requiring more exercises in index-relabeling and tensor identities, is perhaps more systematic, as it does not require one to make a 12d ansatz a priori.
-If there were to exist a 12d covariant expression that reproduces any 10d effective action, then after substituting 10d objects for 12d ones, one must find that the terms group into a more natural pattern arising from splitting 12d indices in a covariant expression.
-What would be a genuine obstruction to a 12d covariant interpretation, is if certain terms can not be written using covariant 12d objects at all.
+The relation above was first noted in \cite{Minasian:2015bxa} in a ``top-down'' fashion, by making an informed guess of a 12d effective action, then showing that the resulting 10d action matches the known gravity and axio-dilaton amplitudes.
+The ``bottom-up'' approach outlined here, despite requiring more exercises in index-relabelling and tensor identities, is perhaps more systematic, as it does not require one to make a 12d ansatz a priori.
+If there were to exist a 12d covariant expression that reproduces any 10d effective action, then after substituting 12d objects for 10d ones, one must find that the terms group into a more natural pattern arising from splitting 12d indices in a covariant expression.
+What would be a genuine obstruction to a 12d covariant interpretation is if certain terms cannot be written using covariant 12d objects at all.
 
 \subsection{Type IIB at 5 points: Obstruction to 12d Covariance?}
 
@@ -360,7 +360,7 @@ Recently, the 5-point 8-derivative effective action in the axio-dilaton sector h
 Interestingly, in the U(1)-preserving sector at 5 points, there exists a term, which realises SL(2, Z)-invariance on its own, with the form (we drop all numerical factors)
 \begin{equation}
 L_{\text{5pt},\tau} \supset
-\text{Re} R^{mnsr} \nabla_m \overline{P}_s \nabla_n \overline{P}_r P_q P^q.
+\operatorname{Re}\left(R^{mnsr} \nabla_m \overline{P}_s \nabla_n \overline{P}_r P_q P^q\right).
 \label{eq:12d-obstruction}
 \end{equation}
 Both $R^{mnsr}$ and $\nabla_m \overline{P}_s$ can be written as 12d covariant objects (see \eqref{eq:12d-Riemann-complex}).
@@ -409,7 +409,8 @@ As for the rest of the non-vanishing Riemann tensor components,
 \end{equation}
 
 The factor $P_q P^q$ in \eqref{eq:12d-obstruction} is a scalar built from two first derivatives of $\tau$, with no second derivatives. 
-A 12d-covariant expression for it, at this two-derivative order, can be built only from a single power of the 12d Riemann tensor, since a product of two curvatures already carries four derivatives. For the ansatz \eqref{eq:F-theory-ansatze}, every nonvanishing component of $\widehat{R}$ is either the pure 10d Riemann tensor or reduces to the mixed components $\widehat{R}_{ambn}$ tabulated above; indeed $\widehat{R}_{mnab} = 2\widehat{R}_{[a|m|b]n}$ and $\widehat{R}_{1212} = -\frac{1}{2}g^{mn}g^{ab}\widehat{R}_{ambn}$. The most general two-derivative scalar that depends on $\tau$ is therefore
+A 12d-covariant expression for it, at this two-derivative order, can be built only from a single power of the 12d Riemann tensor, since a product of two curvatures already carries four derivatives. For the ansatz \eqref{eq:F-theory-ansatze}, every nonvanishing component of $\widehat{R}$ is either the pure 10d Riemann tensor or reduces to the mixed components $\widehat{R}_{ambn}$ tabulated above. 
+Indeed $\widehat{R}_{mnab} = 2\widehat{R}_{[a|m|b]n}$ and $\widehat{R}_{1212} = -\frac{1}{2}g^{mn}g^{ab}\widehat{R}_{ambn}$. The most general two-derivative scalar that depends on $\tau$ is therefore
 \begin{equation}
 S = c^{ab}  g^{mn} \widehat{R}_{ambn},
 \end{equation}
