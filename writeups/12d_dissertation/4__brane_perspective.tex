@@ -16,10 +16,11 @@ Kaluza-Klein monopole & D6 brane & D7 brane\\
 pp-wave               & D0 brane & D($-1$) instanton\\
 \bottomrule
 \end{tabular}
-\caption{The parallel that organises this chapter. Two solutions of eleven-dimensional supergravity reduce on the M-theory circle to the type IIA D6 brane and D0 brane. The same two geometries in twelve dimensions reduce on a torus to the type IIB D7 brane and D($-1$) instanton, the latter after a Wick rotation that renders the instanton Euclidean. No dynamical twelve-dimensional supergravity underlies the right-hand column.}
+\caption{The parallel that organises this chapter. 
+Two solutions of eleven-dimensional supergravity reduce on the M-theory circle to the type IIA D6 brane and D0 brane. 
+The same two geometries in twelve dimensions reduce on a torus to the type IIB D7 brane and D($-1$) instanton.}
 \label{tab:iia-iib-uplift}
 \end{table}
-We start with the sector that provides the clearest indications of 12d interpretation: the axio-dilaton sector.
 One can truncate the type IIB action \eqref{eq:sl2r_invariant_einstein_frame_action} to the axio-dilaton sector
 \begin{equation}
 2\kappa^2S=
@@ -56,8 +57,7 @@ This can be satisfied in two ways: either they cancel each other (as for the D7 
 We now present both solutions.
 
 Among the known BPS branes in the type IIA, IIB, and 11d theories \cite{Stelle:1998xg}, the D7 brane plays a special role: it is co-dimension 2, which means its harmonic function is logarithmic rather than exhibiting the power-law behaviour $\sim \frac{1}{r^{\tilde{d}-2}}$, and thus is not asymptotically flat.
-
-The general $N$ D7 brane solution can be written as \cite{Greene:1989ya,Gibbons:1995vg,Tseytlin:1996ne,Bergshoeff:2006jj}
+The general $N \times$ D7 brane solution can be written as \cite{Greene:1989ya,Gibbons:1995vg,Tseytlin:1996ne,Bergshoeff:2006jj}
 \begin{equation}
 ds_{D7}^2 = -dt^2 + d\vec{x}_7^2 + \text{Im} \tau dz d\bar z,
 \label{D7 solution}
@@ -66,7 +66,7 @@ where $\tau = C_0 + i e^{-\Phi}$ is the axio-dilaton, and takes the form
 \begin{equation}
 j(\tau(z)) = \frac{P_N(z)}{P_{N-1}(z)},
 \end{equation}
-with $j(\tau)$ the holomorphic modular invariant function, and $P_N(z)$ a degree $N$ polynomial, the roots of which are the locations of the D7 branes.
+with $j(\tau)$ the holomorphic modular invariant function, and $P_{N-1}(z)$ a degree $N-1$ polynomial, the roots of which are the locations of the $N-1$ D7 branes, the $N$-th D7 brane being at infinity where $P_N/P_{N-1}$ has a pole.
 For the case of a single D7 brane localised at $z_i$ (Figure~\ref{fig:d7-monodromy}), the axio-dilaton profile near $z_i$ is dictated by monodromies to be
 \begin{equation}
 \tau \sim \frac{1}{2\pi i}\ln (z-z_i)+\text{const}
@@ -99,10 +99,9 @@ H=1+\frac{Q}{r^8}.
 \end{equation}
 
 \subsection{D7 and D6 interpreted as 12d and 11d KK-monopoles}
-% As discussed earlier, the additional two coordinates introduced in F-theory \cite{Vafa:1996xn} must be treated as auxiliary in order to keep the D7 energy density finite.
-% Nevertheless, they can acquire a more dynamical interpretation.
-We will now show that the D7 solution can be interpreted as a 12d KK-monopole geometry compactified on a torus (Figure~\ref{fig:d7-kkmonopole}).
+We will now show that the D7 solution can be interpreted as a 12d KK-monopole geometry compactified on a torus.
 This story is in parallel with the story on the type IIA side, between the D6 brane and an 11d KK-monopole geometry.
+
 The ``Kaluza-Klein monopole (KK-monopole)'' \cite{Gross:1983hb,Sorkin:1983ns} refers to the solution of the Einstein-Hilbert action whose KK reduction yields a magnetic monopole.
 Thus it can also be understood as the product of Minkowski space and the Taub-NUT space \cite{Ortin:2015hya}.
 In $d$ dimensions, the KK-monopole geometry is given by
@@ -117,24 +116,6 @@ ds_d^2 = ds_{1,d-5}^2 + H(\vec{y})d\vec{y}^2 + H(\vec{y})^{-1}(du + \vec{A}\cdot
 \label{kk monopole einstein eqs}
 \end{equation}
 where $\vec{y}$ is a 3d Euclidean vector, together with the compact coordinate $u$ they form a 4d space that is an $S_1$ fibration over $\mathbb{R}^3$.
-
-\begin{figure}[ht]
-\centering
-% PLACEHOLDER -- replace this tikzpicture with \includegraphics{figures/d7-kk-monopole}
-% once the artwork exists. Drawing brief: a horizontal sheet for the R^3 base y; over a
-% generic point draw the compact fibre circle u; at the monopole locus the fibre pinches
-% to a point (the NUT). Mark the two torus cycles u and v = -y_3. A downward arrow
-% "reduce on torus" maps the 12d geometry to the 10d D7, with tau = -A_3 + i H read off
-% from the one-form du + tau dv.
-\begin{tikzpicture}
-  \node[draw, dashed, rounded corners, fill=gray!3,
-        minimum width=0.7\textwidth, minimum height=5.5cm,
-        align=center, text width=0.62\textwidth, font=\small\itshape]
-       {Placeholder for hand-drawn artwork.\\ See the caption and the source comment for the drawing brief.};
-\end{tikzpicture}
-\caption{The twelve-dimensional Kaluza-Klein monopole that reduces to the D7 brane. The compact circle $u$ is fibred over the three-dimensional base $\vec y$ and pinches off at the monopole locus (the NUT). Compactifying the further direction $v=-y_3$ makes the fibre a torus, and reducing on that torus gives the ten-dimensional D7 brane, with axio-dilaton $\tau=-A_3+iH$ read off from the fibration one-form $du+\tau dv$.}
-\label{fig:d7-kkmonopole}
-\end{figure}
 
 \paragraph{D6 brane from reduction of the 11d KK-monopole}
 Specialising to 11d, the KK-monopole is given by
@@ -154,7 +135,7 @@ we find the 10d metric and dilaton profile of
 ds_{10,string}^2=H^{-1/2}[-dt^2+d\vec{x}_6^2] + H^{1/2}d\vec{y}^2,\quad
 e^\Phi=H^{-3/4},
 \end{equation}
-which is the D6 solution \cite{Horowitz:1991cd,Townsend:1995kk}, with $F_2=*_3 dH$.
+which is the D6 solution \cite{Horowitz:1991cd,Townsend:1995kk} (see also Appendix~\ref{sec:10d IIA branes}), with $F_2=*_3 dH$.
 This relation is standard within the web of dualities: the theory accounting for the 11d KK-monopole is 11d supergravity, a well-defined, dynamical, supersymmetric theory.
 By contrast, although no dynamical 12d supergravity is known, there exists an analogous correspondence between the 12d KK-monopole and the type IIB D7 brane solution \cite{Tseytlin:1996ne}, which we now discuss.
 
