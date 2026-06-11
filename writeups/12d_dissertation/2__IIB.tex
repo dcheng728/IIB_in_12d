@@ -68,7 +68,7 @@ We have been discussing the type IIB supergravity multiplet, which captures the 
 The nonlinear (interacting) theory is obtained by restoring an infinite number of higher-order terms in the gravitational coupling $\kappa$, which promote the rigid SO(9,1) to diffeomorphisms
 \footnote{
 For example, promoting $\frac{1}{2}\int d^{10}x\left(\frac{1}{2}\partial_p h_{mn}\partial^p h^{mn}-\frac{1}{4}\partial_m h \partial^m h\right)$ in de Donder gauge to $\frac{1}{2\kappa^2}\int d^{10}x\sqrt{-g}R$}
-and rigid U(1) to local U(1). Doing so \cite{Green:1982tk,Schwarz:1983wa,Schwarz:1983qr,Howe:1983sra}, we find that the theory has a hidden global symmetry group SL(2, R), which, when combined with the now localised U(1) symmetry, gives $\frac{SL(2, R)}{U(1)}$ as the scalar manifold. The construction of the coset representative $\mathcal{V}$ is reviewed in Appendix \ref{sec:sl2r-coset}.
+and rigid U(1) to local U(1). Doing so \cite{Green:1982tk,Schwarz:1983wa,Schwarz:1983qr,Howe:1983sra}, we find that the theory has a hidden global symmetry group \SLR{}, which, when combined with the now localised U(1) symmetry, gives $\frac{\SLR{}}{U(1)}$ as the scalar manifold. The construction of the coset representative $\mathcal{V}$ is reviewed in Appendix \ref{sec:sl2r-coset}.
 
 \subsection{The Type IIB Action in Various Frames}
 
@@ -98,7 +98,7 @@ H_3 = dB_2, \quad
 \tilde F_3 = F_3 - C_0 H_3,\quad
 \tilde F_5 = * \tilde F_5 = F_5 - \frac12 C_2\wedge H_3 + \frac12 B_2\wedge F_3.
 \end{equation}
-We note that \eqref{string frame IIB action} is invariant, up to a boundary term, under the SL(2, R) transformations
+We note that \eqref{string frame IIB action} is invariant, up to a boundary term, under the \SLR{} transformations
 \begin{equation}
 G_{mn}\to |c\tau+d|G_{mn},\quad
 \tau\equiv C_0 + i e^{-\Phi} \to \frac{a\tau+b}{c\tau+d},\quad
@@ -115,20 +115,19 @@ H_3\\F_3
 F_5 \to F_5.
 \label{string frame sl2r transformations}
 \end{equation}
-
-The action of SL(2, R) on the metric in \eqref{string frame sl2r transformations} arises because the string frame Einstein-Hilbert term carries an explicit dilaton coupling.
+The action of \SLR{} on the metric in \eqref{string frame sl2r transformations} arises because the string frame Einstein-Hilbert term carries an explicit dilaton coupling.
 It is therefore natural to pass to an Einstein frame metric \cite{Becker:2006dvp,Weigand:2018rez}, in which the Einstein-Hilbert action takes its canonical form.
 This condition fixes the Einstein frame metric only up to an overall conventional factor, leaving two common but mutually exclusive choices:
 \begin{enumerate}
-    \item that the Einstein frame metric be SL(2, R)-invariant, or
+    \item that the Einstein frame metric be \SLR{}-invariant, or
     \item that the Einstein frame metric be asymptotically flat.
 \end{enumerate}
-The SL(2, R)-invariant Einstein frame metric is given by
+The \SLR{}-invariant Einstein frame metric is given by
 \begin{equation}
 g_{mn} \equiv e^{-\Phi/2}G_{mn}.
 \label{sl2r invariant Einstein frame metric}
 \end{equation}
-From string perturbation theory, the string frame metric $G_{mn}$ is taken to be asymptotically flat: $G_{mn} \to \eta_{mn}$, hence the SL(2, R)-invariant Einstein frame metric is not: $g_{mn} \to g_s^{-1/2}\eta_{mn}$.
+From string perturbation theory, the string frame metric $G_{mn}$ is taken to be asymptotically flat: $G_{mn} \to \eta_{mn}$, hence the \SLR{}-invariant Einstein frame metric is not: $g_{mn} \to g_s^{-1/2}\eta_{mn}$.
 There is an implicit difference in length scale between the string and Einstein frames, $l_E = g_s^{-1/4}l_s$, which one must account for when comparing tensions computed in the Einstein and string frames.
 The action is given as
 \begin{equation}
@@ -144,11 +143,11 @@ e^{-\Phi}|H_3|^2+e^\Phi|\tilde{F}_3|^2
 \end{aligned}
 \label{eq:sl2r_invariant_einstein_frame_action}
 \end{equation}
-Had one taken the second route and worked with an asymptotically-flat Einstein frame metric $\tilde{g}_{mn} \equiv g_s^{1/2}e^{-\Phi/2}G_{mn}$, there would no longer be a difference in length scale between the two frames, but the metric would not be SL(2, R)-invariant:
+Had one taken the second route and worked with an asymptotically-flat Einstein frame metric $\tilde{g}_{mn} \equiv g_s^{1/2}e^{-\Phi/2}G_{mn}$, there would no longer be a difference in length scale between the two frames, but the metric would not be \SLR{}-invariant:
 \begin{equation}
 \tilde{g}_{mn} \to |c\langle\tau\rangle + d| \tilde{g}_{mn}.
 \end{equation}
-Hence to write down an SL(2, R)-invariant action, appropriate factors of $g_s$ must be included. For example, while $R(\tilde{g}_{mn})$ and $\sqrt{-\tilde{g}} R(\tilde{g}_{mn})$ are not SL(2, R)-invariant, 
+Hence to write down an \SLR{}-invariant action, appropriate factors of $g_s$ must be included. For example, while $R(\tilde{g}_{mn})$ and $\sqrt{-\tilde{g}} R(\tilde{g}_{mn})$ are not \SLR{}-invariant, 
 $g_s^{1/2}R(\tilde{g}_{mn})$ and $\frac{1}{g_s^2}\sqrt{-\tilde{g}} R(\tilde{g}_{mn})$ are invariant.
 Using the asymptotically-flat Einstein frame metric $\tilde{g}_{mn} = g_s^{1/2}e^{-\Phi/2}G_{mn}$, the type IIB action is
 \begin{equation}
@@ -165,27 +164,26 @@ e^{-\Phi}|H_3|^2+e^\Phi|\tilde{F}_3|^2
 \end{aligned}
 \label{eq:asymptotically_flat_einstein_frame_action}
 \end{equation}
-where the factors of $g_s$ necessarily enter in order to ensure SL(2, R)-invariance.
+where the factors of $g_s$ necessarily enter in order to ensure \SLR{}-invariance.
 In this convention, it is also standard to define the gravitational coupling $\kappa_{10}^2 = g_s^2 \kappa^2$.
-Because we will primarily be concerned with the SL(2, R) symmetry, it is more convenient to work with the SL(2, R)-invariant Einstein frame metric \eqref{sl2r invariant Einstein frame metric}, where explicit factors of $g_s$ do not enter.
+Because we will primarily be concerned with the \SLR{} symmetry, it is more convenient to work with the \SLR{}-invariant Einstein frame metric \eqref{sl2r invariant Einstein frame metric}, where explicit factors of $g_s$ do not enter.
 
-Although the scalars $\Phi, C_0$, and the form fields $C_2, B_2$ have different NSNS and RR origins in 10d, they transform into each other under SL(2, R).
-This SL(2, R)-invariance will hold at the two-derivative level, as well as for higher-derivative corrections with trivial dependence on $\tau$.
-Once corrections with non-trivial $\tau$-dependence enter, the SL(2, R) symmetry is broken.
-As string and brane corrections are included, the symmetry is further broken to SL(2, Z).
-This reflects the quantisation of NSNS and RR charges in type IIB string theory.
+Although the scalars $\Phi, C_0$, and the form fields $C_2, B_2$ have different NSNS and RR origins in 10d, they transform into each other under \SLR{}.
+This \SLR{}-invariance will hold at the two-derivative level, as well as for higher-derivative corrections with trivial dependence on $\tau$.
+Once corrections with non-trivial $\tau$-dependence enter, the \SLR{} symmetry is broken.
+As string and brane corrections are included, the symmetry of \SLZ{} may be restored, which is understood as a reflection of the quantisation of NSNS and RR charges in type IIB string theory.
 
 \subsection{Guiding Questions}
 
 As discussed above, the NSNS/RR distinction is a purely 10d one.
 Both the NSNS and RR fields in type IIA combine to form SO(9) multiplets.
-Analogously, the NSNS and RR fields in type IIB combine to form $SL(2, R)\times SO(8)$ multiplets, and it is natural to ask whether this could be a hint of a higher-dimensional origin.
-This is the second puzzle of the type IIB theory, and it is unlikely to be independent of the first: where does the SL(2, Z)\footnote{
-SL(2, R) at the two-derivative supergravity level.
+Analogously, the NSNS and RR fields in type IIB combine to form $\SLR{}\times SO(8)$ multiplets, and it is natural to ask whether this could be a hint of a higher-dimensional origin.
+This is the second puzzle of the type IIB theory, and it is unlikely to be independent of the first: where does the \SLZ{}\footnote{
+\SLR{} at the two-derivative supergravity level.
 } symmetry come from\footnote{
-The type IIB theory is understood as the decompactifying limit of M-theory on a torus, which could explain SL(2, Z). But SL(2, Z) is a true symmetry in 10d already.}?
+The type IIB theory is understood as the decompactifying limit of M-theory on a torus, which could explain \SLZ{}. But \SLZ{} is a true symmetry in 10d already.}?
 We approach this review motivated by the two guiding questions introduced above:
 \begin{enumerate}
     \item Does the type IIB theory have a higher-dimensional origin?
-    \item What are the role and origin of SL(2, Z)?
+    \item What are the role and origin of \SLZ{}?
 \end{enumerate}
