@@ -1,10 +1,10 @@
-\section{The construction of the SL(2, R)/SO(2) coset}
+\section{The construction of the \texorpdfstring{\SLR{}}{SL(2,R)}/SO(2) coset}
 \label{sec:sl2r-coset}
 
-We briefly review the construction of the $\frac{SL(2, R)}{SO(2)}$ coset representative, which is important for the discussion of the SL(2, R) symmetry and the interplay between SL(2, Z) and U(1)-violation.
+We briefly review the construction of the $\frac{\SLR{}}{SO(2)}$ coset representative, which is important for the discussion of the \SLR{} symmetry and the interplay between \SLZ{} and U(1)-violation.
 
-The coset representative of $\frac{SL(2, R)}{SO(2)}$ is an SL(2, R) matrix $\mathcal{V}$ with a local SO(2) symmetry.
-Generically, $\dim SL(2, R) = 3$, so $\mathcal{V}$ is parameterised by three real scalars: $\mathcal{V} = \mathcal{V}(\tau_1, \tau_2, \theta)$.
+The coset representative of $\frac{\SLR{}}{SO(2)}$ is an \SLR{} matrix $\mathcal{V}$ with a local SO(2) symmetry.
+Generically, $\dim \SLR{} = 3$, so $\mathcal{V}$ is parameterised by three real scalars: $\mathcal{V} = \mathcal{V}(\tau_1, \tau_2, \theta)$.
 It is convenient to separate the SO(2) factor, parameterised by $\theta$, using the Iwasawa decomposition \cite{iwasawa1949}
 \begin{equation}
 \mathcal{V} =
@@ -22,10 +22,10 @@ It is convenient to separate the SO(2) factor, parameterised by $\theta$, using 
 \end{pmatrix}.
 \label{Iwasawa-decomposition}
 \end{equation}
-In this representation, SL(2, R) acts on $\mathcal{V}$ from the left, with $\Lambda \equiv \begin{pmatrix}
-d&c\\b&a\end{pmatrix} \in SL(2, R)$.
+In this representation, \SLR{} acts on $\mathcal{V}$ from the left, with $\Lambda \equiv \begin{pmatrix}
+d&c\\b&a\end{pmatrix} \in \SLR{}$.
 The representative $\mathcal{V}$ by itself is not physical due to the SO(2) gauge redundancy.
-However, one can construct $\mathcal{V}\mathcal{V}^T$, which transforms covariantly under SL(2, R), removes the SO(2) factor, and gives the physical metric for the scalar manifold, parameterised by $\tau_1, \tau_2$:
+However, one can construct $\mathcal{V}\mathcal{V}^T$, which transforms covariantly under \SLR{}, removes the SO(2) factor, and gives the physical metric for the scalar manifold, parameterised by $\tau_1, \tau_2$:
 \begin{equation}
 \mathcal{M} = \mathcal{V}\mathcal{V}^T = \frac{1}{\tau_2}\begin{pmatrix}
 1 & \tau_1\\
@@ -46,15 +46,15 @@ P_1 + iP_2 = e^{2i\theta}\frac{\partial \tau}{2 \tau_2},\quad
 Q = \partial \theta - \frac{1}{2}\frac{\partial \tau_1}{\tau_2}.
 \end{equation}
 So the vielbein $P$ transforms covariantly under the local U(1) with charge 2, and the kinetic term $\frac{|\partial \tau|^2}{2\tau_2^2}$ is U(1) invariant.
-This U(1) is independent of the global SL(2, R) transformation, and is a gauge redundancy reflecting the choice of the U(1) frame.
+This U(1) is independent of the global \SLR{} transformation, and is a gauge redundancy reflecting the choice of the U(1) frame.
 
 The parameter $\theta$ here is the non-dynamical U(1) phase.
-We can remove its presence in the action by picking a gauge $\theta = 0$, leaving two real scalars $\tau_1, \tau_2$ that parameterise the 2d coset $\frac{SL(2, R)}{U(1)}$ without redundancy.
-However, general SL(2, R) transformations do not preserve the $\theta = 0$ gauge, so a compensating U(1) transformation given by $\theta = -\arg(c\tau+d)$ is induced when $\Lambda$ acts on $\mathcal{V}$ from the left.
-This is independent of the local U(1) symmetry, which may be violated, but is part of the global SL(2, Z) symmetry, which should always be preserved.
+We can remove its presence in the action by picking a gauge $\theta = 0$, leaving two real scalars $\tau_1, \tau_2$ that parameterise the 2d coset $\frac{\SLR{}}{U(1)}$ without redundancy.
+However, general \SLR{} transformations do not preserve the $\theta = 0$ gauge, so a compensating U(1) transformation given by $\theta = -\arg(c\tau+d)$ is induced when $\Lambda$ acts on $\mathcal{V}$ from the left.
+This is independent of the local U(1) symmetry, which may be violated, but is part of the global \SLZ{} symmetry, which should always be preserved.
 
-This is another way to view the breaking of the U(1) symmetry: the original U(1) is the SO(2) factor in SL(2, R), so when SL(2, R) is broken to SL(2, Z), the U(1) is also broken.
+This is another way to view the breaking of the U(1) symmetry: the original U(1) is the SO(2) factor in \SLR{}, so when \SLR{} is broken to \SLZ{}, the U(1) is also broken.
 
 Besides $P$, the other bosonic field that transforms under U(1) is the 3-form field strength $G_3 = e^{\Phi/2}(F_3 - \tau H_3)$, which carries charge 1 under U(1).
-When computing higher-derivative corrections, one wishes to keep track of the U(1) charge for possible U(1)-violating corrections; in that context it is convenient to work with the complexified vielbein $P$ and 3-form field strength $G_3$.
-It is important to distinguish this U(1) from the compensating U(1) used to remove the redundant scalar $\theta$ in the coset representative $\mathcal{V}$. The compensating U(1) is an SL(2, Z) transformation, under which the effective action should always be invariant. For example, the modular form $f(\tau, \bar\tau)$ also carries a U(1)-like charge under SL(2, Z), but it does not carry local U(1) charge, and hence may contribute to SL(2, Z)-invariant but U(1)-violating corrections.
+When computing higher-derivative corrections, one wishes to keep track of the U(1) charge for possible U(1)-violating corrections. In that context it is convenient to work with the complexified vielbein $P$ and 3-form field strength $G_3$.
+It is important to distinguish this U(1) from the compensating U(1) used to remove the redundant scalar $\theta$ in the coset representative $\mathcal{V}$. The compensating U(1) is an \SLZ{} transformation, under which the effective action should always be invariant. For example, the modular form $f(\tau, \bar\tau)$ also carries a U(1)-like charge under \SLZ{}, but it does not carry local U(1) charge, and hence may contribute to \SLZ{}-invariant but U(1)-violating corrections.
