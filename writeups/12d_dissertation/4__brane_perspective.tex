@@ -37,17 +37,14 @@ In the type IIB theory, the R-symmetry is local $SO(2)\cong U(1)$, and the Killi
 &=\frac{i}{\tau-\bar\tau}(\Gamma^\mu\partial_\mu \bar\tau)\epsilon,\\
 \delta\psi_\mu
 &=
-\left(
-\partial_\mu+\frac{1}{4}w_\mu{}^{ab}\Gamma_{ab} -\frac{i}{2}\frac{\partial_\mu \tau_1}{2\tau_2}
-\right)\epsilon
-\equiv\left(\nabla_\mu+\frac{i}{2}Q_\mu\right)\epsilon,
+\left(\nabla_\mu+\frac{i}{2}Q_\mu\right)\epsilon,
 \end{aligned}
 % \tag{0612072 eq3.1}
 \label{9+1 IIB axio-dilaton Killing spinor equations}
 \end{equation}
 where
 \begin{equation}
-Q_\mu = -\frac{\partial_\mu \tau_1}{2\tau_2}
+Q_\mu \equiv -\frac{\partial_\mu \tau_1}{2\tau_2}
 \label{def-Qm}
 \end{equation}
 is the non-dynamical U(1) connection built with $\tau$.
@@ -61,7 +58,7 @@ F_{\mu\nu}(Q)=(\nabla_\mu Q_\nu-\nabla_\nu Q_\mu).
 This can be satisfied in two ways: either they cancel each other (as for the D7 brane) or both contributions vanish (as for the D(-1) instanton).
 We now present both solutions.
 
-Among the known BPS branes in the type IIA, IIB, and 11d theories \cite{Stelle:1998xg}, the D7 brane plays a special role: it is co-dimension 2, which means its harmonic function is logarithmic rather than exhibiting the power-law behaviour $\sim \frac{1}{r^{\tilde{d}-2}}$, and thus is not asymptotically flat.
+Among the known BPS branes in the type IIA, IIB, and 11d theories \cite{Stelle:1998xg}, the D7 brane plays a special role: it is co-dimension 2, which means its source profile is logarithmic rather than exhibiting the power-law behaviour $\sim \frac{1}{r^{\tilde{d}-2}}$, and thus is not asymptotically flat.
 The general $N \times$ D7 brane solution can be written as \cite{Greene:1989ya,Gibbons:1995vg,Tseytlin:1996ne,Bergshoeff:2006jj}
 \begin{equation}
 ds_{D7}^2 = -dt^2 + d\vec{x}_7^2 + \text{Im} \tau dw d\bar w,
@@ -99,8 +96,10 @@ In Einstein frame, it can be written as
 \begin{equation}
 ds_{10}^2 = \sum_{i=1}^{10} dx_i^2,\quad
 e^\Phi = H, \quad\mathcal C\equiv-iC_0 = H^{-1}-1,\quad
-H=1+\frac{Q}{r^8}.
+H=1+\frac{Q}{r^8},
+\label{D-1 background}
 \end{equation}
+where $\mathcal{C}$ is the Euclidean axion.
 
 \subsection{D7 and D6 interpreted as 12d and 11d KK-monopoles}
 We will now show that the D7 solution can be interpreted as a 12d KK-monopole geometry compactified on a torus.
@@ -119,7 +118,7 @@ ds_d^2 = ds_{1,d-5}^2 + H(\vec{y})d\vec{y}^2 + H(\vec{y})^{-1}(dz + \vec{A}\cdot
 \partial^2 H=-\sum_i q_i \delta^3(\vec{y}-\vec{y}_i),
 \label{kk monopole einstein eqs}
 \end{equation}
-where $\vec{y}$ is a 3d Euclidean vector, together with the compact coordinate $u$ they form a 4d space that is an $S_1$ fibration over $\mathbb{R}^3$.
+where $\vec{y}$ is a 3d Euclidean vector which, together with the compact coordinate $z$, forms a 4d space that is an $S_1$ fibration over $\mathbb{R}^3$.
 
 \paragraph{D6 brane from reduction of the 11d KK-monopole}
 Specialising to 11d, the KK-monopole is given by
@@ -185,7 +184,7 @@ ds_{12}^2 = -dt^2 + d\vec{x}_7^2 + \tau_2 dw d\bar w + \tau_2^{-1}|dz_1 + \tau d
 \partial\bar\partial \tau_2 = -\sum_i q_i \delta^2(w,w_i).
 \label{12d KK-monopole in complex coordinates}
 \end{equation}
-Such as 12d metric can equivalently be written as the embedding 
+Such a 12d metric can equivalently be written as the embedding 
 \begin{equation}
 \widehat{g}_{MN} = 
 \begin{pmatrix}
@@ -197,7 +196,7 @@ g_{mn} & 0\\
 \tau_1 & |\tau|^2
 \end{pmatrix},
 \end{equation}
-where $g_{mn}$ is the 10d metric of the form \eqref{D7 solution}.
+and we see that $g_{mn}$ is the 10d metric of the D7 brane solution \eqref{D7 solution}.
 
 % We begin with the 12d KK-monopole geometry
 % \begin{equation}
@@ -334,7 +333,7 @@ Like the relation between the 11d KK-monopole and 10d D6 brane in the type IIA t
 
 
 \paragraph{D(-1) instanton from reduction of the 12d pp-wave}
-We now discuss the parallel story on the type IIB side, specializing \eqref{d-dim pp-wave-t-z} to 12d we find
+We now discuss the parallel story on the type IIB side, specialising \eqref{d-dim pp-wave-t-z} to 12d, we find
 \begin{equation}
 ds_{12}^2 = - H^{-1}dt^2 + H[dz_1 + (H^{-1}-1)dt]^2 + \sum_{i=1}^{10} dx_i^2.
 \end{equation}
@@ -348,9 +347,9 @@ which, in coordinates $(x^m, z_1, z_2)$, corresponds to the 12d metric embedding
 \widehat{g}_{MN} = 
 \begin{pmatrix}
 \delta_{mn} & 0 \\
-0 & \hat{g}_{ab}
+0 & \widehat{g}_{ab}
 \end{pmatrix},\quad
-\hat{g}_{ab} =
+\widehat{g}_{ab} =
 e^{\Phi}\begin{pmatrix}
 1 & C_0 \\
 C_0 & C_0^2 + e^{-2\Phi}
@@ -403,7 +402,7 @@ It is also customary to define a real scalar $\mathcal C \equiv -i C_0$, which i
 One may view the Euclidean D(-1) as a ``slice'' of the 10d homogeneous wavefront of a 12d pp-wave.
 The momentum of the wave is the D(-1) charge.
 Recent investigations of the IKKT matrix model \cite{Hartnoll:2024csr,Komatsu:2024bop} reveal a type IIB supergravity background with axio-dilaton and the 3-form turned on, which admits a similar 12d interpretation.\footnote{
-The mass-deformed model is dual to a probe D1 brane in the Einstein-frame-flat background $ds_{10}^2 = \sum_i dx_i^2$, $e^\Phi = 1 - \frac{\mu^2}{32}\left(\sum_{A=1}^7 x_A^2 + 3\sum_{a=9}^{10}x_a^2\right)$, $H_3 = \mu dx^8\wedge dx^9\wedge dx^{10}$, valid in the ellipsoidal region where $e^\Phi\ge0$ \cite{Hartnoll:2024csr}. Uplifting to 12d (Wick rotating to keep $ds^2$ real) gives the Brinkmann-form metric $ds_{12}^2 = 2dudv + e^\Phi du^2 + \sum_{i=1}^{10}dx_i^2$, whose only non-vanishing Ricci component is $R_{uu}=\mu^2/2$. Since $e^\Phi$ is not harmonic it is not a pp-wave, but it solves 12d gravity coupled to a 4-form, $S = \int d^{12}x\sqrt{-\widehat{g}}\left(\widehat{R}-\tfrac12|\widehat{F}_4|^2\right)$ with $\widehat{F}_4 = \mu du\wedge dx^8\wedge dx^9\wedge dx^{10} = du\wedge H_3$.
+The mass-deformed model is dual to a probe D1 brane in the Einstein-frame-flat background $ds_{10}^2 = \sum_i dx_i^2$, $e^\Phi = 1 - \frac{\mu^2}{32}\left(\sum_{A=1}^7 x_A^2 + 3\sum_{a=9}^{10}x_a^2\right)$, $H_3 = \mu dx^8\wedge dx^9\wedge dx^{10}$, valid in the ellipsoidal region where $e^\Phi\ge0$ \cite{Hartnoll:2024csr}. Uplifting to 12d (Wick rotating to keep $ds^2$ real) gives the Brinkmann-form metric $ds_{12}^2 = 2dudv + e^\Phi du^2 + \sum_{i=1}^{10}dx_i^2$, whose only nonvanishing Ricci component is $R_{uu}=\mu^2/2$. Since $e^\Phi$ is not harmonic it is not a pp-wave, but it solves 12d gravity coupled to a 4-form, $S = \int d^{12}x\sqrt{-\widehat{g}}\left(\widehat{R}-\tfrac12|\widehat{F}_4|^2\right)$ with $\widehat{F}_4 = \mu du\wedge dx^8\wedge dx^9\wedge dx^{10} = du\wedge H_3$.
 }
 
 \subsection{Supersymmetry}
@@ -433,7 +432,7 @@ c_n (F_{n})_M{}^{N_1 N_2 \cdots} \Gamma_{N_1 N_2 \cdots}
 with summation over the form fields of the given theory, and $c_n, d_n$ are coefficients to be determined.
 The Killing spinor equation would then be given by $\delta\psi_M=0$.
 
-Upon dimensional reduction, the higher-dimensional fields decompose into those of the lower-dimensional theory, and the reduction of the gravitino variation \eqref{generic gravitino variation} reproduces the lower-dimensional Killing spinor equation.
+Upon dimensional reduction, the higher-dimensional fields decompose into those of the lower-dimensional theory, and reducing the gravitino variation \eqref{generic gravitino variation} reproduces its Killing spinor equation.
 In our case the higher-dimensional theory is pure gravity, with no form fields, so its gravitino variation \eqref{generic gravitino variation} is simply $\nabla_M\epsilon$.
 The full lower-dimensional Killing spinor equation, flux and connection terms included, must then be reproduced by reducing this covariant derivative alone.
 
@@ -454,14 +453,14 @@ Substituting the reduced spin connection (see \cite{Ortin:2015hya}) on the stand
 \widehat{\nabla}_m \epsilon
 &= e^{\Phi/3}\left[ \nabla_m - \frac{1}{6} \Gamma_m{}^n \partial_n \Phi + \frac{1}{4} e^\Phi F_{mn} \Gamma^n \Gamma^{11} \right] \epsilon = 0,\\
 \widehat{\nabla}_{11} \epsilon
-&=\frac{1}{4} e^{Phi/3} \left[ -\frac{1}{2} e^{\Phi} F_{mn} \Gamma^{mn} - \frac{4}{3}\partial_m \Phi \Gamma^m \Gamma^{11} \right] \epsilon = 0.
+&=\frac{1}{4} e^{\Phi/3} \left[ -\frac{1}{2} e^{\Phi} F_{mn} \Gamma^{mn} - \frac{4}{3}\partial_m \Phi \Gamma^m \Gamma^{11} \right] \epsilon = 0.
 \end{aligned}
 \end{equation}
 We can substitute the $\widehat{\nabla}_{11} \epsilon = 0$ equation into the $\widehat{\nabla}_m \epsilon = 0$ equation to find
 \begin{equation}
 \nabla_m \epsilon = e^{\Phi/3} \left[ \nabla_m + e^\Phi \left(\frac{1}{8}F_{mn}\Gamma^n - \frac{1}{16}F_{nr}\Gamma_m{}^{nr}\right) \Gamma^{11} + \frac{1}{6}\partial_m\Phi \right] \epsilon = 0.
 \end{equation}
-The flux term can be simplified in the following manner:
+The flux term can be simplified:
 \begin{equation}
 \begin{aligned}
 \frac{1}{8}F_{mn}\Gamma^n - \frac{1}{16}F_{nr}\Gamma_m{}^{nr}
@@ -479,56 +478,6 @@ Then performing a redefinition $\epsilon \to e^{-\Phi/6} \epsilon$ to remove the
 which is precisely the type IIA Killing spinor equation in the gravity, KK-vector and dilaton sector \cite{Becker:2006dvp}.
 Hence the 10d $\tfrac{1}{2}$ BPS condition may be understood from 11d covariance.
 Now we present an analogous story between 12d covariance and the type IIB theory.
-
-% Let us consider the equation $\widehat{\nabla}_M \epsilon = 0$ that states the covariant constancy of an 11d spinor $\epsilon$.
-% Splitting the 11d indices into 10d spacetime and the M-theory circle, we have
-% \begin{equation}
-% \begin{aligned}
-% \widehat{\nabla}_m \epsilon = \nabla_m \epsilon + \frac{1}{4} \widehat{w}_{mBC} \Gamma^{BC} \epsilon &= 0,\\
-% \widehat{w}_{11,BC} \Gamma^{BC} \epsilon &= 0.
-% \end{aligned}
-% \end{equation}
-% Substituting the reduced spin connection (see \cite{Becker:2006dvp}) for the standard Kaluza-Klein ansatz \eqref{string frame KK reduction ansatz}, we find
-% \begin{equation}
-% \begin{aligned}
-% \widehat w_{aBC}\Gamma^{BC}
-% &=e^{\Phi/3}\left[w_{abc}\Gamma^{bc}-\tfrac23\Gamma_a{}^b\partial_b\Phi\right]+e^{4\Phi/3}F_{ab}\Gamma^b\Gamma^{11},\\
-% \widehat w_{11,BC}\Gamma^{BC}
-% &=-\tfrac12 e^{4\Phi/3}F_{bc}\Gamma^{bc}-\tfrac43 e^{\Phi/3}\partial_m\Phi\Gamma^m\Gamma^{11}.
-% \end{aligned}
-% \end{equation}
-% Hence the 11d covariant constancy condition reduces to
-% \begin{equation}
-% \begin{aligned}
-% \left[-\tfrac12 e^\Phi F_{bc}\Gamma^{bc}-\tfrac43\partial_m\Phi\Gamma^m\Gamma^{11}\right]\epsilon &= 0\\
-% \left[\nabla_m-\tfrac16\Gamma_m{}^n\partial_n\Phi+\tfrac14 e^\Phi F_{mn}\Gamma^n\Gamma^{11}\right]\epsilon &= 0.
-% \label{IIA spacetime gravitino}
-% \end{aligned}
-% \end{equation}
-% The first equation is algebraic in $\epsilon$. Multiplying by $\Gamma^{11}$ and using $(\Gamma^{11})^2=1$, it becomes the type IIA dilatino variation
-% \begin{equation}
-% \Gamma^b\partial_b\Phi\epsilon=\tfrac38 e^\Phi F_{bc}\Gamma^{bc}\Gamma^{11}\epsilon .
-% \label{IIA dilatino relation}
-% \end{equation}
-% We now use \eqref{IIA dilatino relation} to remove $\partial\Phi$ from the spacetime equation \eqref{IIA spacetime gravitino}.
-% Writing $\Gamma_m{}^n\partial_n\Phi=\Gamma_m(\Gamma^n\partial_n\Phi)-\partial_m\Phi$ and inserting \eqref{IIA dilatino relation}, the flux term it produces combines with the $\tfrac14 e^\Phi F_{mn}\Gamma^n\Gamma^{11}$ already present, giving
-% \begin{equation}
-% \widehat\nabla_m\epsilon=e^{\Phi/3}\left(\nabla_m+\tfrac16\partial_m\Phi+\tfrac18 e^\Phi F_{mn}\Gamma^n\Gamma^{11}-\tfrac1{16}e^\Phi F_{np}\Gamma_m{}^{np}\Gamma^{11}\right)\epsilon ,
-% \label{IIA assembled}
-% \end{equation}
-% where we used $\Gamma_m\Gamma^{np}=\Gamma_m{}^{np}+2\delta_m^{[n}\Gamma^{p]}$.
-% The rank-one and rank-three flux terms then recombine into a single flux-slash acting on $\Gamma_m$: with $\Gamma^{np}\Gamma_m=\Gamma_m{}^{np}-2\delta_m^{[n}\Gamma^{p]}$,
-% \begin{equation}
-% \tfrac18 F_{mn}\Gamma^n-\tfrac1{16}F_{np}\Gamma_m{}^{np}=-\tfrac1{16}F_{np}\Gamma^{np}\Gamma_m .
-% \end{equation}
-% Finally, the Weyl rescaling $\epsilon\to e^{-\Phi/6}\epsilon$ removes the $\tfrac16\partial_m\Phi$ term, leaving us precisely with the type IIA Killing spinor equation in the gravity, KK-vector and dilaton sector,
-% \begin{equation}
-% \delta \psi_m =
-% \left(
-% \nabla_m - \tfrac{1}{16}e^\Phi F_{np}\Gamma^{np}\Gamma_m\Gamma^{11}
-% \right)\epsilon = 0.
-% \label{IIA Killing spinor equation}
-% \end{equation}
 
 \paragraph{From 12d to type IIB.}
 A 12d covariant derivative $\widehat{\nabla}^{(12)}_M\epsilon = 0$ restricted to 10d coordinates $x^m$ takes the form
@@ -552,13 +501,13 @@ The 12d covariant derivative \eqref{12d covariant derivative} thus becomes
 \nabla_m + \frac{1}{2} Q_m \Gamma_{11,12}
 \right]\epsilon,
 \end{equation}
-where $Q_m = -\frac{1}{2} \frac{\partial_m \tau_1}{\tau_2}$ is the non-dynamical U(1) connection the type IIB axio-dilaton sector.
-We note that on a Euclidean torus
+where $Q_m = -\frac{1}{2} \frac{\partial_m \tau_1}{\tau_2}$ is the non-dynamical U(1) connection of the type IIB axio-dilaton sector.
+Note that on a Euclidean torus
 \begin{equation}
 \Gamma_{11,12} = \Gamma_{11}\Gamma_{12},\quad
 (\Gamma_{11,12})^2 =-\Gamma_{11}^2\Gamma_{12}^2 = -1,
 \end{equation}
 so $\Gamma_{11,12}$ is, up to a similarity transformation, $i$ times the U(1) generator.
-After performing a similarity transformation one obtains precisely the axio-dilaton sector Killing spinor equation \eqref{9+1 IIB axio-dilaton Killing spinor equations}.
+After performing a similarity transformation one obtains the axio-dilaton sector Killing spinor equation \eqref{9+1 IIB axio-dilaton Killing spinor equations}.
 This would also hold had we compactified a non-compact torus instead, to obtain a Euclidean type IIB theory.
 In the case of compactifying on a torus of signature (1,1), a factor of $i$ arises both in identifying the U(1) generator from $\Gamma_{11,12}$ and in defining the Euclidean compact scalar $C_0 = i\mathcal C$, so that the 12d covariant derivative again reproduces the type IIB gravitino variation.

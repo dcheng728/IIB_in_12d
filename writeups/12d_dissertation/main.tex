@@ -35,23 +35,24 @@ linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 %==============================================================
 \begin{titlepage}
 \centering
-\vspace*{2cm}
+\vspace*{1cm}
+\noindent\makebox[\textwidth][l]{\includegraphics[width=0.5\textwidth]{imperial_logo.png}}\par
+\vspace{2cm}
 {\LARGE\bfseries A 12d Origin of the Type IIB String Theory?\par}
 \vspace{1.5cm}
-{\large Chang Cheng\par}
+{\large Chang Cheng \raisebox{-0.12em}{\includegraphics[height=0.95em]{chinese_name.pdf}}\par}
 \vspace{0.3cm}
-{\normalsize\href{mailto:chang.cheng24@imperial.ac.uk}{chang.cheng24@imperial.ac.uk}\par}
 \vspace{1cm}
 {\normalsize Department of Physics\\
 Imperial College London, SW7 2AZ, U.K.\par}
 \vfill
-{\normalsize A thesis submitted in partial fulfilment of the requirements for the degree of Master of Physics and the Diploma of Imperial College London.\par}
+{\normalsize A thesis submitted in partial fulfilment of the requirements for the degree of Master~of~Physics and the Diploma of Imperial College London.\par}
 \vspace{1.2cm}
-{\normalsize 15 June 2026\par}
+{\normalsize \today \par}
 \vspace{0.4cm}
 % Word count regenerated with: texcount -1 -sum -merge <chapters 1--8>
 % Excludes abstract, equations, bibliography, and appendices, per the project guidelines.
-{\normalsize Word count: 11{,}341 \par}
+{\normalsize Word count: 11{,}076 \par}
 \end{titlepage}
 \pagenumbering{roman}
 
@@ -83,15 +84,16 @@ This thesis examines the proposal that the type IIB string theory has a twelve-d
 The greater part of this thesis reviews existing literature, attributed by citation throughout: the survey of $10+2$d supergravity and superalgebras, the brane interpretations of the axio-dilaton, and the D3-brane worldvolume analysis report results due to others, principally A.~A.~Tseytlin and the works cited therein.
 
 Two results are my own.
-First, the covariant twelve-dimensional repackaging of the type IIB form-field sector in Section \ref{sec:covariant-unification}, in which the ten-dimensional self-duality of $F_5$ is realised as a twelve-dimensional Hodge duality.
-Second, the result of Section \ref{sec:effective-actions} that the $U(1)$-preserving five-point contact term of \cite{Liu:2025uqu} admits no twelve-dimensional covariant form.
+First, the covariant twelve-dimensional repackaging of the type IIB form-field sector in Section~\ref{sec:covariant-unification}, in which the ten-dimensional self-duality of $F_5$ is realised as a twelve-dimensional Hodge duality.
+Second, the result of Section~\ref{sec:effective-actions} that the $U(1)$-preserving five-point contact term of \cite{Liu:2025uqu} admits no twelve-dimensional covariant form.
 The synthesis of work scattered across the algebraic, brane, form-field, and effective-action perspectives into a single coherent account, and the line of argument running through the thesis, are also my own.
+Besides these original contributions, this thesis aims to bring the existing literature and the new results together into a single self-contained account.
 
 \section*{Declaration of Generative AI Usage}
 
 In accordance with Imperial College London's policy on the use of generative AI tools, I declare the following.
 Generative AI assistants (Anthropic's Claude) were used during the research and preparation phases of this thesis to organise and cross-check intermediate steps of derivations, to locate and summarise relevant literature, and to edit prose for clarity and concision.
-Symbolic tensor algebra was carried out with Python and Sympy.
+Symbolic tensor algebra was carried out with Python and SymPy.
 All physics results, derivations, and conclusions were verified by the author, and the scientific content (including the original contributions described above) is the author's own.
 No AI tool was used to produce results that were not independently checked.
 
@@ -100,13 +102,14 @@ No AI tool was used to produce results that were not independently checked.
 \vspace*{\fill}
 \section*{Acknowledgements}
 
-I am deeply grateful to my family, especially my parents and grandparents, for their unwavering belief in me and their encouragement to pursue my passions.
 
-I owe a great deal to my supervisor, Prof.\ Arkady Tseytlin, for his guidance and support throughout this project, and to Prof.\ Amihay Hanany, whose lectures on string theory have been a tremendous source of insight.
 
-I would also like to thank my friends Carl Bouchard and Tim Wong for their camaraderie and encouragement. 
+I owe a great deal to my supervisor, Prof.\ Arkady Tseytlin, for introducing me to such a fascinating topic, and for his patient guidance and support throughout this project.
+I would also like to thank Prof.\ Amihay Hanany, whose string theory lectures at Imperial have been a tremendous source of insight.
 
-Finally, I am grateful to the many friends whom I have had the pleasure of spending time with at Imperial, particularly in the Abdus Salam Library, who made my time here memorable.
+I would also like to thank my friends Carl Bouchard and Tim Wong for their camaraderie and encouragement, and the many friends whose company I have enjoyed at Imperial, particularly in the Abdus Salam Library, who made my time here so memorable.
+
+Finally, and most importantly, I am deeply grateful to my family, especially my parents and grandparents, for their unwavering belief in me and their support in allowing me to pursue my passions.
 
 \vspace*{\fill}
 
@@ -129,7 +132,6 @@ Finally, I am grateful to the many friends whom I have had the pleasure of spend
 \input{A__DG}
 \input{A__brane_catalog}
 \input{A__form_field_reduction}
-% \input{scratch} % TEMPORARY: scratch/verification notes, remove before submission
 
 \bibliographystyle{JHEP}
 \bibliography{references}
