@@ -44,7 +44,7 @@ K
 \end{equation}
 evaluated in the string frame metric with $G_{mn} |_{\infty} = \eta_{mn}$.
 From the relation $G_{mn} = e^{\Phi/2}g_{mn}$, we see that the Einstein frame metric is not asymptotically flat: $g_{mn} |_{\infty} = g_s^{-1/2}\eta_{mn}$.
-To translate $\mathcal{A}_4$ into the Einstein frame, we need to translate implicit contractions with the string frame metric with those with the Einstein frame metric, which introduces factors of $g_s$.
+To translate $\mathcal{A}_4$ into the Einstein frame, we need to translate implicit contractions with the string frame metric to those with the Einstein frame metric, which introduces factors of $g_s$.
 The net effect is the following Einstein frame expansion
 \begin{equation}
 \mathcal{A}_4 \bigg|_{g_{mn}} = 
@@ -237,7 +237,7 @@ A genuinely ten-dimensional diagnostic requires an amplitude sensitive to all te
 One may attempt to evaluate KK-loop contributions to 5-point amplitudes, using the 5-point Schwinger proper time formula analogous to \eqref{4-point Schwinger parameter}, as given in \cite{Minasian:2015bxa,Green:1999by,Liu:2022bfg}.
 
 \subsection{12d Effective Corrections}
-We begin by reviewing the known relations between type IIB and 12d, using a ``bottom-up'' approach.
+We begin by reviewing the known 12d interpretations of the type IIB effective action, using a ``bottom-up'' approach.
 The type IIB axio-dilaton action, at the two-derivative level, can be written as
 \begin{equation}
 2\kappa^2 S_{IIB,\tau}
@@ -263,7 +263,7 @@ g_{mn} & 0 \\
 One may adopt complex tangent frame coordinates $z, \overline{z}$, with vielbein $e_{\alpha}{}^a = \frac{1}{2\sqrt{\tau_2}}\begin{pmatrix}
     -\tau & 1 \\ -\overline{\tau} & 1
 \end{pmatrix}$. 
-The nonvanishing components of the 12d Riemann tensor are \cite{Liu:2025uqu}
+The nonvanishing components of the 12d Riemann tensor are (see also \cite{Liu:2025uqu})
 \begin{equation}
 \begin{gathered}
 \widehat{R}_{mrns} = R_{mrns},\quad
@@ -281,12 +281,12 @@ Substituting $P_m\overline{P}_n$ in \eqref{eq:IIB-two-derivative} with $\widehat
 =\sqrt{-\widehat{g}} \widehat{R},
 \label{eq:2-derivative-index-splitting}
 \end{equation}
-which verifies that the F-theory ansatz \eqref{eq:F-theory-ansatze} relates the 10d axio-dilaton action to a 12d Einstein-Hilbert term.
+which suggests that the F-theory ansatz \eqref{eq:F-theory-ansatze} relates the 10d axio-dilaton action to a 12d Einstein-Hilbert term.
 Hence we may map solutions of 12d Einstein gravity, such as the pp-wave and the KK-monopole solutions, to type IIB geometries with nontrivial axio-dilaton profile.
 
 What we have been discussing is the classical, two-derivative, two-field type IIB theory, which is the leading term in the $\alpha'$ expansion of the type IIB string theory.
 It is natural to ask whether type IIB higher-derivative corrections (e.g. at 8-derivatives) can also be understood from a 12d perspective.
-The answer does not appear to be a clear-cut yes or no, and the goal of this section is to discuss the current understanding.
+The answer does not appear to be a clear-cut yes or no, and the goal of this section is to clarify the current understanding.
 
 \subsection{Type IIB at 4 points}
 
@@ -479,12 +479,13 @@ S = c^{ab}  g^{mn} \widehat{R}_{ambn},
 where $c^{ab}(\tau)$ is an arbitrary symmetric tensor on the torus, built from $\widehat{g}^{ab}$. 
 Reading off the table, $S$ is a linear combination of $\nabla^2\tau_1$, $\nabla^2\tau_2$ and the products 
 $(\nabla\tau_1)^2$, $(\nabla\tau_2)^2$, $\nabla_m\tau_1\nabla^m\tau_2$, with $\tau$-dependent coefficients. 
-Since $P_q P^q$ contains products of first derivatives only, we must tune $c^{ab}$ so that the $\nabla^2\tau_1$ and $\nabla^2\tau_2$ pieces of $S$ cancel. 
+Since $P_q P^q$ contains products of first derivatives only, the values of $c^{ab}$ must be chosen so the $\nabla^2\tau_1$ and $\nabla^2\tau_2$ pieces of $S$ cancel. 
 This fixes $c^{ab}$ up to an overall factor, and the surviving combination is then forced to be
 \begin{equation}
 S \propto (\nabla\tau_1)^2 + (\nabla\tau_2)^2,
 \end{equation}
-with the two squares appearing with the \emph{same} sign and no cross term. This is the U(1)-invariant $|\nabla\tau|^2 \propto P_q\overline{P}^q$, as it must be, since $\widehat{R}$ is constructed entirely from the U(1)-invariant 12d metric. By contrast,
+with the two squares appearing with the \emph{same} sign and no cross term. This is the U(1)-invariant $|\nabla\tau|^2 \propto P_q\overline{P}^q$.
+By contrast,
 \begin{equation}
 P_m P^m = -\frac{1}{4\tau_2^2}
 \left[
@@ -497,6 +498,6 @@ No choice of $c^{ab}$ reproduces this structure, so $P_q P^q$, and with it the t
 
 The remaining terms in the U(1)-preserving 5-point effective action of \cite{Liu:2025uqu} do not suffer from this problem.
 The deviation from the $t_8 t_8 \widehat{R}^4$ prediction at five points in the U(1)-preserving sector was already observed in \cite{Liu:2025uqu}. The analysis above shows that the term \eqref{eq:12d-obstruction} evades any covariant 12d contraction, not only the $t_8 t_8 \widehat{R}^4$ form.
-However, it remains a possibility that higher-point amplitudes may contain additional terms that conspire with \eqref{eq:12d-obstruction} to support a 12d covariant uplift, e.g. by combining with \eqref{eq:12d-obstruction} to form a 12d covariant object, or by somehow cancelling \eqref{eq:12d-obstruction} altogether.
-To investigate this possibility, one needs access to the 8-pt axio-dilaton effective action, which may become available in the near future.
+However, it remains a possibility that higher-point amplitudes may contain additional terms that conspire with \eqref{eq:12d-obstruction} to support a 12d covariant uplift, e.g. by combining with \eqref{eq:12d-obstruction} to form a 12d covariant object.
+To investigate this possibility, one needs to compute the 8-pt axio-dilaton effective action.
 
