@@ -272,6 +272,87 @@ Meanwhile, the source equation in \eqref{12d KK-monopole in complex coordinates}
 \end{equation}
 We find that the $\tau$ profile near a source localised at $w_i$ is indeed the profile of the axio-dilaton near a D7 brane \eqref{D7 axio-dilaton profile}. 
 For more general (p, q) branes one would need to select the appropriate \SLZ{} section.
+
+We now examine the $S,T$ generators of type IIB \SLZ{}.
+The $T$ gauge transformation given in \eqref{T gauge transformation} is precisely the type IIB \SLZ{}-$T$ transformation on $\tau$, and the type IIB \SLZ{}-$S$ transformation is achieved with a 12d coordinate swap
+\begin{equation}
+w_3\to z_1, \quad
+z_1\to -w_3 .
+\end{equation}
+We can thus identify the type IIB \SLZ{} duality transformations as large gauge transformations in 12d.
+To understand what geometric interpretation such an identification buys us, we briefly review the relation between \SLZ{} and the modulus of a torus.
+
+\paragraph{Geometric Interpretation of the (p, q) 7-brane and \SLZ{}}
+
+We now build up the geometric interpretation of the discussion above, that the (p, q) 7-brane can be understood as a 12d KK-monopole on $T^2$.
+We begin by recalling the geometry of a torus, and how its modulus $\tau$ is related to the periodicity conditions one has to impose when putting coordinates on $S^1 \times S^1$.
+
+A torus has topology $S^1 \times S^1$, suppose its coordinates are given by $(\sigma^1,\sigma^2)\sim (\sigma^1,\sigma^2) + 2\pi (m,n)$.
+Its line element is $ds^2 = \gamma_{ab}d\sigma^a d\sigma^b$ for some $\gamma_{ab}$. 
+Using (Diffeomorphism $\times$ Weyl) symmetry, it is always possible to bring the metric to the flat form $ds^2 = (d\sigma^{1})^2+(d\sigma^{2})^2$ \cite{Polchinski:1998rq}, 
+but depending on the torus, the periodicity condition is no longer that on a rectangle, but a rotated parallelogram
+\begin{equation}
+(\sigma^1,\sigma^2) \sim (\sigma^1,\sigma^2) + 2\pi (m+nv^1,n v^2).
+\end{equation}
+So far we have used the orthonormal basis $\vec{e}_1, \vec{e}_2$ of $\mathbb R^2$, but the lattice may equally be described in $\mathbb C$ with basis vectors $1$ and $\tau$, linearly independent provided $\text{Im} \tau \neq 0$.
+For clearer notation, we also scale the coordinates $\vec{\sigma}$ so that they range in [0,1] instead of [0,2$\pi$].
+The periodicity condition and metric become
+\begin{equation}
+\sigma^1 + \tau \sigma^2 \sim \sigma^1 + \tau \sigma^2 + (m + n\tau),\quad
+ds^2 = |d\sigma^1 + \tau d\sigma^2|^2.
+\end{equation}
+This is the standard form of the torus metric, with $\tau$ its modulus.
+Distinct values of $\tau$, however, need not correspond to distinct tori. Identifying the equivalence relations on $\tau$ is therefore necessary in a number of settings, such as determining the moduli space of the type IIB theory, or the cycle wrapped by a brane.
+These are the transformations of $\tau$ that preserve the lattice, of which there are two generators:
+\begin{enumerate}
+    \item $\tau \to \tau + 1$ is equivalent to $\tau \to \tau$, $(m,n) \to (m+n,n)$.
+    \item $\tau \to -1/\tau$ is equivalent to $\tau \to \tau$, $(m,n) \to (n,-m)$, followed by a constant rescaling $\vec{\sigma} \to \tau \vec{\sigma}$ that restores the metric to standard form. 
+\end{enumerate}
+
+These two operations generate the SL(2,Z) transformations on $\tau$: $\tau \to \frac{a\tau +b}{c\tau + d}$, $ad-bc = 1$. So this is how one should think of the SL(2,Z) symmetry of the torus: it is a footprint of the periodic identification one has to make when putting coordinates on $S^1 \times S^1$. In particular the integers $(m,n)$ label the 1-cycles of $T^2$, and SL(2,Z) acts by relabelling them.
+
+
+
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[>=Stealth, scale=0.8, every node/.style={font=\footnotesize}]
+  % panel 1: T : tau -> tau+1
+  \begin{scope}
+    \begin{scope}
+      \clip (-1.4,-0.6) rectangle (2.9,2.7);
+      \fill[red!10] (0,0) -- (1,0) -- (2.5,1.2) -- (1.5,1.2) -- cycle;
+      \foreach \m in {-3,-2,-1,0,1,2,3,4} \foreach \n in {-1,0,1,2,3}
+        \fill[black!55] (\m+0.5*\n,1.2*\n) circle (1.3pt);
+      \draw[densely dashed,black!45] (0,0) -- (1,0) -- (1.5,1.2) -- (0.5,1.2) -- cycle;
+    \end{scope}
+    \draw[->,gray] (0,0) -- (0.5,1.2);
+    \draw[->,red!70!black] (0.5,1.2) to[bend left=22] (1.5,1.2);
+    \draw[->,thick] (0,0) -- (1,0) node[below right] {$1$};
+    \draw[->,thick] (0,0) -- (1.5,1.2) node[above right] {$\tau+1$};
+    \node[gray] at (0.30,1.32) {$\tau$};
+    \node at (0.75,-1.15) {$T:\ \tau\to\tau+1$};
+  \end{scope}
+  % panel 2: S : tau -> -1/tau
+  \begin{scope}[shift={(5.6,0)}]
+    \begin{scope}
+      \clip (-1.4,-0.6) rectangle (2.9,2.7);
+      \fill[red!10] (0,0) -- (0.5,1.2) -- (-0.5,1.2) -- (-1,0) -- cycle;
+      \foreach \m in {-3,-2,-1,0,1,2,3,4} \foreach \n in {-1,0,1,2,3}
+        \fill[black!55] (\m+0.5*\n,1.2*\n) circle (1.3pt);
+      \draw[densely dashed,black!45] (0,0) -- (1,0) -- (1.5,1.2) -- (0.5,1.2) -- cycle;
+    \end{scope}
+    \draw[->,gray] (0,0) -- (1,0) node[black!55,below right] {$1$};
+    \draw[->,thick] (0,0) -- (0.5,1.2) node[above right] {$\tau$};
+    \draw[->,thick] (0,0) -- (-1,0) node[below left] {$-1$};
+    \node at (0.75,-1.15) {$S:\ \tau\to-1/\tau$};
+  \end{scope}
+\end{tikzpicture}
+\caption{The action of the generators $T$ and $S$ on the lattice, the dashed parallelogram marking the original cell $\{1,\tau\}$ in each panel. The transformation $T:\tau\to\tau+1$ shears the basis, $(m,n)\to(m+n,n)$, replacing the cell by $\{1,\tau+1\}$, while $S:\tau\to-1/\tau$ swaps the two generators with a sign, $(m,n)\to(n,-m)$, replacing it by $\{\tau,-1\}$. In both cases the lattice, and hence the torus, is left unchanged. Applied to the Taub-NUT circle, this is the relabelling that takes the D7 brane to a general $(p,q)$ 7-brane.}
+\label{fig:st-lattice}
+\end{figure}
+
+Since the Taub-NUT circle of the 12d KK-monopole is a definite 1-cycle of the reduction torus, an SL(2,Z) transformation changes which cycle it wraps.
 More precisely, a (p, q) 7-brane is the 12d Kaluza-Klein monopole whose Taub-NUT circle is the corresponding $(p,q)$ cycle of the torus (Figure~\ref{fig:pq-cycle}), the D7 brane of \eqref{D7 solution} being the $(1,0)$ case.
 \begin{figure}[ht]
 \centering
@@ -280,13 +361,7 @@ More precisely, a (p, q) 7-brane is the 12d Kaluza-Klein monopole whose Taub-NUT
 Here being displayed is a (1,1) cycle.}
 \label{fig:pq-cycle}
 \end{figure}
-We now examine the $S,T$ generators of type IIB \SLZ{}.
-The $T$ gauge transformation given in \eqref{T gauge transformation} is precisely the type IIB \SLZ{}-$T$ transformation on $\tau$, and the type IIB \SLZ{}-$S$ transformation is achieved with a 12d coordinate swap
-\begin{equation}
-w_3\to z_1, \quad
-z_1\to -w_3 .
-\end{equation}
-We can thus interpret the type IIB \SLZ{} duality transformations as large gauge transformations in 12d, so that the discrete S and T dualities, ordinarily postulated in 10d, arise geometrically in this 12d picture.
+
 
 \subsection{D(-1) and D0 interpreted as 12d and 11d pp-waves}
 The other $\frac{1}{2}$-BPS solution of the axio-dilaton action \eqref{IIB axio-dilaton action} is the D(-1) instanton, which has been recognised as a 12d pp-wave \cite{Tseytlin:1996ne}.
