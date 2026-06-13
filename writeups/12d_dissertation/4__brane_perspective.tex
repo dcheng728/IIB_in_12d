@@ -281,36 +281,45 @@ z_1\to -w_3 .
 \end{equation}
 We can thus identify the type IIB \SLZ{} duality transformations as large diffeomorphisms in 12d.
 
-\paragraph{Geometric Interpretation of the $(p,q)$ 7-brane and \SLZ{}}
+\paragraph{\boldmath Geometric Interpretation of the $(p,q)$ 7-brane and \SLZ{}}
 
-The D7 brane found above is the simplest of the type IIB $(p,q)$ 7-branes, a family permuted by the \SLZ{} duality. We now give this family a geometric origin in 12d. The claim is that a $(p,q)$ 7-brane is the 12d KK-monopole on $T^2$ whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of the torus, and that the \SLZ{} acting on the brane charges $(p,q)$ is the same \SLZ{} that acts on the $(p,q)$ cycles of $T^2$. 
+The D7 brane found above is the simplest of the type IIB $(p,q)$ 7-branes, a family permuted by \SLZ{}. 
+We now give this family a geometric origin in 12d. The claim is that a $(p,q)$ 7-brane is the 12d KK-monopole on $T^2$ whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of the torus, and that the \SLZ{} acting on the brane charges $(p,q)$ is the same \SLZ{} that acts on the $(p,q)$ cycles of $T^2$. 
 
 We have already identified the type IIB \SLZ{} with the large diffeomorphisms in 12d, through the generators $T$ and $S$ above, so it remains to see how \SLZ{} is built into the torus itself. 
 We thus briefly review how \SLZ{} arises from periodically identifying coordinates on a torus.
 
-A torus has topology $S^1 \times S^1$, suppose its coordinates are given by $(\sigma^1,\sigma^2)\sim (\sigma^1,\sigma^2) + 2\pi (m,n)$.
-Its line element is $ds^2 = \gamma_{ab}d\sigma^a d\sigma^b$ for some $\gamma_{ab}$. 
-Using (Diffeomorphism $\times$ Weyl) symmetry, it is always possible to bring the metric to the flat form $ds^2 = (d\sigma^{1})^2+(d\sigma^{2})^2$ \cite{Polchinski:1998rq}, 
-but depending on the torus, the periodicity condition is no longer that on a rectangle, but a rotated parallelogram
+
+A torus has topology $S^1 \times S^1$. We adopt coordinates $\vec{\sigma} \in \mathbb{R}^2$ by periodically identifying them as $(\sigma^1,\sigma^2)\sim (\sigma^1,\sigma^2) + 2\pi (m,n)$ for integers $m,n$.
+Using (Diffeomorphism $\times$ Weyl) symmetry, it is always possible to bring the metric to the flat form $ds^2 = (d\sigma^{1})^2+(d\sigma^{2})^2$ \cite{Polchinski:1998rq}, but depending on the torus, the periodicity condition will become that of a parallelogram
 \begin{equation}
-(\sigma^1,\sigma^2) \sim (\sigma^1,\sigma^2) + 2\pi (m+nv^1,n v^2).
+(\sigma^1,\sigma^2) \sim (\sigma^1,\sigma^2) + 2\pi (m+nv^1,n v^2),
 \end{equation}
-So far we have used the orthonormal basis $\vec{e}_1, \vec{e}_2$ of $\mathbb R^2$, but the lattice may equally be described in $\mathbb C$ with basis vectors $1$ and $\tau$, linearly independent provided $\text{Im} \tau \neq 0$.
-For clearer notation, we also scale the coordinates $\vec{\sigma}$ so that they range in [0,1] instead of [0,2$\pi$].
-The periodicity condition and metric become
+for some $\vec{v} \in \mathbb{R}^2$ that defines the parallelogram.
+The equivalence class is that of a 2d lattice.
+
+We can equivalently describe coordinates on the torus with $\mathbb{C}$.
+It turns out that instead of using the orthonormal basis $1, i$ in $\mathbb{C}$, it is more convenient to use the basis $1, \tau$, where $\tau \equiv v^1 + i v^2$ is a complex number with $\text{Im} \tau \neq 0$.
+The periodicity condition then becomes
 \begin{equation}
-\sigma^1 + \tau \sigma^2 \sim \sigma^1 + \tau \sigma^2 + (m + n\tau),\quad
+\sigma^1 + \tau \sigma^2 \sim \sigma^1 + \tau \sigma^2 + (m + n\tau),
+\end{equation}
+and the metric is
+\begin{equation}
 ds^2 = |d\sigma^1 + \tau d\sigma^2|^2.
 \end{equation}
-This is the standard form of the torus metric, with $\tau$ its modulus.
-Distinct values of $\tau$, however, need not correspond to distinct tori. 
-We thus need to identify the equivalence relations on $\tau$ that preserve the lattice, and thus the torus geometry.
+Here $\sigma^1, \sigma^2$ are the coordinates in the basis $1, \tau$, scaled to range in $[0,1]$.
+
+As a consequence of the periodic identification on the coordinates, the torus modulus $\tau$ is only identified up to equivalence relations that preserve the lattice.
+Certain transformations $\tau \to \tau'$ may be realised by lattice automorphisms that leave the torus geometry invariant.
+There are two types of such transformations:
 \begin{enumerate}
-    \item $\tau \to \tau + 1$ is equivalent to $\tau \to \tau$, $(m,n) \to (m+n,n)$.
-    \item $\tau \to -1/\tau$ is equivalent to $\tau \to \tau$, $(m,n) \to (n,-m)$, followed by a constant rescaling $\vec{\sigma} \to \tau \vec{\sigma}$ that restores the metric to standard form. 
+    \item $\tau \to \tau+1$ is equivalent to $\tau \to \tau$, $(m, n) \to (m+n,n)$
+    \item $\tau \to -1/\tau$ is equivalent to $\tau \to \tau$, $(m, n) \to (n,-m)$, followed by a constant rescaling of the coordinates that restores the metric to standard form.
 \end{enumerate}
 
-These two operations generate the \SLZ{} transformations on $\tau$: $\tau \to \frac{a\tau +b}{c\tau + d}$, $ad-bc = 1$ (Figure~\ref{fig:st-cycles}). So this is how one should think of the \SLZ{} symmetry of the torus: it is a footprint of the periodic identification one has to make when putting coordinates on $S^1 \times S^1$. In particular the integers $(m,n)$ label the 1-cycles of $T^2$, and \SLZ{} acts by relabelling them.
+These two operations generate the \SLZ{} transformations on $\tau$: $\tau \to \frac{a\tau +b}{c\tau + d}$, $ad-bc = 1$ (Figure~\ref{fig:st-cycles}). 
+The \SLZ{} symmetry of the torus therefore reflects the periodic identifications imposed in placing coordinates on $S^1 \times S^1$: these fix the lattice but not a basis for it, and \SLZ{} relates the equivalent choices of basis. The integers $(m,n)$ label the 1-cycles of $T^2$, on which \SLZ{} acts by relabelling.
 
 
 \begin{figure}[ht]
@@ -339,7 +348,7 @@ These two operations generate the \SLZ{} transformations on $\tau$: $\tau \to \f
     \node at (0.55,-0.6) {$S:\ \tau\to-1/\tau$};
   \end{scope}
 \end{tikzpicture}
-\caption{The generators $T$ and $S$ acting on the lattice basis $\{1,\tau\}$, the two periods of the torus. $T:\tau\to\tau+1$ slides the oblique generator over by one period, a shear, while $S:\tau\to-1/\tau$ swaps the two generators, up to a rescaling that restores unit length. On the 1-cycles $m\cdot1 + n\cdot\tau$ these act as $(m,n)\to(m+n,n)$ and $(m,n)\to(n,-m)$, generating every $(p,q)$ class from the $(1,0)$ cycle of the D7 brane.}
+\caption{The generators $T$ and $S$ acting on the lattice basis $\{1,\tau\}$, the two periods of the torus. $T:\tau\to\tau+1$ slides the oblique generator over by one period, a shear, while $S:\tau\to-1/\tau$ swaps the two generators, up to a rescaling that restores unit length. On the 1-cycles $m\cdot1 + n\cdot\tau$ these act as $(m,n)\to(m+n,n)$ and $(m,n)\to(n,-m)$, generating every coprime $(p,q)$ class from the $(1,0)$ cycle of the D7 brane.}
 \label{fig:st-cycles}
 \end{figure}
 
