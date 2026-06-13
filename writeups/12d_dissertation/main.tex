@@ -12,6 +12,14 @@ linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \usetikzlibrary{arrows.meta, positioning, calc, decorations.pathmorphing, shapes.geometric}
 \usepackage{caption}
 \captionsetup{font=small, labelfont=bf, labelsep=period, margin=1cm}
+
+% --- Vertical spacing around figures and tables (adjust \floatspacing here) ---
+\newlength{\floatspacing}
+\setlength{\floatspacing}{16pt plus 4pt minus 4pt}
+\setlength{\intextsep}{\floatspacing}     % above & below a float in running text (e.g. [ht])
+\setlength{\textfloatsep}{\floatspacing}  % between body text and a float at the top/bottom of a page
+\setlength{\floatsep}{\floatspacing}      % between two adjacent floats
+
 % \usepackage{setspace}
 % \setstretch{1.2}
 \renewcommand{\baselinestretch}{1.2}

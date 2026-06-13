@@ -75,6 +75,7 @@ For the case of a single D7 brane localised at $w_i$ (Figure~\ref{fig:d7-monodro
  = \frac{\text{Arg}(w-w_i)}{2\pi} -i\frac{\ln |w-w_i|}{2\pi}+\text{const}.
  \label{D7 axio-dilaton profile}
 \end{equation}
+
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}[>=Stealth]
@@ -91,6 +92,7 @@ For the case of a single D7 brane localised at $w_i$ (Figure~\ref{fig:d7-monodro
 }
 \label{fig:d7-monodromy}
 \end{figure}
+
 On the other hand, the D(-1) is a solution to the Euclidean type IIB theory \cite{Gibbons:1995vg}.
 In Einstein frame, it can be written as
 \begin{equation}
@@ -113,12 +115,14 @@ In $d$ dimensions, the KK-monopole geometry is given by
 ds_d^2 = ds_{1,d-5}^2 + H(\vec{y})d\vec{y}^2 + H(\vec{y})^{-1}(dz + \vec{A}\cdot d\vec{y})^2,
 \label{d-dim KK-monopole}
 \end{equation}
+where $\vec{y}$ are 3d Euclidean coordinates and $z$ is a compact coordinate.
+Together they form a 4d space that is an $S_1$ fibration over $\mathbb{R}^3$.
+Here $H$ and $\vec{A}$ satisfy the curl and source Einstein equations
 \begin{equation}
 \vec{\nabla} \times \vec A = \vec\nabla H,\quad
-\partial^2 H=-\sum_i q_i \delta^3(\vec{y}-\vec{y}_i),
+\partial^2 H=-\sum_i q_i \delta^3(\vec{y}-\vec{y}_i).
 \label{kk monopole einstein eqs}
 \end{equation}
-where $\vec{y}$ is a 3d Euclidean vector which, together with the compact coordinate $z$, forms a 4d space that is an $S_1$ fibration over $\mathbb{R}^3$.
 
 \paragraph{D6 brane from reduction of the 11d KK-monopole}
 Specialising to 11d, the KK-monopole is given by
@@ -198,69 +202,6 @@ g_{mn} & 0\\
 \end{equation}
 and we see that $g_{mn}$ is the 10d metric of the D7 brane solution \eqref{D7 solution}.
 
-% We begin with the 12d KK-monopole geometry
-% \begin{equation}
-% ds_{12}^2=ds_{1,7}^2+H(\vec{y})d\vec{y}^2 + H^{-1}(\vec{y})(du+\vec{A} \cdot d\vec{y})^2.
-% \label{12d KK-monopole metric}
-% \end{equation}
-% Let the $y_3$ direction be compactified with radius one: $y_3\sim y_3 + 1$.
-% The curl and source Einstein equations \eqref{kk monopole einstein eqs} become
-% \begin{equation}
-% \begin{pmatrix}
-% \partial_1 H\\
-% \partial_2 H\\
-% 0
-% \end{pmatrix}
-% =\begin{pmatrix}
-% \partial_2 A_3\\
-% -\partial_1 A_3\\
-% \partial_1 A_2-\partial_2 A_1
-% \end{pmatrix},\quad
-% (\partial_1^2+\partial_2^2)H=-\sum_iq_i\delta^2(\vec{y}-\vec{y}_i).
-% \label{reduced einstein eq}
-% \end{equation}
-% We fix a gauge where $A_1=A_2=0$ by performing the following gauge transformation denoted $T$
-% \begin{equation}
-% T:u\to u+g(y_1,y_2)+ny_3,\quad
-% g(y_1,y_2)=\int dy^1 A_1 (y_1,y_2).
-% \label{T gauge transformation}
-% \end{equation}
-% After accounting for the induced transformations on $\vec{A}$ and $H$, the metric becomes
-% \begin{equation}
-% ds_{12}^2=ds_{1,7}^2+
-% H(dy_{1}^2 + dy_2^2)
-% +Hdy_3^2
-% +H^{-1}[du+A_3dy_3]^2.
-% \end{equation}
-% We now rename the coordinates and fields in the following manner:
-% \begin{equation}
-% w,\bar w\equiv y_1\pm i y_2,\quad 
-% v\equiv - y_3,\quad
-% \tau \equiv-A_3+iH=\tau_1+i\tau_2.
-% \end{equation}
-% Then the 12d KK-monopole metric \eqref{12d KK-monopole metric}, and the corresponding Einstein equations \eqref{reduced einstein eq} take the form
-% \begin{equation}
-% ds_{12}^2=-dt^2 +dx_7^2+\tau_2 dwd\bar w + \tau_2^{-1}|du+\tau dv|^2,\quad
-% \bar\partial \tau = 0,\quad
-% \partial\bar\partial \tau_2=-\sum_i q_i \delta^2(w,w_i).
-% \label{12d KK-monopole in complex coordinates}
-% \end{equation}
-% Under the 12d metric embedding
-% \begin{equation}
-% ds_{12}^2 = ds_{10}^2+\tau_2^{-1}|du+\tau dv|^2,
-% \end{equation}
-% this geometry reduces to that of the 10d D7 brane \eqref{D7 solution}.
-% We note that equivalently, the 12d metric may be written as
-% \begin{equation}
-% \widehat{g}_{MN}=\begin{pmatrix}
-% g_{mn} & 0 &0 \\
-% 0 & \frac{1}{\tau_2} & \frac{\tau_1}{\tau_2}\\
-% 0 & \frac{\tau_1}{\tau_2} & \frac{\tau_1^2+\tau_2^2}{\tau_2}
-% \end{pmatrix}
-% \label{12d metric ansatz 0}
-% \end{equation}
-% for 12d coordinates $(x^m,u,v)$.
-
 We now check the profile of $\tau$.
 By examining the curl Einstein equation \eqref{kk monopole einstein eqs}, we see that it imposes holomorphy on $\tau$, which then demands that
 \begin{equation}
@@ -291,7 +232,8 @@ We have already identified the type IIB \SLZ{} with the large diffeomorphisms in
 We thus briefly review how \SLZ{} arises from periodically identifying coordinates on a torus.
 
 
-A torus has topology $S^1 \times S^1$. We adopt coordinates $\vec{\sigma} \in \mathbb{R}^2$ by periodically identifying them as $(\sigma^1,\sigma^2)\sim (\sigma^1,\sigma^2) + 2\pi (m,n)$ for integers $m,n$.
+A torus has topology $S^1 \times S^1$. 
+We adopt coordinates $\vec{\sigma} \in \mathbb{R}^2$ by periodically identifying them as $(\sigma^1,\sigma^2)\sim (\sigma^1,\sigma^2) + 2\pi (m,n)$ for integers $m,n$.
 Using (Diffeomorphism $\times$ Weyl) symmetry, it is always possible to bring the metric to the flat form $ds^2 = (d\sigma^{1})^2+(d\sigma^{2})^2$ \cite{Polchinski:1998rq}, but depending on the torus, the periodicity condition will become that of a parallelogram
 \begin{equation}
 (\sigma^1,\sigma^2) \sim (\sigma^1,\sigma^2) + 2\pi (m+nv^1,n v^2),
@@ -299,7 +241,7 @@ Using (Diffeomorphism $\times$ Weyl) symmetry, it is always possible to bring th
 for some $\vec{v} \in \mathbb{R}^2$ that defines the parallelogram.
 The equivalence class is that of a 2d lattice.
 
-We can equivalently describe coordinates on the torus with $\mathbb{C}$.
+We can equivalently describe coordinates on the torus with $\mathbb{C}$ instead of $\mathbb{R}^2$.
 It turns out that instead of using the orthonormal basis $1, i$ in $\mathbb{C}$, it is more convenient to use the basis $1, \tau$, where $\tau \equiv v^1 + i v^2$ is a complex number with $\text{Im} \tau \neq 0$.
 The periodicity condition then becomes
 \begin{equation}
