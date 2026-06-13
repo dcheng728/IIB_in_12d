@@ -12,6 +12,14 @@ linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \usetikzlibrary{arrows.meta, positioning, calc, decorations.pathmorphing, shapes.geometric}
 \usepackage{caption}
 \captionsetup{font=small, labelfont=bf, labelsep=period, margin=1cm}
+
+% --- Vertical spacing around figures and tables (adjust \floatspacing here) ---
+\newlength{\floatspacing}
+\setlength{\floatspacing}{16pt plus 4pt minus 4pt}
+\setlength{\intextsep}{\floatspacing}     % above & below a float in running text (e.g. [ht])
+\setlength{\textfloatsep}{\floatspacing}  % between body text and a float at the top/bottom of a page
+\setlength{\floatsep}{\floatspacing}      % between two adjacent floats
+
 % \usepackage{setspace}
 % \setstretch{1.2}
 \renewcommand{\baselinestretch}{1.2}
@@ -36,32 +44,27 @@ linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \begin{titlepage}
 \centering
 
-\vspace*{0.5cm}
-\noindent\makebox[\textwidth][l]{\includegraphics[width=0.5\textwidth]{imperial_logo.png}}\par
+% \vspace*{0.5cm}
+\noindent\makebox[\textwidth][l]{\includegraphics[width=0.3\textwidth]{imperial_logo.png}}\par
 
 \vfill
 
-\rule{\textwidth}{0.5pt}\par
-\vspace{0.7cm}
 {\LARGE\bfseries A 12d Origin of the Type IIB String Theory?\par}
-\vspace{0.7cm}
-\rule{\textwidth}{0.5pt}\par
 
-\vspace{1.3cm}
+
+\vfill
+
 {\large Chang Cheng~\raisebox{-0.12em}{\includegraphics[height=0.95em]{chinese_name.pdf}}\par}
-\vspace{0.35cm}
+
+
 {\normalsize Department of Physics\\
 Imperial College London, SW7 2AZ, U.K.\par}
 
 \vfill
 
-{\normalsize A thesis submitted in partial fulfilment of the requirements for the degree of Master~of~Physics and the Diploma of Imperial College London.\par}
-\vspace{1cm}
-{\normalsize \today\par}
-\vspace{0.35cm}
-% Word count regenerated with: texcount -1 -sum -merge <chapters 1--8>
-% Excludes abstract, equations, bibliography, and appendices, per the project guidelines.
+{\normalsize A thesis submitted in partial fulfilment of the requirements for the degree of\\Master~of~Physics and the Diploma of Imperial College London.\par}
 {\normalsize Word count: 11{,}076\par}
+{\normalsize \today\par}
 
 \vspace{0.8cm}
 \end{titlepage}
@@ -70,7 +73,7 @@ Imperial College London, SW7 2AZ, U.K.\par}
 %==============================================================
 %  Abstract
 %==============================================================
-\begin{abstract}
+\section*{Abstract}
 
 Type IIB string theory possesses a conjectured non-perturbative \SLZ{} S-duality whose ten-dimensional origin is not manifest. This thesis examines the proposal that the duality, and the theory itself, descend from a twelve-dimensional structure, following four lines of investigation:
 \begin{enumerate}
@@ -83,7 +86,6 @@ Type IIB string theory possesses a conjectured non-perturbative \SLZ{} S-duality
 \end{enumerate}
 Taken together, the 12d picture remains an effective repackaging of the 10d theory, and we discuss its limits across the brane, form-field, and higher-derivative sectors.
 
-\end{abstract}
 
 %==============================================================
 %  Declarations and acknowledgements
@@ -91,36 +93,34 @@ Taken together, the 12d picture remains an effective repackaging of the 10d theo
 \clearpage
 \section*{Declaration of Contributions}
 
-This thesis examines the proposal that the type IIB string theory has a twelve-dimensional origin, and the work presented in it is my own.
-The greater part of this thesis reviews existing literature, attributed by citation throughout: the survey of $10+2$d supergravity and superalgebras, the brane interpretations of the axio-dilaton, and the D3-brane worldvolume analysis report results due to others, principally A.~A.~Tseytlin and the works cited therein.
+This thesis examines the proposal that the type IIB string theory has a twelve-dimensional origin.
+The greater part reviews existing literature, attributed by citation throughout: the $10+2$d supergravity and superalgebras, the brane interpretations of the axio-dilaton, and the D3-brane worldvolume analysis are all due to others.
 
 Two results are my own.
-First, the covariant twelve-dimensional repackaging of the type IIB form-field sector in Section~\ref{sec:covariant-unification}, in which the ten-dimensional self-duality of $F_5$ is realised as a twelve-dimensional Hodge duality.
-Second, the result of Section~\ref{sec:effective-actions} that the $U(1)$-preserving five-point contact term of type IIB admits no twelve-dimensional covariant form, from a systematic analysis of the allowed twelve-dimensional structures.
-The synthesis of work scattered across the algebraic, brane, form-field, and effective-action perspectives into a single coherent account, and the line of argument running through the thesis, are also my own.
-Besides these original contributions, this thesis aims to bring the existing literature and the new results together into a single self-contained account.
+The first, in Section~\ref{sec:covariant-unification}, is a covariant twelve-dimensional repackaging of the type IIB form-field sector, in which the ten-dimensional self-duality of $F_5$ is realised as a twelve-dimensional Hodge duality.
+The second, in Section~\ref{sec:effective-actions}, is a systematic argument that the $U(1)$-preserving five-point contact term admits no twelve-dimensional covariant form.
+The organization of the algebraic, brane, form-field, and effective-action evidence into a single self-contained account, and the line of argument running through the thesis, are also my own.
 
 \section*{Declaration of Generative AI Usage}
 
-In accordance with Imperial College London's policy on the use of generative AI tools, I declare the following.
-Generative AI assistants (Anthropic's Claude) were used during the research and preparation phases of this thesis to organise and cross-check intermediate steps of derivations, to locate and summarise relevant literature, and to edit prose for clarity and concision.
-Symbolic tensor algebra was carried out with Python and SymPy.
-All physics results, derivations, and conclusions were verified by the author, and the scientific content (including the original contributions described above) is the author's own.
-No AI tool was used to produce results that were not independently checked.
+In accordance with Imperial College London's policy on generative AI tools, I declare the use of an AI assistant (Anthropic's Claude Opus 4.7) in researching and preparing this thesis. 
+It assisted with organising and cross-checking intermediate derivation steps, locating and summarising literature, editing prose for clarity and concision, and generating the TikZ code for Figures~\ref{fig:d7-monodromy}, \ref{fig:st-cycles}, and~\ref{fig:stu-channels}.
+Symbolic tensor algebra was carried out in Python and SymPy, again with the assistant's help.
+All physics results, derivations, and conclusions were independently verified by the author, and the scientific content, including the original contributions above, is the author's own.
 
 \newpage
 
 \clearpage
 \section*{Acknowledgements}
 
+\noindent I thank my supervisor, Prof.\ Arkady Tseytlin, for their guidance and support.
 
+\noindent I thank Prof.\ Amihay Hanany for their string theory lectures at Imperial.
 
-I owe a great deal to my supervisor, Prof.\ Arkady Tseytlin, for introducing me to such a fascinating topic, and for his patient guidance and support throughout this project.
-I would also like to thank Prof.\ Amihay Hanany, whose string theory lectures at Imperial have been a tremendous source of insight.
+\noindent I thank Carl Bouchard, Tim Wong, and other Imperial friends for their company.
 
-I would also like to thank my friends Carl Bouchard and Tim Wong for their camaraderie and encouragement, and the many friends whose company I have enjoyed at Imperial, particularly in the Abdus Salam Library, who made my time here so memorable.
-
-Finally, and most importantly, I am deeply grateful to my family, especially my parents and grandparents, for their unwavering belief in me and their support in allowing me to pursue my passions.
+\vspace{4pt}
+\noindent\includegraphics{ack_chinese.pdf}
 
 \vspace*{\fill}
 

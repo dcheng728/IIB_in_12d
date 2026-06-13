@@ -75,6 +75,7 @@ For the case of a single D7 brane localised at $w_i$ (Figure~\ref{fig:d7-monodro
  = \frac{\text{Arg}(w-w_i)}{2\pi} -i\frac{\ln |w-w_i|}{2\pi}+\text{const}.
  \label{D7 axio-dilaton profile}
 \end{equation}
+
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}[>=Stealth]
@@ -91,6 +92,7 @@ For the case of a single D7 brane localised at $w_i$ (Figure~\ref{fig:d7-monodro
 }
 \label{fig:d7-monodromy}
 \end{figure}
+
 On the other hand, the D(-1) is a solution to the Euclidean type IIB theory \cite{Gibbons:1995vg}.
 In Einstein frame, it can be written as
 \begin{equation}
@@ -113,12 +115,14 @@ In $d$ dimensions, the KK-monopole geometry is given by
 ds_d^2 = ds_{1,d-5}^2 + H(\vec{y})d\vec{y}^2 + H(\vec{y})^{-1}(dz + \vec{A}\cdot d\vec{y})^2,
 \label{d-dim KK-monopole}
 \end{equation}
+where $\vec{y}$ are 3d Euclidean coordinates and $z$ is a compact coordinate.
+Together they form a 4d space that is an $S_1$ fibration over $\mathbb{R}^3$.
+Here $H$ and $\vec{A}$ satisfy the curl and source Einstein equations
 \begin{equation}
 \vec{\nabla} \times \vec A = \vec\nabla H,\quad
-\partial^2 H=-\sum_i q_i \delta^3(\vec{y}-\vec{y}_i),
+\partial^2 H=-\sum_i q_i \delta^3(\vec{y}-\vec{y}_i).
 \label{kk monopole einstein eqs}
 \end{equation}
-where $\vec{y}$ is a 3d Euclidean vector which, together with the compact coordinate $z$, forms a 4d space that is an $S_1$ fibration over $\mathbb{R}^3$.
 
 \paragraph{D6 brane from reduction of the 11d KK-monopole}
 Specialising to 11d, the KK-monopole is given by
@@ -198,69 +202,6 @@ g_{mn} & 0\\
 \end{equation}
 and we see that $g_{mn}$ is the 10d metric of the D7 brane solution \eqref{D7 solution}.
 
-% We begin with the 12d KK-monopole geometry
-% \begin{equation}
-% ds_{12}^2=ds_{1,7}^2+H(\vec{y})d\vec{y}^2 + H^{-1}(\vec{y})(du+\vec{A} \cdot d\vec{y})^2.
-% \label{12d KK-monopole metric}
-% \end{equation}
-% Let the $y_3$ direction be compactified with radius one: $y_3\sim y_3 + 1$.
-% The curl and source Einstein equations \eqref{kk monopole einstein eqs} become
-% \begin{equation}
-% \begin{pmatrix}
-% \partial_1 H\\
-% \partial_2 H\\
-% 0
-% \end{pmatrix}
-% =\begin{pmatrix}
-% \partial_2 A_3\\
-% -\partial_1 A_3\\
-% \partial_1 A_2-\partial_2 A_1
-% \end{pmatrix},\quad
-% (\partial_1^2+\partial_2^2)H=-\sum_iq_i\delta^2(\vec{y}-\vec{y}_i).
-% \label{reduced einstein eq}
-% \end{equation}
-% We fix a gauge where $A_1=A_2=0$ by performing the following gauge transformation denoted $T$
-% \begin{equation}
-% T:u\to u+g(y_1,y_2)+ny_3,\quad
-% g(y_1,y_2)=\int dy^1 A_1 (y_1,y_2).
-% \label{T gauge transformation}
-% \end{equation}
-% After accounting for the induced transformations on $\vec{A}$ and $H$, the metric becomes
-% \begin{equation}
-% ds_{12}^2=ds_{1,7}^2+
-% H(dy_{1}^2 + dy_2^2)
-% +Hdy_3^2
-% +H^{-1}[du+A_3dy_3]^2.
-% \end{equation}
-% We now rename the coordinates and fields in the following manner:
-% \begin{equation}
-% w,\bar w\equiv y_1\pm i y_2,\quad 
-% v\equiv - y_3,\quad
-% \tau \equiv-A_3+iH=\tau_1+i\tau_2.
-% \end{equation}
-% Then the 12d KK-monopole metric \eqref{12d KK-monopole metric}, and the corresponding Einstein equations \eqref{reduced einstein eq} take the form
-% \begin{equation}
-% ds_{12}^2=-dt^2 +dx_7^2+\tau_2 dwd\bar w + \tau_2^{-1}|du+\tau dv|^2,\quad
-% \bar\partial \tau = 0,\quad
-% \partial\bar\partial \tau_2=-\sum_i q_i \delta^2(w,w_i).
-% \label{12d KK-monopole in complex coordinates}
-% \end{equation}
-% Under the 12d metric embedding
-% \begin{equation}
-% ds_{12}^2 = ds_{10}^2+\tau_2^{-1}|du+\tau dv|^2,
-% \end{equation}
-% this geometry reduces to that of the 10d D7 brane \eqref{D7 solution}.
-% We note that equivalently, the 12d metric may be written as
-% \begin{equation}
-% \widehat{g}_{MN}=\begin{pmatrix}
-% g_{mn} & 0 &0 \\
-% 0 & \frac{1}{\tau_2} & \frac{\tau_1}{\tau_2}\\
-% 0 & \frac{\tau_1}{\tau_2} & \frac{\tau_1^2+\tau_2^2}{\tau_2}
-% \end{pmatrix}
-% \label{12d metric ansatz 0}
-% \end{equation}
-% for 12d coordinates $(x^m,u,v)$.
-
 We now check the profile of $\tau$.
 By examining the curl Einstein equation \eqref{kk monopole einstein eqs}, we see that it imposes holomorphy on $\tau$, which then demands that
 \begin{equation}
@@ -281,37 +222,51 @@ z_1\to -w_3 .
 \end{equation}
 We can thus identify the type IIB \SLZ{} duality transformations as large diffeomorphisms in 12d.
 
-\paragraph{Geometric Interpretation of the $(p,q)$ 7-brane and \SLZ{}}
+\paragraph{\boldmath Geometric Interpretation of the $(p,q)$ 7-brane and \SLZ{}}
+\label{par:interpreting-sl2z}
 
-The D7 brane found above is the simplest of the type IIB $(p,q)$ 7-branes, a family permuted by the \SLZ{} duality. We now give this family a geometric origin in 12d. The claim is that a $(p,q)$ 7-brane is the 12d KK-monopole on $T^2$ whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of the torus, and that the \SLZ{} acting on the brane charges $(p,q)$ is the same \SLZ{} that acts on the $(p,q)$ cycles of $T^2$. 
+The D7 brane found above is the simplest of the type IIB $(p,q)$ 7-branes, a family permuted by \SLZ{} \cite{Weigand:2018rez}. 
+We now give this family a geometric origin in 12d. The claim is that a $(p,q)$ 7-brane is the 12d KK-monopole on $T^2$ whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of the torus, and that the \SLZ{} acting on the brane charges $(p,q)$ is the same \SLZ{} that acts on the $(p,q)$ cycles of $T^2$. 
 
-We have already identified the type IIB \SLZ{} with the large diffeomorphisms in 12d, through the generators $T$ and $S$ above, so it remains to see how \SLZ{} is built into the torus itself. 
-We thus briefly review how \SLZ{} arises from periodically identifying coordinates on a torus.
-
-A torus has topology $S^1 \times S^1$, suppose its coordinates are given by $(\sigma^1,\sigma^2)\sim (\sigma^1,\sigma^2) + 2\pi (m,n)$.
-Its line element is $ds^2 = \gamma_{ab}d\sigma^a d\sigma^b$ for some $\gamma_{ab}$. 
-Using (Diffeomorphism $\times$ Weyl) symmetry, it is always possible to bring the metric to the flat form $ds^2 = (d\sigma^{1})^2+(d\sigma^{2})^2$ \cite{Polchinski:1998rq}, 
-but depending on the torus, the periodicity condition is no longer that on a rectangle, but a rotated parallelogram
+Having identified the type IIB \SLZ{} with the large 12d diffeomorphisms $T$ and $S$ above, we now recall how the $T$ and $S$ generators of \SLZ{} arise from the periodic identifications that define a torus. 
+A torus has topology $S^1 \times S^1$. 
+We take coordinates $\vec{\sigma} \in \mathbb{R}^2$ with the periodic identification $(\sigma^1,\sigma^2)\sim (\sigma^1,\sigma^2) + 2\pi (m,n)$ for integers $m,n$.
+Diffeomorphism and Weyl symmetry allow the metric to be brought to the flat form $ds^2 = (d\sigma^{1})^2+(d\sigma^{2})^2$ \cite{Polchinski:1998rq}, at the cost of skewing the periodic identification into a parallelogram
 \begin{equation}
-(\sigma^1,\sigma^2) \sim (\sigma^1,\sigma^2) + 2\pi (m+nv^1,n v^2).
+(\sigma^1,\sigma^2) \sim (\sigma^1,\sigma^2) + 2\pi (m+nv^1,n v^2),
 \end{equation}
-So far we have used the orthonormal basis $\vec{e}_1, \vec{e}_2$ of $\mathbb R^2$, but the lattice may equally be described in $\mathbb C$ with basis vectors $1$ and $\tau$, linearly independent provided $\text{Im} \tau \neq 0$.
-For clearer notation, we also scale the coordinates $\vec{\sigma}$ so that they range in [0,1] instead of [0,2$\pi$].
-The periodicity condition and metric become
+for some $\vec{v} \in \mathbb{R}^2$.
+These identifications define a 2d lattice, most naturally described in the complex plane.
+We package the parallelogram vector $\vec{v}$ as the complex modulus $\tau \equiv v^1 + i v^2$ (with $\text{Im} \tau \neq 0$) and adopt the lattice basis $1, \tau$ in place of the orthonormal $1, i$.
+The periodic identification becomes
 \begin{equation}
-\sigma^1 + \tau \sigma^2 \sim \sigma^1 + \tau \sigma^2 + (m + n\tau),\quad
+\sigma^1 + \tau \sigma^2 \sim \sigma^1 + \tau \sigma^2 + 2\pi(m + n\tau),
+\end{equation}
+and the metric is
+\begin{equation}
 ds^2 = |d\sigma^1 + \tau d\sigma^2|^2.
 \end{equation}
-This is the standard form of the torus metric, with $\tau$ its modulus.
-Distinct values of $\tau$, however, need not correspond to distinct tori. 
-We thus need to identify the equivalence relations on $\tau$ that preserve the lattice, and thus the torus geometry.
+
+The torus modulus $\tau$ is therefore defined only up to automorphisms on the lattice, the transformations that leave the torus geometry unchanged.
+There are two such transformations:
 \begin{enumerate}
-    \item $\tau \to \tau + 1$ is equivalent to $\tau \to \tau$, $(m,n) \to (m+n,n)$.
-    \item $\tau \to -1/\tau$ is equivalent to $\tau \to \tau$, $(m,n) \to (n,-m)$, followed by a constant rescaling $\vec{\sigma} \to \tau \vec{\sigma}$ that restores the metric to standard form. 
+    \item $\tau \to \tau+1$: the basis relabelling $(m, n) \to (m+n,n)$ at fixed geometry.
+    \item $\tau \to -1/\tau$: the basis relabelling $(m, n) \to (n,-m)$, followed by a constant rescaling of the coordinates that restores the metric to standard form.
 \end{enumerate}
 
-These two operations generate the \SLZ{} transformations on $\tau$: $\tau \to \frac{a\tau +b}{c\tau + d}$, $ad-bc = 1$ (Figure~\ref{fig:st-cycles}). So this is how one should think of the \SLZ{} symmetry of the torus: it is a footprint of the periodic identification one has to make when putting coordinates on $S^1 \times S^1$. In particular the integers $(m,n)$ label the 1-cycles of $T^2$, and \SLZ{} acts by relabelling them.
+These two operations generate the \SLZ{} group, acting as $\tau \to \frac{a\tau+b}{c\tau+d}$ with $ad-bc=1$ (Figure~\ref{fig:st-cycles}).
+The torus arises from periodic identifications on $S^1 \times S^1$, which fix the underlying lattice but not a choice of basis. 
+The \SLZ{} symmetry is what relates the equivalent bases, whereas each basis consists of two fundamental 1-cycles of $T^2$.
+A general 1-cycle is an integer combination of these, labelled by a pair $(p,q)$, which may be understood as winding $p$ times around one circle and $q$ times around the other.
+When $p$ and $q$ are coprime it is considered a primitive $(p,q)$ cycle. 
+Otherwise, writing $d \equiv \gcd(p,q)$, it is $d$ disjoint copies of the primitive $(p/d,\,q/d)$ loop.
+\SLZ{} permutes these primitive 1-cycles among themselves, taking any one to any other.
 
+We can now draw the two threads together. 
+We have seen that the type IIB D7 brane is obtained by reducing the 12d KK-monopole on $T^2$, where the Taub-NUT circle is identified with one of the $S^1$ factors of $T^2$, which we can take to be the $(1,0)$.
+Furthermore, we identified the type IIB $S, T$ generators of \SLZ{} with large diffeomorphisms of the reduction torus.
+Acting on the torus, these are precisely the relabellings of its 1-cycles introduced above: they carry the $(1,0)$ cycle to a general $(p,q)$ cycle, and with it the D7 brane to a $(p,q)$ 7-brane.
+It is therefore natural to identify the $(p,q)$ 7-brane as the 12d KK-monopole whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of $T^2$ (Figure~\ref{fig:pq-cycle}).
 
 \begin{figure}[ht]
 \centering
@@ -339,11 +294,10 @@ These two operations generate the \SLZ{} transformations on $\tau$: $\tau \to \f
     \node at (0.55,-0.6) {$S:\ \tau\to-1/\tau$};
   \end{scope}
 \end{tikzpicture}
-\caption{The generators $T$ and $S$ acting on the lattice basis $\{1,\tau\}$, the two periods of the torus. $T:\tau\to\tau+1$ slides the oblique generator over by one period, a shear, while $S:\tau\to-1/\tau$ swaps the two generators, up to a rescaling that restores unit length. On the 1-cycles $m\cdot1 + n\cdot\tau$ these act as $(m,n)\to(m+n,n)$ and $(m,n)\to(n,-m)$, generating every $(p,q)$ class from the $(1,0)$ cycle of the D7 brane.}
+\caption{The generators $T$ and $S$ acting on the lattice basis $\{1,\tau\}$, the two periods of the torus. $T:\tau\to\tau+1$ slides the oblique generator over by one period, a shear, while $S:\tau\to-1/\tau$ swaps the two generators, up to a rescaling that restores unit length. On the 1-cycles $m\cdot1 + n\cdot\tau$ these act as $(m,n)\to(m+n,n)$ and $(m,n)\to(n,-m)$, generating every coprime $(p,q)$ class from the $(1,0)$ cycle of the D7 brane.}
 \label{fig:st-cycles}
 \end{figure}
 
-We can now draw the two threads together. The type IIB \SLZ{} is realised in 12d by the generators $T$ and $S$ as large diffeomorphisms of the reduction torus \eqref{12d KK-monopole in complex coordinates}. By the review above these are precisely the lattice relabellings $(m,n)$, the action of \SLZ{} on the 1-cycles of $T^2$. The Taub-NUT circle of the KK-monopole is one such 1-cycle, the $(1,0)$ cycle for the D7 brane \eqref{D7 solution}, and acting with the duality carries it onto a general $(p,q)$ cycle (Figure~\ref{fig:pq-cycle}). A $(p,q)$ 7-brane is therefore the 12d Kaluza-Klein monopole whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of $T^2$. In particular, the \SLZ{} that permutes the 7-brane charges $(p,q)$ is the same \SLZ{} that acts on the $(p,q)$ cycles of the torus.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.25\textwidth]{torusc.png}
@@ -398,11 +352,12 @@ Like the relation between the 11d KK-monopole and 10d D6 brane in the type IIA t
 
 
 \paragraph{D(-1) instanton from reduction of the 12d pp-wave}
-We now discuss the parallel story on the type IIB side, specialising \eqref{d-dim pp-wave-t-z} to 12d, we find
+We now discuss the parallel story on the type IIB side. 
+Specialising \eqref{d-dim pp-wave-t-z} to 12d, we find
 \begin{equation}
 ds_{12}^2 = - H^{-1}dt^2 + H[dz_1 + (H^{-1}-1)dt]^2 + \sum_{i=1}^{10} dx_i^2.
 \end{equation}
-Performing a Wick rotation via $t = iz_2$ yields
+Performing a Wick rotation via $t \equiv iz_2$ yields
 \begin{equation}
 ds_{12}^2
 = \sum_{i=1}^{10} dx_1^2 + H^{-1}dz_2^2 + H[dz_1 + i(H^{-1}-1)dz_2]^2,
@@ -471,7 +426,7 @@ The mass-deformed model is dual to a probe D1 brane in the Einstein-frame-flat b
 }
 
 \subsection{Supersymmetry}
-We now discuss a further consistency check for the relation between 12d gravity and the type IIB axio-dilaton sector, namely how the $\tfrac{1}{2}$ BPS condition of the latter can be obtained by reducing the covariantly-constant equation of the former.
+We now discuss a further consistency check for the relation between 12d gravity and the type IIB axio-dilaton sector, namely how the $\tfrac{1}{2}$ BPS condition of the latter can be obtained by reducing the covariantly-constant-spinor equation of the former.
 
 Disregarding the type IIB supergravity action for the moment, let us consider a generic theory in $d$ dimensions.
 The action with kinetic terms for the metric, form fields, and the gravitino takes the form
@@ -499,7 +454,7 @@ The Killing spinor equation would then be given by $\delta\psi_M=0$.
 
 Upon dimensional reduction, the higher-dimensional fields decompose into those of the lower-dimensional theory, and reducing the gravitino variation \eqref{generic gravitino variation} reproduces its Killing spinor equation.
 In our case the higher-dimensional theory is pure gravity, with no form fields, so its gravitino variation \eqref{generic gravitino variation} is simply $\nabla_M\epsilon$.
-The full lower-dimensional Killing spinor equation, flux and connection terms included, must then be reproduced by reducing this covariant derivative alone.
+The full lower-dimensional Killing spinor equation, flux and connection terms included, should then be reproduced by reducing this covariant derivative alone.
 
 \paragraph{From 11d to type IIA.}
 Let us consider the 11d covariant constancy equation $\widehat{\nabla}_M \epsilon = 0$.
@@ -558,15 +513,14 @@ A 12d covariant derivative $\widehat{\nabla}^{(12)}_M\epsilon = 0$ restricted to
 Using the 12d metric ansatz, we find the spin connections
 \begin{equation}
 \widehat{w}_m{}^{11,n}=\widehat{w}_m{}^{12,n}=0,\quad
-\widehat{w}_m{}^{11,12} = -\frac{1}{2}\frac{\partial_m \tau_1}{\tau_2}.
+\widehat{w}_m{}^{11,12} =Q_m.
 \end{equation}
 The 12d covariant derivative \eqref{12d covariant derivative} thus becomes
 \begin{equation}
 \left[
 \nabla_m + \frac{1}{2} Q_m \Gamma_{11,12}
-\right]\epsilon,
+\right]\epsilon.
 \end{equation}
-where $Q_m = -\frac{1}{2} \frac{\partial_m \tau_1}{\tau_2}$ is the non-dynamical U(1) connection of the type IIB axio-dilaton sector.
 Note that on a Euclidean torus
 \begin{equation}
 \Gamma_{11,12} = \Gamma_{11}\Gamma_{12},\quad
@@ -574,5 +528,5 @@ Note that on a Euclidean torus
 \end{equation}
 so $\Gamma_{11,12}$ is, up to a similarity transformation, $i$ times the U(1) generator.
 After performing a similarity transformation one obtains the axio-dilaton sector Killing spinor equation \eqref{9+1 IIB axio-dilaton Killing spinor equations}.
-This would also hold had we compactified a non-compact torus instead, to obtain a Euclidean type IIB theory.
-In the case of compactifying on a torus of signature (1,1), a factor of $i$ arises both in identifying the U(1) generator from $\Gamma_{11,12}$ and in defining the Euclidean compact scalar $C_0 = i\mathcal C$, so that the 12d covariant derivative again reproduces the type IIB gravitino variation.
+This would also hold had we instead compactified on a torus of signature (1,1), to obtain a Euclidean type IIB theory.
+In that case, a factor of $i$ arises both in identifying the U(1) generator from $\Gamma_{11,12}$ and in defining the Euclidean compact scalar $C_0 = i\mathcal C$, so that the 12d covariant derivative again reproduces the type IIB gravitino variation.
