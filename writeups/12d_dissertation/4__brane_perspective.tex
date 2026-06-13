@@ -228,7 +228,7 @@ We can thus identify the type IIB \SLZ{} duality transformations as large diffeo
 The D7 brane found above is the simplest of the type IIB $(p,q)$ 7-branes, a family permuted by \SLZ{} \cite{Weigand:2018rez}. 
 We now give this family a geometric origin in 12d. The claim is that a $(p,q)$ 7-brane is the 12d KK-monopole on $T^2$ whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of the torus, and that the \SLZ{} acting on the brane charges $(p,q)$ is the same \SLZ{} that acts on the $(p,q)$ cycles of $T^2$. 
 
-Having identified the type IIB \SLZ{} with the large 12d diffeomorphisms $T$ and $S$ above, we now recall how the same \SLZ{} arises from the periodic identifications that define a torus. 
+Having identified the type IIB \SLZ{} with the large 12d diffeomorphisms $T$ and $S$ above, we now recall how the $T$ and $S$ generators of \SLZ{} arise from the periodic identifications that define a torus. 
 A torus has topology $S^1 \times S^1$. 
 We take coordinates $\vec{\sigma} \in \mathbb{R}^2$ with the periodic identification $(\sigma^1,\sigma^2)\sim (\sigma^1,\sigma^2) + 2\pi (m,n)$ for integers $m,n$.
 Diffeomorphism and Weyl symmetry allow the metric to be brought to the flat form $ds^2 = (d\sigma^{1})^2+(d\sigma^{2})^2$ \cite{Polchinski:1998rq}, at the cost of skewing the periodic identification into a parallelogram
@@ -254,12 +254,19 @@ There are two such transformations:
     \item $\tau \to -1/\tau$: the basis relabelling $(m, n) \to (n,-m)$, followed by a constant rescaling of the coordinates that restores the metric to standard form.
 \end{enumerate}
 
-These two operations generate the \SLZ{} group: $\tau \to \frac{a\tau +b}{c\tau + d}$, $ad-bc = 1$ (Figure~\ref{fig:st-cycles}). 
-The \SLZ{} symmetry of the torus therefore reflects the periodic identifications imposed on $S^1 \times S^1$: these fix the lattice but not a basis for it, and \SLZ{} relates the equivalent choices of basis. 
-The 1-cycles of $T^2$ are labelled by integer pairs $(p,q)$: the class $p + q\tau$ is a loop winding $p$ and $q$ times around the two circles, represented by a single connected loop when $p$ and $q$ are coprime. 
-\SLZ{} permutes these coprime cycles among themselves, relating any one to any other.
+These two operations generate the \SLZ{} group, acting as $\tau \to \frac{a\tau+b}{c\tau+d}$ with $ad-bc=1$ (Figure~\ref{fig:st-cycles}).
+The torus arises from periodic identifications on $S^1 \times S^1$, which fix the underlying lattice but not a choice of basis. 
+The \SLZ{} symmetry is what relates the equivalent bases, whereas each basis consists of two fundamental 1-cycles of $T^2$.
+A general 1-cycle is an integer combination of these, labelled by a pair $(p,q)$, which may be understood as winding $p$ times around one circle and $q$ times around the other.
+When $p$ and $q$ are coprime it is considered a primitive $(p,q)$ cycle. 
+Otherwise, writing $d \equiv \gcd(p,q)$, it is $d$ disjoint copies of the primitive $(p/d,\,q/d)$ loop.
+\SLZ{} permutes these primitive 1-cycles among themselves, taking any one to any other.
 
-We can now draw the two threads together. The type IIB \SLZ{} is realised in 12d by the generators $T$ and $S$ as large diffeomorphisms of the reduction torus \eqref{12d KK-monopole in complex coordinates}. By the review above these are precisely the lattice relabellings $(m,n)$, the action of \SLZ{} on the 1-cycles of $T^2$. The Taub-NUT circle of the KK-monopole is one such 1-cycle, the $(1,0)$ cycle for the D7 brane \eqref{D7 solution}, and acting with the duality carries it onto a general $(p,q)$ cycle (Figure~\ref{fig:pq-cycle}). A $(p,q)$ 7-brane is therefore the 12d Kaluza-Klein monopole whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of $T^2$. In particular, the \SLZ{} that permutes the 7-brane charges $(p,q)$ is the same \SLZ{} that acts on the $(p,q)$ cycles of the torus.
+We can now draw the two threads together. 
+We have seen that the type IIB D7 brane is obtained by reducing the 12d KK-monopole on $T^2$, where the Taub-NUT circle is identified with one of the $S^1$ factors of $T^2$, which we can take to be the $(1,0)$.
+Furthermore, we identified the type IIB $S, T$ generators of \SLZ{} with large diffeomorphisms of the reduction torus.
+Acting on the torus, these are precisely the relabellings of its 1-cycles introduced above: they carry the $(1,0)$ cycle to a general $(p,q)$ cycle, and with it the D7 brane to a $(p,q)$ 7-brane.
+It is therefore natural to identify the $(p,q)$ 7-brane as the 12d KK-monopole whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of $T^2$ (Figure~\ref{fig:pq-cycle}).
 
 \begin{figure}[ht]
 \centering
