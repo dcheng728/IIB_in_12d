@@ -10,13 +10,13 @@ We then discuss a potential parallel, between type IIA and type IIB, where the D
 We conclude by discussing how certain higher-derivative corrections of the type IIB axio-dilaton sector can be written in a 12d covariant form, and the limitations of such an interpretation.
 
 \subsection{Recap: Perturbative String Theory and Higher-Derivative Supergravity}
-The perturbative expansion of string amplitudes is organised by two parameters. The Regge slope $\alpha' = l_s^2$ controls the derivative expansion, while the string coupling $g_s$ orders contributions by the genus of the worldsheet.
+The perturbative expansion of string amplitudes is organised by two parameters. The Regge slope $\alpha' = l_s^2$ controls the derivative expansion, while the string coupling $g_s$ controls the worldsheet genus expansion.
 An $n$-point amplitude is a sum over genus-$g$ worldsheet path integrals
 \begin{equation}
     \mathcal A_n(\alpha') = \sum_{g=0}^\infty g_s^{2g-2} \mathcal A_n^{(g)}(\alpha').
 \end{equation}
 The tree-level 4-point function in the type IIA and type IIB string theories is the Virasoro-Shapiro amplitude \cite{Green:2012oqa}. 
-For the symmetric traceless massless modes in the NSNS sector of the string, it takes the following form \cite{Green:1999pv}, up to an irrelevant overall factor
+For the symmetric traceless massless modes in the NSNS sector of the string, it takes, up to an irrelevant overall factor, the form \cite{Green:1999pv}
 \begin{equation}
 \begin{aligned}
 \mathcal A_4
@@ -44,7 +44,7 @@ K
 \end{equation}
 evaluated in the string frame metric with $G_{mn} |_{\infty} = \eta_{mn}$.
 From the relation $G_{mn} = e^{\Phi/2}g_{mn}$, we see that the Einstein frame metric is not asymptotically flat: $g_{mn} |_{\infty} = g_s^{-1/2}\eta_{mn}$.
-To pass to the Einstein frame, we convert the implicit contractions with the string frame metric to ones with the Einstein frame metric, which introduces factors of $g_s$.
+To pass to the Einstein frame, we convert the implicit string frame contractions to the Einstein frame metric, which introduces factors of $g_s$.
 The net effect is the following Einstein frame expansion
 \begin{equation}
 \mathcal{A}_4 \bigg|_{g_{mn}} = 
@@ -160,7 +160,7 @@ thereby restoring the \SLZ{} duality symmetry, after the 2-derivative \SLR{} had
 This is the weight-$\tfrac32$ non-holomorphic Eisenstein series, $f_0 = E_{3/2}$. 
 \footnote{We follow the convention that the $s$-th Eisenstein series is given by 
 \begin{equation}
-E_s(\tau,\bar\tau) \equiv \sum_{(m,n)\neq(0,0)} \tau_2^{s}/|m+n\tau|^{2s}.
+E_s(\tau,\bar\tau) \equiv \sum_{(m,n)\neq(0,0)} \frac{\tau_2^{s}}{|m+n\tau|^{2s}}.
 \end{equation}}
 Since type IIA has no D(-1) backgrounds, the restoration of \SLZ{} is unique to the type IIB theory.
 
@@ -240,7 +240,7 @@ we arrive at
 \label{eq:KK-R4-coefficient}
 \end{equation}
 The prefactor $R_T^{-1}\tau_2^{-1/2}$ is itself modular invariant as $R_T$ transforms under \SLZ{}.
-The $\tau$-dependence is carried by the modular-invariant Eisenstein series $f_0$ of \eqref{eq:f0-eisenstein}: a single KK-loop sum reproduces the entire series otherwise obtained by summing over the D(-1) backgrounds.
+The $\tau$-dependence is carried by the modular-invariant Eisenstein series $f_0$ of \eqref{eq:f0-eisenstein}: a single KK-loop sum reproduces the series otherwise obtained by summing over the D(-1) backgrounds.
 The KK tower on the torus therefore acts as a surrogate for the D(-1) background, in parallel with 10d type IIA supergravity, where the KK modes on $S^1$ produce the D0 background \cite{Green:1997as}.
 
 We do not wish to overclaim.
