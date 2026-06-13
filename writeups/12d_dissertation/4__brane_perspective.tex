@@ -18,7 +18,7 @@ pp-wave               & D0 brane & D($-1$) instanton\\
 \end{tabular}
 \caption{The parallel that organises this chapter. 
 Two solutions of eleven-dimensional supergravity reduce on the M-theory circle to the type IIA D6 brane and D0 brane. 
-The same two geometries in twelve dimensions reduce on a torus to the type IIB D7 brane and D($-1$) instanton.}
+The same two geometries in twelve dimensions reduce on a torus to the type IIB D7 brane and D(-1) instanton.}
 \label{tab:iia-iib-uplift}
 \end{table}
 One can truncate the type IIB action \eqref{eq:sl2r_invariant_einstein_frame_action} to the axio-dilaton sector
@@ -225,10 +225,10 @@ We can thus identify the type IIB \SLZ{} duality transformations as large diffeo
 \paragraph{\boldmath Geometric Interpretation of the $(p,q)$ 7-brane and \SLZ{}}
 \label{par:interpreting-sl2z}
 
-The D7 brane found above is the simplest of the type IIB $(p,q)$ 7-branes, a family permuted by \SLZ{} \cite{Weigand:2018rez}. 
-We now give this family a geometric origin in 12d. The claim is that a $(p,q)$ 7-brane is the 12d KK-monopole on $T^2$ whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of the torus, and that the \SLZ{} acting on the brane charges $(p,q)$ is the same \SLZ{} that acts on the $(p,q)$ cycles of $T^2$. 
+The D7 brane found above is a member of the type IIB $(p,q)$ 7-branes, a family permuted by \SLZ{} \cite{Weigand:2018rez}. 
+We now give this family a geometric origin in 12d. The claim is that a $(p,q)$ 7-brane is the 12d KK-monopole on $T^2$ whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of the torus.
 
-Having identified the type IIB \SLZ{} with the large 12d diffeomorphisms $T$ and $S$ above, we now recall how the $T$ and $S$ generators of \SLZ{} arise from the periodic identifications that define a torus. 
+Having identified the type IIB \SLZ{} with the 12d large diffeomorphisms $T$ and $S$ above, we now recall how the $T$ and $S$ generators of \SLZ{} arise from the periodic identifications that define a torus. 
 A torus has topology $S^1 \times S^1$. 
 We take coordinates $\vec{\sigma} \in \mathbb{R}^2$ with the periodic identification $(\sigma^1,\sigma^2)\sim (\sigma^1,\sigma^2) + 2\pi (m,n)$ for integers $m,n$.
 Diffeomorphism and Weyl symmetry allow the metric to be brought to the flat form $ds^2 = (d\sigma^{1})^2+(d\sigma^{2})^2$ \cite{Polchinski:1998rq}, at the cost of skewing the periodic identification into a parallelogram
@@ -253,20 +253,6 @@ There are two such transformations:
     \item $\tau \to \tau+1$: the basis relabelling $(m, n) \to (m+n,n)$ at fixed geometry.
     \item $\tau \to -1/\tau$: the basis relabelling $(m, n) \to (n,-m)$, followed by a constant rescaling of the coordinates that restores the metric to standard form.
 \end{enumerate}
-
-These two operations generate the \SLZ{} group, acting as $\tau \to \frac{a\tau+b}{c\tau+d}$ with $ad-bc=1$ (Figure~\ref{fig:st-cycles}).
-The torus arises from periodic identifications on $S^1 \times S^1$, which fix the underlying lattice but not a choice of basis. 
-The \SLZ{} symmetry is what relates the equivalent bases, whereas each basis consists of two fundamental 1-cycles of $T^2$.
-A general 1-cycle is an integer combination of these, labelled by a pair $(p,q)$, which may be understood as winding $p$ times around one circle and $q$ times around the other.
-When $p$ and $q$ are coprime it is considered a primitive $(p,q)$ cycle. 
-Otherwise, writing $d \equiv \gcd(p,q)$, it is $d$ disjoint copies of the primitive $(p/d,\,q/d)$ loop.
-\SLZ{} permutes these primitive 1-cycles among themselves, taking any one to any other.
-
-We can now draw the two threads together. 
-We have seen that the type IIB D7 brane is obtained by reducing the 12d KK-monopole on $T^2$, where the Taub-NUT circle is identified with one of the $S^1$ factors of $T^2$, which we can take to be the $(1,0)$.
-Furthermore, we identified the type IIB $S, T$ generators of \SLZ{} with large diffeomorphisms of the reduction torus.
-Acting on the torus, these are precisely the relabellings of its 1-cycles introduced above: they carry the $(1,0)$ cycle to a general $(p,q)$ cycle, and with it the D7 brane to a $(p,q)$ 7-brane.
-It is therefore natural to identify the $(p,q)$ 7-brane as the 12d KK-monopole whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of $T^2$ (Figure~\ref{fig:pq-cycle}).
 
 \begin{figure}[ht]
 \centering
@@ -294,9 +280,23 @@ It is therefore natural to identify the $(p,q)$ 7-brane as the 12d KK-monopole w
     \node at (0.55,-0.6) {$S:\ \tau\to-1/\tau$};
   \end{scope}
 \end{tikzpicture}
-\caption{The generators $T$ and $S$ acting on the lattice basis $\{1,\tau\}$, the two periods of the torus. $T:\tau\to\tau+1$ slides the oblique generator over by one period, a shear, while $S:\tau\to-1/\tau$ swaps the two generators, up to a rescaling that restores unit length. On the 1-cycles $m\cdot1 + n\cdot\tau$ these act as $(m,n)\to(m+n,n)$ and $(m,n)\to(n,-m)$, generating every coprime $(p,q)$ class from the $(1,0)$ cycle of the D7 brane.}
+\caption{The generators $T$ and $S$ acting on the lattice basis $\{1,\tau\}$, the two periods of the torus. $T:\tau\to\tau+1$ is a shift on the lattice by one period, while $S:\tau\to-1/\tau$ swaps the two generators, up to a rescaling that restores unit length.}
 \label{fig:st-cycles}
 \end{figure}
+
+These two operations generate the \SLZ{} group, acting as $\tau \to \frac{a\tau+b}{c\tau+d}$ with $ad-bc=1$ (Figure~\ref{fig:st-cycles}).
+The torus arises from periodic identifications on $S^1 \times S^1$, which fix the underlying lattice but not a choice of basis. 
+The \SLZ{} symmetry is what relates the equivalent bases, whereas each basis consists of two fundamental 1-cycles of $T^2$.
+A general 1-cycle is an integer combination of these, labelled by a pair $(p,q)$, which may be understood as winding $p$ times around one circle and $q$ times around the other.
+When $p$ and $q$ are coprime it is considered a primitive $(p,q)$ cycle. 
+Otherwise, writing $d \equiv \gcd(p,q)$, it is $d$ disjoint copies of the primitive $(p/d, q/d)$ cycle.
+\SLZ{} permutes these primitive 1-cycles among themselves.
+
+We can now draw the two threads together. 
+We have seen that the type IIB D7 brane is obtained by reducing the 12d KK-monopole on $T^2$, where the Taub-NUT circle is identified with one of the $S^1$ factors of $T^2$, which we can take to be the $(1,0)$ cycle.
+Furthermore, we identified the type IIB $S, T$ generators of \SLZ{} with large diffeomorphisms of the $T^2$.
+Acting on the torus, these are precisely the relabellings of its 1-cycles introduced above: they carry the $(1,0)$ cycle to a general $(p,q)$ cycle, and with it the D7 brane to a $(p,q)$ 7-brane.
+It is therefore natural to identify the $(p,q)$ 7-brane as the 12d KK-monopole whose Taub-NUT circle is wrapped on the $(p,q)$ cycle of $T^2$ (Figure~\ref{fig:pq-cycle}).
 
 \begin{figure}[ht]
 \centering
@@ -360,7 +360,7 @@ ds_{12}^2 = - H^{-1}dt^2 + H[dz_1 + (H^{-1}-1)dt]^2 + \sum_{i=1}^{10} dx_i^2.
 Performing a Wick rotation via $t \equiv iz_2$ yields
 \begin{equation}
 ds_{12}^2
-= \sum_{i=1}^{10} dx_1^2 + H^{-1}dz_2^2 + H[dz_1 + i(H^{-1}-1)dz_2]^2,
+= \sum_{i=1}^{10} dx_i^2 + H^{-1}dz_2^2 + H[dz_1 + i(H^{-1}-1)dz_2]^2,
 \end{equation}
 which, in coordinates $(x^m, z_1, z_2)$, corresponds to the 12d metric embedding
 \begin{equation}
@@ -384,41 +384,6 @@ This precisely reduces to the D(-1) solution of the type IIB axio-dilaton sector
 Here the axion $C_0$ is purely imaginary, which is a consequence of the Wick rotation we performed to keep the metric real.
 It is also customary to define a real scalar $\mathcal C \equiv -i C_0$, which is the axion entering the Euclidean type IIB theory with a wrong sign kinetic term \cite{Gibbons:1995vg}.
 
-% The D(-1) is a solution to the Euclidean type IIB theory, within the axio-dilaton sector \cite{Gibbons:1995vg}.
-% In Einstein frame, it can be written as\footnote{In the Euclidean type IIB theory, the compact scalar $C_0$ gets a wrong sign kinetic term, thus becomes purely imaginary. One instead works with $\mathcal C$. This is discussed in \cite{Gibbons:1995vg}.}
-% \begin{equation}
-% ds_{10}^2 = \sum_{i=1}^{10} dx_i^2,\quad
-% e^\Phi = H, \quad
-% \mathcal C\equiv-iC_0 = H^{-1}-1,\quad
-% H=1+\frac{Q}{r^8}.
-% \label{D-1 background}
-% \end{equation}
-% We now perform its uplift to 12d, using the same ansatz we previously used for relating the D7 brane to the 12d KK-monopole \eqref{12d metric ansatz 0}.
-% We find
-% \begin{equation}
-% ds_{12}^2=
-% e^{-\Phi}d\tilde{t}^2+e^\Phi(dy+i\mathcal C d\tilde{t})^2
-% +
-%  \sum_{i=1}^{10} dx_i^2
-% \label{F-theory ansatz}
-% \end{equation}
-% with $\tilde{t},y$ the coordinates on the torus.
-% To keep the metric real, it is natural to perform a Wick rotation $\tilde{t}=-it$, which turns the torus into a non-compact one, and the metric becomes
-% \begin{equation}
-% ds_{12}^2=
-% -e^{-\Phi}dt^2+e^\Phi[dy+\mathcal C dt]^2
-% +\sum_{i=1}^{10}dx_i^2.
-% \end{equation}
-% We thus find the 12d metric
-% \begin{equation}
-% ds_{12}^2
-% =
-% dudv
-% +(H-1)du^2
-% +ds_{10}^2,\quad
-% v,u = y\pm t.
-% \end{equation}
-% By comparison with \eqref{d-dim pp-wave}, we see that the uplift of D(-1) is a pp-wave in 11+1 dimensions.
 One may view the Euclidean D(-1) as a ``slice'' of the 10d homogeneous wavefront of a 12d pp-wave.
 The momentum of the wave is the D(-1) charge.
 Recent investigations of the IKKT matrix model \cite{Hartnoll:2024csr,Komatsu:2024bop} reveal a type IIB supergravity background with axio-dilaton and the 3-form turned on, which admits a similar 12d interpretation.\footnote{
