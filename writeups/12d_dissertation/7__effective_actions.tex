@@ -251,7 +251,7 @@ One may attempt to evaluate KK-loop contributions to 5-point amplitudes using th
 \subsection{12d Effective Corrections}
 We now turn to the 12d interpretation of the type IIB higher-derivative corrections.
 We begin by reviewing the known 12d interpretations of the type IIB effective action, using a ``bottom-up'' approach.
-The type IIB supergravity in the axio-dilaton sector, can be written as
+The type IIB supergravity in the axio-dilaton sector can be written as
 \begin{equation}
 2\kappa^2 S_{IIB,\tau}
 = \int d^{10}x \sqrt{-g} \left(R - 2 P_m \overline{P}^m\right),
@@ -259,7 +259,7 @@ The type IIB supergravity in the axio-dilaton sector, can be written as
 \end{equation}
 where $P_m \equiv \frac{i\nabla_m \tau}{2\tau_2}$.
 
-We have previously discussed that for backreacted 7-brane configurations and the D(-1) instanton backgrounds, the axio-dilaton profile $\tau$ can be geometrised as the complex structure of an auxiliary torus.
+We have previously discussed that for the D7 brane and the D(-1) instanton backgrounds, the axio-dilaton profile $\tau$ can be geometrised as the complex structure of a torus on which 12d gravity is compactified.
 This proposal can be understood by noting that the 10d axio-dilaton action can be obtained from a certain 12d action on a specific metric ansatz, where the 12d metric is given by
 \begin{equation}
 \widehat{g}_{MN}=\begin{pmatrix}
@@ -276,6 +276,8 @@ g_{mn} & 0 \\
 One may adopt complex tangent frame coordinates $z, \overline{z}$, with vielbein $e_{\alpha}{}^a = \frac{1}{2\sqrt{\tau_2}}\begin{pmatrix}
     -\tau & 1 \\ -\overline{\tau} & 1
 \end{pmatrix}$. 
+The 12d metric in complex coordinates is then
+$\widehat{g}_{zz} = \widehat{g}_{\overline{z}\overline{z}} = 0$, $\widehat{g}_{z\overline{z}} = 1/2$.
 The nonvanishing components of the 12d Riemann tensor are (see also \cite{Liu:2025uqu})
 \begin{equation}
 \begin{gathered}
@@ -283,7 +285,7 @@ The nonvanishing components of the 12d Riemann tensor are (see also \cite{Liu:20
 \widehat{R}_{z\overline{z}z\overline{z}} = -\frac14 |P|^2,\quad
 \widehat{R}_{mnz\overline{z}} = P_{[m}\overline{P}_{n]},\\
 \widehat{R}_{mzn\overline{z}} = - \frac{P_m \overline{P}_n}{2},\quad
-\widehat{R}_{mznz} = \frac{D_m P_n}{2}.
+\widehat{R}_{mznz} = \frac{\nabla_m P_n}{2}.
 \end{gathered}
 \label{eq:12d-Riemann-complex}
 \end{equation}
@@ -367,7 +369,7 @@ The computation is done with Cadabra, which agrees with the results of \cite{Min
 The next step is to replace the 10d terms with their 12d counterparts. The only 10d terms that remain are $\nabla P$.
 We note that, because the only 12d Riemann tensor linear in $P$ is $R_{mznz}$ and its conjugate, we have
 \begin{equation}
-\widehat{R}_{ambn} \widehat{R}^{a}{}_{r}{}^{b}{}_{s} = 2 \operatorname{Re}\left(D_m P_n D_r \overline{P}_s\right) + O(P^3).
+\widehat{R}_{ambn} \widehat{R}^{a}{}_{r}{}^{b}{}_{s} = 2 \operatorname{Re}\left(\nabla_m P_n \nabla_r \overline{P}_s\right) + O(P^3).
 \end{equation}
 We will use $m, n, r, s, ...$ for 10d spacetime indices and $a, b, c, d, ...$ for 2d torus indices.
 Substituting this as well as $t_8 t_8 R^4$ into \eqref{eq:4pt-gravity-axiodilaton}, we find
@@ -402,7 +404,7 @@ Hence the last term in \eqref{eq:4pt-gravity-axiodilaton-12d-replaced} is compat
 \frac{1}{32} (\widehat{R}_{MNRS} \widehat{R}^{MNRS})^2 \in t_8 t_8 \widehat{R}^4.
 \end{equation}
 
-Upon further inspection, one finds that every term in \eqref{eq:4pt-gravity-axiodilaton-12d-replaced} descends from a single 12d contraction, displayed below with the 12d contraction on the left and its 10d expansion (the pure 10d quartic followed by the mixed-leg completions) on the right:
+Upon further inspection, one finds that every term in \eqref{eq:4pt-gravity-axiodilaton-12d-replaced} descends from a single 12d contraction, displayed below with the 12d contraction on the left and its 10d expansion (the pure 10d quartic followed by the mixed-leg terms) on the right:
 \begin{equation}
 \begin{aligned}
 \widehat{R}_{PNQM} \widehat{R}^{PRQS} \widehat{R}^{MT}{}_{RU} \widehat{R}^{NU}{}_{ST}
@@ -483,10 +485,8 @@ As for the rest of the nonvanishing 12d Riemann tensor components, they are give
 \begin{aligned}
 \widehat{R}_{mnab} 
 &= 2\widehat{R}_{[a|m|b]n}\\
-% = \frac{1}{2\tau_2^2}[\nabla_m\tau_2\nabla_n\tau_1-\nabla_m\tau_1\nabla_n\tau_2],\\
 \widehat{R}_{1212}
-&= -\frac{1}{2}g^{mn}g^{ab} \widehat{R}_{ambn} 
-% = \frac{1}{4\tau_2^2}|\nabla \tau|^2.
+&= -\frac{1}{2}g^{mn}g^{ab} \widehat{R}_{ambn}.
 \end{aligned}
 \end{equation}
 
