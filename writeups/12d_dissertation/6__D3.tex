@@ -1,7 +1,7 @@
 \section{The D3 Brane and Self-Duality}
 \label{sec:d3-self-duality}
 The low-energy dynamics of a D3 brane in a given type IIB supergravity background are described by the Dirac-Born-Infeld action supplemented by a Wess-Zumino term, with background metric, NSNS and RR fields entering through the appropriate pullbacks to the brane worldvolume \cite{Leigh:1989jq,Polchinski:1998rr}.
-In particular, in Einstein frame the bosonic sector of the D3 low-energy action takes the form \cite{Tseytlin:1996it}
+In particular, the bosonic sector of the D3 low-energy action takes the form \cite{Tseytlin:1996it}
 \begin{equation}
 \begin{aligned}
 S_{D3}
@@ -12,7 +12,7 @@ S_{D3}
 \end{aligned}
 \label{D3-action}
 \end{equation}
-Throughout, the bulk supergravity fields are understood to be pulled back onto the brane worldvolume, where $m,n$ label worldvolume indices, $(\mathcal{F}_2)_{mn}$ are the components of the worldvolume 2-form $\mathcal{F}_2$, and $C_0$ is the RR axion.
+Throughout, the bulk supergravity fields are understood to be pulled back onto the brane worldvolume (in \eqref{D3-action} we pullback the Einstein frame bulk metric $g_{mn}$ to the D3 worldvolume), where $m,n$ label worldvolume indices, $(\mathcal{F}_2)_{mn}$ are the components of the worldvolume 2-form $\mathcal{F}_2$, and $C_0$ is the RR axion.
 The vector $A_m$ is the dynamical gauge potential on the brane worldvolume.
 It was shown \cite{Tseytlin:1996it} that the action is invariant under electromagnetic duality only if the bulk background simultaneously undergoes an \SLZ{} transformation.
 We derive this explicitly below.
@@ -48,15 +48,13 @@ We read off that this is in the same form as the D3 action \eqref{D3-action}, wi
 \tau\to-\frac{1}{\tau},\qquad
 B_2 \to C_2,\qquad C_2\to -B_2.
 \end{equation}
-This is precisely the $S$ generator of the type IIB bulk \SLZ{} duality.
-Because the D3 action is also invariant under the axion shift $C_0\to C_0+1$, the full \SLZ{} duality is realised on the D3 worldvolume.
-% The nonlinear Born-Infeld terms do not affect this conclusion: the Born-Infeld determinant is invariant under the Legendre transform \cite{Tseytlin:1996it}, so the full action \eqref{D3-action} returns to its original form under this transformation.
-The bulk generator $T: \tau\to \tau+1$ corresponds to $\theta\to \theta + 2\pi$ on the D3 worldvolume, for the complexified coupling $\tau_{YM}\equiv \frac{\theta}{2\pi} + \frac{4\pi i}{g^2}$.
-Thus the \SLZ{} duality of $\mathcal N=4$ SYM on the D3 worldvolume is intimately linked to the type IIB \SLZ{} duality, with the bulk $S$ generator realised as the worldvolume electromagnetic duality.
+This is precisely the $S$ generator of the bulk \SLZ{} duality, realised on the worldvolume as electromagnetic duality.
+The remaining generator, the axion shift $C_0\to C_0+1$, leaves the D3 action invariant and corresponds to $\theta\to \theta + 2\pi$ for the complexified coupling $\tau_{YM}\equiv \frac{\theta}{2\pi} + \frac{4\pi i}{g^2}$.
+The full bulk \SLZ{} duality of type IIB is thus identified with the \SLZ{} duality of $\mathcal N=4$ SYM on the D3 worldvolume.
 
 For comparison, we recall a similar story on the type IIA side.
 The analogy is not direct because there is no analogue of the \SLZ{} duality in the type IIA theory.
-The D2 action can be written in string frame as \cite{Schmidhuber:1996fy,Tseytlin:1996it}
+The D2 action can be written as (we pull back the string frame metric $G_{mn}$ to the brane worldvolume) \cite{Schmidhuber:1996fy,Tseytlin:1996it}
 \begin{equation}
 S_{D2}
 =\int d^3x \sqrt{-e^{-2\Phi}\det (G_{mn}+(\mathcal F_2)_{mn})}
@@ -64,7 +62,7 @@ S_{D2}
 \mathcal F_2\equiv dA_1-B_2.
 \end{equation}
 We dualise the worldvolume vector into a scalar, paralleling the D3 treatment.
-We promote $\mathcal F_2$ to an independent field and enforce $dd A_1 = 0$ through a Lagrange multiplier, here a scalar $y$,
+This is done by promoting $\mathcal F_2$ to an independent field and enforcing $d\mathcal F_2 = 0$ through a Lagrange multiplier, here a scalar $y$,
 \begin{equation}
 \int dy\wedge(\mathcal F_2 + B_2).
 \end{equation}
@@ -82,7 +80,7 @@ we find
 \begin{equation}
 S_{D2}=\int d^3x\sqrt{-G}\sqrt{e^{-2\Phi}+(C_1-dy)_p(C_1-dy)^p}+\int\left(C_3 + B_2\wedge dy\right).
 \end{equation}
-Finally, the rank-one identity $\det(aG_{mn}+bK_mK_n)=a^3\det G_{mn}(1+\tfrac{b}{a}K_pK^p)$ with $a=e^{-2\Phi/3}$, $b=e^{4\Phi/3}$ repackages the integrand into a single determinant,
+Finally, the identity $\det(aG_{mn}+bK_mK_n)=a^3\det G_{mn}(1+\tfrac{b}{a}K_pK^p)$ with $a=e^{-2\Phi/3}$, $b=e^{4\Phi/3}$ repackages the integrand into a single determinant
 \begin{equation}
 \begin{aligned}
 S_{D2}
@@ -90,21 +88,20 @@ S_{D2}
 &\quad+ \int\left(C_3 + B_2\wedge dy\right).
 \end{aligned}
 \end{equation}
-Then as one interprets the worldvolume scalar $y$ as a 10d scalar pulled back onto the D2 worldvolume, this is the M2 action directly reduced on $S^1$ \cite{Bergshoeff:1987cm,Tseytlin:1996it,Schmidhuber:1996fy}. The bracketed metric is the standard Kaluza-Klein form, and $C_3+B_2\wedge dy$ is the reduction of the 11d three-form.
+As one interprets the worldvolume scalar $y$ as a 10d scalar pulled back onto the D2 worldvolume, this is the M2 action directly reduced on $S^1$ \cite{Bergshoeff:1987cm,Tseytlin:1996it,Schmidhuber:1996fy}. The bracketed metric is in the standard Kaluza-Klein form, and $C_3+B_2\wedge dy$ is the reduction of the 11d three-form.
 
-Just as the M2 brane reduced on a circle gives the D2, one could speculate that the D3 arises from some 12d brane reduced on a two-torus $T^2$.
-A two-torus is built from two circles, and its shape (their relative size and tilt) is captured by a single complex number $\tau$.
-Different choices of which two loops to call the basic cycles are physically equivalent, and passing between them changes $\tau$ by \SLZ{} transformations such as $\tau\to-1/\tau$, leaving the torus itself untouched.
-This is precisely how the \SLZ{} we found acts on the IIB axio-dilaton, and hence, through the dualisation above, on the gauge coupling $\tau_{YM}$ of $\mathcal{N}=4$ SYM on the D3 worldvolume.
+Just as the D2 arises from the M2 reduced on a circle, if there were to exist a 12d effective framework, the D3 may arise from a 12d brane reduced on a two-torus $T^2$.
+Suppose there exists a certain 5-brane in 12d, which would have its own worldvolume gauge theory.
+Wrapping such a 5-brane on $T^2$ parametrised by $\tau$ would give a 3-brane in 10d that is an \SLZ{} singlet.
+The worldvolume gauge theory of the resultant 3-brane would be related to the modulus $\tau$ of the torus, and \SLZ{} transformations on such $\tau$ would act both on the bulk and on the worldvolume, as we have seen in the D3 case.
+Such a relationship is realised in the known example of the M5 brane in 11d, whose worldvolume theory is the 6d $(2,0)$ superconformal theory with a self-dual 2-form \cite{Witten:1995zh}.
+The $\mathcal N = 4$ SYM on the D3, and hence the \SLZ{} duality is understood as the result of reducing the 6d $(2,0)$ theory on $T^2$ \cite{Witten:2007ct}. 
+The unsatisfactory aspect of this story is again that a 9d detour is required.
+The same logic applies to a hypothetical 3-brane in 12d: the pullback of the 12d metric carries the torus modulus $\tau$ into its worldvolume action, so \SLZ{} again acts as a worldvolume transformation.
 
-Suppose there exists a certain 5-brane in 12d, which has its own worldvolume gauge theory.
-Wrapping such a 5-brane on $T^2$ parametrised by $\tau$ would give a 3-brane in 10d.
-The worldvolume gauge theory of the resultant 3-brane would be related to the modulus $\tau$ of the torus, and \SLZ{} transformations on such $\tau$ would result in duality transformations on the worldvolume gauge theory, as we have seen in the D3 case.
-The same logic applies to a hypothetical 3-brane in 12d, since the pullback of the 12d metric would enter its worldvolume action, and the \SLZ{} transformations on the torus modulus $\tau$ would then induce a duality transformation on its worldvolume as well.
-
-Whether such a torus is really present remains an open question, and a closer look at the D3's degrees of freedom shows why it is not straightforward.
-A naive count of degrees of freedom is encouraging: a 3-brane in 12d has eight transverse directions, and the D3 worldvolume theory carries exactly eight bosonic degrees of freedom, six from its scalars and two from the vector field.
-However, the two vector degrees of freedom are difficult to interpret as embedding coordinates.
+Whether such a connection exists in 12d remains an open question, and a closer look at the D3's degrees of freedom shows why it is not straightforward.
+A naive count of degrees of freedom is encouraging: a 3-brane in 12d has eight transverse directions, and the D3 worldvolume theory carries eight bosonic degrees of freedom, six from its scalars and two from the vector field.
+But the two vector degrees of freedom cannot be directly interpreted as transverse coordinates.
 One can wrap the D3 on a circle so that its worldvolume vector decomposes into two scalars \cite{Jatkar:1996np,Kar:1997cx}, but this simply reproduces the standard relation between M-theory on $T^2$ and 9d supergravity \cite{Green:1997as}.
 
 

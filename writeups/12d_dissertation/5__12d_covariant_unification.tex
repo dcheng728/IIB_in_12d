@@ -1,19 +1,19 @@
 \section{Does the Story Continue? A Covariant Unification in 12d}
 \label{sec:covariant-unification}
 
-In the previous section we saw that the D(-1) and D7 solutions admit an uplift to 12d, and that their Killing spinor equations are reproduced by reducing a 12d covariantly-constant spinor condition on a torus, were such a 12d theory to exist.
-It is natural to ask whether other brane-like solutions in the type IIB theory have an analogous 12d uplift.
+In the previous section we saw that the D(-1) and D7 solutions lift to 12d, and that, if a 12d theory existed, reducing its covariantly constant spinor condition on a torus would reproduce the type IIB Killing spinor equations.
+It is natural to ask whether other brane-like solutions of type IIB lift in the same way.
 
 
 \subsection{Brane-like solutions}
 \label{sec:general brane solns}
-It has been shown \cite{Stelle:1998xg} that, working in the Einstein frame, with $F_n$ an n-form and the action
+Working in the Einstein frame, with $F_n$ an n-form and the action
 \begin{equation}
 S = \int d^Dx\sqrt{-g}\left[
     R - \frac{1}{2}(\partial\phi)^2 - \frac{1}{2}e^{\alpha\phi}|F_n|^2
 \right],
 \end{equation}
-the equations of motion, together with the Bianchi identity (assuming $F = dA$), are given by
+the equations of motion, together with the Bianchi identity (assuming $F = dA$), are given by \cite{Stelle:1998xg}
 \begin{equation}
 \begin{aligned}
 R_{MN}
@@ -79,12 +79,12 @@ On-shell bosonic degrees of freedom of the type IIB fields, given as (number of 
 }
 \label{tab:10d-12d-dof}
 \end{table}
-
-At the level of fields, then, a fully 12d uplift is not available: no configuration of a 12d graviton and 12d form fields reduces to the type IIB field content, and we should not expect type IIB to arise as the dimensional reduction of a genuine 12d (super)gravity realising the full 12d spacetime symmetries.
+As the table shows, the type IIB degrees of freedom do not fill out the SO(10) representations of the 12d fields. 
+Type IIB therefore cannot arise as the dimensional reduction of a genuine 12d (super)gravity that realises the full 12d spacetime symmetries.
 
 This does not, however, exhaust the 12d interpretation.
-Already in the axio-dilaton sector the embedding into the 12d metric was only partial (the two off-diagonal Kaluza-Klein 1-forms were set to zero, so the full 12d metric was never reconstructed), yet it still furnished a 12d perspective on the D(-1) and D7 branes, as discussed in the previous section.
-In the same spirit, in the following subsection we organise the type IIB fields into 12d objects \emph{without} realising the full 12d spacetime symmetries: not all degrees of freedom of the 12d gravity and form fields are excited, and the construction is best understood as a covariant repackaging of the 10d theory rather than the reduction of a true 12d one.
+Already in the axio-dilaton sector the embedding into the 12d metric was only partial: the two off-diagonal Kaluza-Klein 1-forms were set to zero, so the full 12d metric was never reconstructed. It nonetheless provided a 12d perspective on the D(-1) and D7 branes, as we saw in the previous section.
+In the same spirit, the following subsection organises the type IIB fields into 12d objects \emph{without} realising the full 12d spacetime symmetries: not all degrees of freedom of the 12d graviton and form fields are excited, so the construction is best understood as a covariant repackaging of the 10d theory rather than the reduction of a genuine 12d one.
 
 \subsection{A Covariant Unification in 12d}
 \label{sec:a-covariant-unification-in-12d}
@@ -186,6 +186,7 @@ The 10d Chern-Simons term can also be obtained using the 12d potentials and thei
 \mathrm{Vol}(T_2)\int_{\mathbb{R}^{1,9}}C_4\wedge H_3\wedge F_3.
 \end{equation}
 We note that reproducing the type IIB Chern-Simons term in 12d necessitates both the 4-form field strength $\widehat F_4$ and the 4-form potential $\widehat C_4$, whose field strength is the 5-form $\widehat F_5$.
+
 One can write down a ``12d''\footnote{
 Not dynamical 12d, but dynamical 10d times a 2-torus.
 }
@@ -203,18 +204,20 @@ S_{\text{``12''}}
 \label{12d action}
 \end{equation}
 The composite seven-form $\widetilde{\widehat{F}}_7$ does not arise from an independent degree of freedom: it is fixed by the self-duality relation \eqref{12d interpretation of 10d self-duality}, $\widetilde{\widehat{F}}_7 = -*_{12}\widetilde{\widehat{F}}_5$. 
-For the F1, D1, NS5, D5 and D3 backgrounds treated below, $C_2\wedge H_3$ and $B_2\wedge F_3$ vanish, so $\tilde F_5 = F_5$ and the relation reduces to $\widehat F_7 = -*_{12}d\widehat C_4$.
 The action \eqref{12d action} is exactly the Einstein frame type IIB action \eqref{eq:sl2r_invariant_einstein_frame_action}.
 The 2d integrand is just a repackaging of $1/\kappa^2$, and it is likely that $\widehat C_3, \widehat C_4$ do not furnish independent degrees of freedom, as has been discussed in \cite{Tseytlin:1996ne}.
 
 \subsection{Uplift of type IIB branes}
-We now present the 12d ``uplifts'' of the various type IIB brane solutions, using the effective 12d ``action''.
+Using the effective action \eqref{12d action}, we now uplift the type IIB brane solutions to 12d.\footnote{The brane solutions are listed in Appendix~\ref{sec:catalog-of-branes}.}
 
-Although one often thinks of F1 and NS5, D1 and D5 as EM dual pairs, their $H_3$ and $F_3$ configurations are not related by EM duality in 10d, and of course they have opposite dilaton profiles as well.\footnote{The brane solutions are listed in Appendix~\ref{sec:catalog-of-branes}.}
+We must note that these uplifts do not solve the full 12d Einstein equation.
+This is a manifestation of the fact that the equation obtained in 12d by varying the volume of the torus is not imposed in 10d, where it's not a dynamical field.
+We accordingly treat the uplifts as a 12d repackaging of the 10d backgrounds, rather than as genuine 12d solutions.
 
-To obtain the NS5 from F1 by EM duality, one actually has to perform an accompanying \SLZ{} transformation to invert the dilaton.
-A similar situation is encountered on the D3 brane worldvolume \cite{Tseytlin:1996it}.
-Using the unification proposed in the previous subsection, let us uplift the F1, D1, NS5, D5 branes to 12d.
+Although F1 and NS5, and D1 and D5, are often regarded as electromagnetic dual pairs, their $H_3$ and $F_3$ configurations are not related by electromagnetic duality alone in 10d: the two branes in each pair carry opposite dilaton profiles. 
+Obtaining the NS5 from the F1, for instance, requires an accompanying \SLZ{} transformation to invert the dilaton, as also occurs on the D3 worldvolume \cite{Tseytlin:1996it}.
+
+We now treat the F1, D1, NS5, and D5 branes in turn.
 
 \paragraph{F1}
 \begin{equation}
