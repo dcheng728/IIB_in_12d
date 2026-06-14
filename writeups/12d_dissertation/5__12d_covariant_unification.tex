@@ -60,7 +60,7 @@ e^\phi &= H^{-2\alpha/\Delta}.
 In 11d supergravity, type IIA, and type IIB, one finds $\Delta = 4$ for all branes.
 We provide a catalog of the various brane solutions in Appendix~\ref{sec:catalog-of-branes}.
 
-One can readily see that there do not exist nontrivial ways to embed the type IIB metric, scalars, and form fields into a 12d metric and form fields.
+One can readily see that there do not exist straightforward ways to embed the type IIB metric, scalars, and form fields into a 12d metric and form fields.
 At the level of supergravity, 12d fields transform under the little group SO(10) while the 10d fields transform under SO(8).
 In Table~\ref{tab:10d-12d-dof} we summarise the 10d massless on-shell degrees of freedom in type IIB, alongside the on-shell degrees of freedom of the corresponding 12d field of the same form rank.
 
@@ -70,8 +70,8 @@ In Table~\ref{tab:10d-12d-dof} we summarise the 10d massless on-shell degrees of
 \hline
  & metric & scalar & 1-form & 2-form & 3-form & 4-form & 5-form \\
 \hline
-Type IIB $SO(8)$ & $1\times 35$ & $2\times 1$ & $0\times 8$ & $2\times 28$ & $0\times 56$ & $1\times 35$ & $-$ \\
-12d $SO(10)$ & $54$ & $-$ & $10$ & $45$ & $120$ & $210$ & $126$ \\
+Type IIB $SO(8)$ & $1\times 35$ & $2\times 1$ & $0\times 8$ & $2\times 28$ & $0\times 56$ & $1\times 35$ (self-dual) & $-$ \\
+12d $SO(10)$ & $54$ & $1$ & $10$ & $45$ & $120$ & $210$ & $126$ (self-dual) \\
 \hline
 \end{tabular}
 \caption{
@@ -175,7 +175,8 @@ that exactly supplies the type IIB composite 5-form contribution upon contractio
 \end{equation}
 The additional utility of the composite seven-form is that it lets us write the genuine 10d self-duality condition on the composite five-form $\tilde F_5$ as a 12d Hodge duality condition
 \begin{equation}
-\widetilde{\widehat{F}}_7 = -*_{12}\widetilde{\widehat{F}}_5\quad
+\widetilde{\widehat{F}}_7 = -*_{12}\tilde F_5
+\quad
 \Leftrightarrow\quad
 \tilde F_5 = *_{10}\tilde F_5.
 \label{12d interpretation of 10d self-duality}
@@ -203,21 +204,15 @@ S_{\text{``12''}}
 \end{aligned}
 \label{12d action}
 \end{equation}
-The composite seven-form $\widetilde{\widehat{F}}_7$ does not arise from an independent degree of freedom: it is fixed by the self-duality relation \eqref{12d interpretation of 10d self-duality}, $\widetilde{\widehat{F}}_7 = -*_{12}\widetilde{\widehat{F}}_5$. 
+The composite seven-form $\widetilde{\widehat{F}}_7$ does not arise from an independent degree of freedom: it is fixed by the self-duality relation \eqref{12d interpretation of 10d self-duality}, $\widetilde{\widehat{F}}_7 = -*_{12}\tilde F_5$. 
 The action \eqref{12d action} is exactly the Einstein frame type IIB action \eqref{eq:sl2r_invariant_einstein_frame_action}.
 The 2d integrand is just a repackaging of $1/\kappa^2$, and it is likely that $\widehat C_3, \widehat C_4$ do not furnish independent degrees of freedom, as has been discussed in \cite{Tseytlin:1996ne}.
 
 \subsection{Uplift of type IIB branes}
 Using the effective action \eqref{12d action}, we now uplift the type IIB brane solutions to 12d.\footnote{The brane solutions are listed in Appendix~\ref{sec:catalog-of-branes}.}
-
 We must note that these uplifts do not solve the full 12d Einstein equation.
-This is a manifestation of the fact that the equation obtained in 12d by varying the volume of the torus is not imposed in 10d, where it's not a dynamical field.
+This is a manifestation of the fact that the equation of motion obtained in 12d by varying the volume of the torus is not imposed in 10d, where it's not a dynamical field.
 We accordingly treat the uplifts as a 12d repackaging of the 10d backgrounds, rather than as genuine 12d solutions.
-
-Although F1 and NS5, and D1 and D5, are often regarded as electromagnetic dual pairs, their $H_3$ and $F_3$ configurations are not related by electromagnetic duality alone in 10d: the two branes in each pair carry opposite dilaton profiles. 
-Obtaining the NS5 from the F1, for instance, requires an accompanying \SLZ{} transformation to invert the dilaton, as also occurs on the D3 worldvolume \cite{Tseytlin:1996it}.
-
-We now treat the F1, D1, NS5, and D5 branes in turn.
 
 \paragraph{F1}
 \begin{equation}
@@ -226,9 +221,9 @@ ds^2
 &= H^{-3/4}ds_{1,1}^2
 + H^{1/4}ds_8^2
 +H^{-1/2}dz_1^2
-+H^{1/2}dz_2^2\\
++H^{1/2}dz_2^2,\\
 (\widehat{F}_4)_{\mu_0 \mu_1 m z_1}
-&= \varepsilon_{\mu_0 \mu_1}\partial_m H^{-1}
+&= \varepsilon_{\mu_0 \mu_1}\partial_m H^{-1}.
 \end{aligned}
 \end{equation}
 
@@ -239,9 +234,9 @@ ds^2
 &= H^{-3/4}ds_{1,1}^2
 + H^{1/4}ds_8^2
 +H^{1/2}dz_1^2
-+H^{-1/2}dz_2^2\\
++H^{-1/2}dz_2^2,\\
 (\widehat{F}_4)_{\mu_0 \mu_1 m z_2}
-&= \varepsilon_{\mu_0 \mu_1}\partial_m H^{-1}
+&= \varepsilon_{\mu_0 \mu_1}\partial_m H^{-1}.
 \end{aligned}
 \end{equation}
 
@@ -253,9 +248,9 @@ ds^2
 &= H^{-1/4}ds_{1,5}^2
 + H^{3/4}ds_4^2
 +H^{1/2}dz_1^2
-+H^{-1/2}dz_2^2\\
++H^{-1/2}dz_2^2,\\
 (\widehat{F}_4)_{m_1 m_2 m_3 z_1}
-&= \varepsilon_{m_1 m_2 m_3 m}\partial_m H
+&= \varepsilon_{m_1 m_2 m_3 m}\partial_m H.
 \end{aligned}
 \end{equation}
 
@@ -266,9 +261,9 @@ ds^2
 &= H^{-1/4}ds_{1,5}^2
 + H^{3/4}ds_4^2
 +H^{-1/2}dz_1^2
-+H^{1/2}dz_2^2\\
++H^{1/2}dz_2^2,\\
 (\widehat{F}_4)_{m_1 m_2 m_3 z_2}
-&= \varepsilon_{m_1 m_2 m_3 m}\partial_m H
+&= \varepsilon_{m_1 m_2 m_3 m}\partial_m H.
 \end{aligned}
 \end{equation}
 
@@ -277,9 +272,10 @@ ds^2
 Usually, in supergravity theories, the dilaton is related to the volume of the compact manifold.
 In type IIB, however, the compact torus has fixed volume: as the radius of one circle grows, the other shrinks.
 The natural place for the non-compact scalar dilaton to live is the radius of one of the circles $R_1 \sim e^{\Phi}$, while the radius of the other circle scales inversely, $R_2 \sim e^{-\Phi}$.
-In this way, type IIB backgrounds cannot have a 12d decompactifying limit, because taking the decompactifying limit of one circle immediately compactifies the other circle.
+This is apparent by examining the conformal factors on $dz_1^2$ and $dz_2^2$ in the 12d uplifts above.
+Following this logic, type IIB backgrounds cannot have a genuine 12d decompactifying limit, because taking the decompactifying limit of one circle immediately compactifies the other circle.
 The exception is the D(-1)-instanton uplift, where the pp-wave propagates inside a non-compact torus.
-The KK-monopole uplift of the D7-brane is not an exception because a 12d KK-monopole is localised on $S^1 \times \mathbb{R}^3$: there is indeed a compact circle in 12d.
+The KK-monopole uplift of the D7-brane is not an exception because a 12d KK-monopole is localised on $S^1 \times \mathbb{R}^3$: there is already a compact circle in 12d.
 
-While the two circle radii scale inversely to each other, one may consider the case where they are equal: $e^\Phi = e^{-\Phi} = 1$.
-This implies that the radii of both circles are finite, hence a compactification limit of the full torus.
+While the two circle radii scale inversely to each other, one may consider the special case where they are equal: $e^\Phi \propto e^{-\Phi}$.
+This implies that the radii of both circles are finite constants hence the 10d dilaton is not excited, as in the case of the D3 background.
