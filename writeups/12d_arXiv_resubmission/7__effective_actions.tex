@@ -1,0 +1,526 @@
+\section{Effective Actions and their 12d Consistencies}
+\label{sec:effective-actions}
+The type IIB supergravity \eqref{eq:sl2r_invariant_einstein_frame_action} is understood as the low-energy effective field theory of the type IIB string theory.
+Under higher-derivative and stringy corrections, the \SLR{} symmetry is believed to be broken to the discrete group \SLZ{} \cite{Schwarz:1995dk}.
+If the type IIB theory admits a 12d interpretation, that interpretation and its implications for effective actions must be consistent with the type IIB effective action and \SLZ{}.
+
+In this section, we discuss the current understanding of \SLZ{} as arising from higher-derivative corrections, and their 12d interpretations.
+We will begin by reviewing how one obtains higher-derivative corrections in supergravity from perturbative string theory, in particular how the \SLZ{} invariance arises non-perturbatively from the D(-1) backgrounds.
+We then discuss a potential parallel, between type IIA and type IIB, where the D0 and D(-1) backgrounds are effectively accounted for by loops of higher-dimensional KK modes.
+We conclude by discussing how certain higher-derivative corrections of the type IIB axio-dilaton sector can be written in a 12d covariant form, and the limitations of such an interpretation.
+
+\subsection{Recap: Perturbative String Theory and Higher-Derivative Supergravity}
+The perturbative expansion of string amplitudes is organised by two parameters. The Regge slope $\alpha' = l_s^2$ controls the derivative expansion, while the string coupling $g_s$ controls the worldsheet genus expansion.
+An $n$-point amplitude is a sum over genus-$g$ worldsheet path integrals
+\begin{equation}
+    \mathcal A_n(\alpha') = \sum_{g=0}^\infty g_s^{2g-2} \mathcal A_n^{(g)}(\alpha').
+\end{equation}
+The tree-level 4-point function in the type IIA and type IIB string theories is the Virasoro-Shapiro amplitude \cite{Green:2012oqa}. 
+For the symmetric traceless modes in the NSNS sector of the string, it takes, up to an irrelevant overall factor, the form \cite{Green:1999pv}
+\begin{equation}
+\begin{aligned}
+\mathcal A_4
+&=\frac{\alpha^{\prime 4}}{3\cdot 2^3 g_s^2}
+K
+\times\frac{64}{\alpha^{\prime 3}stu}
+\frac{\Gamma[1-\tfrac{\alpha'}{4}s]\Gamma[1-\tfrac{\alpha'}{4}t]\Gamma[1-\tfrac{\alpha'}{4}u]}{\Gamma[1+\tfrac{\alpha'}{4}s]\Gamma[1+\tfrac{\alpha'}{4}t]\Gamma[1+\tfrac{\alpha'}{4}u]},\\
+K &\equiv t_8^{m_1...m_8}t_8^{n_1...n_8}               
+\prod_{r=1}^4\zeta^{(r)}_{m_{2r}n_{2r}}k^{(r)}_{m_{2r-1}}k^{(r)}_{n_{2r-1}},
+\end{aligned}
+\end{equation}
+where $s,t,u$ are Mandelstam variables, and $\zeta^{(r)}_{mn}$ is the dimensionless polarisation of the symmetric traceless modes on a closed string.
+They may also be interpreted as polarisations of the spacetime graviton $\kappa h^{(r)}_{mn}$ in $G_{mn}=\eta_{mn} + \kappa h_{mn}$.
+The explicit form of $t_8 t_8$ can be found in \cite{Schwarz:1982jn,Policastro:2008hg,Liu:2025uqu}.
+Using the relation
+\begin{equation}
+\ln\Gamma(1-x)-\ln\Gamma(1+x) = 2\gamma x + 2\sum_{m\ge0}\frac{\zeta(2m+3)}{2m+3}x^{2m+3},
+\end{equation}
+we find the expansion
+\begin{equation}
+\mathcal{A}_4 = \frac{\alpha^{\prime 4}}{3\cdot 2^3 g_s^2}
+K
+\left[ \frac{64}{\alpha^{\prime 3}stu} + 2 \zeta(3)\right]
+ + O(\alpha^{\prime 5})
+\end{equation}
+evaluated in the string frame with $G_{mn} |_{\infty} = \eta_{mn}$.
+From the relation $G_{mn} = e^{\Phi/2}g_{mn}$, we see that the Einstein frame metric is not asymptotically flat: $g_{mn} |_{\infty} = g_s^{-1/2}\eta_{mn}$.
+To pass to the Einstein frame, we convert the implicit string frame contractions to those with the Einstein frame metric, which introduces factors of $g_s$.
+The net effect is the following Einstein frame expansion
+\begin{equation}
+\mathcal{A}_4 \bigg|_{g_{mn}} = 
+\frac{\alpha^{\prime 4}}{3\cdot 2^3 }
+K
+\times
+\left[ \frac{64}{\alpha^{\prime 3}stu} + 2 \zeta(3)g_s^{-3/2}\right]
+ + O(\alpha^{\prime 5}),
+\label{eq:4-pt-virasoro-shapiro}
+\end{equation}
+where $\zeta_{mn}^{(r)}$ inside $K$ is now the polarisation of the Einstein frame graviton, and all contractions are performed with the asymptotic Einstein frame metric $g_s^{-1/2}\eta_{mn}$.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+    line cap=round,
+    vrtx/.style={circle, fill=black, inner sep=1.3pt},
+    leg/.style={thick},
+    prop/.style={thick},
+    op/.style={font=\large}
+  ]
+  % ---- s-channel ----
+  \begin{scope}[xshift=0cm]
+    \coordinate (sL) at (-0.4,0);
+    \coordinate (sR) at (0.4,0);
+    \draw[leg] (-1.1,0.7) -- (sL);
+    \draw[leg] (-1.1,-0.7) -- (sL);
+    \draw[prop] (sL) -- (sR);
+    \draw[leg] (sR) -- (1.1,0.7);
+    \draw[leg] (sR) -- (1.1,-0.7);
+    \node[vrtx] at (sL) {};
+    \node[vrtx] at (sR) {};
+  \end{scope}
+  \node[op] at (1.9,0) {$+$};
+  % ---- t-channel ----
+  \begin{scope}[xshift=3.8cm]
+    \coordinate (tT) at (0,0.5);
+    \coordinate (tB) at (0,-0.5);
+    \draw[leg] (-1.1,0.7) -- (tT) -- (1.1,0.7);
+    \draw[leg] (-1.1,-0.7) -- (tB) -- (1.1,-0.7);
+    \draw[prop] (tT) -- (tB);
+    \node[vrtx] at (tT) {};
+    \node[vrtx] at (tB) {};
+  \end{scope}
+  \node[op] at (5.7,0) {$+$};
+  % ---- u-channel ----
+  \begin{scope}[xshift=7.6cm]
+    \coordinate (uT) at (0,0.5);
+    \coordinate (uB) at (0,-0.5);
+    \draw[leg] (-1.1,0.7) -- (uT);
+    \draw[leg] (-1.1,-0.7) -- (uB);
+    \draw[prop] (uT) -- (uB);
+    \draw[leg] (uT) -- (1.1,-0.7);
+    \draw[leg] (uB) -- (1.1,0.7);
+    \node[vrtx] at (uT) {};
+    \node[vrtx] at (uB) {};
+  \end{scope}
+  \node[op, anchor=west] at (9.0,0) {$\sim \dfrac{1}{stu}$};
+\end{tikzpicture}
+\caption{The three graviton-exchange channels ($s$, $t$, and $u$, from left to right) that generate the nonlocal $1/stu$ pole of the four-graviton amplitude $\mathcal{A}_4$. Each arises from massless graviton exchange through the cubic vertices of the Einstein-Hilbert action.}
+\label{fig:stu-channels}
+\end{figure}
+
+The polynomial $K$ is analytic in the momenta and arises from the expansion of $\frac{t_8 t_8 R^4}{16}$.
+The nonlocal poles at $s, t, u = 0$ correspond to massless graviton exchange and reproduce the $s,t,u$-channel structure generated by the cubic graviton vertices of the Einstein-Hilbert action (Figure~\ref{fig:stu-channels}). The nonlocal $1/stu$ piece is therefore attributed to tree-level supergravity dynamics.
+Indeed, it is accompanied by a single factor of $\alpha'$, which reflects its origin in two-derivative supergravity.
+
+The next contribution in \eqref{eq:4-pt-virasoro-shapiro} appears at $O(\alpha^{\prime 4})$, which reveals an 8-derivative spacetime origin.
+Its nonlinear completion is captured by $t_8t_8 R^4$:
+\begin{equation}
+\frac{\alpha^{\prime 4}}{3 \cdot 2^3} K 2 \zeta(3) g_s^{-3/2}
+\to
+\frac{\alpha^{\prime 4}}{3 \cdot 2^7} t_8t_8 R^4 (2 \zeta(3) g_s^{-3/2}) + O(\alpha^{\prime 5}).
+\end{equation}
+
+The leading correction in $g_s$ comes from genus-1 amplitudes \cite{Green:1999pv}, which are common to both type IIA and IIB theories and again carry the $t_8 t_8 R^4$ factor. 
+Combining the genus-0 and genus-1 amplitudes and promoting $g_s$ to $\frac{1}{\tau_2}$, we obtain the local effective action
+\begin{equation}
+\mathcal{A}_4 = -4\pi^7 (t_8 t_8 R^4)\alpha^{\prime 4}
+\left[
+2 \zeta(3)\tau_2^{3/2}
++\frac{2\pi^2}{3}\tau_2^{-1/2}
+\right]
++O(\alpha^{\prime 5}).
+\label{eq:genus-0-genus-1-R4}
+\end{equation}
+Non-renormalisation theorem suggest that the perturbative corrections to $R^4$ terminate here at one loop \cite{Green:1997tv,Kehagias:1997cq}.
+
+Non-perturbatively, the type IIB string path integral also requires summing over the D(-1) backgrounds \eqref{D-1 background}.
+The singly and multiply charged D(-1) backgrounds give rise to non-perturbative $R^4$ corrections \cite{Green:1997tv,Kehagias:1997cq} of the form
+\begin{equation}
+\mathcal A_{D(-1)}\propto \alpha^{\prime 4}t_8t_8R^4\sum_{m,n\ge1}\left(\frac{m}{n^3}\right)^{1/2}
+(e^{2\pi i mn\tau}+e^{-2\pi i mn\bar{\tau}})
+\left(
+1+\sum_{k=1}^\infty(4\pi mn\tau_2)^{-k}\frac{\Gamma[k-1/2]}{\Gamma[-k-1/2]k!}
+\right).
+\end{equation}
+When combined with the genus-0 and genus-1 perturbative contributions, these D(-1) terms assemble into the modular-invariant, non-holomorphic Eisenstein series
+\begin{equation}
+\begin{aligned}
+f_0(\tau,\bar\tau)
+&=\sum_{(m,n)\neq(0,0)}\frac{\tau_2^{3/2}}{|m+n\tau|^3}\\
+&=2\zeta(3)\tau_2^{3/2}+\frac{2\pi^2}{3}\tau_2^{-1/2}\\
+&\quad+4\pi^{3/2}\sum_{m,n\ge1}\left(\frac{m}{n^3}\right)^{1/2}
+(e^{2\pi i mn\tau}+e^{-2\pi i mn\bar{\tau}})
+\left(
+1+\sum_{k=1}^\infty(4\pi mn\tau_2)^{-k}\frac{\Gamma[k-1/2]}{\Gamma[-k-1/2]k!}
+\right),
+\end{aligned}
+\label{eq:f0-eisenstein}
+\end{equation}
+thereby restoring the \SLZ{} duality symmetry, after the 2-derivative \SLR{} had been explicitly broken in \eqref{eq:genus-0-genus-1-R4}.
+This is the weight-$\tfrac32$ non-holomorphic Eisenstein series $f_0 = E_{3/2}$. 
+\footnote{We follow the convention that the $s$-th Eisenstein series is given by 
+\begin{equation}
+E_s(\tau,\bar\tau) \equiv \sum_{(m,n)\neq(0,0)} \frac{\tau_2^{s}}{|m+n\tau|^{2s}}.
+\end{equation}}
+Since type IIA has no D(-1) backgrounds, the restoration of \SLZ{} is unique to the type IIB theory.
+
+\subsection{KK-modes and D-brane Backgrounds}
+We saw above how summing over the D(-1) backgrounds completes the perturbative $R^4$ corrections into the Eisenstein series $f_0(\tau,\bar\tau)$, thereby restoring \SLZ{}.
+Before turning to the 12d repackaging of the effective action, we note a closely related point: the supergravity KK-modes on a torus reproduce the effect of the D0 and D(-1) backgrounds in string path integrals.
+
+We work in 12d with coordinates $(x^\mu,y^1,y^2)$ and compactify $y^1,y^2$ on a torus through the identifications
+\begin{equation}
+y^1\to y^1+2\pi R_T,\quad
+(y^1,y^2)\to (y^1+2\pi R_T\tau_1,y^2+2\pi R_T\tau_2)
+\end{equation}
+where $R_T$ is an overall radius parameter setting the scale of the torus. A 12d scalar can then be Fourier expanded on $T^2$ as
+\begin{equation}
+\chi(x^\mu,y^1,y^2)
+=\sum_{m,n}\chi_{m,n}(x^\mu) \times\exp
+\left[
+\frac{i}{R_T\tau_2}\left(m\tau_2y^1 + (n-m\tau_1)y^2\right)
+\right].
+\end{equation}
+The massive modes are
+\begin{equation}
+[-\nabla^2_{10}-\nabla^2_2]\chi_{p,m,n}
+=\left(p_{10}^2+M_{m,n}^2\right)\chi_{p,m,n},\quad
+M^2_{m,n}
+= \frac{m^2}{R_T^2}+\frac{(n-m\tau_1)^2}{R_T^2\tau_2^2}
+=\frac{|n-m\tau|^2}{R_T^2\tau_2^2}.
+\end{equation}
+For 4-point amplitudes in 10d, we evaluate the contributions from loops of the infinite tower of massive KK-modes using the Schwinger proper-time representation
+\cite{Green:1997as,Beccaria:2023hhi}
+\begin{equation}
+\mathcal{A}_4
+\propto \sum_{n,m}\int_{\Lambda^{-2}}^\infty
+\frac{d\lambda}{\lambda^{3/2}}
+e^{-\lambda \frac{|n-m\tau|^2}{R_T^2\tau_2^2}}
+P(s,t;\lambda),\quad
+P(s,t;\lambda) = \int_{\Delta} d^3\rho  e^{-\lambda M(s,t;\rho)}
+\label{4-point Schwinger parameter}
+\end{equation}
+where the Mandelstam variables $s,t,u$ are defined as usual, the Feynman parameters $\rho_i$ are integrated over the simplex $\Delta \equiv \{0\le\rho_1\le\rho_2\le\rho_3\le1\}$, and $M(s,t;\rho)$ is defined as
+\begin{equation}
+M(s,t;\rho)=s\rho_1\rho_2+t\rho_2\rho_3+u\rho_1\rho_3 + t(\rho_1-\rho_2).
+\end{equation}
+The local higher-derivative terms come from expanding \eqref{4-point Schwinger parameter} for small $s,t,u$.\footnote{The leading coefficient also follows from the shortcut of adding a spectator dimension to the known 11d-on-$T^2$ results \cite{Green:1997as}, but the direct route taken here keeps the dimension dependence explicit.}
+Expanding the Feynman-parameter integral, we find
+\begin{equation}
+P(s,t;\lambda)
+= \sum_{k=0}^\infty \frac{(-\lambda)^k}{k!}\int_{\Delta} d^3\rho  M(s,t;\rho)^k.
+\end{equation}
+Each power of $M$ carries two derivatives, so an order-$k$ term corresponds to a coupling of the form $D^{2k}R^4$.
+The $R^4$ coupling of interest is the leading ($k=0$) term, for which $M$ drops out and $P$ reduces to the volume of the simplex $\Delta$,
+\begin{equation}
+P(0,0;\lambda) = \int_\Delta d^3\rho = \frac{1}{6}.
+\end{equation}
+Substituting this in the amplitude \eqref{4-point Schwinger parameter} gives
+\begin{equation}
+\mathcal{A}_4
+\propto \sum_{(m,n)\neq(0,0)} \int_{\Lambda^{-2}}^\infty \frac{d\lambda}{\lambda^{3/2}}  e^{-\lambda M_{m,n}^2}.
+\end{equation}
+The massless mode $(m,n)=(0,0)$ is dropped, as it is infrared divergent.
+The proper-time integral has an ultraviolet divergence at $\lambda\to0$, regulated by the cutoff $\Lambda$. 
+Being local, it is absorbed into an $R^4$ counterterm.
+Its renormalised finite part is fixed by the analytic continuation of $\int_0^\infty d\lambda \lambda^{s-1}e^{-\lambda M^2}=\Gamma(s)(M^2)^{-s}$.
+We thus have
+\begin{equation}
+\mathcal{A}_4
+\propto \frac{1}{R_T \sqrt{\tau_2}}\Gamma[-\tfrac{1}{2}] E_{-1/2}(\tau,\bar\tau),
+\end{equation}
+where we have substituted $M_{m,n}^2 = |n-m\tau|^2/(R_T^2\tau_2^2)$ and recognised the sum over $(m,n)\neq(0,0)$ as the Eisenstein series $E_{-1/2}(\tau,\bar\tau)$.
+Using the functional relation
+\begin{equation}
+\pi^{-s}\Gamma(s)\zeta(2s)E_s(\tau,\bar\tau)=\pi^{-(1-s)}\Gamma(1-s)\zeta(2-2s)E_{1-s}(\tau,\bar\tau),
+\end{equation}
+we arrive at
+\begin{equation}
+\mathcal{A}_4 \propto R_T^{-1}\tau_2^{-1/2} f_0(\tau,\bar\tau).
+\label{eq:KK-R4-coefficient}
+\end{equation}
+The prefactor $R_T^{-1}\tau_2^{-1/2}$ is itself modular invariant as $R_T$ transforms under \SLZ{}.
+The $\tau$-dependence is carried by the modular-invariant Eisenstein series $f_0$ of \eqref{eq:f0-eisenstein}: a single KK-loop sum reproduces the series otherwise obtained by summing over the D(-1) backgrounds.
+The KK tower on the torus therefore acts as a surrogate for the D(-1) background, in parallel with 10d type IIA supergravity, where the KK modes on $S^1$ produce the D0 background \cite{Green:1997as}.
+
+We do not wish to overclaim.
+The KK-loop reproduction of $f_0$ probes the established eleven-to-nine-dimensional relation \cite{Green:1997as}: it is compatible with a 12d-to-10d reading but does not establish one, since the $R^4$ coupling is not an intrinsically 10d quantity.
+A genuinely 10d diagnostic requires an amplitude sensitive to all ten momenta, such as $\epsilon_{10}\epsilon_{10}R^4$, which first appears at five points.
+One may attempt to evaluate KK-loop contributions to 5-point amplitudes using the 5-point Schwinger proper-time formula analogous to \eqref{4-point Schwinger parameter}, given in \cite{Minasian:2015bxa,Green:1999by,Liu:2022bfg}.
+
+\subsection{12d Effective Corrections}
+We now turn to the 12d interpretation of the type IIB higher-derivative corrections.
+We begin by reviewing the known 12d interpretations of the type IIB effective action, using a ``bottom-up'' approach.
+The type IIB supergravity in the axio-dilaton sector can be written as
+\begin{equation}
+2\kappa^2 S_{IIB,\tau}
+= \int d^{10}x \sqrt{-g} \left(R - 2 P_m \overline{P}^m\right),
+\label{eq:IIB-two-derivative}
+\end{equation}
+where $P_m \equiv \frac{i\nabla_m \tau}{2\tau_2}$.
+
+We have previously discussed that for the D7 brane and the D(-1) instanton backgrounds, the axio-dilaton profile $\tau$ can be geometrised as the complex structure of a torus on which 12d gravity is compactified.
+This proposal can be understood by noting that the 10d axio-dilaton action can be obtained from a certain 12d action on a specific metric ansatz, where the 12d metric is given by
+\begin{equation}
+\widehat{g}_{MN}=\begin{pmatrix}
+g_{mn} & 0 \\
+0 &\widehat{g}_{ab}
+\end{pmatrix},\quad
+\widehat{g}_{ab}
+=\frac{1}{\tau_2}\begin{pmatrix}
+1& \tau_1\\
+\tau_1 & \tau_1^2+\tau_2^2
+\end{pmatrix}.
+\label{eq:F-theory-ansatze}
+\end{equation}
+One may adopt complex tangent frame coordinates $z, \overline{z}$, with vielbein $e_{\alpha}{}^a = \frac{1}{2\sqrt{\tau_2}}\begin{pmatrix}
+    -\tau & 1 \\ -\overline{\tau} & 1
+\end{pmatrix}$. 
+The 12d metric in complex coordinates is then
+$\widehat{g}_{zz} = \widehat{g}_{\overline{z}\overline{z}} = 0$, $\widehat{g}_{z\overline{z}} = 1/2$.
+The nonvanishing components of the 12d Riemann tensor are (see also \cite{Liu:2025uqu})
+\begin{equation}
+\begin{gathered}
+\widehat{R}_{mrns} = R_{mrns},\quad
+\widehat{R}_{z\overline{z}z\overline{z}} = -\frac14 |P|^2,\quad
+\widehat{R}_{mnz\overline{z}} = P_{[m}\overline{P}_{n]},\\
+\widehat{R}_{mzn\overline{z}} = - \frac{P_m \overline{P}_n}{2},\quad
+\widehat{R}_{mznz} = \frac{\nabla_m P_n}{2}.
+\end{gathered}
+\label{eq:12d-Riemann-complex}
+\end{equation}
+Substituting $P_m\overline{P}_n$ in \eqref{eq:IIB-two-derivative} with $\widehat{R}_{mzn\overline{z}}$, we find
+\begin{equation}
+\sqrt{-g}[R - 2 P_m \overline{P}^m]
+=\sqrt{-\widehat{g}}[R + \widehat{R}^{mz}{}_{mz} + \widehat{R}^{m\overline{z}}{}_{m\overline{z}}]
+=\sqrt{-\widehat{g}} \widehat{R},
+\label{eq:2-derivative-index-splitting}
+\end{equation}
+which suggests that the F-theory ansatz \eqref{eq:F-theory-ansatze} relates the 10d axio-dilaton action to a 12d Einstein-Hilbert term.
+Hence we may map solutions of 12d Einstein gravity, such as the pp-wave and the KK-monopole solutions, to type IIB geometries with nontrivial axio-dilaton profile.
+This was discussed in section~\ref{sec:axio-dilaton-12d}.
+
+It is natural to ask whether type IIB higher-derivative corrections (e.g. at 8-derivatives) can also be understood from a 12d perspective.
+The answer does not appear to be a clear-cut yes or no, and the goal of the rest of this section is to clarify the current understanding.
+
+\subsubsection{Type IIB at 4 points}
+
+The 4-point 8-derivative effective action can be written \cite{Liu:2025uqu,Minasian:2015bxa,Policastro:2008hg} as
+\begin{equation}
+\begin{aligned}
+\frac{L_{\text{4pt}}}{\beta  f_{0}(\tau,\overline{\tau})}
+&= t_{8}t_{8} \biggl[R^4+6R^{2}\left(4|\delta\nabla P|^{2}+|\nabla G_{3}|^{2}\right)+24|\delta \nabla P|^{2}|\nabla G_{3}|^{2}\\
+&+12R\left(\delta \nabla P(\nabla\overline{G}_{3})^{2}+\delta \nabla \overline{P}(\nabla{G}_{3})^{2}\right)\biggr]\\
+&+1536 |\nabla_m P_n \nabla^m P^n|^2\\
+&+O_{2}\left((|\nabla G_{3}|^{2})^{2}\right)
+\label{eq:PTaction}
+\end{aligned}
+\end{equation}
+where $\beta = \frac{\alpha^{\prime 3}}{3 \cdot 2^{12}}$ and $(\delta \nabla P)_{mrns} \equiv g_{[m[n} \nabla_{r]} P_{s]}$ is defined to have the same symmetries as the Riemann tensor, up to $\delta$-functions located at the sources of $\tau$.
+We make an observation that the 3-form sector of \eqref{eq:PTaction} admits a factorisation that is compatible with a 12d interpretation, but further investigations are out of the scope of this thesis.%
+\footnote{
+\label{footnote:3-form-factorisation}
+The 3-form sector of \eqref{eq:PTaction} admits the factorisation
+\begin{equation}
+L_{\text{3-form}}
+\propto
+t_8t_8
+6 |R \nabla G_3 + 2 \delta \nabla P \nabla \bar{G}_3|^2
++O_{2}\left((|\nabla G_{3}|^{2})^{2}\right).
+\end{equation}
+In the 12d perspective, $\delta \nabla P$ consists of linear combinations of the 12d Riemann tensor $\widehat{R}$, so schematically this factor is of the form $|\widehat{R} \widehat{F}_4|^2$ where $\widehat{F}_4$ is the 12d uplift of the 10d 3-form field strength $H_3, F_3$.
+}
+
+Restricting to the gravity + scalar sector of \eqref{eq:PTaction}, we have
+\begin{equation}
+\frac{L_{\text{4pt},\tau}}{\beta f_0(\tau,\overline{\tau})} = t_8t_8
+(R^4 + 24 R^2 |\delta \nabla P|^2) + 1536 (\nabla_m P_n \nabla^m P^n)(\nabla_r \overline{P}_s \nabla^r \overline{P}^s).
+\label{eq:4pt-gravity-axiodilaton}
+\end{equation}
+In the 12d perspective $\tau$ is embedded in the metric.
+If certain axio-dilaton couplings in the 10d effective action admit a 12d interpretation, one should be able to rewrite such terms using 12d-covariant differential operators acting on the metric, i.e. the 12d Riemann tensor \eqref{eq:12d-Riemann-complex}. 
+Once we have replaced the 10d fields and their derivatives with their 12d counterparts, we may reexamine the resulting expression, and see if the terms group into a natural pattern as a result of index splitting.
+We carried out this exercise at the two-derivative level in \eqref{eq:2-derivative-index-splitting}. We now perform the same exercise at the 8-derivative level on \eqref{eq:4pt-gravity-axiodilaton}, as a ``bottom-up'' rederivation of the results of \cite{Minasian:2015bxa}.
+
+Let us begin by expanding the $t_8t_8$ contractions.
+The $t_8t_8$ contraction with tensors of symmetries of the Riemann tensor is known \cite{Policastro:2008hg} to be 
+\begin{equation}
+\begin{aligned}
+\frac{t_8t_8 R^4}{3 \cdot 2^7}
+&=  R_{pnqm} R^{prqs} R^{mt}{}_{ru} R^{nu}{}_{st} + \frac{1}{2}R_{mpnq} R^{qrps} R_{tsur} R^{untm} \\
+& - \frac{1}{2}R_{mnrs} R^{rsnp} R_{pquv} R^{qmuv} - \frac{1}{4} R_{mnrs} R^{rs}{}_{pq} R^{qmuv} R^{np}{}_{uv}\\
+& + \frac{1}{16} R_{mnrs} R^{mnpq} R_{pquv} R^{uvrs} + \frac{1}{32}(R_{mnrs} R^{mnrs})^2.
+\end{aligned}
+\label{eq:t8t8R4}
+\end{equation}
+Expanding the $t_8 t_8 R^2 |\delta \nabla P|^2$ sector, we find\footnote{
+The computation is done with Cadabra, which agrees with the results of \cite{Minasian:2015bxa}. We have taken $f_0(\tau,\overline{\tau})$ to be $2\zeta(3) \tau_2^{3/2}$.
+}
+\begin{equation}
+\begin{aligned}
+\frac{1}{3 \cdot 2^{8}\zeta(3) \tau_2^{3/2}}\frac{L_{\text{4pt},\tau}}{\beta}
+&=  \frac{t_8 t_8 R^4}{3 \cdot 2^7}
++ 4 \nabla_n P_m \nabla^r \overline{P}^s R^{mt}{}_{ru} R^{nu}{}_{st} \\
+&+ 4 \nabla_m P_n \nabla^r \overline{P}^s R_{tsur} R^{untm}
++ 4 |\nabla_m P_n \nabla^m P^n|^2 \\
+&- 4 \nabla_m P_n \nabla^n \overline{P}^r R_{rsuv} R^{smuv}
++ \frac{1}{2} \nabla_{m} P_{n} \nabla^{m}\overline{P}^{n}R^{rstu}R_{rstu} + O(R^2 P^3).
+\end{aligned}
+\end{equation}
+The next step is to replace the 10d terms with their 12d counterparts. The only 10d terms that remain are $\nabla P$.
+We note that, because the only 12d Riemann tensor linear in $P$ is $R_{mznz}$ and its conjugate, we have
+\begin{equation}
+\widehat{R}_{ambn} \widehat{R}^{a}{}_{r}{}^{b}{}_{s} = 2 \operatorname{Re}\left(\nabla_m P_n \nabla_r \overline{P}_s\right) + O(P^3).
+\end{equation}
+We will use $m, n, r, s, ...$ for 10d spacetime indices and $a, b, c, d, ...$ for 2d torus indices.
+Substituting this as well as $t_8 t_8 R^4$ into \eqref{eq:4pt-gravity-axiodilaton}, we find
+\begin{equation}
+\begin{aligned}
+\frac{1}{3 \cdot 2^{8}\zeta(3) \tau_2^{3/2}}\frac{L_{\text{4pt},\tau}}{\beta}
+&=
+R_{pnqm} R^{prqs} R^{mt}{}_{ru} R^{nu}{}_{st}
++ 2 \widehat{R}_{anbm} \widehat{R}^{arbs} R^{mt}{}_{ru} R^{nu}{}_{st}\\
+& + \frac{1}{2}\Big[ R_{mpnq} R^{qrps} R_{tsur} R^{untm}
++ 4 \widehat{R}_{ambn} \widehat{R}^{bras} R_{tsur} R^{untm}\\
+&\qquad + 2 \widehat{R}_{ambn} \widehat{R}^{bras} \widehat{R}_{csdr} \widehat{R}^{dncm}\Big]\\
+& - \frac{1}{2}\left[ R_{mnrs} R^{rsnp} R_{pquv} R^{qmuv}
+ + 4 \widehat{R}_{mban} \widehat{R}^{anbp} R_{pquv} R^{qmuv} \right]\\
+& - \frac{1}{4} R_{mnrs} R^{rs}{}_{pq} R^{qmuv} R^{np}{}_{uv}\\
+& + \frac{1}{16} R_{mnrs} R^{mnpq} R_{pquv} R^{uvrs}\\
+& + \frac{1}{32}(R_{rstu} R^{rstu})
+\left[R_{mnrs} R^{mnrs}+ 8 \widehat{R}_{ambn} \widehat{R}^{ambn}\right]+ O(\text{5-pt}).
+\end{aligned}
+\label{eq:4pt-gravity-axiodilaton-12d-replaced}
+\end{equation}
+
+In this expression we have grouped terms with the same index contraction structure together. 
+We again see contraction patterns that could reveal a 12d covariant structure.
+For example
+\begin{equation}
+\widehat{R}_{MNRS}\widehat{R}^{MNRS} = R_{mnrs} R^{mnrs} + 4 \widehat{R}_{ambn} \widehat{R}^{ambn} + O(P^3),
+\end{equation}
+the factor of 4 arises from the 4 ways to choose 2 torus legs in $\widehat{R}_{MNRS}$ that contribute to 4-pt amplitudes.
+Hence the last term in \eqref{eq:4pt-gravity-axiodilaton-12d-replaced} is compatible with arising from a 12d contraction 
+\begin{equation}
+\frac{1}{32} (\widehat{R}_{MNRS} \widehat{R}^{MNRS})^2 \in t_8 t_8 \widehat{R}^4.
+\end{equation}
+
+Upon further inspection, one finds that every term in \eqref{eq:4pt-gravity-axiodilaton-12d-replaced} descends from a single 12d contraction, displayed below with the 12d contraction on the left and its 10d expansion (the pure 10d quartic followed by the mixed-leg terms) on the right:
+\begin{equation}
+\begin{aligned}
+\widehat{R}_{PNQM} \widehat{R}^{PRQS} \widehat{R}^{MT}{}_{RU} \widehat{R}^{NU}{}_{ST}
+&= R_{pnqm} R^{prqs} R^{mt}{}_{ru} R^{nu}{}_{st}\\
+&\quad + 2 \widehat{R}_{anbm} \widehat{R}^{arbs} R^{mt}{}_{ru} R^{nu}{}_{st}+ \ldots\\
+\widehat{R}_{MPNQ} \widehat{R}^{QRPS} \widehat{R}_{TSUR} \widehat{R}^{UNTM}
+&= R_{mpnq} R^{qrps} R_{tsur} R^{untm}\\
+&\quad + 4 \widehat{R}_{ambn} \widehat{R}^{bras} R_{tsur} R^{untm}\\
+&\quad + 2 \widehat{R}_{ambn} \widehat{R}^{bras} \widehat{R}_{csdr} \widehat{R}^{dncm}+ \ldots\\
+\widehat{R}_{MNRS} \widehat{R}^{RSNP} \widehat{R}_{PQUV} \widehat{R}^{QMUV}
+&= R_{mnrs} R^{rsnp} R_{pquv} R^{qmuv}\\
+&\quad + 4 \widehat{R}_{mban} \widehat{R}^{anbp} R_{pquv} R^{qmuv}+ \ldots\\
+\widehat{R}_{MNRS} \widehat{R}^{RS}{}_{PQ} \widehat{R}^{QMUV} \widehat{R}^{NP}{}_{UV}
+&= R_{mnrs} R^{rs}{}_{pq} R^{qmuv} R^{np}{}_{uv}+ \ldots\\
+\widehat{R}_{MNRS} \widehat{R}^{MNPQ} \widehat{R}_{PQUV} \widehat{R}^{UVRS}
+&= R_{mnrs} R^{mnpq} R_{pquv} R^{uvrs}+ \ldots\\
+(\widehat{R}_{MNRS}\widehat{R}^{MNRS})^2
+&= (R_{rstu} R^{rstu})
+\left[R_{mnrs} R^{mnrs}+ 8 \widehat{R}_{ambn} \widehat{R}^{ambn}\right]+ \ldots
+\end{aligned}
+\end{equation}
+where the ellipses denote terms with more than 4 fields in 10d, or terms that vanish when summed with the coefficients in \eqref{eq:t8t8R4}.
+Thus, every term in \eqref{eq:4pt-gravity-axiodilaton-12d-replaced} has an origin from a 12d contraction $t_8 t_8 \widehat{R}^4$, upon substituting the specific F-theory ansatz \eqref{eq:F-theory-ansatze}.
+
+The relation above was first noted in \cite{Minasian:2015bxa} in a ``top-down'' fashion, by making an informed guess of a 12d effective action, then showing that the resulting 10d action matches the known gravity and axio-dilaton amplitudes.
+The ``bottom-up'' approach outlined here, despite requiring more exercises in index-relabelling and tensor identities, is perhaps more systematic, as it does not require one to make a 12d ansatz a priori, and the argument is purely based on covariance.
+If there were to exist a 12d covariant expression that reproduces any 10d effective action, then after substituting 12d objects for 10d ones, one must find that the terms group into a more natural pattern arising from splitting 12d indices.
+What would be a genuine obstruction to a 12d covariant interpretation is if certain terms cannot be written using covariant 12d objects at all.
+
+\subsubsection{Type IIB at 5 points: Obstruction to 12d Covariance?}
+\label{sec:5-pt-obstruction}
+
+Recently, the type IIB 5-point 8-derivative effective action has been computed \cite{Liu:2025uqu,Claasen:2026owa}.
+In the U(1)-preserving sector at 5 points, there exists a term, which realises \SLZ{}-invariance on its own, with the form (we drop all numerical factors)
+\begin{equation}
+L_{\text{5pt},\tau} \supset
+\operatorname{Re}\left(R^{mnsr} \nabla_m \overline{P}_s \nabla_n \overline{P}_r P_q P^q\right).
+\label{eq:12d-obstruction}
+\end{equation}
+Both $R^{mnsr}$ and $\nabla_m \overline{P}_s$ can be written as 12d covariant objects (see \eqref{eq:12d-Riemann-complex}).
+However, while we may write $P_q \overline{P}^q$ using $\widehat{R}_{z\overline{z}z\overline{z}}$, there is no 12d covariant object that can be substituted for $P_q P^q$.
+Building on the 5-point action of \cite{Liu:2025uqu}, we now study this term more carefully, and show that it constitutes a genuine obstruction to a 12d covariant interpretation of the type IIB effective action.
+
+We had previously worked with, from \eqref{eq:12d-Riemann-complex}, the 12d Riemann tensor components for the complex tangent frame coordinates $\widehat{g}_{zz} = \widehat{g}_{\overline{z}\overline{z}} = 0$, $\widehat{g}_{z\overline{z}} = 1/2$. 
+For the arguments we are about to make, we find it more convenient to work in real coordinates, where the torus metric is given by \eqref{eq:F-theory-ansatze}.
+In real coordinates, the components of the 12d Riemann tensor $\widehat{R}$ are linear combinations of the basis structures $\nabla_m \nabla_n \tau_1, \nabla_m \nabla_n \tau_2, \nabla_m \tau_1 \nabla_n \tau_2, \dots$.
+We list the components of $\widehat{R}_{ambn}$ in Table \ref{tab:12d-Riemann-components}.
+
+
+\begin{table}[ht]
+\centering
+{\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{ccccccc}
+\toprule
+$\widehat{R}_{ambn}$
+  & $\nabla_m\nabla_n\tau_1$
+  & $\nabla_m\nabla_n\tau_2$
+  & $\nabla_m\tau_1\nabla_n\tau_1$
+  & $\nabla_m\tau_2\nabla_n\tau_2$
+  & $\nabla_m\tau_1\nabla_n\tau_2$
+  & $\nabla_m\tau_2\nabla_n\tau_1$ \\
+\midrule
+$\widehat{R}_{1m1n}$ & $0$ & $\frac{1}{2\tau_2^2}$ & $\frac{1}{4\tau_2^3}$ & $-\frac{3}{4\tau_2^3}$ & $0$ & $0$ \\
+$\widehat{R}_{1m2n}$ & $-\frac{1}{2\tau_2}$ & $\frac{\tau_1}{2\tau_2^2}$ & $\frac{\tau_1}{4\tau_2^3}$ & $-\frac{3\tau_1}{4\tau_2^3}$ & $\frac{1}{4\tau_2^2}$ & $\frac{3}{4\tau_2^2}$ \\
+$\widehat{R}_{2m1n}$ & $-\frac{1}{2\tau_2}$ & $\frac{\tau_1}{2\tau_2^2}$ & $\frac{\tau_1}{4\tau_2^3}$ & $-\frac{3\tau_1}{4\tau_2^3}$ & $\frac{3}{4\tau_2^2}$ & $\frac{1}{4\tau_2^2}$ \\
+$\widehat{R}_{2m2n}$ & $-\frac{\tau_1}{\tau_2}$ & $\frac{\tau_1^2-\tau_2^2}{2\tau_2^2}$ & $\frac{\tau_1^2-3\tau_2^2}{4\tau_2^3}$ & $\frac{\tau_2^2-3\tau_1^2}{4\tau_2^3}$ & $\frac{\tau_1}{\tau_2^2}$ & $\frac{\tau_1}{\tau_2^2}$ \\
+\bottomrule
+\end{tabular}
+}
+\medskip
+\caption{Nonvanishing mixed components $\widehat{R}_{ambn}$ of the 12d Riemann tensor in real torus coordinates, with torus indices $a,b\in\{1,2\}$ and spacetime indices $m,n$.}%
+\label{tab:12d-Riemann-components}
+\end{table}
+
+As for the rest of the nonvanishing 12d Riemann tensor components, they are given by
+\begin{equation}
+\begin{aligned}
+\widehat{R}_{mnab} 
+&= 2\widehat{R}_{[a|m|b]n}\\
+\widehat{R}_{1212}
+&= -\frac{1}{2}g^{mn}g^{ab} \widehat{R}_{ambn}.
+\end{aligned}
+\end{equation}
+
+The factor $P_q P^q$ in \eqref{eq:12d-obstruction} is a scalar quadratic in the first derivatives of $\tau$, with no second derivatives. 
+A 12d-covariant expression for it must then be linear in the 12d Riemann tensor, since a product of two curvatures already carries four derivatives. 
+For the ansatz \eqref{eq:F-theory-ansatze}, every nonvanishing component of $\widehat{R}$ is either the pure 10d Riemann tensor or, by the identities above, reduces to the mixed components $\widehat{R}_{ambn}$ of Table~\ref{tab:12d-Riemann-components}. 
+The most general two-derivative scalar that depends on $\tau$ is therefore
+\begin{equation}
+S = c^{ab}  g^{mn} \widehat{R}_{ambn},
+\end{equation}
+where $c^{ab}(\tau)$ is an arbitrary symmetric tensor on the torus, built from $\widehat{g}^{ab}$. 
+Reading off the table, $S$ is a linear combination of $\nabla^2\tau_1$, $\nabla^2\tau_2$ and the products 
+$(\nabla\tau_1)^2$, $(\nabla\tau_2)^2$, $\nabla_m\tau_1\nabla^m\tau_2$, with $\tau$-dependent coefficients. 
+Since $P_q P^q$ contains products of first derivatives only, the values of $c^{ab}$ must be chosen so the $\nabla^2\tau_1$ and $\nabla^2\tau_2$ pieces of $S$ cancel. 
+This fixes $c^{ab}$ up to an overall factor, and the surviving combination is then forced to be
+\begin{equation}
+S \propto (\nabla\tau_1)^2 + (\nabla\tau_2)^2,
+\end{equation}
+with the two squares appearing with the \emph{same} sign and no cross term. 
+By contrast,
+\begin{equation}
+P_m P^m = -\frac{1}{4\tau_2^2}
+\left[
+    (\nabla\tau_1)^2 - (\nabla\tau_2)^2 + 2i \nabla^m \tau_1 \nabla_m \tau_2
+\right]
+\label{eq:PP-real}
+\end{equation}
+carries the two squares with \emph{opposite} sign together with a nonvanishing cross term. 
+No choice of $c^{ab}$ reproduces this structure, so $P_q P^q$, and with it the term \eqref{eq:12d-obstruction}, admits no 12d-covariant expression.
+
+The deviation from the $t_8 t_8 \widehat{R}^4$ prediction at five points in the U(1)-preserving sector was already observed in \cite{Liu:2025uqu}. The analysis above shows that the term \eqref{eq:12d-obstruction} evades any covariant 12d contraction, not only the $t_8 t_8 \widehat{R}^4$ form.
+It remains a possibility that higher-point amplitudes may contain additional terms that conspire with \eqref{eq:12d-obstruction} to support a 12d covariant uplift, e.g. by combining with \eqref{eq:12d-obstruction} to form a 12d covariant object.
+To investigate this possibility, one needs to compute the 8-pt axio-dilaton effective action.\footnote{A single 12d Riemann tensor $\widehat{R}$ upon \eqref{eq:F-theory-ansatze} may reduce to, schematically, $\nabla P$ or a product of $P \bar{P}$ in 10d.
+So a 12d structure of $\widehat{R}^4$ contributes to 4, 5, 6, 7 and 8-point amplitudes in 10d.}
+
