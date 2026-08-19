@@ -1,14 +1,17 @@
 \section{The Axio-Dilaton Sector and 12d Gravity}
 We now turn to the 12d structures suggested by brane solutions.
-From this point onward, our discussion of ``12d perspectives" will not assume the existence of any 12d supersymmetric theory.
+From this point onward, our discussion of ``12d perspectives" will not assume the existence of any 12d supersymmetric theory, of any signature.
 Rather, we see a possible effective description in 12d arising from brane solutions and effective actions.
 Remarkably, this higher-dimensional effective description is in parallel with what's known between the type IIA theory and M-theory.
 We start with the sector that provides the clearest indications of 12d interpretation: the axio-dilaton sector.
-One can truncate the type IIB action \eqref{eq:sl2r_invariant_einstein_frame_action} to the axio-dilaton sector
+
+One can truncate the type IIB action \eqref{SL(2, R) maniest IIB action} to the axio-dilaton action\footnote{
+For the discussion of field equations and their solutions it suffices to set $g_s=1$, which is what we will do in this section.
+}
 \begin{equation}
-2\kappa^2S=
+g_s^2S=
 \int d^{10}x\sqrt{-g}\left[
-R-\frac{1}{2}\frac{|\partial \tau|^2}{\tau_2^2}
+R-\frac{1}{2}\frac{1}{\tau_2^2}\partial_m\tau\partial^m\bar\tau
 \right].
 \label{IIB axio-dilaton action}
 \end{equation}
@@ -21,62 +24,93 @@ In the type IIB theory, the R-symmetry is local $SO(2)\cong U(1)$, and the Killi
 \delta\psi_\mu
 &=
 \left(
-\partial_\mu+\frac{1}{4}\omega_\mu{}^{ab}\gamma_{ab} -\frac{i}{2}\frac{\partial_m \tau_1}{2\tau_2}
+\partial_\mu+\frac{1}{4}\omega_\mu{}^{ab}\gamma_{ab} +\frac{i}{2}\frac{1}{2i}\frac{\partial_\mu(\tau+\bar\tau)}{(\tau-\bar\tau)}
 \right)\epsilon
 \equiv\left(\nabla_\mu+\frac{i}{2}Q_\mu\right)\epsilon.
 \end{aligned}
 % \tag{0612072 eq3.1}
 \label{9+1 IIB axio-dilaton Killing spinor equations}
 \end{equation}
-Here $Q_\mu$ is the non-dynamical U(1) connection built with $\tau$ (see [add eqref]). 
-The associated integrability condition is that the total holonomy built with the Levi-Civita connection and the U(1) connection vanishes:
+Here $Q_\mu$ is the non-dynamical U(1) connection built with $\tau$. Both equations are Levi-Civita and U(1)-covariant.
+The associated integrability condition is a statement of vanishing holonomy
 \begin{equation}
 \left[\frac{1}{4}R_{\mu\nu ab}\gamma^{ab}
 + \frac{i}{2}F_{\mu\nu}(Q)\right]
 \epsilon = 0,\quad
 F_{\mu\nu}(Q)=(\nabla_\mu Q_\nu-\nabla_\nu Q_\mu).
 \end{equation}
-This can be satisfied in two ways: either they cancel each other (as for the D7 brane) or both contributions vanish (as for the D(-1) instanton).
-We now present both solutions.
+In supersymmetric backgrounds, the vanishing of the total holonomy is achieved by the cancellation of the U(1) and the Levi-Civita holonomy. 
+There exist solutions in which neither contribution vanishes (as for the D7 brane) and solutions in which both vanish (as for the D(-1) brane).
+We anticipate backreactions for the former. 
 
-{\color{orange}
-Among the known BPS branes in the type IIA, IIB, and 11d theories \cite{Stelle:1998xg}, the D7 brane plays a special role: it is co-dimension 2, which means its harmonic function is logarithmic rather than exhibiting the power-law behavior $\sim \frac{1}{r^{\tilde{d}-2}}$, and thus is not asymptotically flat.
+The D7 ansatz is
+\begin{equation}
+ds^2 = -dt^2+d\vec{x}_7^2 + \Omega(y)(dy_1^2 +dy_2^2).
+\label{D7 ansatz}
+\end{equation}
+Substituting this into the action \eqref{IIB axio-dilaton action}, one finds the kinetic energy
+\begin{equation}
+T = 
+\int d^8x\int_{\mathbb{C}}dzd\bar{z}\left[-\frac{i}{2}\frac{1}{\tau_2^2}\right]\partial \tau \bar\partial \bar\tau
+=\text{Vol}(D7) \int_{\tau(\mathbb{C})}d\tau d\bar\tau\left[-\frac{i}{2}\frac{1}{\tau_2^2}\right],
+% \tag{GSVY eq 3.8}
+\label{D7 energy density}
+\end{equation}
+where we have defined $z,\bar z = y_1\pm iy_2$. 
+From \eqref{D7 energy density} we read off the energy density of D7 as the volume of the 2d moduli space that $\tau$ lives on, with volume form $-\tfrac{i}{2}\tfrac{1}{\tau_2^2}d\tau d\bar\tau$. 
+The natural choice for the moduli space is $\mathbb{H}/SL(2, Z)$\footnote{
+as the energy density needs to be SL(2, Z) invariant and finite}. 
+Upon integrating over $\mathbb{H}/SL(2, Z)$, one finds \cite{Greene:1989ya} $\mathcal E = \frac{\pi}{3}$.
+After accounting for Einstein and Euler-Lagrange equations of \eqref{IIB axio-dilaton action}, one finds the sourced D7 equation is \cite{Bergshoeff:2006jj,Greene:1989ya}
+\begin{equation}
+\partial\bar\partial \ln \Omega = \partial\bar\partial \ln\tau_2-\frac{\pi}{12}\sum_i\delta^2(z,z_i).
+\label{Sourced D7 equation}
+\end{equation}
 
-The general $N$ D7 brane solution can be written as \cite{Greene:1989ya,Gibbons:1995vg,Tseytlin:1996ne,Bergshoeff:2006jj}
+It is convenient to put the metric in a manifestly SL(2, R)-invariant form
 \begin{equation}
-ds_{D7}^2 = -dt^2 + d\vec{x}_7^2 + \text{Im} \tau dz d\bar z,
+\Omega = \Omega(\tau,\bar\tau,z,\bar z)=\tau_2 |\eta(\tau)|^4 |h(z)|^2,
 \end{equation}
-where $\tau = C^{(0)} + i e^{-\Phi}$ is the axio-dilaton, and takes the form
+where $\eta(\tau)$ is the holomorphic Dedekind function \cite{Greene:1989ya}. The source equation \eqref{Sourced D7 equation} becomes
 \begin{equation}
-j(\tau(z)) = \frac{P_N(z)}{P_{N-1}(z)},
+\partial\bar\partial \ln|h|^2 =-\frac{\pi}{12}\sum_i^N\delta^2(z,z_i).
 \end{equation}
-with $j(\tau)$ the holomorphic modular invariant function, and $P_N(z)$ a degree $N$ polynomial, the roots of which are the locations of the D7 branes.
-For the case of a single D7 brane localized at $z_i$, the axio-dilaton profile near $z_i$ is dictated by monodromies to be
+We thus find the general $N$ 7-brane metric
+\begin{equation}
+ds^2_{D7} = -dt^2+d\vec{x}_7^2+\tau_2|\eta(\tau)|^4\prod_i^N|z-z_i|^{-1/6} dzd\bar z.
+\end{equation}
+Performing a locally-defined holomorphic coordinate transformation $dw(z) = \eta^2(\tau)\prod_i (z-z_i)^{-1/12} dz$, we obtain
+\begin{equation}
+ds^2_{D7} = -dt^2 + d\vec{x}_7^2 + \tau_2 dwd\bar w.
+\label{D7 solution}
+\end{equation}
+The Euler-Lagrange equation of $\tau$ is solved by $\bar\partial\tau=0$. 
+The local behavior near a D7 localised at $z_i$ is dictated by monodromies to be
 \begin{equation}
 \tau \sim \frac{1}{2\pi i}\ln (z-z_i)+\text{const}
  = \frac{\text{Arg}(z-z_i)}{2\pi} -i\frac{\ln |z-z_i|}{2\pi}+\text{const}.
  \label{D7 axio-dilaton profile}
 \end{equation}
+We have thus obtained the D7 solution \cite{Gibbons:1995vg,Bergshoeff:2006jj,Greene:1989ya}.
 
-
-}
-
-{\color{orange}
-The D(-1) is a solution to the Euclidean type IIB theory, within the axio-dilaton sector \cite{Gibbons:1995vg}.
-In Einstein frame, it can be written as
+F-theory \cite{Vafa:1996xn} instructs one to view scalar fields $\tau,\bar\tau$ as two additional (auxiliary) coordinates. 
+The transverse space arises as a 4d total space that is an SL(2, Z) fibration over the 2d base. 
 \begin{equation}
-ds_{10}^2 = \sum_{i=1}^{10} dx_i^2,\quad
-e^\Phi = H, \quad\mathcal C\equiv-iC = H^{-1}-1,\quad
-H=1+\frac{Q}{r^8}.
+(\underbrace{t,x_1,x_2,...,x_7}_{\mathbb{R}^{1,7}},
+\underbrace{z,\bar z,\tau(z),\bar\tau(\bar z)}_{4d \text{ total space}}).
 \end{equation}
-}
+Of these four transverse coordinates, only two can be dynamical. 
+The energy density of the D7 is always the volume of the two manifold $M_2$ transverse to D7, which one obtains by either integrating over $dzd\bar z$ or $d\tau d\bar \tau$, but never all four coordinates. The transverse total space encodes backreactions of the D7 brane, in the case of 24 D7 branes present, the base becomes a compact $S^2$ and the total space is the 4d K3 which is a CY 2-fold, this is the original 12d insights offered by ``F-theory" \cite{Vafa:1996xn}.
+Since then, ``F-theory" has developed into a framework for studying string vacua \cite{Weigand:2018rez,Heckman:2010bq,Knapp:2011ip, Maharana:2012tu}.
+This will not be our focus, our objective is to go up in dimensions from 10d, not down.
 
 \subsection{D7 and D6 interpreted as 12d and 11d KK-monopoles}
-% As discussed earlier, the additional two coordinates introduced in F-theory \cite{Vafa:1996xn} must be treated as auxiliary in order to keep the D7 energy density finite.
-% Nevertheless, they can acquire a more dynamical interpretation.
+As discussed earlier, the additional two coordinates introduced in F-theory \cite{Vafa:1996xn} must be treated as auxiliary in order to keep the D7 energy density finite.
+Nevertheless, they can acquire a more dynamical interpretation.
 We will now show that the D7 solution can be interpreted as a 12d KK-monopole geometry compactified on a torus.
 Remarkably, this story is in parallel with the story on the type IIA side, between the D6 brane and an 11d KK-monopole geometry.
-The ``Kaluza-Klein monopole (KK-monopole)" \cite{Gross:1983hb,Sorkin:1983ns} refers to the solution of the Einstein-Hilbert action whose KK reduction yields a magnetic monopole.
+
+The ``Kaluza-Klein-Monopole (KK-monopole)" \cite{Gross:1983hb,Sorkin:1983ns} refers to the solution of the Einstein-Hilbert action whose KK reduction yields a magnetic monopole.
 Thus it can also be understood as the product of Minkowski space and the Taub-NUT space \cite{Ortin:2015hya}.
 In $d$ dimensions, the KK-monopole geometry is given by
 \cite{Eguchi:1980jx}
@@ -101,7 +135,7 @@ It is co-dimension 3, localised on $S_1\times\mathbb{R}^3$.
 We will recognize this $S_1$ as the M-theory circle.
 By matching \eqref{11d KK-monopole} with the string frame KK reduction ansatz
 \begin{equation}
-ds_{11}^2=e^{-2\Phi/3}ds_{10}^2+e^{4\Phi/3}(du+ \vec{A}\cdot d\vec{y})^2,
+ds_{11}^2=e^{-2\Phi/3}ds_{10}^2+e^{4\Phi/4}(du+ \vec{A}\cdot d\vec{y})^2,
 \label{string frame KK reduction ansatz}
 \end{equation}
 we find the 10d metric and dilaton profile of
@@ -231,7 +265,7 @@ ds_{10,string}^2
 e^{\phi} = H^{3/4},\quad
 A_0 = H^{-1}-1.
 \end{equation}
-Like the relation between the 11d KK-monopole and 10d D6 brane in the type IIA theory, the connection between the 11d pp-wave and the D0 brane is part of the established S-duality between the type IIA theory and M-theory. Remarkably, despite the absence of a 12d supergravity theory, this story also has a similar analogue on the type IIB side, between a 12d pp-wave and the type IIB D(-1) solution.
+Like the relation between the 11d KK-monopole and 10d D6 brane in the type IIA theory, the connection between the 11d pp-wave and the D0 brane is part of the established S-duality between the type IIA theory and M-theory. Remarkably, despite the absence of a 12d supergravity theory, this story also has a similar analogue on the type IIB side, between an 12d pp-wave and the type IIB D(-1) solution.
 
 
 \paragraph{D(-1) instanton from reduction of the 12d pp-wave}
@@ -239,7 +273,7 @@ Like the relation between the 11d KK-monopole and 10d D6 brane in the type IIA t
 The D(-1) is a solution to the Euclidean type IIB theory, within the axio-dilaton sector \cite{Gibbons:1995vg}.
 In Einstein frame, it can be written as\footnote{In the Euclidean type IIB theory, the compact scalar $C$ gets a wrong sign kinetic term, thus becomes purely imaginary. One instead works with $\mathcal C$. This is discussed in \cite{Gibbons:1995vg}.}
 \begin{equation}
-ds_{10}^2 = \sum_{i=1}^{10} dx_i^2,\quad
+ds_{10}^2 = \sum_{i=1}^{10} x_i^2,\quad
 e^\Phi = H, \quad
 \mathcal C\equiv-iC = H^{-1}-1,\quad
 H=1+\frac{Q}{r^8}.
@@ -251,7 +285,7 @@ We find
 ds_{12}^2=
 e^{-\Phi}d\tilde{t}^2+e^\Phi(dy+i\mathcal C d\tilde{t})^2
 +
- \sum_{i=1}^{10} dx_i^2
+ \sum_{i=1}^{10} x_i^2
 \label{F-theory ansatz}
 \end{equation}
 with $\tilde{t},y$ the coordinates on the torus.
@@ -259,7 +293,7 @@ To keep the metric real, it is natural to perform a Wick rotation $\tilde{t}=-it
 \begin{equation}
 ds_{12}^2=
 -e^{-\Phi}dt^2+e^\Phi[dy+\mathcal C dt]^2
-+\sum_{i=1}^{10}dx_i^2.
++\sum_{i=1}^{10}x_i^2.
 \end{equation}
 We thus find the 12d metric
 \begin{equation}
@@ -295,22 +329,22 @@ The type IIA pure gravity combined with the KK-vector and dilaton sector has the
 \begin{equation}
 \delta \psi_m =
 \left(
-\nabla_m - \frac{1}{16}e^\phi F_{np}\,\Gamma^{np}\Gamma_m\, \Gamma^{11}
+\nabla_m - \frac{1}{8}e^\phi F_{np}\Gamma_m{}^{np\rho} \Gamma^{11}
 \right)\epsilon = 0.
 \label{IIA Killing spinor equation}
 \end{equation}
-This equation arises directly from the dimensional reduction of the 11d covariantly constant spinor condition $\nabla^{(11)}_M\epsilon = 0$; we provide an explicit derivation in Appendix \ref{sec:IIA killing spinor reduction} (see also \cite{Becker:2006dvp}).\footnote{
-We contract gamma matrices with explicit indices, so $F_{np}\Gamma^{np}$ denotes the full sum over $n,p$ (with no $1/2!$). In the slash convention $\slashed{F}_2\equiv\frac{1}{2!}F_{np}\Gamma^{np}$ of \cite{Becker:2006dvp}, the same coupling reads $-\frac{1}{8}e^\phi\slashed{F}_2\Gamma_m\Gamma^{11}$; the two are identical, the apparent factor of two being the $1/2!$ absorbed into the slash.}
-We now demonstrate that analogously, the type IIB gravitino variation can be derived from a 12d covariant derivative.
+This equation arises directly from the dimensional reduction of the 11d covariantly constant spinor condition $\nabla^{(11)}_M\epsilon = 0$. See, for example, \cite{Becker:2006dvp}.
+We now demonstrate that the type IIB gravitino variation can be derived from a 12d covariant derivative, analogous to the story between 11d supergravity and 10d type IIA discussed above.
 
-A 12d covariant derivative $\nabla^{(12)}_M\epsilon = 0$ restricted to 10d takes the form
+We begin with a 12d covariant derivative $\nabla^{(12)}_M\epsilon = 0$.
+Restricted to 10 dimensions, we have
 \begin{equation}
 \nabla^{(12)}_m\epsilon
 =\left(
 \nabla^{(10)}_m
 +\frac{1}{2}\omega_m{}^{10,n}\Gamma_{10,n}
 +\frac{1}{2}\omega_m{}^{11,n}\Gamma_{11,n}
-+\frac{1}{4}\omega_m{}^{10,11}\Gamma_{10,11}\right)\epsilon = 0,
++\frac{1}{4}\omega_m{}^{10,11}\Gamma_{10,11}\right)\epsilon = 0
 \label{12d covariant derivative}
 \end{equation}
 where $\omega_{M}{}^{NP}$ denotes the spin connections.
@@ -335,7 +369,7 @@ On the Euclidean torus, we have
 So that $\Gamma_{10,11}$ is, up to a similarity transformation, $i$ times the U(1) generator.
 },
 one obtains precisely the axio-dilaton sector Killing spinor equation \eqref{9+1 IIB axio-dilaton Killing spinor equations}.
-This would also hold had we compactified a non-compact torus instead, to obtain a Euclidean type IIB theory\footnote{
+This will also hold had we compactified a non-compact torus instead, to obtain an Euclidean type IIB theory\footnote{
 If we were to consider Euclidean type IIB we would compactify on a 1+1 torus, there will arise a factor of $i$ in identifying the U(1) generator from $\Gamma_{11,12}$, as well as a factor of $i$ in defining the Euclidean compact scalar $C = i\mathcal C$. 
 So that the 12d covariant derivative again reproduces the type IIB gravitino variation.
 }.
